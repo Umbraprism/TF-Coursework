@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Text.Json;
-using Coursework.Classes;
+using Coursework.ParentClasses;
 using Coursework.Helpers;
 
 namespace Coursework.Forms
@@ -43,7 +43,7 @@ namespace Coursework.Forms
                 playerList = JsonSerializer.Deserialize<List<Player>>(json);
             }
 
-            if (playerList.Any(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text))
+            if (playerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
             {
                 FormHelper.s_quizPlayer = playerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
                 FormHelper.s_mainMenuScreen.Show();

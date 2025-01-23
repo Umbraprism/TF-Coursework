@@ -1,4 +1,4 @@
-﻿namespace Coursework.Classes
+﻿namespace Coursework.ParentClasses
 {
     [Serializable]
     public class Player

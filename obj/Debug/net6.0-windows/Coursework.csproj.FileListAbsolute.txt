@@ -333,3 +333,4 @@ Z:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\refint\Coursework.dll
 Z:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.pdb
 Z:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.genruntimeconfig.cache
 Z:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\ref\Coursework.dll
+Z:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.sourcelink.json

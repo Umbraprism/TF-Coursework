@@ -1,4 +1,4 @@
-﻿using Coursework.Classes;
+﻿using Coursework.ParentClasses;
 using Coursework.Helpers;
 
 namespace Coursework.Forms

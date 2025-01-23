@@ -1,6 +1,7 @@
 ﻿using Coursework.Helpers;
-using Coursework.Classes;
+using Coursework.ParentClasses;
 using System.Text.Json;
+using System.Diagnostics;
 
 namespace Coursework
 {
@@ -55,62 +56,27 @@ namespace Coursework
             // Checks if the entered password isnt the same as the re-entered password, removes click event to prevent making an incorrect account, and shows an error label.
             if (tbPassword.Text != tbReenter.Text)
             {
-                lblPassMatch.Visible = true;
-
-                tbPassword.Clear();
-                tbReenter.Clear();
-
-                btnRegister.Click -= btnRegister_Click;
-
-                await Task.Delay(1000);
-
-                lblPassMatch.Visible = false;
-                btnRegister.Click += btnRegister_Click;
+                ErrorMessage(lblPassMatch);
             }
 
             /* uses a LINQ quetry to check every user in the database and ensure the entered usenrame is not already registered, the method Any() returns a boolean value if the list contains the value found in tbUsername.Text
                an anonymous method here is defined here with a lambda expression (=>) as this will only be used once here, so a full named method is not needed.
                to the left of the => is a temporary parameter used for the anonmyous method, and to the right is the logic of the method.
                i utilised a lambda expression here as it provides more readablity for the code and this is a one off condition which will not be re-used. */
-            else if (playerList.Any(u => u.Username == tbUsername.Text))
+            else if (playerList.Any(player => player.Username == tbUsername.Text))
             {
-                lblAccExists.Visible = true;
-
-                tbUsername.Clear();
-
-                btnRegister.Click -= btnRegister_Click;
-
-                await Task.Delay(1000);
-
-                lblAccExists.Visible = false;
-                btnRegister.Click += btnRegister_Click;
+                ErrorMessage(lblAccExists);
             }
 
             // checks whether a username and password have been entered and class has been selected
             else if (String.IsNullOrEmpty(tbUsername.Text) || String.IsNullOrEmpty(tbPassword.Text))
             {
-                lblPleaseEnter.Visible = true;
-
-                btnRegister.Click -= btnRegister_Click;
-
-                await Task.Delay(1000);
-
-                lblPleaseEnter.Visible = false;
-                btnRegister.Click += btnRegister_Click;
+                ErrorMessage(lblPleaseEnter);
             }
 
             else if (classId == 0)
             {
-                lblPleaseEnter.Text = "Please select a class.";
-                lblPleaseEnter.Visible = true;
-
-                btnRegister.Click -= btnRegister_Click;
-
-                await Task.Delay(1000);
-
-                lblPleaseEnter.Visible = false;
-                lblPleaseEnter.Text = "Please enter a username and password.";
-                btnRegister.Click += btnRegister_Click;
+                ErrorMessage(lblPleaseSelectClass);
             }
 
             // if everything is correct, the user is written to the file
@@ -121,14 +87,26 @@ namespace Coursework
                     Player player = new(tbUsername.Text, tbPassword.Text, new TFClass(classId), playerList.Count + 1);
                     playerList.Add(player);
 
-                    string updatedJson = JsonSerializer.Serialize(playerList);
+                    JsonSerializerOptions options = new()
+                    {
+                        WriteIndented = true
+                    };
+                    string updatedJson = JsonSerializer.Serialize(playerList, options);
                     bw.Write(updatedJson);
 
-                    MessageBox.Show(updatedJson);
+                    Debug.WriteLine(updatedJson);
 
                     tbUsername.Clear();
                     tbPassword.Clear();
                     tbReenter.Clear();
+                    classId = 0;
+                    pbClassSelected.Image = null;
+
+                    btnRegister.BackColor = Color.FromArgb(114, 158, 66);
+
+                    await Task.Delay(1000);
+
+                    btnRegister.BackColor = Color.FromArgb(189, 59, 59);
                 }
             }
         }
@@ -145,6 +123,24 @@ namespace Coursework
         {
             FormHelper.s_loginScreen.Show();
             Hide();
+        }
+
+        private async void ErrorMessage(Control control)
+        {
+            control.Visible = true;
+
+            btnRegister.Click -= btnRegister_Click;
+
+            await Task.Delay(1000);
+
+            control.Visible = false;
+            btnRegister.Click += btnRegister_Click;
+
+            tbUsername.Clear();
+            tbPassword.Clear();
+            tbReenter.Clear();
+            classId = 0;
+            pbClassSelected.Image = null;
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Coursework.Helpers;
 
-namespace Coursework.Classes
+namespace Coursework.ParentClasses
 {
     [Serializable]
     public class Ability

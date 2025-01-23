@@ -55,6 +55,7 @@
             linkToLogin = new LinkLabel();
             pbClassSelected = new PictureBox();
             pnlClasses = new Panel();
+            lblPleaseSelectClass = new Label();
             ((System.ComponentModel.ISupportInitialize)pbScoutEmblem).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbSoldierEmblem).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPyroEmblem).BeginInit();
@@ -224,6 +225,7 @@
             // pnlRegister
             // 
             pnlRegister.BackColor = Color.FromArgb(54, 49, 45);
+            pnlRegister.Controls.Add(lblPleaseSelectClass);
             pnlRegister.Controls.Add(cbShowPassword);
             pnlRegister.Controls.Add(lblPleaseEnter);
             pnlRegister.Controls.Add(lblPassMatch);
@@ -455,6 +457,19 @@
             pnlClasses.Size = new Size(1600, 156);
             pnlClasses.TabIndex = 5;
             // 
+            // lblPleaseSelectClass
+            // 
+            lblPleaseSelectClass.Anchor = AnchorStyles.Left;
+            lblPleaseSelectClass.AutoSize = true;
+            lblPleaseSelectClass.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPleaseSelectClass.ForeColor = Color.FromArgb(189, 59, 59);
+            lblPleaseSelectClass.Location = new Point(12, 507);
+            lblPleaseSelectClass.Name = "lblPleaseSelectClass";
+            lblPleaseSelectClass.Size = new Size(335, 37);
+            lblPleaseSelectClass.TabIndex = 10;
+            lblPleaseSelectClass.Text = "Please select a class above.";
+            lblPleaseSelectClass.Visible = false;
+            // 
             // RegisterScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -525,5 +540,6 @@
         private PictureBox pbSpyEmblem;
         private PictureBox pbClassSelected;
         private Panel pnlClasses;
+        private Label lblPleaseSelectClass;
     }
 }

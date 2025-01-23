@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Coursework.Classes
+namespace Coursework.ParentClasses
 {
     public class TFClass
     {
