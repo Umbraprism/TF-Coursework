@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "Z:\\CourseworkRoot\\CourseworkCode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\parentclasses\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:parentclasses\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\quizzes\\guessinggame.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:quizzes\\guessinggame.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\quizzes\\historyquiz.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:quizzes\\historyquiz.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\quizzes\\weaponsquiz.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:quizzes\\weaponsquiz.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\quizzes\\classquiz.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:quizzes\\classquiz.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\helpers\\formhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:helpers\\formhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,64 +30,76 @@
       "DocumentGroups": [
         {
           "DockedHeight": 311,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T18:37:40.876Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Question.cs",
-              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\ParentClasses\\Question.cs",
-              "RelativeDocumentMoniker": "ParentClasses\\Question.cs",
-              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\ParentClasses\\Question.cs*",
-              "RelativeToolTip": "ParentClasses\\Question.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T21:40:05.208Z",
+              "Title": "GuessingGame.json",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\GuessingGame.json",
+              "RelativeDocumentMoniker": "Quizzes\\GuessingGame.json",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\GuessingGame.json",
+              "RelativeToolTip": "Quizzes\\GuessingGame.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-24T20:40:34.869Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormHelper.cs",
-              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Helpers\\FormHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\FormHelper.cs",
-              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Helpers\\FormHelper.cs",
-              "RelativeToolTip": "Helpers\\FormHelper.cs",
+              "DocumentIndex": 1,
+              "Title": "HistoryQuiz.json",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\HistoryQuiz.json",
+              "RelativeDocumentMoniker": "Quizzes\\HistoryQuiz.json",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\HistoryQuiz.json",
+              "RelativeToolTip": "Quizzes\\HistoryQuiz.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T18:58:51.409Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-24T20:40:20.743Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RegisterScreen.cs",
-              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\RegisterScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\RegisterScreen.cs",
-              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\RegisterScreen.cs",
-              "RelativeToolTip": "Forms\\RegisterScreen.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAUwCoAAABlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T18:44:07.973Z",
+              "Title": "ClassQuiz.json",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\ClassQuiz.json",
+              "RelativeDocumentMoniker": "Quizzes\\ClassQuiz.json",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\ClassQuiz.json",
+              "RelativeToolTip": "Quizzes\\ClassQuiz.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-24T20:40:02.733Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeaponsQuiz.json",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\WeaponsQuiz.json",
+              "RelativeDocumentMoniker": "Quizzes\\WeaponsQuiz.json",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\WeaponsQuiz.json",
+              "RelativeToolTip": "Quizzes\\WeaponsQuiz.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-24T20:39:14.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormHelper.cs",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Helpers\\FormHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\FormHelper.cs",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Helpers\\FormHelper.cs",
+              "RelativeToolTip": "Helpers\\FormHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T20:34:16.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         },
