@@ -27,7 +27,7 @@ color 7
 echo:
 echo:
 
-echo Total lines of code in this solution:
+echo Total lines of code in this project:
 powershell -Command "& {(gci -include *.cs,*.xaml -recurse | select-string .).Count;}"
 timeout 3
 

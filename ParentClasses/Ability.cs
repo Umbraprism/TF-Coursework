@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Coursework.Helpers;
+﻿using Coursework.Helpers;
 
 namespace Coursework.ParentClasses
 {
@@ -12,6 +7,16 @@ namespace Coursework.ParentClasses
     {
         public string Name { get; set; }
         public string Info { get; set; }
+
+        private string name;
+        private string info;
+
+        public Ability(string Name, string Info)
+        {
+            this.Name = Name;
+            this.Info = Info;
+        }
+
         public virtual void UseAbility()
         {
             switch (FormHelper.s_quizPlayer.TFClass.Id)
@@ -35,12 +40,6 @@ namespace Coursework.ParentClasses
                 case 9:
                     throw new NotImplementedException();
             }
-        }
-
-        public Ability(string Name, string Info)
-        {
-            this.Name = Name;
-            this.Info = Info;
         }
     }
 }

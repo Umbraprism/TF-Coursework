@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Coursework.ParentClasses
+﻿namespace Coursework.ParentClasses
 {
     public class Achievement
     {
@@ -12,5 +6,18 @@ namespace Coursework.ParentClasses
         public string AchievementDescription { get; set; }
         public bool IsRareAchievement { get; set; }
         public bool IsAchieved { get; set; }
+
+        private string achievementName;
+        private string achievementDescription;
+        private bool isRareAchievement;
+        private bool isAchieved;
+
+        public Achievement(string achievementName, string achievementDescription, bool isRareAchievement, bool isAchieved)
+        {
+            AchievementName = achievementName;
+            AchievementDescription = achievementDescription;
+            IsRareAchievement = isRareAchievement;
+            IsAchieved = isAchieved;
+        }
     }
 }
