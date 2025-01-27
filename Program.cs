@@ -24,7 +24,7 @@ namespace Coursework
                 FormHelper.s_tips = JsonSerializer.Deserialize<Tip[]>(sr.ReadToEnd());
             }
 
-            Application.Run(FormHelper.s_splashScreen);
+            Application.Run(FormHelper.s_answerIndicationScreen);
         }
     }
 }

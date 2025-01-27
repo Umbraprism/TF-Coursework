@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "Z:\\CourseworkRoot\\CourseworkCode\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\forms\\answerindicationscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\answerindicationscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\forms\\answerindicationscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\answerindicationscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\forms\\achievementsscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\achievementsscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\forms\\achievementsscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\achievementsscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|Z:\\CourseworkRoot\\CourseworkCode\\forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|Z:\\CourseworkRoot\\CourseworkCode\\forms\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|z:\\courseworkroot\\courseworkcode\\quizzes\\guessinggame.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:quizzes\\guessinggame.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -30,11 +62,115 @@
       "DocumentGroups": [
         {
           "DockedHeight": 311,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AnswerIndicationScreen.cs",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\AnswerIndicationScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\AnswerIndicationScreen.cs",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\AnswerIndicationScreen.cs",
+              "RelativeToolTip": "Forms\\AnswerIndicationScreen.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAIAwwBsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T20:48:06.788Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AnswerIndicationScreen.cs [Design]",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\AnswerIndicationScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\AnswerIndicationScreen.cs",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\AnswerIndicationScreen.cs [Design]",
+              "RelativeToolTip": "Forms\\AnswerIndicationScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T20:46:29.797Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterScreen.cs",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\RegisterScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\RegisterScreen.cs",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\RegisterScreen.cs",
+              "RelativeToolTip": "Forms\\RegisterScreen.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAIAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T20:37:35.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AchievementsScreen.cs",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\AchievementsScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\AchievementsScreen.cs",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\AchievementsScreen.cs",
+              "RelativeToolTip": "Forms\\AchievementsScreen.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T17:07:48.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainMenuScreen.cs [Design]",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\MainMenuScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\MainMenuScreen.cs",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\MainMenuScreen.cs [Design]",
+              "RelativeToolTip": "Forms\\MainMenuScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T17:06:28.258Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterScreen.cs [Design]",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\RegisterScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\RegisterScreen.cs",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\RegisterScreen.cs [Design]",
+              "RelativeToolTip": "Forms\\RegisterScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T17:03:15.244Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AchievementsScreen.cs [Design]",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\AchievementsScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\AchievementsScreen.cs",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Forms\\AchievementsScreen.cs [Design]",
+              "RelativeToolTip": "Forms\\AchievementsScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T17:00:11.848Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "Z:\\CourseworkRoot\\CourseworkCode\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T20:43:50.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GuessingGame.json",
               "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\GuessingGame.json",
               "RelativeDocumentMoniker": "Quizzes\\GuessingGame.json",
@@ -42,12 +178,11 @@
               "RelativeToolTip": "Quizzes\\GuessingGame.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-24T20:40:34.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:40:34.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "HistoryQuiz.json",
               "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\HistoryQuiz.json",
               "RelativeDocumentMoniker": "Quizzes\\HistoryQuiz.json",
@@ -55,12 +190,11 @@
               "RelativeToolTip": "Quizzes\\HistoryQuiz.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-24T20:40:20.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:40:20.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "ClassQuiz.json",
               "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\ClassQuiz.json",
               "RelativeDocumentMoniker": "Quizzes\\ClassQuiz.json",
@@ -68,12 +202,11 @@
               "RelativeToolTip": "Quizzes\\ClassQuiz.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-24T20:40:02.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:40:02.733Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "WeaponsQuiz.json",
               "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Quizzes\\WeaponsQuiz.json",
               "RelativeDocumentMoniker": "Quizzes\\WeaponsQuiz.json",
@@ -81,12 +214,11 @@
               "RelativeToolTip": "Quizzes\\WeaponsQuiz.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-24T20:39:14.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:39:14.789Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "FormHelper.cs",
               "DocumentMoniker": "Z:\\CourseworkRoot\\CourseworkCode\\Helpers\\FormHelper.cs",
               "RelativeDocumentMoniker": "Helpers\\FormHelper.cs",
@@ -94,12 +226,7 @@
               "RelativeToolTip": "Helpers\\FormHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T20:34:16.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2025-01-24T20:34:16.442Z"
             }
           ]
         },

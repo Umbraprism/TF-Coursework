@@ -87,11 +87,7 @@ namespace Coursework
                     Player player = new(tbUsername.Text, tbPassword.Text, new TFClass(classId), playerList.Count + 1);
                     playerList.Add(player);
 
-                    JsonSerializerOptions options = new()
-                    {
-                        WriteIndented = true
-                    };
-                    string updatedJson = JsonSerializer.Serialize(playerList, options);
+                    string updatedJson = JsonSerializer.Serialize(playerList, new JsonSerializerOptions { WriteIndented = true }); // writes indented so the debug output is easier to read
                     bw.Write(updatedJson);
 
                     Debug.WriteLine(updatedJson);
@@ -103,10 +99,14 @@ namespace Coursework
                     pbClassSelected.Image = null;
 
                     btnRegister.BackColor = Color.FromArgb(114, 158, 66);
+                    MessageBox.Show("Account registered succesfully.", "Registration Successful");
 
                     await Task.Delay(1000);
 
                     btnRegister.BackColor = Color.FromArgb(189, 59, 59);
+
+                    this.Hide();
+                    FormHelper.s_loginScreen.Show();
                 }
             }
         }
