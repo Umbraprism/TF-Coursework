@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterScreen));
             lblSelectClass = new Label();
             pbScoutEmblem = new PictureBox();
             pbSoldierEmblem = new PictureBox();
@@ -39,6 +40,7 @@
             pbSniperEmblem = new PictureBox();
             pbSpyEmblem = new PictureBox();
             pnlRegister = new Panel();
+            lblPleaseSelectClass = new Label();
             cbShowPassword = new CheckBox();
             lblPleaseEnter = new Label();
             lblPassMatch = new Label();
@@ -55,7 +57,6 @@
             linkToLogin = new LinkLabel();
             pbClassSelected = new PictureBox();
             pnlClasses = new Panel();
-            lblPleaseSelectClass = new Label();
             ((System.ComponentModel.ISupportInitialize)pbScoutEmblem).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbSoldierEmblem).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPyroEmblem).BeginInit();
@@ -241,6 +242,19 @@
             pnlRegister.Name = "pnlRegister";
             pnlRegister.Size = new Size(592, 744);
             pnlRegister.TabIndex = 2;
+            // 
+            // lblPleaseSelectClass
+            // 
+            lblPleaseSelectClass.Anchor = AnchorStyles.Left;
+            lblPleaseSelectClass.AutoSize = true;
+            lblPleaseSelectClass.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPleaseSelectClass.ForeColor = Color.FromArgb(189, 59, 59);
+            lblPleaseSelectClass.Location = new Point(12, 507);
+            lblPleaseSelectClass.Name = "lblPleaseSelectClass";
+            lblPleaseSelectClass.Size = new Size(335, 37);
+            lblPleaseSelectClass.TabIndex = 10;
+            lblPleaseSelectClass.Text = "Please select a class above.";
+            lblPleaseSelectClass.Visible = false;
             // 
             // cbShowPassword
             // 
@@ -457,19 +471,6 @@
             pnlClasses.Size = new Size(1600, 156);
             pnlClasses.TabIndex = 5;
             // 
-            // lblPleaseSelectClass
-            // 
-            lblPleaseSelectClass.Anchor = AnchorStyles.Left;
-            lblPleaseSelectClass.AutoSize = true;
-            lblPleaseSelectClass.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPleaseSelectClass.ForeColor = Color.FromArgb(189, 59, 59);
-            lblPleaseSelectClass.Location = new Point(12, 507);
-            lblPleaseSelectClass.Name = "lblPleaseSelectClass";
-            lblPleaseSelectClass.Size = new Size(335, 37);
-            lblPleaseSelectClass.TabIndex = 10;
-            lblPleaseSelectClass.Text = "Please select a class above.";
-            lblPleaseSelectClass.Visible = false;
-            // 
             // RegisterScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -483,6 +484,7 @@
             Controls.Add(pnlClasses);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "RegisterScreen";
             Text = "Registration";
             WindowState = FormWindowState.Maximized;

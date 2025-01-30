@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             pnlLoading = new Panel();
             ppbLoading = new UserControls.PercentageProgressBar();
             label1 = new Label();
@@ -85,6 +86,7 @@
             Controls.Add(pnlLoading);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "SplashScreen";
             Text = "Loading Screen";
             WindowState = FormWindowState.Maximized;

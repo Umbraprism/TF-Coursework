@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuScreen));
             pnlMain = new Panel();
             tlpStatistics = new TableLayoutPanel();
             btnStats = new Button();
@@ -47,9 +48,9 @@
             pbPfp = new PictureBox();
             btnQuit = new Button();
             pnlTip = new Panel();
+            btnNextTip = new Button();
             lblTipText = new Label();
             lblTip = new Label();
-            btnNextTip = new Button();
             pnlMain.SuspendLayout();
             tlpStatistics.SuspendLayout();
             tlpQuizSelect.SuspendLayout();
@@ -324,6 +325,19 @@
             pnlTip.Size = new Size(449, 144);
             pnlTip.TabIndex = 0;
             // 
+            // btnNextTip
+            // 
+            btnNextTip.FlatAppearance.BorderSize = 0;
+            btnNextTip.FlatStyle = FlatStyle.Flat;
+            btnNextTip.ForeColor = Color.FromArgb(246, 231, 222);
+            btnNextTip.Location = new Point(406, 121);
+            btnNextTip.Name = "btnNextTip";
+            btnNextTip.Size = new Size(43, 23);
+            btnNextTip.TabIndex = 2;
+            btnNextTip.Text = "▶";
+            btnNextTip.UseVisualStyleBackColor = true;
+            btnNextTip.Click += btnNextTip_Click;
+            // 
             // lblTipText
             // 
             lblTipText.AutoSize = true;
@@ -348,19 +362,6 @@
             lblTip.TabIndex = 0;
             lblTip.Text = "TIP";
             // 
-            // btnNextTip
-            // 
-            btnNextTip.FlatAppearance.BorderSize = 0;
-            btnNextTip.FlatStyle = FlatStyle.Flat;
-            btnNextTip.ForeColor = Color.FromArgb(246, 231, 222);
-            btnNextTip.Location = new Point(406, 121);
-            btnNextTip.Name = "btnNextTip";
-            btnNextTip.Size = new Size(43, 23);
-            btnNextTip.TabIndex = 2;
-            btnNextTip.Text = "▶";
-            btnNextTip.UseVisualStyleBackColor = true;
-            btnNextTip.Click += btnNextTip_Click;
-            // 
             // MainMenuScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -372,6 +373,7 @@
             Controls.Add(pnlMain);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainMenuScreen";
             Text = "MainMenuScreen";
             WindowState = FormWindowState.Maximized;

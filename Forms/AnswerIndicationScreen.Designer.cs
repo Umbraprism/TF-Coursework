@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnswerIndicationScreen));
             lblIndicator = new Label();
             lblScore = new Label();
             SuspendLayout();
@@ -65,6 +66,7 @@
             Controls.Add(lblScore);
             Controls.Add(lblIndicator);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AnswerIndicationScreen";
             Text = "AnswerIndicationScreen";
             WindowState = FormWindowState.Maximized;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginScreen));
             lblLogin = new Label();
             pbLogo = new PictureBox();
             tbUsername = new TextBox();
@@ -213,6 +214,7 @@
             Controls.Add(pbClassImage);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginScreen";
             Text = "LoginScreen";
             WindowState = FormWindowState.Maximized;

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AchievementsScreen));
             pnlHeader = new Panel();
             ppbAchievementProgress = new UserControls.PercentageProgressBar();
             lblAchievements = new Label();
@@ -112,6 +113,7 @@
             Controls.Add(flpAchievements);
             Controls.Add(pnlHeader);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AchievementsScreen";
             Text = "AchievementsScreen";
             WindowState = FormWindowState.Maximized;
