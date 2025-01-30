@@ -77,7 +77,7 @@ namespace Coursework.UserControls
             e.Graphics.Clear(BackColor);
 
             if (Value > 0)
-          {
+            {
                 barProgress = new(barBackground.X, barBackground.Y, (int)Math.Ceiling(PercentageProgress / 100 * barBackground.Width), barBackground.Height);
                 e.Graphics.FillRectangle(solidBrushProgress, barProgress);
             }

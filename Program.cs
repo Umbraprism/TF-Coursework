@@ -24,7 +24,10 @@ namespace Coursework
                 FormHelper.s_tips = JsonSerializer.Deserialize<Tip[]>(sr.ReadToEnd());
             }
 
-            Application.Run(FormHelper.s_answerIndicationScreen);
+            // Allows main form (in this case the first SplashScreen) to be closed without killing the application.
+            // See https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.form.close?view=windowsdesktop-9.0x for more info about the Form.Close() method.
+            new SplashScreen(FormHelper.s_registerScreen).Show();
+            Application.Run();
         }
     }
 }

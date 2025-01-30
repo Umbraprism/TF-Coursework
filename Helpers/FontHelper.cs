@@ -14,7 +14,7 @@ namespace Coursework.Helpers
         /// <summary>
         /// Loads the font into a location in a PrivateFontCollection and instantiates it to a variable.
         /// </summary>
-        public static void MakeFont() // I've used Marshal here, which is bundled with .NET Core, instead of an unsafe block for handling memory.This provides a bit more safety for the code and makes it more readable
+        public static void MakeFont()
         {
             string fontPath = @$"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Resources\";
             fontCollection.AddFontFile(Path.Combine(fontPath, "TF2Build.ttf"));
@@ -43,7 +43,6 @@ namespace Coursework.Helpers
                 default:
                     Debug.WriteLine($"Font not found for Control {control} located in {control.Parent}. Using fallback font.");
                     throw new FontNotFoundException();
-                    // If a font loaded incorrectly but is still used, a fallback font specified in the designer will still work. This allows the user to still proceed with the quiz, but the forms will look slightly worse.
             }
         }
 
@@ -63,7 +62,7 @@ namespace Coursework.Helpers
                 {
                     TextBox textBox = (TextBox)control; // parses the control to a TextBox object so the placeholder text can be accessed
 
-                    if (textBox.PlaceholderText.Replace(" ", "").ToUpper() == textBox.PlaceholderText.Replace(" ", ""))  // removes spaces and check if the string is fully uppercase, then applies fonts as specified
+                    if (textBox.PlaceholderText.ToUpper() == textBox.PlaceholderText)  // removes spaces and check if the string is fully uppercase, then applies fonts as specified
                     {
                         control.UseFont("Build"); 
                     }
@@ -73,7 +72,7 @@ namespace Coursework.Helpers
                     }
                 }
 
-                if (control.GetType() != typeof(TextBox) && control.Text.Replace(" ","").ToUpper() == control.Text.Replace(" ", "")) // Ignores TextBoxes (handled above) and checks if the string (with spaces removed - these always count as lowercase) matches itself when it is fully capitalised, which ensures the string iss all caps)
+                if (control.GetType() != typeof(TextBox) && control.Text.ToUpper() == control.Text) // Ignores TextBoxes (handled above) and checks if the string (with spaces removed - these always count as lowercase) matches itself when it is fully capitalised, which ensures the string iss all caps)
                 {
                     control.UseFont("Build"); // strings which are made all caps are set to use the Build font, which acts as a title display font
                 }

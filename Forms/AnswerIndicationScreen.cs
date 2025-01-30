@@ -24,6 +24,7 @@ namespace Coursework.Forms
         private void AnswerIndicationScreen_Load(object sender, EventArgs e) // change to appropriate colours soon
         {
             FontHelper.ApplyFonts(this);
+
             lblIndicator.Width = this.Width / 2;
             lblIndicator.Height = this.Height / 2;
 

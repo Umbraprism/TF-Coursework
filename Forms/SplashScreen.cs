@@ -48,8 +48,8 @@ namespace Coursework.Forms
                 await Task.Delay(1000);
 
                 tmrLoading.Stop();
-                this.Hide();
-                FormHelper.s_registerScreen.Show();
+                OnWayTo.Show();
+                this.Close();
             }
         }
     }

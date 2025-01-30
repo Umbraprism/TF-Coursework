@@ -1,0 +1,20 @@
+’[
+  {
+    "Id": 1,
+    "Username": "Administrator",
+    "Password": "admin",
+    "TFClass": {
+      "Id": 9,
+      "Name": "Spy",
+      "Description": "A dashing rogue hailing from who-knows-where in France. He has a penchant for dapper suits and even dapper-ier disguises.",
+      "ClassAbility": null
+    },
+    "Achievements": [],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "ClassLatestScore": 0,
+    "ClassHighestScore": 0,
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0
+  }
+]

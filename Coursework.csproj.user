@@ -37,6 +37,9 @@
     <Compile Update="Forms\TrueFalseScreen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserControls\AchievementView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\PercentageProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>

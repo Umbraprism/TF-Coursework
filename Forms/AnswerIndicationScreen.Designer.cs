@@ -37,7 +37,7 @@
             lblIndicator.Anchor = AnchorStyles.None;
             lblIndicator.AutoSize = true;
             lblIndicator.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            lblIndicator.ForeColor = SystemColors.ButtonHighlight;
+            lblIndicator.ForeColor = Color.FromArgb(246, 231, 222);
             lblIndicator.Location = new Point(229, 148);
             lblIndicator.Name = "lblIndicator";
             lblIndicator.Size = new Size(375, 86);
@@ -49,7 +49,7 @@
             lblScore.Anchor = AnchorStyles.None;
             lblScore.AutoSize = true;
             lblScore.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            lblScore.ForeColor = Color.White;
+            lblScore.ForeColor = Color.FromArgb(246, 231, 222);
             lblScore.Location = new Point(229, 257);
             lblScore.Name = "lblScore";
             lblScore.Size = new Size(129, 37);

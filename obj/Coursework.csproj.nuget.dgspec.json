@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj": {}
+    "U:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj": {}
   },
   "projects": {
-    "Z:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj": {
+    "U:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj",
+        "projectUniqueName": "U:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj",
         "projectName": "Coursework",
-        "projectPath": "Z:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj",
+        "projectPath": "U:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "Z:\\CourseworkRoot\\CourseworkCode\\obj\\",
+        "outputPath": "U:\\CourseworkRoot\\CourseworkCode\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

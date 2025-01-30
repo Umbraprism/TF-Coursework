@@ -121,6 +121,9 @@
   <data name="medicAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\medicAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="powerSymbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\powerSymbol3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="demoEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\demoEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,6 +163,9 @@
   <data name="hwgEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hwgEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="achieved" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\achieved.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="scoutAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scoutAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,7 +190,7 @@
   <data name="hwgAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hwgAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="powerSymbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\powerSymbol3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="starburst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\starburst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

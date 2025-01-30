@@ -63,6 +63,16 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap achieved {
+            get {
+                object obj = ResourceManager.GetObject("achieved", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cwBgWide {
             get {
                 object obj = ResourceManager.GetObject("cwBgWide", resourceCulture);
@@ -256,6 +266,16 @@ namespace Coursework.Properties {
         internal static System.Drawing.Bitmap spyEmblem {
             get {
                 object obj = ResourceManager.GetObject("spyEmblem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap starburst {
+            get {
+                object obj = ResourceManager.GetObject("starburst", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

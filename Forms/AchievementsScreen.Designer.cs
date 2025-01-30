@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pnlHeader = new Panel();
-            percentageProgressBar1 = new UserControls.PercentageProgressBar();
+            ppbAchievementProgress = new UserControls.PercentageProgressBar();
             lblAchievements = new Label();
             btnBack = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            flpAchievements = new FlowLayoutPanel();
+            ttMyAchievementProgress = new ToolTip(components);
             pnlHeader.SuspendLayout();
             SuspendLayout();
             // 
             // pnlHeader
             // 
             pnlHeader.BackColor = Color.FromArgb(41, 39, 39);
-            pnlHeader.Controls.Add(percentageProgressBar1);
+            pnlHeader.Controls.Add(ppbAchievementProgress);
             pnlHeader.Controls.Add(lblAchievements);
             pnlHeader.Controls.Add(btnBack);
             pnlHeader.Dock = DockStyle.Top;
@@ -48,19 +50,20 @@
             pnlHeader.Size = new Size(1600, 156);
             pnlHeader.TabIndex = 0;
             // 
-            // percentageProgressBar1
+            // ppbAchievementProgress
             // 
-            percentageProgressBar1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            percentageProgressBar1.BackColor = Color.FromArgb(26, 26, 26);
-            percentageProgressBar1.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            percentageProgressBar1.Location = new Point(967, 34);
-            percentageProgressBar1.Name = "percentageProgressBar1";
-            percentageProgressBar1.ProgressColour = Color.FromArgb(246, 231, 222);
-            percentageProgressBar1.Size = new Size(621, 86);
-            percentageProgressBar1.Style = ProgressBarStyle.Continuous;
-            percentageProgressBar1.TabIndex = 2;
-            percentageProgressBar1.TextColour = Color.FromArgb(246, 231, 222);
-            percentageProgressBar1.UsePercentage = true;
+            ppbAchievementProgress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            ppbAchievementProgress.BackColor = Color.FromArgb(26, 26, 26);
+            ppbAchievementProgress.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbAchievementProgress.Location = new Point(967, 34);
+            ppbAchievementProgress.Name = "ppbAchievementProgress";
+            ppbAchievementProgress.ProgressColour = Color.FromArgb(246, 231, 222);
+            ppbAchievementProgress.Size = new Size(621, 86);
+            ppbAchievementProgress.Style = ProgressBarStyle.Continuous;
+            ppbAchievementProgress.TabIndex = 2;
+            ppbAchievementProgress.TextColour = Color.FromArgb(246, 231, 222);
+            ttMyAchievementProgress.SetToolTip(ppbAchievementProgress, "This is the percentage of achievements you have completed.");
+            ppbAchievementProgress.UsePercentage = true;
             // 
             // lblAchievements
             // 
@@ -73,7 +76,6 @@
             lblAchievements.Size = new Size(487, 86);
             lblAchievements.TabIndex = 1;
             lblAchievements.Text = "ACHIEVEMENTS";
-            lblAchievements.Click += lblAchievements_Click;
             // 
             // btnBack
             // 
@@ -91,14 +93,15 @@
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
-            // flowLayoutPanel1
+            // flpAchievements
             // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(0, 156);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1600, 744);
-            flowLayoutPanel1.TabIndex = 1;
+            flpAchievements.AutoScroll = true;
+            flpAchievements.AutoSize = true;
+            flpAchievements.Dock = DockStyle.Fill;
+            flpAchievements.Location = new Point(0, 156);
+            flpAchievements.Name = "flpAchievements";
+            flpAchievements.Size = new Size(1600, 744);
+            flpAchievements.TabIndex = 1;
             // 
             // AchievementsScreen
             // 
@@ -106,7 +109,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(53, 48, 46);
             ClientSize = new Size(1600, 900);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(flpAchievements);
             Controls.Add(pnlHeader);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AchievementsScreen";
@@ -116,6 +119,7 @@
             pnlHeader.ResumeLayout(false);
             pnlHeader.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -123,7 +127,8 @@
         private Panel pnlHeader;
         private Button btnBack;
         private Label lblAchievements;
-        private UserControls.PercentageProgressBar percentageProgressBar1;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private UserControls.PercentageProgressBar ppbAchievementProgress;
+        private FlowLayoutPanel flpAchievements;
+        private ToolTip ttMyAchievementProgress;
     }
 }

@@ -51,7 +51,7 @@
             // 
             lblLogin.AutoSize = true;
             lblLogin.Font = new Font("Segoe UI", 35F, FontStyle.Regular, GraphicsUnit.Point);
-            lblLogin.ForeColor = Color.White;
+            lblLogin.ForeColor = Color.FromArgb(246, 231, 222);
             lblLogin.Location = new Point(3, 306);
             lblLogin.Name = "lblLogin";
             lblLogin.Size = new Size(175, 62);
@@ -153,7 +153,7 @@
             cbShowPassword.Anchor = AnchorStyles.None;
             cbShowPassword.AutoSize = true;
             cbShowPassword.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            cbShowPassword.ForeColor = Color.White;
+            cbShowPassword.ForeColor = Color.FromArgb(246, 231, 222);
             cbShowPassword.Location = new Point(15, 653);
             cbShowPassword.Name = "cbShowPassword";
             cbShowPassword.Size = new Size(314, 58);
@@ -169,7 +169,7 @@
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Segoe UI", 52F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLogin.ForeColor = Color.White;
+            btnLogin.ForeColor = Color.FromArgb(246, 231, 222);
             btnLogin.Location = new Point(12, 790);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(563, 118);
