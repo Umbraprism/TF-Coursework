@@ -1,15 +1,16 @@
 ﻿using Coursework.Helpers;
+using Coursework.ParentClasses;
 
 namespace Coursework.Forms
 {
     public partial class SplashScreen : Form
     {
         public Form OnWayTo { get; set; }
+        private Random rnd = new();
 
         public SplashScreen(Form OnWayTo)
         {
             InitializeComponent();
-            FontHelper.ApplyFonts(this);
             this.OnWayTo = OnWayTo;
         }
 
@@ -20,7 +21,22 @@ namespace Coursework.Forms
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
-            label1.Text = OnWayTo.Text;
+            uint randomClass = (uint)rnd.Next(1, 10);
+
+            FontHelper.ApplyFonts(this);
+            FontHelper.ApplyCursor(this, "Default");
+
+            lblTipText.Text = FormHelper.s_tips[rnd.Next(0, FormHelper.s_tips.Length - 1)].Text;
+
+            lblOnWayTo.Text = OnWayTo.Text;
+            lblOnWayTo.Left = (pnlOnWayTo.Width / 2 - (TextRenderer.MeasureText(lblOnWayTo.Text, lblOnWayTo.Font).Width / 2));
+            lblOnWayTo.Top = (pnlOnWayTo.Height / 2 - (TextRenderer.MeasureText(lblOnWayTo.Text, lblOnWayTo.Font).Height / 2));
+
+            lblClassName.Text = TFClass.assetsHashmap[randomClass].Item4;
+            lblClassName.Left = (pnlClassName.Width / 2 - (TextRenderer.MeasureText(lblClassName.Text, lblClassName.Font).Width / 2));
+
+            pbClassImage.Image = TFClass.assetsHashmap[randomClass].Item3;
+
             tmrLoading.Start();
         }
 

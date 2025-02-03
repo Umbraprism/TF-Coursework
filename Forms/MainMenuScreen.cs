@@ -5,7 +5,7 @@ namespace Coursework.Forms
 {
     public partial class MainMenuScreen : Form
     {
-        Random rnd = new();
+        private Random rnd = new();
 
         public MainMenuScreen()
         {
@@ -15,9 +15,11 @@ namespace Coursework.Forms
         private void MainMenuScreen_Load(object sender, EventArgs e)
         {
             FontHelper.ApplyFonts(this);
-            pbPfp.Image = TFClass.classToImage[FormHelper.s_quizPlayer.TFClass.Id].Item1;
+            FontHelper.ApplyCursor(this, "TFClass");
+
+            pbPfp.Image = TFClass.assetsHashmap[FormHelper.s_quizPlayer.TFClass.Id].Item1;
             lblUsername.Text = FormHelper.s_quizPlayer.Username;
-            lblAchievementCount.Text = $"{FormHelper.s_quizPlayer.Achievements.Count} Achievements";
+            lblAchievementCount.Text = $"{FormHelper.s_quizPlayer.Achievements.Count(achievement => achievement.IsAchieved)} Achievements";
             lblHighestScore.Text = $"Highest Score - {FormHelper.s_quizPlayer.GetHighestScore()}";
             lblClass.Text = $"The {FormHelper.s_quizPlayer.TFClass.Name}";
 

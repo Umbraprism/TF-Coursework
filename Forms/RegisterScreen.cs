@@ -19,6 +19,7 @@ namespace Coursework
         private void RegisterScreen_Load(object sender, EventArgs e)
         {
             FontHelper.ApplyFonts(this);
+            FontHelper.ApplyCursor(this, "Default");
         }
 
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -116,7 +117,7 @@ namespace Coursework
             PictureBox selectedClass = (PictureBox)sender;
 
             classId = UInt32.Parse(selectedClass.Tag.ToString()); // gets the Tag defined in the designer (which will be a number from 1 to 9) into a variable
-            pbClassSelected.Image = TFClass.classToImage[classId].Item3;
+            pbClassSelected.Image = TFClass.assetsHashmap[classId].Item3;
         }
 
         private void linkToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

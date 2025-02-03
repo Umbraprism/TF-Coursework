@@ -2,18 +2,18 @@
 {
     public class TFClass
     {
-        public static Dictionary<uint, Tuple<Bitmap?, Bitmap?, Bitmap?>> classToImage = new()
+        public static Dictionary<uint, Tuple<Bitmap?, Bitmap?, Bitmap?, string?>> assetsHashmap = new()
         {
-            {0, new(null, null, null)},
-            {1, new(Properties.Resources.scoutAva, null, Properties.Resources.scoutEmblem)},
-            {2, new(Properties.Resources.soldierAva, null, Properties.Resources.soldierEmblem)},
-            {3, new(Properties.Resources.pyroAva, null, Properties.Resources.pyroEmblem)},
-            {4, new(Properties.Resources.demoAva, null, Properties.Resources.demoEmblem)},
-            {5, new(Properties.Resources.hwgAva, null, Properties.Resources.hwgEmblem)},
-            {6, new(Properties.Resources.engineerAva, null, Properties.Resources.engineerEmblem)},
-            {7, new(Properties.Resources.medicAva, null, Properties.Resources.medicEmblem)},
-            {8, new(Properties.Resources.sniperAva, null, Properties.Resources.sniperEmblem)},
-            {9, new(Properties.Resources.spyAva, null, Properties.Resources.spyEmblem)}
+            {0, new(null, null, null, null)},
+            {1, new(Properties.Resources.scoutAva, null, Properties.Resources.scoutEmblem, "THE SCOUT")},
+            {2, new(Properties.Resources.soldierAva, null, Properties.Resources.soldierEmblem, "THE SOLDIER")},
+            {3, new(Properties.Resources.pyroAva, null, Properties.Resources.pyroEmblem, "THE PYRO")},
+            {4, new(Properties.Resources.demoAva, null, Properties.Resources.demoEmblem, "THE DEMOMAN")},
+            {5, new(Properties.Resources.hwgAva, null, Properties.Resources.hwgEmblem, "THE HEAVY")},
+            {6, new(Properties.Resources.engineerAva, null, Properties.Resources.engineerEmblem, "THE ENGINEER")},
+            {7, new(Properties.Resources.medicAva, null, Properties.Resources.medicEmblem, "THE MEDIC")},
+            {8, new(Properties.Resources.sniperAva, null, Properties.Resources.sniperEmblem, "THE SNIPER")},
+            {9, new(Properties.Resources.spyAva, null, Properties.Resources.spyEmblem, "THE SPY")}
         };
 
         public uint Id { get; set; }

@@ -1,4 +1,7 @@
-﻿namespace Coursework.ParentClasses
+﻿using System.Text.Json;
+using Coursework.Helpers;
+
+namespace Coursework.ParentClasses
 {
     [Serializable]
     public class Player
@@ -36,7 +39,9 @@
             Password = password;
             TFClass = tfClass;
             Id = id;
-            Achievements = new List<Achievement>();
+
+            string json = File.ReadAllText(FormHelper.s_achievementsJsonPath);
+            Achievements = JsonSerializer.Deserialize<List<Achievement>>(json);
         }
 
         public int GetHighestScore()

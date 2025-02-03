@@ -91,7 +91,7 @@ namespace Coursework.UserControls
                 e.Graphics.DrawString(((int)PercentageProgress).ToString(), Font, solidBrushText, new PointF((Width - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Width - 10 * Font.Size / 10), (Height - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Height) / 2)); 
                 e.Graphics.DrawString("%", Font, solidBrushText, new PointF((Width - e.Graphics.MeasureString("%", Font).Width) - 1, (Height - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Height) / 2));
 
-                if (barProgress.IntersectsWith(new Rectangle(new Point((int)(Width - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Width - 10 * Font.Size / 10 + Font.Size / 2), (int)(Height - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Height) / 2 + 5), new Size((int)e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Width, Font.Height))))
+                if (barProgress.IntersectsWith(new Rectangle(new Point((int)(Width - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Width - 10 * Font.Size / 5), (int)(Height - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Height) / 2 + 5), new Size((int)e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Width, Font.Height))))
                 {
                     TextColour = this.BackColor;
                 }

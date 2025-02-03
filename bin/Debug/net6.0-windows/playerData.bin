@@ -1,15 +1,25 @@
-’[
+ã[
   {
     "Id": 1,
-    "Username": "Administrator",
-    "Password": "admin",
+    "Username": "e",
+    "Password": "e",
     "TFClass": {
-      "Id": 9,
-      "Name": "Spy",
-      "Description": "A dashing rogue hailing from who-knows-where in France. He has a penchant for dapper suits and even dapper-ier disguises.",
-      "ClassAbility": null
+      "Id": 1,
+      "Name": "Scout",
+      "Description": "A fast running hooligan from Boston; Complete with bad attitude.",
+      "ClassAbility": {
+        "Name": "Double Jump",
+        "Info": "Skip the question you\u0027re currently on and get it right immediately. Get 3 answers right to charge it again!"
+      }
     },
-    "Achievements": [],
+    "Achievements": [
+      {
+        "AchievementName": "Race For The Pennant",
+        "AchievementDescription": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": false,
+        "IsAchieved": false
+      }
+    ],
     "WeaponsLatestScore": 0,
     "WeaponsHighestScore": 0,
     "ClassLatestScore": 0,

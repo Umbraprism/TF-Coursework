@@ -79,7 +79,7 @@ namespace Coursework.Forms
         private void LoginScreen_Activated(object sender, EventArgs e)
         {
             uint tfRandomClass = (uint)rnd.Next(1, 9);
-            pbClassImage.Image = TFClass.classToImage[tfRandomClass].Item3;
+            pbClassImage.Image = TFClass.assetsHashmap[tfRandomClass].Item3;
         }
     }
 }

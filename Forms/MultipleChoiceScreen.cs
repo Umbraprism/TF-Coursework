@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Coursework.ParentClasses;
 
 namespace Coursework.Forms
 {
     public partial class MultipleChoiceScreen : Form
     {
-        public MultipleChoiceScreen()
+        public MultipleChoiceScreen(Question question)
         {
             InitializeComponent();
         }

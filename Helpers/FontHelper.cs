@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Drawing.Text;
+using System.Runtime.InteropServices;
 using Coursework.Exceptions;
+using Coursework.Properties;
 
 namespace Coursework.Helpers
 {
@@ -10,6 +12,12 @@ namespace Coursework.Helpers
 
         private static Font? TF2Build;
         private static Font? TF2Secondary;
+
+        /// <summary>
+        /// Exposes the function to load a pointer to a new Cursor file and create a custom handle
+        /// </summary>
+        [DllImport("user32.dll")]
+        public static extern IntPtr LoadCursorFromFile(string fileName);
 
         /// <summary>
         /// Loads the font into a location in a PrivateFontCollection and instantiates it to a variable.
@@ -81,6 +89,78 @@ namespace Coursework.Helpers
                     control.UseFont("Secondary"); // otherwise the Secondary font is used as a more general font.
                 }
             }
+        }
+
+        public static void ApplyCursor(Control form, string cursorType)
+        {
+            Cursor customCursor;
+            string cursorPath = $@"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Cursors\";
+
+            switch (cursorType)
+            {
+                case "Default":
+                    customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "defaultCursor.cur")));
+                    break;
+
+                case "TFClass":
+                    switch (FormHelper.s_quizPlayer.TFClass.Id)
+                    {
+                        case 1:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "scoutCursor.cur")));
+                            break;
+
+                        case 2:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "soldierCursor.cur")));
+                            break;
+
+                        case 3:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "pyroCursor.cur")));
+                            break;
+
+                        case 4:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "demoCursor.cur")));
+                            break;
+
+                        case 5:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "hwgCursor.cur")));
+                            break;
+
+                        case 6:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "engineerCursor.cur")));
+                            break;
+
+                        case 7:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "medicCursor.cur")));
+                            break;
+
+                        case 8:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "sniperCursor.cur")));
+                            break;
+
+                        case 9:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "spyCursor.cur")));
+                            break;
+
+                        default:
+                            throw new IndexOutOfRangeException();
+                    }
+                    break;
+
+                default:
+                    throw new CursorNotFoundException();
+            }
+
+            foreach (Control control in form.Controls)
+            {
+                if (control.Controls.Count > 0)
+                {
+                    ApplyCursor(control, cursorType);
+                }
+
+                control.Cursor = customCursor;
+            }
+
+            form.Cursor = customCursor;
         }
     }
 }

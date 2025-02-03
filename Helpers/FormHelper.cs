@@ -7,6 +7,7 @@ namespace Coursework.Helpers
     {
         public static string s_playerJsonPath = Path.Combine(Environment.CurrentDirectory, "playerData.bin");
         public static string s_tipJsonPath = Path.Combine(Environment.CurrentDirectory, "tips.json");
+        public static string s_achievementsJsonPath = Path.Combine(Environment.CurrentDirectory, "achievements.json");
         public static Player s_quizPlayer;
 
         public static Dictionary<string, Color> s_ColourHashmap = new()
@@ -26,15 +27,12 @@ namespace Coursework.Helpers
 
         public static RegisterScreen s_registerScreen = new();
         public static LoginScreen s_loginScreen = new();
-        public static DragDropScreen s_dragDropScreen = new();
         public static AnswerIndicationScreen s_answerIndicationScreen = new(0);
         public static AchievementsScreen s_achievementsScreen = new();
         public static GuessingGameScreen s_guessingGameScreen = new();
         public static LeaderboardScreen s_leaderboardScreen = new();
         public static MainMenuScreen s_mainMenuScreen = new();
-        public static MultipleChoiceScreen s_multipleChoiceScreen = new();
         public static SplashScreen s_splashScreen = new(s_registerScreen);
         public static StatsScreen s_statsScreen = new();
-        public static TrueFalseScreen s_trueFalseScreen = new();
     }
 }
