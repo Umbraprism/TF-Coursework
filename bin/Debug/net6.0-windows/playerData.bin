@@ -1,8 +1,8 @@
-ã[
+»[
   {
     "Id": 1,
-    "Username": "e",
-    "Password": "e",
+    "Username": "test",
+    "Password": "test",
     "TFClass": {
       "Id": 1,
       "Name": "Scout",
@@ -22,9 +22,68 @@
     ],
     "WeaponsLatestScore": 0,
     "WeaponsHighestScore": 0,
-    "ClassLatestScore": 0,
-    "ClassHighestScore": 0,
+    "WeaponsRank": null,
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": null,
     "HistoryLatestScore": 0,
-    "HistoryHighestScore": 0
+    "HistoryHighestScore": 0,
+    "HistoryRank": null
+  },
+  {
+    "Id": 2,
+    "Username": "test2",
+    "Password": "test",
+    "TFClass": {
+      "Id": 2,
+      "Name": "Soldier",
+      "Description": "A lead poisoned military-man who has, in fact, never been in the U.S. Army.",
+      "ClassAbility": null
+    },
+    "Achievements": [
+      {
+        "AchievementName": "Race For The Pennant",
+        "AchievementDescription": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": false,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": null,
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": null,
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": null
+  },
+  {
+    "Id": 3,
+    "Username": "test3",
+    "Password": "test",
+    "TFClass": {
+      "Id": 3,
+      "Name": "Pyro",
+      "Description": "[REDACTED BY MANN. CO]",
+      "ClassAbility": null
+    },
+    "Achievements": [
+      {
+        "AchievementName": "Race For The Pennant",
+        "AchievementDescription": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": false,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": null,
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": null,
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": null
   }
 ]

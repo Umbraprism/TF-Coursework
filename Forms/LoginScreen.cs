@@ -7,7 +7,6 @@ namespace Coursework.Forms
 {
     public partial class LoginScreen : Form
     {
-        List<Player>? playerList;
         Random rnd = new();
         public LoginScreen()
         {
@@ -18,6 +17,7 @@ namespace Coursework.Forms
         private void LoginScreen_Load(object sender, EventArgs e)
         {
             FontHelper.ApplyFonts(this);
+            FontHelper.ApplyCursor(this, "Default");
         }
 
         private void linkToRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -40,12 +40,12 @@ namespace Coursework.Forms
             using (BinaryReader br = new(File.Open(FormHelper.s_playerJsonPath, FileMode.Open)))
             {
                 string json = br.ReadString();
-                playerList = JsonSerializer.Deserialize<List<Player>>(json);
+                FormHelper.s_playerList = JsonSerializer.Deserialize<List<Player>>(json);
             }
 
-            if (playerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
+            if (FormHelper.s_playerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
             {
-                FormHelper.s_quizPlayer = playerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
+                FormHelper.s_quizPlayer = FormHelper.s_playerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
                 FormHelper.s_mainMenuScreen.Show();
                 Hide();
             }

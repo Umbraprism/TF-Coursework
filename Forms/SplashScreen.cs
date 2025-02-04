@@ -24,7 +24,7 @@ namespace Coursework.Forms
             uint randomClass = (uint)rnd.Next(1, 10);
 
             FontHelper.ApplyFonts(this);
-            FontHelper.ApplyCursor(this, "Default");
+            FontHelper.ApplyCursor(this, "TFClass");
 
             lblTipText.Text = FormHelper.s_tips[rnd.Next(0, FormHelper.s_tips.Length - 1)].Text;
 

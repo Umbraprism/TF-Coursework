@@ -14,10 +14,13 @@ namespace Coursework.ParentClasses
 
         public int WeaponsLatestScore { get; set; }
         public int WeaponsHighestScore { get; set; }
-        public int ClassLatestScore { get; set; }
-        public int ClassHighestScore { get; set; }
+        public string WeaponsRank { get; set; }
+        public int TFClassLatestScore { get; set; }
+        public int TFClassHighestScore { get; set; }
+        public string TFClassRank { get; set; }
         public int HistoryLatestScore { get; set; }
         public int HistoryHighestScore { get; set; }
+        public string HistoryRank { get; set; }
 
         private int id;
         private string username;
@@ -27,8 +30,8 @@ namespace Coursework.ParentClasses
 
         private int weaponsLatestScore;
         public int weaponsHighestScore;
-        public int classLatestScore;
-        public int classHighestScore;
+        public int tfClassLatestScore;
+        public int tfClassHighestScore;
         public int historyLatestScore;
         public int historyHighestScore;
 
@@ -46,7 +49,7 @@ namespace Coursework.ParentClasses
 
         public int GetHighestScore()
         {
-            List<Int32> scores = new() {weaponsHighestScore, classHighestScore, historyHighestScore};
+            List<Int32> scores = new() {weaponsHighestScore, tfClassHighestScore, historyHighestScore};
 
             return scores.Max();
         }

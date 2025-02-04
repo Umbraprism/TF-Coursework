@@ -8,6 +8,8 @@ namespace Coursework.Helpers
         public static string s_playerJsonPath = Path.Combine(Environment.CurrentDirectory, "playerData.bin");
         public static string s_tipJsonPath = Path.Combine(Environment.CurrentDirectory, "tips.json");
         public static string s_achievementsJsonPath = Path.Combine(Environment.CurrentDirectory, "achievements.json");
+
+        public static List<Player> s_playerList;
         public static Player s_quizPlayer;
 
         public static Dictionary<string, Color> s_ColourHashmap = new()

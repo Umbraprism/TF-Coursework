@@ -71,7 +71,8 @@ namespace Coursework.Forms
 
         private void btnStats_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            this.Hide();
+            FormHelper.s_leaderboardScreen.Show();
         }
     }
 }
