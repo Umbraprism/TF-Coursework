@@ -83,9 +83,9 @@
             lblOnWayTo.ForeColor = Color.FromArgb(246, 231, 222);
             lblOnWayTo.Location = new Point(14, 126);
             lblOnWayTo.Name = "lblOnWayTo";
-            lblOnWayTo.Size = new Size(172, 86);
+            lblOnWayTo.Size = new Size(315, 86);
             lblOnWayTo.TabIndex = 1;
-            lblOnWayTo.Text = "form";
+            lblOnWayTo.Text = "NextForm";
             // 
             // tmrLoading
             // 

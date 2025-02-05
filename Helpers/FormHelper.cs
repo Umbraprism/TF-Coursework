@@ -26,6 +26,7 @@ namespace Coursework.Helpers
         };
 
         public static Tip[] s_tips;
+        public static Quiz s_currentQuiz;
 
         public static RegisterScreen s_registerScreen = new();
         public static LoginScreen s_loginScreen = new();

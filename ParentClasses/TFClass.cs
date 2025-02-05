@@ -19,12 +19,12 @@
         public uint Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public Ability ClassAbility { get; set; }
+        public Ability TFClassAbility { get; set; }
 
         private uint id;
         private string name;
         private string description;
-        private Ability classAbility;
+        private Ability tfClassAbility;
 
         public TFClass() { }
 
@@ -37,7 +37,7 @@
                 case 1:
                     this.Name = "Scout";
                     this.Description = "A fast running hooligan from Boston; Complete with bad attitude.";
-                    this.ClassAbility = new("Double Jump", "Skip the question you're currently on and get it right immediately. Get 3 answers right to charge it again!");
+                    this.TFClassAbility = new("Double Jump", "Skip the question you're currently on and get it right immediately. Get 3 answers right to charge it again!");
                     break;
                 case 2:
                     this.Name = "Soldier";

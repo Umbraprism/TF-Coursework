@@ -18,6 +18,7 @@
         public string Text { get; set; }
         public QuestionType Type { get; set; }
         public string[] Answers { get; set; }
+        public uint CorrectAnswerIndex { get; set; }
         public uint ImageId { get; set; }
 
         private string questionText;
@@ -25,6 +26,7 @@
         private string[] answers;
         private uint correctAnswerIndex;
         private uint imageId;
+        public bool isCorrect = false;
 
         public Question() { }
 

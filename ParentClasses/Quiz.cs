@@ -5,6 +5,7 @@ namespace Coursework.ParentClasses
 {
     public class Quiz
     {
+        public string Name { get; set; }
         public List<Question> BaseQuestions
         {
             get { return baseQuestions; }
@@ -16,21 +17,24 @@ namespace Coursework.ParentClasses
             set { easyQuestions = value; }
         }
 
-        [JsonIgnore]
-        private List<Form> baseQuizForms = new();
-        [JsonIgnore]
-        private List<Form> easyQuizForms = new();
-        [JsonIgnore]
+        public List<Form> baseQuizForms = new();
+        public List<Form> easyQuizForms = new();
         private string quizPath;
 
         private List<Question> baseQuestions = new();
         private List <Question> easyQuestions = new();
 
-        public Quiz() { }
+        public bool isDisguised = false;
+        public int scoreMultiplier = 0;
+        public int currentQuestionIndex = 0;
+        public List<Form> currentDifficulty;
+
+        public Quiz() { currentDifficulty = baseQuizForms; }
 
         public Quiz(string quizType)
         {
-            quizPath = Path.Combine(@$"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Quizzes\", $"{quizType}.json");
+            //quizPath = Path.Combine(@$"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Quizzes\", $"{quizType}.json");
+            currentDifficulty = baseQuizForms;
         }
 
         public void CreateQuizForms()

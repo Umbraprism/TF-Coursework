@@ -1,24 +1,27 @@
 {
-  "BaseQuestions": [
-    {
-      "Text": "",
-      "Type": 2,
-      "Answers": [
-        "1",
-        "2"
-      ],
-      "ImageId": 0
-    }
-  ],
-  "EasyQuestions": [
-    {
-      "Text": "",
-      "Type": 0,
-      "Answers": [
-        "1",
-        "2"
-      ],
-      "ImageId": 0
-    }
-  ]
+    "Name":  "Weapons",
+    "BaseQuestions": [
+        {
+            "Text": "",
+            "Type": 2,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "1",
+                "2"
+            ],
+            "ImageId": 0
+        }
+    ],
+    "EasyQuestions": [
+        {
+            "Text": "",
+            "Type": 0,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "1",
+                "2"
+            ],
+            "ImageId": 0
+        }
+    ]
 }

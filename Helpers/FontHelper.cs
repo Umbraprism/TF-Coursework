@@ -100,6 +100,7 @@ namespace Coursework.Helpers
         {
             Cursor customCursor;
             string cursorPath = $@"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Cursors\";
+            uint id = 0;
 
             switch (cursorType)
             {
@@ -108,7 +109,7 @@ namespace Coursework.Helpers
                     break;
 
                 case CursorStyle.TFClass:
-                    switch (FormHelper.s_quizPlayer.TFClass.Id)
+                    switch (id)
                     {
                         case 1:
                             customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "scoutCursor.cur")));
@@ -147,7 +148,8 @@ namespace Coursework.Helpers
                             break;
 
                         default:
-                            throw new IndexOutOfRangeException();
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "defaultCursor.cur")));
+                            break;
                     }
                     break;
 
