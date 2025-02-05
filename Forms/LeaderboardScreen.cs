@@ -15,8 +15,8 @@ namespace Coursework.Forms
 
         private void LeaderboardScreen_Load(object sender, EventArgs e)
         {
-            FontHelper.ApplyFonts(this);
             FontHelper.ApplyCursor(this, CursorStyle.TFClass);
+            FontHelper.ApplyFonts(this);
         }
 
         private void btnWeaponsLeaderboard_Click(object sender, EventArgs e)
@@ -30,9 +30,6 @@ namespace Coursework.Forms
             for (int i = 0; i < FormHelper.s_playerList.Count; i++)
             {
                 Player player = FormHelper.s_playerList[i];
-                player.WeaponsRank = "Unusual";
-                Random rnd = new();
-                player.WeaponsHighestScore = rnd.Next(0, 100);
 
                 ListViewItem item = new();
 
@@ -42,7 +39,10 @@ namespace Coursework.Forms
 
                 item.UseItemStyleForSubItems = false;
 
+                FontHelper.ApplyFonts(this);
+
                 item.SubItems[0].Font = FontHelper.TF2Build;
+                item.SubItems[3].ForeColor = player.WeaponsRank != null ? FormHelper.s_ColourHashmap[player.WeaponsRank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
             }
@@ -60,6 +60,29 @@ namespace Coursework.Forms
             }
 
             lvLeaderboard.Sort();
+
+            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
+            {
+                ListViewItem item = lvLeaderboard.Items[i];
+
+                switch (item.SubItems[0].Text)
+                {
+                    case "1":
+                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Gold"];
+                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Gold"];
+                        break;
+                    case "2":
+                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Silver"];
+                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Silver"];
+                        break;
+                    case "3":
+                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
+                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         private void btnTFClassLeaderboard_Click(object sender, EventArgs e)
@@ -73,9 +96,6 @@ namespace Coursework.Forms
             for (int i = 0; i < FormHelper.s_playerList.Count; i++)
             {
                 Player player = FormHelper.s_playerList[i];
-                player.TFClassRank = "Unusual";
-                Random rnd = new();
-                player.TFClassHighestScore = rnd.Next(0, 100);
 
                 ListViewItem item = new();
 
@@ -85,7 +105,10 @@ namespace Coursework.Forms
 
                 item.UseItemStyleForSubItems = false;
 
+                FontHelper.ApplyFonts(this);
+
                 item.SubItems[0].Font = FontHelper.TF2Build;
+                item.SubItems[3].ForeColor = player.TFClassRank != null ? FormHelper.s_ColourHashmap[player.TFClassRank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
             }
@@ -103,6 +126,29 @@ namespace Coursework.Forms
             }
 
             lvLeaderboard.Sort();
+
+            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
+            {
+                ListViewItem item = lvLeaderboard.Items[i];
+
+                switch (item.SubItems[0].Text)
+                {
+                    case "1":
+                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Gold"];
+                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Gold"];
+                        break;
+                    case "2":
+                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Silver"];
+                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Silver"];
+                        break;
+                    case "3":
+                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
+                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         private void btnHistoryLeaderboard_Click(object sender, EventArgs e)
@@ -116,9 +162,6 @@ namespace Coursework.Forms
             for (int i = 0; i < FormHelper.s_playerList.Count; i++)
             {
                 Player player = FormHelper.s_playerList[i];
-                player.HistoryRank = "Unusual";
-                Random rnd = new();
-                player.HistoryHighestScore = rnd.Next(0, 100);
 
                 ListViewItem item = new();
 
@@ -128,7 +171,10 @@ namespace Coursework.Forms
 
                 item.UseItemStyleForSubItems = false;
 
+                FontHelper.ApplyFonts(this);
+
                 item.SubItems[0].Font = FontHelper.TF2Build;
+                item.SubItems[3].ForeColor = player.HistoryRank != null ? FormHelper.s_ColourHashmap[player.HistoryRank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
             }
@@ -146,6 +192,29 @@ namespace Coursework.Forms
             }
 
             lvLeaderboard.Sort();
+
+            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
+            {
+                ListViewItem item = lvLeaderboard.Items[i];
+
+                switch (item.SubItems[0].Text)
+                {
+                    case "1":
+                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Gold"];
+                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Gold"];
+                        break;
+                    case "2":
+                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Silver"];
+                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Silver"];
+                        break;
+                    case "3":
+                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
+                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

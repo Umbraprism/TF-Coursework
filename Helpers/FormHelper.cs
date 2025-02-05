@@ -21,8 +21,15 @@ namespace Coursework.Helpers
             { "Green", Color.FromArgb(0, 0, 0) },
             { "Text", Color.FromArgb(0, 0, 0) },
             { "Gold", Color.FromArgb(234, 185, 59) },
-            { "Silver", Color.FromArgb(0, 0, 0) },
-            { "Bronze", Color.FromArgb(0, 0, 0) }
+            { "Silver", Color.FromArgb(183, 173, 173) },
+            { "Bronze", Color.FromArgb(171, 101, 71) },
+            { "Unusual", Color.FromArgb(134, 80, 172) },
+            { "Strange", Color.FromArgb(207, 106, 50) },
+            { "Genuine", Color.FromArgb(77, 116, 85) },
+            { "Vintage", Color.FromArgb(134, 80, 172) },
+            { "Unique", Color.FromArgb(255, 215, 0) },
+            { "Basic", Color.FromArgb(250, 250, 250) },
+            { "Junk", Color.FromArgb(178, 178, 178) }
         };
 
         public static Tip[] s_tips;

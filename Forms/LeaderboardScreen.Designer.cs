@@ -119,6 +119,7 @@
             // 
             // tlpLeaderboardSelect
             // 
+            tlpLeaderboardSelect.Anchor = AnchorStyles.Left;
             tlpLeaderboardSelect.ColumnCount = 1;
             tlpLeaderboardSelect.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tlpLeaderboardSelect.Controls.Add(btnTFClassLeaderboard, 0, 1);
@@ -184,7 +185,6 @@
             // 
             // lblQuizSelected
             // 
-            lblQuizSelected.Anchor = AnchorStyles.Top;
             lblQuizSelected.AutoSize = true;
             lblQuizSelected.Font = new Font("Segoe UI", 72F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuizSelected.ForeColor = Color.FromArgb(246, 231, 222);

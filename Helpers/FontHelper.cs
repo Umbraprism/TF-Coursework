@@ -2,7 +2,6 @@
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using Coursework.Exceptions;
-using Coursework.Properties;
 
 namespace Coursework.Helpers
 {
@@ -11,6 +10,7 @@ namespace Coursework.Helpers
         Default,
         TFClass
     }
+
     public static class FontHelper
     {
         private static PrivateFontCollection fontCollection = new();
@@ -85,7 +85,24 @@ namespace Coursework.Helpers
                     }
                 }
 
-                if (control.GetType() != typeof(TextBox) && control.Text.ToUpper() == control.Text) // Ignores TextBoxes (handled above) and checks if the string (with spaces removed - these always count as lowercase) matches itself when it is fully capitalised, which ensures the string iss all caps)
+                if (control.GetType() == typeof(ListView))
+                {
+                    ListView listView = (ListView)control;
+                    foreach (ListViewItem cell in listView.Items)
+                    {
+                        if (cell.Text.ToUpper() == cell.Text)  // removes spaces and check if the string is fully uppercase, then applies fonts as specified
+                        {
+                            control.UseFont("Build");
+                        }
+                        else
+                        {
+                            control.UseFont("Secondary");
+                        }
+                    }
+                }
+
+
+                if (!String.IsNullOrEmpty(control.Text) && control.Text.ToUpper() == control.Text) // Ignores TextBoxes (handled above) and checks if the string (with spaces removed - these always count as lowercase) matches itself when it is fully capitalised, which ensures the string iss all caps)
                 {
                     control.UseFont("Build"); // strings which are made all caps are set to use the Build font, which acts as a title display font
                 }
@@ -100,7 +117,6 @@ namespace Coursework.Helpers
         {
             Cursor customCursor;
             string cursorPath = $@"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Cursors\";
-            uint id = 0;
 
             switch (cursorType)
             {
@@ -109,7 +125,7 @@ namespace Coursework.Helpers
                     break;
 
                 case CursorStyle.TFClass:
-                    switch (id)
+                    switch (FormHelper.s_quizPlayer.TFClass.Id)
                     {
                         case 1:
                             customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "scoutCursor.cur")));

@@ -25,7 +25,7 @@ namespace Coursework.Forms
 
             FontHelper.ApplyFonts(this);
 
-            FontHelper.ApplyCursor(this, CursorStyle.TFClass);
+            FontHelper.ApplyCursor(this, CursorStyle.Default);
 
             lblTipText.Text = FormHelper.s_tips[rnd.Next(0, FormHelper.s_tips.Length - 1)].Text;
 

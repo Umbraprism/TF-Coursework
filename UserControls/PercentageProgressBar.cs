@@ -66,6 +66,7 @@ namespace Coursework.UserControls
             Style = ProgressBarStyle.Continuous;
             SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true); // Removes the automatic VisualStyles which would overwrite the custom OnPaint
             InitializeComponent();
+            this.Text = "PERCENTAGE"; // ensures text value is not empty so the font is correctly applied as 'Build'. Without this line, the 'Secondary' font would be used, which is not meant to be utilised on numbers.
         }
 
         protected override void OnPaint(PaintEventArgs e)
