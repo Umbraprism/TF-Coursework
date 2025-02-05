@@ -15,7 +15,7 @@ namespace Coursework.Forms
         private void MainMenuScreen_Load(object sender, EventArgs e)
         {
             FontHelper.ApplyFonts(this);
-            FontHelper.ApplyCursor(this, "TFClass");
+            FontHelper.ApplyCursor(this, CursorStyle.TFClass);
 
             pbPfp.Image = TFClass.assetsHashmap[FormHelper.s_quizPlayer.TFClass.Id].Item1;
             lblUsername.Text = FormHelper.s_quizPlayer.Username;

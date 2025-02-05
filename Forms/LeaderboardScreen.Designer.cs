@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeaderboardScreen));
             pnlHeader = new Panel();
+            ppbAvgAchievementProgress = new UserControls.PercentageProgressBar();
             ppbAchievementProgress = new UserControls.PercentageProgressBar();
             lblLeaderboardHeader = new Label();
             btnBack = new Button();
             tlpLeaderboardSelect = new TableLayoutPanel();
-            btnGuessingLeaderboard = new Button();
-            btnHistoryLeaderboard = new Button();
             btnTFClassLeaderboard = new Button();
             btnWeaponsLeaderboard = new Button();
+            btnHistoryLeaderboard = new Button();
             lblQuizSelected = new Label();
             chPlacement = new ColumnHeader();
             chUsername = new ColumnHeader();
@@ -51,6 +51,7 @@
             // pnlHeader
             // 
             pnlHeader.BackColor = Color.FromArgb(41, 39, 39);
+            pnlHeader.Controls.Add(ppbAvgAchievementProgress);
             pnlHeader.Controls.Add(ppbAchievementProgress);
             pnlHeader.Controls.Add(lblLeaderboardHeader);
             pnlHeader.Controls.Add(btnBack);
@@ -59,6 +60,20 @@
             pnlHeader.Name = "pnlHeader";
             pnlHeader.Size = new Size(1600, 156);
             pnlHeader.TabIndex = 1;
+            // 
+            // ppbAvgAchievementProgress
+            // 
+            ppbAvgAchievementProgress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            ppbAvgAchievementProgress.BackColor = Color.FromArgb(26, 26, 26);
+            ppbAvgAchievementProgress.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbAvgAchievementProgress.Location = new Point(967, 36);
+            ppbAvgAchievementProgress.Name = "ppbAvgAchievementProgress";
+            ppbAvgAchievementProgress.ProgressColour = Color.FromArgb(246, 231, 222);
+            ppbAvgAchievementProgress.Size = new Size(621, 86);
+            ppbAvgAchievementProgress.Style = ProgressBarStyle.Continuous;
+            ppbAvgAchievementProgress.TabIndex = 3;
+            ppbAvgAchievementProgress.TextColour = Color.FromArgb(246, 231, 222);
+            ppbAvgAchievementProgress.UsePercentage = true;
             // 
             // ppbAchievementProgress
             // 
@@ -100,55 +115,24 @@
             btnBack.TabIndex = 0;
             btnBack.Text = "❰";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // tlpLeaderboardSelect
             // 
             tlpLeaderboardSelect.ColumnCount = 1;
             tlpLeaderboardSelect.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tlpLeaderboardSelect.Controls.Add(btnGuessingLeaderboard, 0, 3);
-            tlpLeaderboardSelect.Controls.Add(btnHistoryLeaderboard, 0, 2);
             tlpLeaderboardSelect.Controls.Add(btnTFClassLeaderboard, 0, 1);
             tlpLeaderboardSelect.Controls.Add(btnWeaponsLeaderboard, 0, 0);
-            tlpLeaderboardSelect.Dock = DockStyle.Left;
-            tlpLeaderboardSelect.Location = new Point(0, 156);
+            tlpLeaderboardSelect.Controls.Add(btnHistoryLeaderboard, 0, 2);
+            tlpLeaderboardSelect.Location = new Point(0, 183);
             tlpLeaderboardSelect.Name = "tlpLeaderboardSelect";
-            tlpLeaderboardSelect.RowCount = 4;
+            tlpLeaderboardSelect.RowCount = 3;
             tlpLeaderboardSelect.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tlpLeaderboardSelect.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tlpLeaderboardSelect.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tlpLeaderboardSelect.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tlpLeaderboardSelect.Size = new Size(658, 744);
+            tlpLeaderboardSelect.Size = new Size(658, 694);
             tlpLeaderboardSelect.TabIndex = 2;
-            // 
-            // btnGuessingLeaderboard
-            // 
-            btnGuessingLeaderboard.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            btnGuessingLeaderboard.BackColor = Color.FromArgb(189, 59, 59);
-            btnGuessingLeaderboard.FlatAppearance.BorderSize = 0;
-            btnGuessingLeaderboard.FlatStyle = FlatStyle.Flat;
-            btnGuessingLeaderboard.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGuessingLeaderboard.ForeColor = Color.FromArgb(246, 231, 222);
-            btnGuessingLeaderboard.Location = new Point(76, 561);
-            btnGuessingLeaderboard.Name = "btnGuessingLeaderboard";
-            btnGuessingLeaderboard.Size = new Size(506, 180);
-            btnGuessingLeaderboard.TabIndex = 10;
-            btnGuessingLeaderboard.Text = "GUESSING";
-            btnGuessingLeaderboard.UseVisualStyleBackColor = false;
-            // 
-            // btnHistoryLeaderboard
-            // 
-            btnHistoryLeaderboard.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            btnHistoryLeaderboard.BackColor = Color.FromArgb(189, 59, 59);
-            btnHistoryLeaderboard.FlatAppearance.BorderSize = 0;
-            btnHistoryLeaderboard.FlatStyle = FlatStyle.Flat;
-            btnHistoryLeaderboard.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            btnHistoryLeaderboard.ForeColor = Color.FromArgb(246, 231, 222);
-            btnHistoryLeaderboard.Location = new Point(76, 375);
-            btnHistoryLeaderboard.Name = "btnHistoryLeaderboard";
-            btnHistoryLeaderboard.Size = new Size(506, 180);
-            btnHistoryLeaderboard.TabIndex = 9;
-            btnHistoryLeaderboard.Text = "HISTORY";
-            btnHistoryLeaderboard.UseVisualStyleBackColor = false;
             // 
             // btnTFClassLeaderboard
             // 
@@ -156,14 +140,15 @@
             btnTFClassLeaderboard.BackColor = Color.FromArgb(189, 59, 59);
             btnTFClassLeaderboard.FlatAppearance.BorderSize = 0;
             btnTFClassLeaderboard.FlatStyle = FlatStyle.Flat;
-            btnTFClassLeaderboard.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTFClassLeaderboard.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
             btnTFClassLeaderboard.ForeColor = Color.FromArgb(246, 231, 222);
-            btnTFClassLeaderboard.Location = new Point(76, 189);
+            btnTFClassLeaderboard.Location = new Point(76, 234);
             btnTFClassLeaderboard.Name = "btnTFClassLeaderboard";
-            btnTFClassLeaderboard.Size = new Size(506, 180);
+            btnTFClassLeaderboard.Size = new Size(506, 225);
             btnTFClassLeaderboard.TabIndex = 8;
             btnTFClassLeaderboard.Text = "CLASSES";
             btnTFClassLeaderboard.UseVisualStyleBackColor = false;
+            btnTFClassLeaderboard.Click += btnTFClassLeaderboard_Click;
             // 
             // btnWeaponsLeaderboard
             // 
@@ -171,15 +156,31 @@
             btnWeaponsLeaderboard.BackColor = Color.FromArgb(189, 59, 59);
             btnWeaponsLeaderboard.FlatAppearance.BorderSize = 0;
             btnWeaponsLeaderboard.FlatStyle = FlatStyle.Flat;
-            btnWeaponsLeaderboard.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnWeaponsLeaderboard.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
             btnWeaponsLeaderboard.ForeColor = Color.FromArgb(246, 231, 222);
             btnWeaponsLeaderboard.Location = new Point(76, 3);
             btnWeaponsLeaderboard.Name = "btnWeaponsLeaderboard";
-            btnWeaponsLeaderboard.Size = new Size(506, 180);
+            btnWeaponsLeaderboard.Size = new Size(506, 225);
             btnWeaponsLeaderboard.TabIndex = 7;
             btnWeaponsLeaderboard.Text = "WEAPONS";
             btnWeaponsLeaderboard.UseVisualStyleBackColor = false;
             btnWeaponsLeaderboard.Click += btnWeaponsLeaderboard_Click;
+            // 
+            // btnHistoryLeaderboard
+            // 
+            btnHistoryLeaderboard.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btnHistoryLeaderboard.BackColor = Color.FromArgb(189, 59, 59);
+            btnHistoryLeaderboard.FlatAppearance.BorderSize = 0;
+            btnHistoryLeaderboard.FlatStyle = FlatStyle.Flat;
+            btnHistoryLeaderboard.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            btnHistoryLeaderboard.ForeColor = Color.FromArgb(246, 231, 222);
+            btnHistoryLeaderboard.Location = new Point(76, 465);
+            btnHistoryLeaderboard.Name = "btnHistoryLeaderboard";
+            btnHistoryLeaderboard.Size = new Size(506, 226);
+            btnHistoryLeaderboard.TabIndex = 9;
+            btnHistoryLeaderboard.Text = "HISTORY";
+            btnHistoryLeaderboard.UseVisualStyleBackColor = false;
+            btnHistoryLeaderboard.Click += btnHistoryLeaderboard_Click;
             // 
             // lblQuizSelected
             // 
@@ -187,11 +188,10 @@
             lblQuizSelected.AutoSize = true;
             lblQuizSelected.Font = new Font("Segoe UI", 72F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuizSelected.ForeColor = Color.FromArgb(246, 231, 222);
-            lblQuizSelected.Location = new Point(874, 159);
+            lblQuizSelected.Location = new Point(675, 159);
             lblQuizSelected.Name = "lblQuizSelected";
-            lblQuizSelected.Size = new Size(518, 128);
+            lblQuizSelected.Size = new Size(0, 128);
             lblQuizSelected.TabIndex = 3;
-            lblQuizSelected.Text = "QUIZ QUIZ";
             // 
             // chUsername
             // 
@@ -253,7 +253,6 @@
         private Button btnBack;
         private TableLayoutPanel tlpLeaderboardSelect;
         private Label lblQuizSelected;
-        private Button btnGuessingLeaderboard;
         private Button btnHistoryLeaderboard;
         private Button btnTFClassLeaderboard;
         private Button btnWeaponsLeaderboard;
@@ -262,5 +261,6 @@
         private ColumnHeader chScore;
         private ColumnHeader chHighestRank;
         private ListView lvLeaderboard;
+        private UserControls.PercentageProgressBar ppbAvgAchievementProgress;
     }
 }

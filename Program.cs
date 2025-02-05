@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using System.Text.Json;
 using Coursework.Forms;
 using Coursework.Helpers;
@@ -23,11 +22,17 @@ namespace Coursework
             {
                 FormHelper.s_tips = JsonSerializer.Deserialize<Tip[]>(sr.ReadToEnd());
             }
+            
+            Application.Exit();
+            string json = File.ReadAllText(Path.Combine(@$"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Quizzes\", $"WeaponsQuiz.json"));
+            Quiz testQuiz = JsonSerializer.Deserialize<Quiz>(json);
+            testQuiz.CreateQuizForms();
 
             // Allows main form (in this case the first SplashScreen) to be closed without killing the application.
             // See https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.form.close?view=windowsdesktop-9.0x for more info about the Form.Close() method.
             //new SplashScreen(FormHelper.s_registerScreen).Show();
-            Application.Run(FormHelper.s_registerScreen);
+            new SplashScreen(FormHelper.s_registerScreen).Show();
+            Application.Run();
         }
     }
 }

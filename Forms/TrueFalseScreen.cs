@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Coursework.ParentClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace Coursework.Forms
 {
     public partial class TrueFalseScreen : Form
     {
-        public TrueFalseScreen()
+        public TrueFalseScreen(Question question)
         {
             InitializeComponent();
         }

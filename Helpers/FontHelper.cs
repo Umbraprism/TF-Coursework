@@ -6,6 +6,11 @@ using Coursework.Properties;
 
 namespace Coursework.Helpers
 {
+    public enum CursorStyle
+    {
+        Default,
+        TFClass
+    }
     public static class FontHelper
     {
         private static PrivateFontCollection fontCollection = new();
@@ -72,32 +77,15 @@ namespace Coursework.Helpers
 
                     if (textBox.PlaceholderText.ToUpper() == textBox.PlaceholderText)  // removes spaces and check if the string is fully uppercase, then applies fonts as specified
                     {
-                        control.UseFont("Build"); 
+                        control.UseFont("Build");
                     }
                     else
                     {
-                        control.UseFont("Secondary"); 
+                        control.UseFont("Secondary");
                     }
                 }
 
-                if (control.GetType() == typeof(ListView))
-                {
-                    ListView listView = (ListView)control;
-
-                    foreach (ListViewItem cell in listView.Items)
-                    {
-                        if (cell.Text.ToUpper() == cell.Text)  // removes spaces and check if the string is fully uppercase, then applies fonts as specified
-                        {
-                            control.UseFont("Build");
-                        }
-                        else
-                        {
-                            control.UseFont("Secondary");
-                        }
-                    }
-                }
-
-                if (control.Text.ToUpper() == control.Text && !String.IsNullOrEmpty(control.Text)) // Ignores TextBoxes (handled above) and checks if the string (with spaces removed - these always count as lowercase) matches itself when it is fully capitalised, which ensures the string iss all caps)
+                if (control.GetType() != typeof(TextBox) && control.Text.ToUpper() == control.Text) // Ignores TextBoxes (handled above) and checks if the string (with spaces removed - these always count as lowercase) matches itself when it is fully capitalised, which ensures the string iss all caps)
                 {
                     control.UseFont("Build"); // strings which are made all caps are set to use the Build font, which acts as a title display font
                 }
@@ -108,66 +96,58 @@ namespace Coursework.Helpers
             }
         }
 
-        public static void ApplyCursor(Control form, string cursorType)
+        public static void ApplyCursor(Control form, CursorStyle cursorType)
         {
             Cursor customCursor;
             string cursorPath = $@"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Cursors\";
 
             switch (cursorType)
             {
-                case "Default":
+                case CursorStyle.Default:
                     customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "defaultCursor.cur")));
                     break;
 
-                case "TFClass":
-                    try
+                case CursorStyle.TFClass:
+                    switch (FormHelper.s_quizPlayer.TFClass.Id)
                     {
-                        switch (FormHelper.s_quizPlayer.TFClass.Id)
-                        {
-                            case 1:
-                                customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "scoutCursor.cur")));
-                                break;
+                        case 1:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "scoutCursor.cur")));
+                            break;
 
-                            case 2:
-                                customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "soldierCursor.cur")));
-                                break;
+                        case 2:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "soldierCursor.cur")));
+                            break;
 
-                            case 3:
-                                customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "pyroCursor.cur")));
-                                break;
+                        case 3:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "pyroCursor.cur")));
+                            break;
 
-                            case 4:
-                                customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "demoCursor.cur")));
-                                break;
+                        case 4:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "demoCursor.cur")));
+                            break;
 
-                            case 5:
-                                customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "hwgCursor.cur")));
-                                break;
+                        case 5:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "hwgCursor.cur")));
+                            break;
 
-                            case 6:
-                                customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "engineerCursor.cur")));
-                                break;
+                        case 6:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "engineerCursor.cur")));
+                            break;
 
-                            case 7:
-                                customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "medicCursor.cur")));
-                                break;
+                        case 7:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "medicCursor.cur")));
+                            break;
 
-                            case 8:
-                                customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "sniperCursor.cur")));
-                                break;
+                        case 8:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "sniperCursor.cur")));
+                            break;
 
-                            case 9:
-                                customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "spyCursor.cur")));
-                                break;
+                        case 9:
+                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "spyCursor.cur")));
+                            break;
 
-                            default:
-                                throw new IndexOutOfRangeException();
-                        }
-                    }
-                    catch (NullReferenceException)
-                    {
-                        customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "defaultCursor.cur")));
-                        break;
+                        default:
+                            throw new IndexOutOfRangeException();
                     }
                     break;
 

@@ -122,10 +122,10 @@
             lblTipText.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTipText.ForeColor = Color.FromArgb(246, 231, 222);
             lblTipText.Location = new Point(6, 41);
-            lblTipText.MaximumSize = new Size(440, 0);
-            lblTipText.MinimumSize = new Size(440, 0);
+            lblTipText.MaximumSize = new Size(637, 0);
+            lblTipText.MinimumSize = new Size(637, 0);
             lblTipText.Name = "lblTipText";
-            lblTipText.Size = new Size(440, 21);
+            lblTipText.Size = new Size(637, 21);
             lblTipText.TabIndex = 1;
             lblTipText.Text = "tipText";
             // 

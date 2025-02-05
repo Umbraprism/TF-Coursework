@@ -17,7 +17,7 @@ namespace Coursework.Forms
         private void LoginScreen_Load(object sender, EventArgs e)
         {
             FontHelper.ApplyFonts(this);
-            FontHelper.ApplyCursor(this, "Default");
+            FontHelper.ApplyCursor(this, CursorStyle.Default);
         }
 
         private void linkToRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

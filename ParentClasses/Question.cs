@@ -1,5 +1,12 @@
 ﻿namespace Coursework.ParentClasses
 {
+
+    public enum QuestionType
+    {
+        MultipleChoice,
+        TrueFalse,
+        DragDrop
+    }
     public class Question
     {
         public Dictionary<int, Bitmap?> idToPhoto = new()
@@ -8,8 +15,8 @@
             {1, Properties.Resources.soldierEmblem}
         };
 
-        public string QuestionText { get; set; }
-        public string QuestionType { get; set; }
+        public string Text { get; set; }
+        public QuestionType Type { get; set; }
         public string[] Answers { get; set; }
         public uint ImageId { get; set; }
 
@@ -21,11 +28,11 @@
 
         public Question() { }
 
-        public Question(string questionText, string[] answers, string questionType, uint imageId)
+        public Question(string questionText, string[] answers, QuestionType questionType, uint imageId)
         {
-            QuestionText = questionText;
+            Text = questionText;
             Answers = answers;
-            QuestionType = questionType;
+            Type = questionType;
             ImageId = imageId;
         }
     }

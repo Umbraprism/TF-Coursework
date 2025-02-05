@@ -15,7 +15,7 @@ namespace Coursework.Forms
         private void AchievementsScreen_Load(object sender, EventArgs e)
         {
             FontHelper.ApplyFonts(this);
-            FontHelper.ApplyCursor(this, "TFClass");
+            FontHelper.ApplyCursor(this, CursorStyle.TFClass);
 
             ppbAchievementProgress.Maximum = FormHelper.s_quizPlayer.Achievements.Count;
 
