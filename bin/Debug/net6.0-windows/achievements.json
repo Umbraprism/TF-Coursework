@@ -1,8 +1,8 @@
 [
     {
-        "AchievementName": "Race For The Pennant",
-	"AchievementDescription": "Complete any quiz in less than 50% of the allocated time.",
-	"IsRareAchievement": false,
-	"IsAchieved": false
+        "Name": "Race For The Pennant",
+	    "Description": "Complete any quiz in less than 50% of the allocated time.",
+	    "IsRareAchievement": true,
+	    "IsAchieved": false
     }
 ]

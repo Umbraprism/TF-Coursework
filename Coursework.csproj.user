@@ -46,6 +46,9 @@
     <Compile Update="UserControls\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="UserControls\TFMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">

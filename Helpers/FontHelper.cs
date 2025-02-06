@@ -118,6 +118,8 @@ namespace Coursework.Helpers
             Cursor customCursor;
             string cursorPath = $@"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Cursors\";
 
+            uint id = FormHelper.s_quizPlayer == null ? 0 : FormHelper.s_quizPlayer.TFClass.Id;
+
             switch (cursorType)
             {
                 case CursorStyle.Default:
@@ -125,7 +127,7 @@ namespace Coursework.Helpers
                     break;
 
                 case CursorStyle.TFClass:
-                    switch (FormHelper.s_quizPlayer.TFClass.Id)
+                    switch (id)
                     {
                         case 1:
                             customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "scoutCursor.cur")));
@@ -184,6 +186,19 @@ namespace Coursework.Helpers
             }
 
             form.Cursor = customCursor;
+        }
+
+        public static void DrawToolTip(object sender, DrawToolTipEventArgs e)
+        {
+            ToolTip toolTip = (ToolTip)sender;
+
+            toolTip.OwnerDraw = true;
+            SolidBrush backgroundBrush = new(toolTip.BackColor);
+            SolidBrush textBrush = new(toolTip.ForeColor);
+
+            e.Graphics.FillRectangle(backgroundBrush, e.Bounds);
+            e.DrawBorder();
+            e.Graphics.DrawString(e.ToolTipText, TF2Secondary, textBrush, new PointF(0, 0));
         }
     }
 }

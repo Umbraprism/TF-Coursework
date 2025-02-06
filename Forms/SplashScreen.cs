@@ -1,6 +1,6 @@
 ﻿using Coursework.Helpers;
 using Coursework.ParentClasses;
-
+using Coursework.UserControls;
 namespace Coursework.Forms
 {
     public partial class SplashScreen : Form
@@ -25,7 +25,7 @@ namespace Coursework.Forms
 
             FontHelper.ApplyFonts(this);
 
-            FontHelper.ApplyCursor(this, CursorStyle.Default);
+            FontHelper.ApplyCursor(this, CursorStyle.TFClass);
 
             lblTipText.Text = FormHelper.s_tips[rnd.Next(0, FormHelper.s_tips.Length - 1)].Text;
 

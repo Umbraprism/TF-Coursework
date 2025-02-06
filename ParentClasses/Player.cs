@@ -6,7 +6,7 @@ namespace Coursework.ParentClasses
     [Serializable]
     public class Player
     {
-        public int Id { get; set; }
+        public uint Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public TFClass TFClass { get; set; }
@@ -21,22 +21,11 @@ namespace Coursework.ParentClasses
         public int HistoryLatestScore { get; set; }
         public int HistoryHighestScore { get; set; }
         public string HistoryRank { get; set; }
-
-        private int id;
-        private string username;
-        private string password;
-        private TFClass tfClass;
-        private List<Achievement> achievements;
-
-        private int weaponsLatestScore;
-        public int weaponsHighestScore;
-        public int tfClassLatestScore;
-        public int tfClassHighestScore;
-        public int historyLatestScore;
-        public int historyHighestScore;
+        public int GuessingGameLowestGuesses { get; set; }
 
         public Player() { }
-        public Player(string username, string password, TFClass tfClass, int id)
+
+        public Player(string username, string password, TFClass tfClass, uint id)
         {
             Username = username;
             Password = password;
@@ -45,11 +34,22 @@ namespace Coursework.ParentClasses
 
             string json = File.ReadAllText(FormHelper.s_achievementsJsonPath);
             Achievements = JsonSerializer.Deserialize<List<Achievement>>(json);
+
+            WeaponsLatestScore = 0;
+            WeaponsHighestScore = 0;
+            WeaponsRank = String.Empty;
+            HistoryLatestScore = 0;
+            HistoryHighestScore = 0;
+            HistoryRank = String.Empty;
+            TFClassLatestScore = 0;
+            TFClassHighestScore = 0;
+            TFClassRank = String.Empty;
+            GuessingGameLowestGuesses = 0;
         }
 
         public int GetHighestScore()
         {
-            List<Int32> scores = new() {weaponsHighestScore, tfClassHighestScore, historyHighestScore};
+            List<Int32> scores = new() {WeaponsHighestScore, TFClassHighestScore, HistoryHighestScore};
 
             return scores.Max();
         }

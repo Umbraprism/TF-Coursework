@@ -29,11 +29,13 @@ namespace Coursework.ParentClasses
         public int currentQuestionIndex = 0;
         public List<Form> currentDifficulty;
 
-        public Quiz() { currentDifficulty = baseQuizForms; }
+        public Quiz() { }
 
-        public Quiz(string quizType)
+        public Quiz(string name, List<Question> baseQuestions, List<Question> easyQuestions)
         {
-            //quizPath = Path.Combine(@$"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Quizzes\", $"{quizType}.json");
+            this.Name = name;
+            this.BaseQuestions = baseQuestions;
+            this.EasyQuestions = easyQuestions;
             currentDifficulty = baseQuizForms;
         }
 

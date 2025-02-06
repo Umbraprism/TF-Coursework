@@ -85,7 +85,7 @@ namespace Coursework
             {
                 using (BinaryWriter bw = new(File.Open(FormHelper.s_playerJsonPath, FileMode.Create)))
                 {
-                    Player player = new(tbUsername.Text, tbPassword.Text, new TFClass(classId), playerList.Count + 1);
+                    Player player = new(tbUsername.Text, tbPassword.Text, new TFClass(classId), (uint)playerList.Count + 1);
                     playerList.Add(player);
 
                     string updatedJson = JsonSerializer.Serialize(playerList, new JsonSerializerOptions { WriteIndented = true }); // writes indented so the debug output is easier to read
@@ -107,6 +107,7 @@ namespace Coursework
                     btnRegister.BackColor = Color.FromArgb(189, 59, 59);
 
                     FormHelper.s_playerList = playerList;
+
                     this.Hide();
                     FormHelper.s_loginScreen.Show();
                 }

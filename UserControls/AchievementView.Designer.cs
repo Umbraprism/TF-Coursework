@@ -74,6 +74,9 @@
             // 
             ttRareAchievement.BackColor = Color.FromArgb(41, 39, 39);
             ttRareAchievement.ForeColor = Color.FromArgb(246, 231, 222);
+            ttRareAchievement.OwnerDraw = true;
+            ttRareAchievement.Draw += ttRareAchievement_Draw;
+            ttRareAchievement.Popup += ttRareAchievement_Popup;
             // 
             // AchievementView
             // 

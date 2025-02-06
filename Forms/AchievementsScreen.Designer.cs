@@ -62,6 +62,7 @@
             ppbAchievementProgress.Size = new Size(621, 86);
             ppbAchievementProgress.Style = ProgressBarStyle.Continuous;
             ppbAchievementProgress.TabIndex = 2;
+            ppbAchievementProgress.Text = "PERCENTAGE";
             ppbAchievementProgress.TextColour = Color.FromArgb(246, 231, 222);
             ttMyAchievementProgress.SetToolTip(ppbAchievementProgress, "This is the percentage of achievements you have completed.");
             ppbAchievementProgress.UsePercentage = true;
@@ -103,6 +104,15 @@
             flpAchievements.Name = "flpAchievements";
             flpAchievements.Size = new Size(1600, 744);
             flpAchievements.TabIndex = 1;
+            // 
+            // ttMyAchievementProgress
+            // 
+            ttMyAchievementProgress.BackColor = Color.FromArgb(41, 39, 39);
+            ttMyAchievementProgress.ForeColor = Color.FromArgb(246, 231, 222);
+            ttMyAchievementProgress.OwnerDraw = true;
+            ttMyAchievementProgress.UseAnimation = false;
+            ttMyAchievementProgress.UseFading = false;
+            ttMyAchievementProgress.Draw += ttMyAchievementProgress_Draw;
             // 
             // AchievementsScreen
             // 

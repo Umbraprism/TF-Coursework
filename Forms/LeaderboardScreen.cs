@@ -42,7 +42,7 @@ namespace Coursework.Forms
                 FontHelper.ApplyFonts(this);
 
                 item.SubItems[0].Font = FontHelper.TF2Build;
-                item.SubItems[3].ForeColor = player.WeaponsRank != null ? FormHelper.s_ColourHashmap[player.WeaponsRank] : Color.FromArgb(0, 0, 0);
+                item.SubItems[3].ForeColor = player.WeaponsRank != String.Empty ? FormHelper.s_ColourHashmap[player.WeaponsRank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
             }
@@ -108,7 +108,7 @@ namespace Coursework.Forms
                 FontHelper.ApplyFonts(this);
 
                 item.SubItems[0].Font = FontHelper.TF2Build;
-                item.SubItems[3].ForeColor = player.TFClassRank != null ? FormHelper.s_ColourHashmap[player.TFClassRank] : Color.FromArgb(0, 0, 0);
+                item.SubItems[3].ForeColor = player.TFClassRank != String.Empty ? FormHelper.s_ColourHashmap[player.TFClassRank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
             }
@@ -174,7 +174,7 @@ namespace Coursework.Forms
                 FontHelper.ApplyFonts(this);
 
                 item.SubItems[0].Font = FontHelper.TF2Build;
-                item.SubItems[3].ForeColor = player.HistoryRank != null ? FormHelper.s_ColourHashmap[player.HistoryRank] : Color.FromArgb(0, 0, 0);
+                item.SubItems[3].ForeColor = player.HistoryRank != String.Empty ? FormHelper.s_ColourHashmap[player.HistoryRank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
             }
@@ -194,22 +194,26 @@ namespace Coursework.Forms
             lvLeaderboard.Sort();
 
             for (int i = 0; i < lvLeaderboard.Items.Count; i++)
-            {
-                ListViewItem item = lvLeaderboard.Items[i];
-
-                switch (item.SubItems[0].Text)
+            { 
+                switch (Int32.Parse(lvLeaderboard.Items[i].SubItems[0].Text))
                 {
-                    case "1":
-                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Gold"];
-                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Gold"];
+                    case 1:
+                        for (int j = 0; j < 3; j++)
+                        {
+                            lvLeaderboard.Items[i].SubItems[j].ForeColor = FormHelper.s_ColourHashmap["Gold"];
+                        }
                         break;
-                    case "2":
-                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Silver"];
-                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Silver"];
+                    case 2:
+                        for (int j = 0; j < 3; j++)
+                        {
+                            lvLeaderboard.Items[i].SubItems[j].ForeColor = FormHelper.s_ColourHashmap["Silver"];
+                        }
                         break;
-                    case "3":
-                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
-                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
+                    case 3:
+                        for (int j = 0; j < 3; j++)
+                        {
+                            lvLeaderboard.Items[i].SubItems[j].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
+                        }
                         break;
                     default:
                         break;

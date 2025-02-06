@@ -2,20 +2,17 @@
 {
     public class Achievement
     {
-        public string AchievementName { get; set; }
-        public string AchievementDescription { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
         public bool IsRareAchievement { get; set; }
         public bool IsAchieved { get; set; }
 
-        private string achievementName;
-        private string achievementDescription;
-        private bool isRareAchievement;
-        private bool isAchieved;
+        public Achievement() { }
 
-        public Achievement(string achievementName, string achievementDescription, bool isRareAchievement, bool isAchieved)
+        public Achievement(string name, string description, bool isRareAchievement, bool isAchieved)
         {
-            AchievementName = achievementName;
-            AchievementDescription = achievementDescription;
+            Name = name;
+            Description = description;
             IsRareAchievement = isRareAchievement;
             IsAchieved = isAchieved;
         }

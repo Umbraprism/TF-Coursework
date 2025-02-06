@@ -1,36 +1,8 @@
-±'[
+ã[
   {
     "Id": 1,
-    "Username": "T",
-    "Password": "t",
-    "TFClass": {
-      "Id": 8,
-      "Name": "Sniper",
-      "Description": "Coming from the sunken and lost land of New Zealand - but raised in the outback - he has a keen eye which is usually found planted in a scope.",
-      "TFClassAbility": null
-    },
-    "Achievements": [
-      {
-        "AchievementName": "Race For The Pennant",
-        "AchievementDescription": "Complete any quiz in less than 50% of the allocated time.",
-        "IsRareAchievement": false,
-        "IsAchieved": false
-      }
-    ],
-    "WeaponsLatestScore": 0,
-    "WeaponsHighestScore": 0,
-    "WeaponsRank": null,
-    "TFClassLatestScore": 0,
-    "TFClassHighestScore": 0,
-    "TFClassRank": null,
-    "HistoryLatestScore": 0,
-    "HistoryHighestScore": 0,
-    "HistoryRank": null
-  },
-  {
-    "Id": 2,
-    "Username": "tr",
-    "Password": "tr",
+    "Username": "Scout",
+    "Password": "sc",
     "TFClass": {
       "Id": 1,
       "Name": "Scout",
@@ -38,137 +10,26 @@
       "TFClassAbility": {
         "Name": "Double Jump",
         "Info": "Skip the question you\u0027re currently on and get it right immediately. Get 3 answers right to charge it again!",
-        "ChargesRequired": null
+        "ChargesRequired": 3
       }
     },
     "Achievements": [
       {
-        "AchievementName": "Race For The Pennant",
-        "AchievementDescription": "Complete any quiz in less than 50% of the allocated time.",
-        "IsRareAchievement": false,
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
         "IsAchieved": false
       }
     ],
     "WeaponsLatestScore": 0,
     "WeaponsHighestScore": 0,
-    "WeaponsRank": null,
+    "WeaponsRank": "",
     "TFClassLatestScore": 0,
     "TFClassHighestScore": 0,
-    "TFClassRank": null,
+    "TFClassRank": "",
     "HistoryLatestScore": 0,
     "HistoryHighestScore": 0,
-    "HistoryRank": null
-  },
-  {
-    "Id": 3,
-    "Username": "testr",
-    "Password": "t",
-    "TFClass": {
-      "Id": 4,
-      "Name": "Demoman",
-      "Description": "Uses his one good eye for well timed explosions. Uses his liver to distil alcohol.",
-      "TFClassAbility": null
-    },
-    "Achievements": [
-      {
-        "AchievementName": "Race For The Pennant",
-        "AchievementDescription": "Complete any quiz in less than 50% of the allocated time.",
-        "IsRareAchievement": false,
-        "IsAchieved": false
-      }
-    ],
-    "WeaponsLatestScore": 0,
-    "WeaponsHighestScore": 0,
-    "WeaponsRank": null,
-    "TFClassLatestScore": 0,
-    "TFClassHighestScore": 0,
-    "TFClassRank": null,
-    "HistoryLatestScore": 0,
-    "HistoryHighestScore": 0,
-    "HistoryRank": null
-  },
-  {
-    "Id": 4,
-    "Username": "t",
-    "Password": "t",
-    "TFClass": {
-      "Id": 2,
-      "Name": "Soldier",
-      "Description": "A lead poisoned military-man who has, in fact, never been in the U.S. Army.",
-      "TFClassAbility": null
-    },
-    "Achievements": [
-      {
-        "AchievementName": "Race For The Pennant",
-        "AchievementDescription": "Complete any quiz in less than 50% of the allocated time.",
-        "IsRareAchievement": false,
-        "IsAchieved": false
-      }
-    ],
-    "WeaponsLatestScore": 0,
-    "WeaponsHighestScore": 0,
-    "WeaponsRank": null,
-    "TFClassLatestScore": 0,
-    "TFClassHighestScore": 0,
-    "TFClassRank": null,
-    "HistoryLatestScore": 0,
-    "HistoryHighestScore": 0,
-    "HistoryRank": null
-  },
-  {
-    "Id": 5,
-    "Username": "u",
-    "Password": "u",
-    "TFClass": {
-      "Id": 5,
-      "Name": "Heavy",
-      "Description": "Some people think they can outsmart him. Maybe. He has yet to meet someone who can outsmart a bullet.",
-      "TFClassAbility": null
-    },
-    "Achievements": [
-      {
-        "AchievementName": "Race For The Pennant",
-        "AchievementDescription": "Complete any quiz in less than 50% of the allocated time.",
-        "IsRareAchievement": false,
-        "IsAchieved": false
-      }
-    ],
-    "WeaponsLatestScore": 0,
-    "WeaponsHighestScore": 0,
-    "WeaponsRank": null,
-    "TFClassLatestScore": 0,
-    "TFClassHighestScore": 0,
-    "TFClassRank": null,
-    "HistoryLatestScore": 0,
-    "HistoryHighestScore": 0,
-    "HistoryRank": null
-  },
-  {
-    "Id": 6,
-    "Username": "Zamasu",
-    "Password": "z",
-    "TFClass": {
-      "Id": 6,
-      "Name": "Engineer",
-      "Description": "A soft-spoken Texan with a knack for automatic machine gun turrets.",
-      "TFClassAbility": null
-    },
-    "Achievements": [
-      {
-        "AchievementName": "Race For The Pennant",
-        "AchievementDescription": "Complete any quiz in less than 50% of the allocated time.",
-        "IsRareAchievement": false,
-        "IsAchieved": false
-      }
-    ],
-    "WeaponsLatestScore": 0,
-    "WeaponsHighestScore": 0,
-    "WeaponsRank": null,
-    "TFClassLatestScore": 0,
-    "TFClassHighestScore": 0,
-    "TFClassRank": null,
-    "HistoryLatestScore": 0,
-    "HistoryHighestScore": 0,
-    "HistoryRank": null
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
   }
 ]

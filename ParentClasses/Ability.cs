@@ -9,15 +9,15 @@ namespace Coursework.ParentClasses
         public string Info { get; set; }
         public uint? ChargesRequired { get; set; }
 
-        private string name;
-        private string info;
-        private int chargeLevel;
+        public int chargeLevel;
 
+        public Ability() { }
 
-        public Ability(string Name, string Info)
+        public Ability(string name, string info, uint chargesRequired)
         {
-            this.Name = Name;
-            this.Info = Info;
+            Name = name;
+            Info = info;
+            ChargesRequired = chargesRequired;
         }
 
         public virtual void UseAbility(Quiz quiz)
