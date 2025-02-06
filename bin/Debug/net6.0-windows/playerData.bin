@@ -1,0 +1,93 @@
+ö[
+  {
+    "Id": 1,
+    "Username": "Scout",
+    "Password": "sc",
+    "TFClass": {
+      "Id": 1,
+      "Name": "Scout",
+      "Description": "A fast running hooligan from Boston; Complete with bad attitude.",
+      "TFClassAbility": {
+        "Name": "Double Jump",
+        "Info": "Skip the question you\u0027re currently on and get it right immediately. Get 3 answers right to charge it again!",
+        "ChargesRequired": 3
+      }
+    },
+    "Achievements": [
+      {
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": "",
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": "",
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
+  },
+  {
+    "Id": 2,
+    "Username": "Soldier",
+    "Password": "so",
+    "TFClass": {
+      "Id": 2,
+      "Name": "Soldier",
+      "Description": "A lead poisoned military-man who has, in fact, never been in the military at all.",
+      "TFClassAbility": null
+    },
+    "Achievements": [
+      {
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": "",
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": "",
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
+  },
+  {
+    "Id": 3,
+    "Username": "Sniper",
+    "Password": "sn",
+    "TFClass": {
+      "Id": 8,
+      "Name": "Sniper",
+      "Description": "Coming from the sunken and lost land of New Zealand - but raised in the outback - he has a keen eye which is usually found planted in a scope.",
+      "TFClassAbility": null
+    },
+    "Achievements": [
+      {
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": "",
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": "",
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
+  }
+]

@@ -15,8 +15,8 @@ namespace Coursework.Forms
 
         private void LeaderboardScreen_Load(object sender, EventArgs e)
         {
-            FontHelper.ApplyCursor(this, CursorStyle.TFClass);
-            FontHelper.ApplyFonts(this);
+            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UIHelper.ApplyFonts(this);
         }
 
         private void btnWeaponsLeaderboard_Click(object sender, EventArgs e)
@@ -39,9 +39,9 @@ namespace Coursework.Forms
 
                 item.UseItemStyleForSubItems = false;
 
-                FontHelper.ApplyFonts(this);
+                UIHelper.ApplyFonts(this);
 
-                item.SubItems[0].Font = FontHelper.TF2Build;
+                item.SubItems[0].Font = UIHelper.TF2Build;
                 item.SubItems[3].ForeColor = player.WeaponsRank != String.Empty ? FormHelper.s_ColourHashmap[player.WeaponsRank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
@@ -105,9 +105,9 @@ namespace Coursework.Forms
 
                 item.UseItemStyleForSubItems = false;
 
-                FontHelper.ApplyFonts(this);
+                UIHelper.ApplyFonts(this);
 
-                item.SubItems[0].Font = FontHelper.TF2Build;
+                item.SubItems[0].Font = UIHelper.TF2Build;
                 item.SubItems[3].ForeColor = player.TFClassRank != String.Empty ? FormHelper.s_ColourHashmap[player.TFClassRank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
@@ -171,9 +171,9 @@ namespace Coursework.Forms
 
                 item.UseItemStyleForSubItems = false;
 
-                FontHelper.ApplyFonts(this);
+                UIHelper.ApplyFonts(this);
 
-                item.SubItems[0].Font = FontHelper.TF2Build;
+                item.SubItems[0].Font = UIHelper.TF2Build;
                 item.SubItems[3].ForeColor = player.HistoryRank != String.Empty ? FormHelper.s_ColourHashmap[player.HistoryRank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);

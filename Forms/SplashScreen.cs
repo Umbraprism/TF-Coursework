@@ -21,8 +21,8 @@ namespace Coursework.Forms
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
-            FontHelper.ApplyFonts(this);
-            FontHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UIHelper.ApplyFonts(this);
+            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
             uint randomClass = (uint)rnd.Next(1, 10);
 

@@ -17,7 +17,7 @@ namespace Coursework
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            FontHelper.MakeFont();
+            UIHelper.MakeFont();
             using (StreamReader sr = new(FormHelper.s_tipJsonPath))
             {
                 FormHelper.s_tips = JsonSerializer.Deserialize<Tip[]>(sr.ReadToEnd());

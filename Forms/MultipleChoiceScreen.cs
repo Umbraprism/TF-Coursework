@@ -15,7 +15,7 @@ namespace Coursework.Forms
 
         private void MultipleChoiceScreen_Load(object sender, EventArgs e)
         {
-            FontHelper.ApplyFonts(this);
+            UIHelper.ApplyFonts(this);
             lblTipText.Left = (this.Width / 2 - (TextRenderer.MeasureText(lblTipText.Text, lblTipText.Font).Width / 2));
         }
 

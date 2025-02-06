@@ -47,7 +47,7 @@ namespace Coursework.UserControls
 
         private void AchievementView_Load(object sender, EventArgs e)
         {
-            FontHelper.ApplyFonts(this);
+            UIHelper.ApplyFonts(this);
             pbIsAchieved.Height = 121; // ensures unlock indicator remains a consistent size
             pbIsAchieved.Width = 121;
         }
@@ -61,13 +61,11 @@ namespace Coursework.UserControls
             {
                 sf.Alignment = StringAlignment.Center;
                 sf.LineAlignment = StringAlignment.Center;
-                sf.HotkeyPrefix = HotkeyPrefix.None;
-                sf.FormatFlags = StringFormatFlags.NoWrap;
 
                 e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
 
                 e.Graphics.Clear(toolTip.BackColor);
-                e.Graphics.DrawString(e.ToolTipText, FontHelper.TF2Secondary, textBrush, e.Bounds);
+                e.Graphics.DrawString(e.ToolTipText, UIHelper.TF2Secondary, textBrush, e.Bounds, sf);
             }
         }
 
@@ -75,7 +73,7 @@ namespace Coursework.UserControls
         {
             string toolTip = ((ToolTip)sender).GetToolTip(e.AssociatedControl);
 
-            Size textSize = TextRenderer.MeasureText(toolTip, FontHelper.TF2Secondary);
+            Size textSize = TextRenderer.MeasureText(toolTip, UIHelper.TF2Secondary);
 
             e.ToolTipSize = textSize;
         }

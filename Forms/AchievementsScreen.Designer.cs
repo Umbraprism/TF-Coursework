@@ -113,6 +113,7 @@
             ttMyAchievementProgress.UseAnimation = false;
             ttMyAchievementProgress.UseFading = false;
             ttMyAchievementProgress.Draw += ttMyAchievementProgress_Draw;
+            ttMyAchievementProgress.Popup += ttMyAchievementProgress_Popup;
             // 
             // AchievementsScreen
             // 

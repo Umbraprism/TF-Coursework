@@ -15,10 +15,9 @@ namespace Coursework.Forms
 
         private void AchievementsScreen_Load(object sender, EventArgs e)
         {
-            FontHelper.ApplyFonts(this);
-            FontHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UIHelper.ApplyFonts(this);
+            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
             ttMyAchievementProgress.OwnerDraw = true;
-            ttMyAchievementProgress.BackColor = Color.Green;
 
             ppbAchievementProgress.Maximum = FormHelper.s_quizPlayer.Achievements.Count;
 
@@ -42,19 +41,12 @@ namespace Coursework.Forms
 
         private void ttMyAchievementProgress_Draw(object sender, DrawToolTipEventArgs e)
         {
-            ToolTip toolTip = (ToolTip)sender;
-            SolidBrush textBrush = new(toolTip.ForeColor);
+            UIHelper.DrawToolTip(this, e);
+        }
 
-            using (StringFormat sf = new())
-            {
-                sf.Alignment = StringAlignment.Center;
-                sf.LineAlignment = StringAlignment.Center;
-                sf.HotkeyPrefix = HotkeyPrefix.None;
-                sf.FormatFlags = StringFormatFlags.NoWrap;
-
-                e.Graphics.Clear(toolTip.BackColor);
-                e.Graphics.DrawString(e.ToolTipText, FontHelper.TF2Secondary, textBrush, new PointF(0, 0), sf);
-            }
+        private void ttMyAchievementProgress_Popup(object sender, PopupEventArgs e)
+        {
+            UIHelper.SizeToolTip(this, e);
         }
     }
 }

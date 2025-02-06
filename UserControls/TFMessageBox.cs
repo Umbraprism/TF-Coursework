@@ -37,8 +37,8 @@ namespace Coursework.UserControls
 
         private void TFMessageBox_Load(object sender, EventArgs e)
         {
-            FontHelper.ApplyFonts(this);
-            FontHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UIHelper.ApplyFonts(this);
+            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
         }
 
         protected override CreateParams CreateParams

@@ -5,13 +5,18 @@ using Coursework.Exceptions;
 
 namespace Coursework.Helpers
 {
+    public enum CustomFont
+    {
+        Build,
+        Secondary
+    }
     public enum CursorStyle
     {
         Default,
         TFClass
     }
 
-    public static class FontHelper
+    public static class UIHelper
     {
         private static PrivateFontCollection fontCollection = new();
 
@@ -19,7 +24,7 @@ namespace Coursework.Helpers
         public static Font? TF2Secondary;
 
         /// <summary>
-        /// Exposes the function to load a pointer to a new Cursor file and create a custom handle
+        /// <c>P/Invoke</c> Creates a cursor handle from a cursor file. Allows the custom cursor to utilise colour.
         /// </summary>
         [DllImport("user32.dll")]
         public static extern IntPtr LoadCursorFromFile(string fileName);
@@ -41,15 +46,15 @@ namespace Coursework.Helpers
         /// <summary>
         /// Applies the specified custom font to a Control. If the font entered is invalid, a FontNotFoundException is thrown.
         /// </summary>
-        public static void UseFont(this Control control, string fontChoice)
+        public static void UseFont(this Control control, CustomFont fontChoice)
         {
             switch (fontChoice)
             {
-                case "Build":
+                case CustomFont.Build:
                     control.Font = new(TF2Build.FontFamily, control.Font.SizeInPoints);
                     break;
 
-                case "Secondary":
+                case CustomFont.Secondary:
                     control.Font = new(TF2Secondary.FontFamily, control.Font.SizeInPoints);
                     break;
 
@@ -77,11 +82,11 @@ namespace Coursework.Helpers
 
                     if (textBox.PlaceholderText.ToUpper() == textBox.PlaceholderText)  // removes spaces and check if the string is fully uppercase, then applies fonts as specified
                     {
-                        control.UseFont("Build");
+                        control.UseFont(CustomFont.Build);
                     }
                     else
                     {
-                        control.UseFont("Secondary");
+                        control.UseFont(CustomFont.Secondary);
                     }
                 }
 
@@ -92,11 +97,11 @@ namespace Coursework.Helpers
                     {
                         if (cell.Text.ToUpper() == cell.Text)  // removes spaces and check if the string is fully uppercase, then applies fonts as specified
                         {
-                            control.UseFont("Build");
+                            control.UseFont(CustomFont.Build);
                         }
                         else
                         {
-                            control.UseFont("Secondary");
+                            control.UseFont(CustomFont.Secondary);
                         }
                     }
                 }
@@ -104,15 +109,18 @@ namespace Coursework.Helpers
 
                 if (!String.IsNullOrEmpty(control.Text) && control.Text.ToUpper() == control.Text) // Ignores TextBoxes (handled above) and checks if the string (with spaces removed - these always count as lowercase) matches itself when it is fully capitalised, which ensures the string iss all caps)
                 {
-                    control.UseFont("Build"); // strings which are made all caps are set to use the Build font, which acts as a title display font
+                    control.UseFont(CustomFont.Build); // strings which are made all caps are set to use the Build font, which acts as a title display font
                 }
                 else
                 {
-                    control.UseFont("Secondary"); // otherwise the Secondary font is used as a more general font.
+                    control.UseFont(CustomFont.Secondary); // otherwise the Secondary font is used as a more general font.
                 }
             }
         }
 
+        /// <summary>
+        /// Applies a custom cursor to each Control within the form as well as the overarching Form object.
+        /// </summary>
         public static void ApplyCursor(Control form, CursorStyle cursorType)
         {
             Cursor customCursor;
@@ -188,17 +196,36 @@ namespace Coursework.Helpers
             form.Cursor = customCursor;
         }
 
+        /// <summary>
+        /// Draws a custom ToolTip via the OwnerDraw property, giving it the same appearance as the rest of the UI.
+        /// </summary>
         public static void DrawToolTip(object sender, DrawToolTipEventArgs e)
         {
             ToolTip toolTip = (ToolTip)sender;
-
-            toolTip.OwnerDraw = true;
-            SolidBrush backgroundBrush = new(toolTip.BackColor);
             SolidBrush textBrush = new(toolTip.ForeColor);
 
-            e.Graphics.FillRectangle(backgroundBrush, e.Bounds);
-            e.DrawBorder();
-            e.Graphics.DrawString(e.ToolTipText, TF2Secondary, textBrush, new PointF(0, 0));
+            using (StringFormat sf = new())
+            {
+                sf.Alignment = StringAlignment.Center;
+                sf.LineAlignment = StringAlignment.Center;
+
+                e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
+
+                e.Graphics.Clear(toolTip.BackColor);
+                e.Graphics.DrawString(e.ToolTipText, UIHelper.TF2Secondary, textBrush, e.Bounds, sf);
+            }
+        }
+
+        /// <summary>
+        /// Resizes the custom drawn ToolTip to account for the change in font.
+        /// </summary>
+        public static void SizeToolTip(object sender, PopupEventArgs e)
+        {
+            string toolTip = ((ToolTip)sender).GetToolTip(e.AssociatedControl);
+
+            Size textSize = TextRenderer.MeasureText(toolTip, UIHelper.TF2Secondary);
+
+            e.ToolTipSize = textSize;
         }
     }
 }

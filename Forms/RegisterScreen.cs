@@ -18,8 +18,8 @@ namespace Coursework
 
         private void RegisterScreen_Load(object sender, EventArgs e)
         {
-            FontHelper.ApplyFonts(this);
-            FontHelper.ApplyCursor(this, CursorStyle.Default);
+            UIHelper.ApplyFonts(this);
+            UIHelper.ApplyCursor(this, CursorStyle.Default);
         }
 
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
