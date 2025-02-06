@@ -1,7 +1,7 @@
 ﻿using Coursework.Helpers;
 using Coursework.ParentClasses;
 using System.Text.Json;
-using System.Diagnostics;
+using Coursework.UserControls;
 
 namespace Coursework
 {
@@ -91,8 +91,6 @@ namespace Coursework
                     string updatedJson = JsonSerializer.Serialize(playerList, new JsonSerializerOptions { WriteIndented = true }); // writes indented so the debug output is easier to read
                     bw.Write(updatedJson);
 
-                    Debug.WriteLine(updatedJson);
-
                     tbUsername.Clear();
                     tbPassword.Clear();
                     tbReenter.Clear();
@@ -100,7 +98,7 @@ namespace Coursework
                     pbClassSelected.Image = null;
 
                     btnRegister.BackColor = Color.FromArgb(114, 158, 66);
-                    MessageBox.Show("Account registered succesfully.", "Registration Successful");
+                    TFMessageBox.Show($"Thank you for registering! The account '{player.Username}' has been registered succesfully.", "Registration Successful");
 
                     await Task.Delay(1000);
 

@@ -21,20 +21,20 @@ namespace Coursework.Forms
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
-            uint randomClass = (uint)rnd.Next(1, 10);
-
             FontHelper.ApplyFonts(this);
-
             FontHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            lblTipText.Text = FormHelper.s_tips[rnd.Next(0, FormHelper.s_tips.Length - 1)].Text;
+            uint randomClass = (uint)rnd.Next(1, 10);
+
+            Tip[] tfClassTips = FormHelper.s_tips.Where(tip => tip.TFClassId == randomClass).ToArray();
+            lblTipText.Text = tfClassTips[rnd.Next(0, tfClassTips.Length - 1)].Text;
 
             lblOnWayTo.Text = OnWayTo.Text;
             lblOnWayTo.Left = (pnlOnWayTo.Width / 2 - (TextRenderer.MeasureText(lblOnWayTo.Text, lblOnWayTo.Font).Width / 2));
             lblOnWayTo.Top = (pnlOnWayTo.Height / 2 - (TextRenderer.MeasureText(lblOnWayTo.Text, lblOnWayTo.Font).Height / 2));
 
-            lblClassName.Text = TFClass.assetsHashmap[randomClass].Item4;
-            lblClassName.Left = (pnlClassName.Width / 2 - (TextRenderer.MeasureText(lblClassName.Text, lblClassName.Font).Width / 2));
+            lblTFClassName.Text = TFClass.assetsHashmap[randomClass].Item4;
+            lblTFClassName.Left = (pnlClassName.Width / 2 - (TextRenderer.MeasureText(lblTFClassName.Text, lblTFClassName.Font).Width / 2));
 
             pbClassImage.Image = TFClass.assetsHashmap[randomClass].Item3;
 

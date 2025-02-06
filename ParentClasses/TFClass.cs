@@ -36,11 +36,11 @@
                     break;
                 case 2:
                     this.Name = "Soldier";
-                    this.Description = "A lead poisoned military-man who has, in fact, never been in the U.S. Army.";
+                    this.Description = "A lead poisoned military-man who has, in fact, never been in the military at all.";
                     break;
                 case 3:
                     this.Name = "Pyro";
-                    this.Description = "[REDACTED BY MANN. CO]";
+                    this.Description = "A fire-loving mercenary of origins unknown. In fact, the only thing known about him is his penchant for setting things alight.";
                     break;
                 case 4:
                     this.Name = "Demoman";

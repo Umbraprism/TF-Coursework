@@ -1,5 +1,6 @@
 ﻿using Coursework.ParentClasses;
 using Coursework.Helpers;
+using Coursework.UserControls;
 
 namespace Coursework.Forms
 {
@@ -28,7 +29,12 @@ namespace Coursework.Forms
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult quitQuery = TFMessageBox.Show("Are you sure you would like to quit?", "Quit", TFMessageBoxButtons.YesAndNo);
+
+            if (quitQuery == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnNextTip_Click(object sender, EventArgs e)

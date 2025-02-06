@@ -41,7 +41,7 @@
             pnlOnWayTo = new Panel();
             lblYoureOnWayTo = new Label();
             pnlClassName = new Panel();
-            lblClassName = new Label();
+            lblTFClassName = new Label();
             pbClassImage = new PictureBox();
             pnlLoading.SuspendLayout();
             pnlInfo.SuspendLayout();
@@ -72,6 +72,7 @@
             ppbLoading.Size = new Size(1576, 86);
             ppbLoading.Style = ProgressBarStyle.Continuous;
             ppbLoading.TabIndex = 1;
+            ppbLoading.Text = "PERCENTAGE";
             ppbLoading.TextColour = Color.FromArgb(246, 231, 222);
             ppbLoading.UsePercentage = true;
             ppbLoading.Click += ppbLoading_Click;
@@ -165,22 +166,22 @@
             // pnlClassName
             // 
             pnlClassName.BackColor = Color.FromArgb(41, 39, 39);
-            pnlClassName.Controls.Add(lblClassName);
+            pnlClassName.Controls.Add(lblTFClassName);
             pnlClassName.Location = new Point(35, 28);
             pnlClassName.Name = "pnlClassName";
             pnlClassName.Size = new Size(649, 131);
             pnlClassName.TabIndex = 0;
             // 
-            // lblClassName
+            // lblTFClassName
             // 
-            lblClassName.AutoSize = true;
-            lblClassName.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            lblClassName.ForeColor = Color.FromArgb(246, 231, 222);
-            lblClassName.Location = new Point(151, 32);
-            lblClassName.Name = "lblClassName";
-            lblClassName.Size = new Size(347, 86);
-            lblClassName.TabIndex = 0;
-            lblClassName.Text = "THE CLASS";
+            lblTFClassName.AutoSize = true;
+            lblTFClassName.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTFClassName.ForeColor = Color.FromArgb(246, 231, 222);
+            lblTFClassName.Location = new Point(151, 32);
+            lblTFClassName.Name = "lblTFClassName";
+            lblTFClassName.Size = new Size(347, 86);
+            lblTFClassName.TabIndex = 0;
+            lblTFClassName.Text = "THE CLASS";
             // 
             // pbClassImage
             // 
@@ -231,7 +232,7 @@
         private System.Windows.Forms.Timer tmrLoading;
         private Panel pnlInfo;
         private Panel pnlClassName;
-        private Label lblClassName;
+        private Label lblTFClassName;
         private Panel pnlOnWayTo;
         private Label lblYoureOnWayTo;
         private Panel pnlTip;

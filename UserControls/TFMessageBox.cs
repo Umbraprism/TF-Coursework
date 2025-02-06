@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Coursework.Helpers;
+﻿using Coursework.Helpers;
 
 namespace Coursework.UserControls
 {
@@ -16,13 +7,32 @@ namespace Coursework.UserControls
         OK,
         YesAndNo
     }
+
     public partial class TFMessageBox : Form
     {
-        public TFMessageBox(string title, string message, TFMessageBoxButtons buttons)
+        private static DialogResult _result;
+
+        public TFMessageBox(string message, string title, TFMessageBoxButtons? buttons)
         {
             InitializeComponent();
-            this.lblTitle.Text = title;
             this.lblMessage.Text = message;
+            this.lblTitle.Text = title.ToUpper();
+
+            switch (buttons)
+            {
+                case TFMessageBoxButtons.OK:
+                    tlpYesAndNo.Visible = false;
+                    btnOk.Visible = true;
+                    break;
+                case TFMessageBoxButtons.YesAndNo:
+                    tlpYesAndNo.Visible = true;
+                    btnOk.Visible = false;
+                    break;
+                default:
+                    tlpYesAndNo.Visible = false;
+                    btnOk.Visible = true;
+                    break;
+            }
         }
 
         private void TFMessageBox_Load(object sender, EventArgs e)
@@ -42,12 +52,30 @@ namespace Coursework.UserControls
             }
         }
 
-        public static void Show(string title, string description, TFMessageBoxButtons buttons)
+        public static DialogResult Show(string message, string title, TFMessageBoxButtons buttons = TFMessageBoxButtons.OK)
         {
-            using (TFMessageBox msg = new(title, description, buttons))
+            using (TFMessageBox msg = new(message, title, buttons))
             {
-
+                msg.ShowDialog();
+                return _result;
             }
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNo_Click(object sender, EventArgs e)
+        {
+             _result = DialogResult.No;
+            this.Close();
+        }
+
+        private void btnYes_Click(object sender, EventArgs e)
+        {
+            _result = DialogResult.Yes;
+            this.Close();
         }
     }
 }
