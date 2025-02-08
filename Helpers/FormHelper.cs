@@ -39,7 +39,6 @@ namespace Coursework.Helpers
 
         public static RegisterScreen s_registerScreen = new();
         public static LoginScreen s_loginScreen = new();
-        public static AnswerIndicationScreen s_answerIndicationScreen = new(0);
         public static AchievementsScreen s_achievementsScreen = new();
         public static GuessingGameScreen s_guessingGameScreen = new();
         public static LeaderboardScreen s_leaderboardScreen = new();

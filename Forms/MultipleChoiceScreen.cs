@@ -53,9 +53,20 @@ namespace Coursework.Forms
             if (UInt32.Parse(btn.Tag.ToString()) == question.CorrectAnswerIndex)
             {
                 TFMessageBox.Show("you right!", "W");
-                score += FormHelper.s_currentQuiz.scoreMultiplier != 0 ? 20 * FormHelper.s_currentQuiz.scoreMultiplier : 20;
-                new AnswerIndicationScreen(score).Show();
-                this.Close();
+
+                int scoreAddition = FormHelper.s_currentQuiz.scoreMultiplier != 0 ? 20 * FormHelper.s_currentQuiz.scoreMultiplier : 20;
+
+                score += scoreAddition;
+
+                if (FormHelper.s_currentQuiz.currentQuestionIndex != FormHelper.s_currentQuiz.currentDifficulty.Count - 1)
+                {
+                    new AnswerIndicationScreen(scoreAddition).Show();
+                    this.Hide();
+                }
+                else
+                {
+                    TFMessageBox.Show("you have been tuaght face to face", "freakin packet yo");
+                }
             }
             else
             {
@@ -67,9 +78,16 @@ namespace Coursework.Forms
                 FormHelper.s_currentQuiz.isDisguised = false;
 
                 TFMessageBox.Show("you wrong", "L");
-                new AnswerIndicationScreen(score).Show();
-                FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex].Show();
-                this.Close();
+
+                if (FormHelper.s_currentQuiz.currentQuestionIndex != FormHelper.s_currentQuiz.currentDifficulty.Count)
+                {
+                    new AnswerIndicationScreen(0).Show();
+                    this.Hide();
+                }
+                else
+                {
+                    TFMessageBox.Show("you have been tuaght face to face", "freakin packet yo");
+                }
             }
         }
     }

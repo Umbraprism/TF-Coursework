@@ -142,12 +142,6 @@ namespace Coursework
 
             control.Visible = false;
             btnRegister.Click += btnRegister_Click;
-
-            tbUsername.Clear();
-            tbPassword.Clear();
-            tbReenter.Clear();
-            classId = 0;
-            pbClassSelected.Image = null;
         }
     }
 }

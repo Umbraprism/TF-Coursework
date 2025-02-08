@@ -144,7 +144,7 @@
             lblQuestionText.AutoSize = true;
             lblQuestionText.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionText.ForeColor = Color.FromArgb(246, 231, 222);
-            lblQuestionText.Location = new Point(482, 229);
+            lblQuestionText.Location = new Point(501, 225);
             lblQuestionText.MaximumSize = new Size(637, 0);
             lblQuestionText.MinimumSize = new Size(637, 0);
             lblQuestionText.Name = "lblQuestionText";

@@ -6,6 +6,7 @@ namespace Coursework.Forms
     public partial class AnswerIndicationScreen : Form
     {
         private int score;
+        private int sleepTime = 0;
 
         public AnswerIndicationScreen(int score)
         {
@@ -13,7 +14,7 @@ namespace Coursework.Forms
             InitializeComponent();
         }
 
-        private void AnswerIndicationScreen_Load(object sender, EventArgs e) // change to appropriate colours soon
+        private async void AnswerIndicationScreen_Load(object sender, EventArgs e) // change to appropriate colours soon
         {
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
@@ -23,34 +24,33 @@ namespace Coursework.Forms
 
             lblScore.Width = this.Width / 2;
             lblScore.Height = this.Height / 2;
-            
+
             if (score > 0)
             {
                 lblIndicator.Text = "CORRECT!";
                 lblScore.Text = $"+{score} Points";
-                lblScore.ForeColor = Color.FromArgb(1, 1, 1);
+                lblScore.ForeColor = FormHelper.s_ColourHashmap["Green"];
             }
             else
             {
                 lblIndicator.Text = "INCORRECT!";
                 lblScore.Text = $"+{score} Points";
-                lblScore.ForeColor = Color.FromArgb(0, 0, 0);
+                lblScore.ForeColor = FormHelper.s_ColourHashmap["Red"];
             }
 
-            Task.Delay(2000);
+            await Task.Delay(2000);
 
             try
             {
-                //FormHelper.s_currentQuiz.currentDifficulty.RemoveAt(FormHelper.s_currentQuiz.currentQuestionIndex);
                 FormHelper.s_currentQuiz.currentQuestionIndex++;
                 FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex].Show();
             }
             catch (Exception ex)
             {
-                TFMessageBox.Show($"you #win you must've been taught face to face instead of being handed a #freakinpacketyo", "end");
+                TFMessageBox.Show($"{ex.Message}{Environment.NewLine}you #win you must've been taught face to face instead of being handed a #freakinpacketyo", "end");
             }
 
-            this.Close();
+            Close();
         }
     }
 }

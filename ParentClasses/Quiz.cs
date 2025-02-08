@@ -77,8 +77,8 @@ namespace Coursework.ParentClasses
                 }
             }
 
-            baseQuizForms.Shuffle();
-            easyQuestions.Shuffle();
+            //baseQuizForms.Shuffle();
+            //easyQuestions.Shuffle();
         }
     }
 }

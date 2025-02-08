@@ -39,7 +39,7 @@
             lblIndicator.AutoSize = true;
             lblIndicator.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
             lblIndicator.ForeColor = Color.FromArgb(246, 231, 222);
-            lblIndicator.Location = new Point(229, 148);
+            lblIndicator.Location = new Point(235, 148);
             lblIndicator.Name = "lblIndicator";
             lblIndicator.Size = new Size(375, 86);
             lblIndicator.TabIndex = 0;
@@ -51,11 +51,12 @@
             lblScore.AutoSize = true;
             lblScore.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblScore.ForeColor = Color.FromArgb(246, 231, 222);
-            lblScore.Location = new Point(229, 257);
+            lblScore.Location = new Point(347, 234);
             lblScore.Name = "lblScore";
             lblScore.Size = new Size(129, 37);
             lblScore.TabIndex = 1;
             lblScore.Text = "+n Points";
+            lblScore.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // AnswerIndicationScreen
             // 
