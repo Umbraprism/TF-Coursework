@@ -34,15 +34,15 @@ namespace Coursework.Forms
                 ListViewItem item = new();
 
                 item.SubItems.Add(player.Username);
-                item.SubItems.Add(player.WeaponsHighestScore.ToString());
-                item.SubItems.Add(player.WeaponsRank);
+                item.SubItems.Add(player.scoresHashmap[QuizScores.Weapons].HighestScore.ToString());
+                item.SubItems.Add(player.scoresHashmap[QuizScores.Weapons].Rank);
 
                 item.UseItemStyleForSubItems = false;
 
                 UIHelper.ApplyFonts(this);
 
                 item.SubItems[0].Font = UIHelper.TF2Build;
-                item.SubItems[3].ForeColor = player.WeaponsRank != String.Empty ? FormHelper.s_ColourHashmap[player.WeaponsRank] : Color.FromArgb(0, 0, 0);
+                item.SubItems[3].ForeColor = player.scoresHashmap[QuizScores.Weapons].Rank != String.Empty ? FormHelper.s_ColourHashmap[player.scoresHashmap[QuizScores.Weapons].Rank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
             }
@@ -100,15 +100,15 @@ namespace Coursework.Forms
                 ListViewItem item = new();
 
                 item.SubItems.Add(player.Username);
-                item.SubItems.Add(player.TFClassHighestScore.ToString());
-                item.SubItems.Add(player.TFClassRank);
+                item.SubItems.Add(player.scoresHashmap[QuizScores.TFClass].HighestScore.ToString());
+                item.SubItems.Add(player.scoresHashmap[QuizScores.TFClass].Rank);
 
                 item.UseItemStyleForSubItems = false;
 
                 UIHelper.ApplyFonts(this);
 
                 item.SubItems[0].Font = UIHelper.TF2Build;
-                item.SubItems[3].ForeColor = player.TFClassRank != String.Empty ? FormHelper.s_ColourHashmap[player.TFClassRank] : Color.FromArgb(0, 0, 0);
+                item.SubItems[3].ForeColor = player.scoresHashmap[QuizScores.Weapons].Rank != String.Empty ? FormHelper.s_ColourHashmap[player.scoresHashmap[QuizScores.Weapons].Rank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
             }
@@ -166,15 +166,15 @@ namespace Coursework.Forms
                 ListViewItem item = new();
 
                 item.SubItems.Add(player.Username);
-                item.SubItems.Add(player.HistoryHighestScore.ToString());
-                item.SubItems.Add(player.HistoryRank);
+                item.SubItems.Add(player.scoresHashmap[QuizScores.History].HighestScore.ToString());
+                item.SubItems.Add(player.scoresHashmap[QuizScores.History].Rank);
 
                 item.UseItemStyleForSubItems = false;
 
                 UIHelper.ApplyFonts(this);
 
                 item.SubItems[0].Font = UIHelper.TF2Build;
-                item.SubItems[3].ForeColor = player.HistoryRank != String.Empty ? FormHelper.s_ColourHashmap[player.HistoryRank] : Color.FromArgb(0, 0, 0);
+                item.SubItems[3].ForeColor = player.scoresHashmap[QuizScores.History].Rank != String.Empty ? FormHelper.s_ColourHashmap[player.scoresHashmap[QuizScores.Weapons].Rank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
             }

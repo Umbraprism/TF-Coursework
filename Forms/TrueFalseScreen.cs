@@ -13,7 +13,7 @@ namespace Coursework.Forms
 {
     public partial class TrueFalseScreen : Form
     {
-        public TrueFalseScreen(Question question)
+        public TrueFalseScreen(ref Question question)
         {
             InitializeComponent();
         }

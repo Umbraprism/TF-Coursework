@@ -46,8 +46,13 @@ namespace Coursework.Helpers
         /// <summary>
         /// Applies the specified custom font to a Control. If the font entered is invalid, a FontNotFoundException is thrown.
         /// </summary>
-        public static void UseFont(this Control control, CustomFont fontChoice)
+        public static void UseFont(this Control control, CustomFont fontChoice, float sizeInPoints = 0)
         {
+            if (sizeInPoints == 0)
+            {
+                sizeInPoints = control.Font.SizeInPoints;
+            }
+
             switch (fontChoice)
             {
                 case CustomFont.Build:

@@ -13,7 +13,7 @@ namespace Coursework.Forms
 {
     public partial class DragDropScreen : Form
     {
-        public DragDropScreen(Question question)
+        public DragDropScreen(ref Question question)
         {
             InitializeComponent();
         }

@@ -40,7 +40,6 @@ namespace Coursework.Helpers
         public static RegisterScreen s_registerScreen = new();
         public static LoginScreen s_loginScreen = new();
         public static AchievementsScreen s_achievementsScreen = new();
-        public static GuessingGameScreen s_guessingGameScreen = new();
         public static LeaderboardScreen s_leaderboardScreen = new();
         public static MainMenuScreen s_mainMenuScreen = new();
         public static SplashScreen s_splashScreen = new(s_registerScreen);
@@ -53,8 +52,10 @@ namespace Coursework.Helpers
             for (int i = 0; i < toShuffle.Count; i++)
             {
                 T store = toShuffle[i];
-                toShuffle[i] = toShuffle[rnd.Next(0, toShuffle.Count)];
-                toShuffle[rnd.Next(0, toShuffle.Count)] = store;
+                int rndNum = rnd.Next(0, toShuffle.Count);
+
+                toShuffle[i] = toShuffle[rndNum];
+                toShuffle[rndNum] = store;
             }
         }
     }

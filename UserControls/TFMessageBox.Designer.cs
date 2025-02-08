@@ -35,6 +35,7 @@
             btnNo = new Button();
             btnYes = new Button();
             btnOk = new Button();
+            btnClose = new Button();
             pnlHeader.SuspendLayout();
             tlpYesAndNo.SuspendLayout();
             SuspendLayout();
@@ -42,6 +43,7 @@
             // pnlHeader
             // 
             pnlHeader.BackColor = Color.FromArgb(41, 39, 39);
+            pnlHeader.Controls.Add(btnClose);
             pnlHeader.Controls.Add(lblTitle);
             pnlHeader.Dock = DockStyle.Top;
             pnlHeader.Location = new Point(0, 0);
@@ -139,6 +141,23 @@
             btnOk.UseVisualStyleBackColor = false;
             btnOk.Click += btnOk_Click;
             // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.FromArgb(189, 59, 59);
+            btnClose.Dock = DockStyle.Right;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClose.ForeColor = Color.FromArgb(246, 231, 222);
+            btnClose.Location = new Point(459, 0);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(93, 93);
+            btnClose.TabIndex = 9;
+            btnClose.Tag = "No";
+            btnClose.Text = "X";
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
+            // 
             // TFMessageBox
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -170,5 +189,6 @@
         private Button btnNo;
         private Button btnYes;
         private Button btnOk;
+        private Button btnClose;
     }
 }

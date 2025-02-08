@@ -54,25 +54,62 @@ namespace Coursework.Forms
         {
             string json = File.ReadAllText(Path.Combine(FormHelper.s_quizJsonPath, $"WeaponsQuiz.json"));
             FormHelper.s_currentQuiz = JsonSerializer.Deserialize<Quiz>(json);
-            FormHelper.s_currentQuiz.CreateQuizForms();
+            //FormHelper.s_currentQuiz.CreateQuiz();
 
-            new SplashScreen(FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex]).Show();
+            TFMessageBox.Show($"{FormHelper.s_currentQuiz.CurrentDifficulty.Count}", "eee");
+
+            Question question = FormHelper.s_currentQuiz.CurrentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex];
+
+            switch (question.Type)
+            {
+                case QuestionType.MultipleChoice:
+                    new MultipleChoiceScreen(ref question).Show();
+                    break;
+                case QuestionType.TrueFalse:
+                    new TrueFalseScreen(ref question).Show();
+                    break;
+                case QuestionType.DragDrop:
+                    new DragDropScreen(ref question).Show();
+                    break;
+                default:
+                    throw new FormatException("Question is not of a valid type.");
+            }
             this.Hide();
         }
 
         private void btnTFClassQuiz_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            string json = File.ReadAllText(Path.Combine(FormHelper.s_quizJsonPath, $"TFClassQuiz.json"));
+            FormHelper.s_currentQuiz = JsonSerializer.Deserialize<Quiz>(json);
+            //FormHelper.s_currentQuiz.CreateQuizForms();
+
+            //new SplashScreen(FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex]).Show();
+            this.Hide();
         }
 
         private void btnHistoryQuiz_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            string json = File.ReadAllText(Path.Combine(FormHelper.s_quizJsonPath, $"HistoryQuiz.json"));
+            FormHelper.s_currentQuiz = JsonSerializer.Deserialize<Quiz>(json);
+            //FormHelper.s_currentQuiz.CreateQuizForms();
+
+            //new SplashScreen(FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex]).Show();
+            this.Hide();
         }
 
         private void btnGuessingGame_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            DialogResult dialogResult = TFMessageBox.Show("Would you like to guess today's weapon in the 'Daily' mode, or test your ability to identify weapons endlessly 'TF∞' mode?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Daily", "TF∞" });
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                throw new NotImplementedException();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                throw new NotImplementedException();
+            }
+            else { }
         }
 
         private void btnAchievements_Click(object sender, EventArgs e)

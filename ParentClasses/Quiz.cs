@@ -21,64 +21,34 @@ namespace Coursework.ParentClasses
         public List<Form> baseQuizForms = new();
         public List<Form> easyQuizForms = new();
 
-        private List<Question> baseQuestions = new();
-        private List<Question> easyQuestions = new();
+        public List<Question> baseQuestions = new();
+        public List<Question> easyQuestions = new();
 
         public bool isDisguised = false;
         public int scoreMultiplier = 0;
         public int currentQuestionIndex = 0;
-        public List<Form> currentDifficulty;
 
-        public Quiz() { currentDifficulty = baseQuizForms; }
+        public List<Question> CurrentDifficulty { get; set;  }
 
+        [JsonConstructor]
         public Quiz(string name, List<Question> baseQuestions, List<Question> easyQuestions)
         {
             this.Name = name;
             this.BaseQuestions = baseQuestions;
             this.EasyQuestions = easyQuestions;
-            currentDifficulty = baseQuizForms;
+
+            baseQuestions.Shuffle();
+            easyQuestions.Shuffle();
+
+            CurrentDifficulty = BaseQuestions;
         }
 
-        public void CreateQuizForms()
+        public void CreateQuiz()
         {
-            foreach (Question question in baseQuestions)
-            {
-                switch (question.Type)
-                {
-                    case QuestionType.MultipleChoice:
-                        baseQuizForms.Add(new MultipleChoiceScreen(question));
-                        break;
-                    case QuestionType.TrueFalse:
-                        baseQuizForms.Add(new TrueFalseScreen(question));
-                        break;
-                    case QuestionType.DragDrop:
-                        baseQuizForms.Add(new DragDropScreen(question));
-                        break;
-                    default:
-                        break;
-                }
-            }
+            baseQuestions.Shuffle();
+            easyQuestions.Shuffle();
 
-            foreach (Question question in easyQuestions)
-            {
-                switch (question.Type)
-                {
-                    case QuestionType.MultipleChoice:
-                        easyQuizForms.Add(new MultipleChoiceScreen(question));
-                        break;
-                    case QuestionType.TrueFalse:
-                        easyQuizForms.Add(new TrueFalseScreen(question));
-                        break;
-                    case QuestionType.DragDrop:
-                        easyQuizForms.Add(new DragDropScreen(question));
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            //baseQuizForms.Shuffle();
-            //easyQuestions.Shuffle();
+            CurrentDifficulty = BaseQuestions;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Coursework.Helpers;
+using Coursework.ParentClasses;
 using Coursework.UserControls;
 
 namespace Coursework.Forms
@@ -43,11 +44,28 @@ namespace Coursework.Forms
             try
             {
                 FormHelper.s_currentQuiz.currentQuestionIndex++;
-                FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex].Show();
+
+                Question question = FormHelper.s_currentQuiz.BaseQuestions[FormHelper.s_currentQuiz.currentQuestionIndex];
+
+                switch (question.Type)
+                {
+                    case QuestionType.MultipleChoice:
+                        new MultipleChoiceScreen(ref question).Show();
+                        break;
+                    case QuestionType.TrueFalse:
+                        new TrueFalseScreen(ref question).Show();
+                        break;
+                    case QuestionType.DragDrop:
+                        new DragDropScreen(ref question).Show();
+                        break;
+                    default:
+                        throw new FormatException("Question is not of a valid type.");
+                }
             }
             catch (Exception ex)
             {
-                TFMessageBox.Show($"{ex.Message}{Environment.NewLine}you #win you must've been taught face to face instead of being handed a #freakinpacketyo", "end");
+                TFMessageBox.Show($"{ex.Message}", "bleghhh...");
+                FormHelper.s_mainMenuScreen.Show();
             }
 
             Close();
