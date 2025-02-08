@@ -2,24 +2,76 @@
     "Name":  "Weapons",
     "BaseQuestions": [
         {
-            "Text": "",
-            "Type": 2,
+            "Text": "What Heavy weapon slows enemies down whilst they are being shot?",
+            "Type": 0,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "1",
-                "2"
+                "Natascha",
+                "Minigun",
+                "Family Business",
+                "Eviction Notice"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "What is the name of the weapon that coats enemies in gas?",
+            "Type": 0,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Nostromo Napalmer",
+                "Backburner",
+                "Degreaser",
+                "Gas Passer"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Spy unlock is capable of preventing death?",
+            "Type": 0,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Red-Tape Recorder",
+                "Ap-Sap",
+                "Dead Ringer",
+                "Conniver's Kunai"
             ],
             "ImageId": 0
         }
     ],
     "EasyQuestions": [
         {
-            "Text": "",
+            "Text": "Which of the following is the Heavy's stock primary weapon?'",
             "Type": 0,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "1",
-                "2"
+                "Minigun",
+                "Tomislav",
+                "Shotgun",
+                "Sandvich"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Of the following, which item is used by the Sniper?",
+            "Type": 0,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "Knife",
+                "SMG",
+                "Bottle",
+                "Dalokohs Bar"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "What Pyro weapon delivers critical hits on burning enemies?",
+            "Type": 0,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Flamethrower",
+                "Scorch Shot",
+                "Flare Gun",
+                "Fire Axe"
             ],
             "ImageId": 0
         }

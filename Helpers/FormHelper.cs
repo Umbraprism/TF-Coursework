@@ -18,9 +18,10 @@ namespace Coursework.Helpers
             { "Background", Color.FromArgb(0, 0, 0) },
             { "BackgroundDark", Color.FromArgb(0, 0, 0) },
             { "BackgroundDarker", Color.FromArgb(0, 0, 0) },
-            { "ButtonFace", Color.FromArgb(0, 0, 0) },
-            { "Green", Color.FromArgb(0, 0, 0) },
             { "Text", Color.FromArgb(0, 0, 0) },
+            { "Red", Color.FromArgb(189, 59, 59) },
+            { "Green", Color.FromArgb(114, 158, 66) },
+            { "Blue", Color.FromArgb(100, 142, 170) },
             { "Gold", Color.FromArgb(234, 185, 59) },
             { "Silver", Color.FromArgb(183, 173, 173) },
             { "Bronze", Color.FromArgb(171, 101, 71) },
@@ -45,5 +46,17 @@ namespace Coursework.Helpers
         public static MainMenuScreen s_mainMenuScreen = new();
         public static SplashScreen s_splashScreen = new(s_registerScreen);
         public static StatsScreen s_statsScreen = new();
+
+        public static void Shuffle<T>(this List<T> toShuffle)
+        {
+            Random rnd = new();
+
+            for (int i = 0; i < toShuffle.Count; i++)
+            {
+                T store = toShuffle[i];
+                toShuffle[i] = toShuffle[rnd.Next(0, toShuffle.Count)];
+                toShuffle[rnd.Next(0, toShuffle.Count)] = store;
+            }
+        }
     }
 }

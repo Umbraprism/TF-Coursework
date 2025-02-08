@@ -2,6 +2,7 @@
 using Coursework.ParentClasses;
 using System.Text.Json;
 using Coursework.UserControls;
+using System.Diagnostics;
 
 namespace Coursework
 {
@@ -60,10 +61,13 @@ namespace Coursework
                 ErrorMessage(lblPassMatch);
             }
 
-            /* uses a LINQ quetry to check every user in the database and ensure the entered usenrame is not already registered, the method Any() returns a boolean value if the list contains the value found in tbUsername.Text
+            /* uses a LINQ query to check every user in the database and ensure the entered usenrame is not already registered, the method Any() returns a boolean value if the list contains the value found in tbUsername.Text
                an anonymous method here is defined here with a lambda expression (=>) as this will only be used once here, so a full named method is not needed.
                to the left of the => is a temporary parameter used for the anonmyous method, and to the right is the logic of the method.
-               i utilised a lambda expression here as it provides more readablity for the code and this is a one off condition which will not be re-used. */
+               i utilised a lambda expression here as it provides more readablity for the code and this is a one off condition which will not be re-used.
+            
+               LINQ will be utilised further in my project in ordser to say, select every user which has obtained a specific achievement, or check how many achievements an individual user has achieved (among other things, of course).
+             */
             else if (playerList.Any(player => player.Username == tbUsername.Text))
             {
                 ErrorMessage(lblAccExists);
@@ -90,6 +94,8 @@ namespace Coursework
 
                     string updatedJson = JsonSerializer.Serialize(playerList, new JsonSerializerOptions { WriteIndented = true }); // writes indented so the debug output is easier to read
                     bw.Write(updatedJson);
+
+                    Debug.WriteLine(updatedJson);
 
                     tbUsername.Clear();
                     tbPassword.Clear();

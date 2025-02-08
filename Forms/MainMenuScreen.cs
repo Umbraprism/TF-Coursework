@@ -1,6 +1,7 @@
 ﻿using Coursework.ParentClasses;
 using Coursework.Helpers;
 using Coursework.UserControls;
+using System.Text.Json;
 
 namespace Coursework.Forms
 {
@@ -51,7 +52,12 @@ namespace Coursework.Forms
 
         private void btnWeaponsQuiz_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            string json = File.ReadAllText(Path.Combine(FormHelper.s_quizJsonPath, $"WeaponsQuiz.json"));
+            FormHelper.s_currentQuiz = JsonSerializer.Deserialize<Quiz>(json);
+            FormHelper.s_currentQuiz.CreateQuizForms();
+
+            new SplashScreen(FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex]).Show();
+            this.Hide();
         }
 
         private void btnTFClassQuiz_Click(object sender, EventArgs e)

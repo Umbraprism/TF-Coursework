@@ -1,4 +1,5 @@
 ﻿using Coursework.Forms;
+using Coursework.Helpers;
 using System.Text.Json.Serialization;
 
 namespace Coursework.ParentClasses
@@ -11,7 +12,7 @@ namespace Coursework.ParentClasses
             get { return baseQuestions; }
             set { baseQuestions = value; }
         }
-        public List<Question> EasyQuestions 
+        public List<Question> EasyQuestions
         {
             get { return easyQuestions; }
             set { easyQuestions = value; }
@@ -19,17 +20,16 @@ namespace Coursework.ParentClasses
 
         public List<Form> baseQuizForms = new();
         public List<Form> easyQuizForms = new();
-        private string quizPath;
 
         private List<Question> baseQuestions = new();
-        private List <Question> easyQuestions = new();
+        private List<Question> easyQuestions = new();
 
         public bool isDisguised = false;
         public int scoreMultiplier = 0;
         public int currentQuestionIndex = 0;
         public List<Form> currentDifficulty;
 
-        public Quiz() { }
+        public Quiz() { currentDifficulty = baseQuizForms; }
 
         public Quiz(string name, List<Question> baseQuestions, List<Question> easyQuestions)
         {
@@ -76,6 +76,9 @@ namespace Coursework.ParentClasses
                         break;
                 }
             }
+
+            baseQuizForms.Shuffle();
+            easyQuestions.Shuffle();
         }
     }
 }

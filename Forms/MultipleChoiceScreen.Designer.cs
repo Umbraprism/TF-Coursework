@@ -36,16 +36,16 @@
             lblTimeRemainingPrefix = new Label();
             ppbAchievementProgress = new UserControls.PercentageProgressBar();
             lblQuizName = new Label();
-            lblTipText = new Label();
+            lblQuestionText = new Label();
             pbAbility = new PictureBox();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            btnAnsThree = new Button();
-            btnAnsTwo = new Button();
+            tlpAnswers = new TableLayoutPanel();
             btnAnsOne = new Button();
+            btnAnsTwo = new Button();
             btnAnsFour = new Button();
+            btnAnsThree = new Button();
             pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAbility).BeginInit();
-            tableLayoutPanel1.SuspendLayout();
+            tlpAnswers.SuspendLayout();
             SuspendLayout();
             // 
             // pnlHeader
@@ -122,6 +122,7 @@
             ppbAchievementProgress.Size = new Size(621, 86);
             ppbAchievementProgress.Style = ProgressBarStyle.Continuous;
             ppbAchievementProgress.TabIndex = 2;
+            ppbAchievementProgress.Text = "PERCENTAGE";
             ppbAchievementProgress.TextColour = Color.FromArgb(246, 231, 222);
             ppbAchievementProgress.UsePercentage = true;
             // 
@@ -137,18 +138,20 @@
             lblQuizName.TabIndex = 1;
             lblQuizName.Text = "QUIZ QUIZ";
             // 
-            // lblTipText
+            // lblQuestionText
             // 
-            lblTipText.AutoSize = true;
-            lblTipText.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTipText.ForeColor = Color.FromArgb(246, 231, 222);
-            lblTipText.Location = new Point(482, 229);
-            lblTipText.MaximumSize = new Size(637, 0);
-            lblTipText.MinimumSize = new Size(637, 0);
-            lblTipText.Name = "lblTipText";
-            lblTipText.Size = new Size(637, 65);
-            lblTipText.TabIndex = 2;
-            lblTipText.Text = "tipText";
+            lblQuestionText.Anchor = AnchorStyles.Top;
+            lblQuestionText.AutoSize = true;
+            lblQuestionText.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblQuestionText.ForeColor = Color.FromArgb(246, 231, 222);
+            lblQuestionText.Location = new Point(482, 229);
+            lblQuestionText.MaximumSize = new Size(637, 0);
+            lblQuestionText.MinimumSize = new Size(637, 0);
+            lblQuestionText.Name = "lblQuestionText";
+            lblQuestionText.Size = new Size(637, 65);
+            lblQuestionText.TabIndex = 2;
+            lblQuestionText.Text = "questionText";
+            lblQuestionText.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbAbility
             // 
@@ -161,40 +164,40 @@
             pbAbility.TabStop = false;
             pbAbility.Click += pbAbility_Click;
             // 
-            // tableLayoutPanel1
+            // tlpAnswers
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Bottom;
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(btnAnsThree, 0, 1);
-            tableLayoutPanel1.Controls.Add(btnAnsTwo, 1, 0);
-            tableLayoutPanel1.Controls.Add(btnAnsOne, 0, 0);
-            tableLayoutPanel1.Controls.Add(btnAnsFour, 1, 1);
-            tableLayoutPanel1.Location = new Point(285, 416);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1072, 463);
-            tableLayoutPanel1.TabIndex = 4;
+            tlpAnswers.Anchor = AnchorStyles.Bottom;
+            tlpAnswers.ColumnCount = 2;
+            tlpAnswers.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tlpAnswers.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tlpAnswers.Controls.Add(btnAnsOne, 0, 0);
+            tlpAnswers.Controls.Add(btnAnsTwo, 1, 0);
+            tlpAnswers.Controls.Add(btnAnsFour, 0, 1);
+            tlpAnswers.Controls.Add(btnAnsThree, 1, 1);
+            tlpAnswers.Location = new Point(285, 416);
+            tlpAnswers.Name = "tlpAnswers";
+            tlpAnswers.RowCount = 2;
+            tlpAnswers.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tlpAnswers.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tlpAnswers.Size = new Size(1072, 463);
+            tlpAnswers.TabIndex = 4;
             // 
-            // btnAnsThree
+            // btnAnsOne
             // 
-            btnAnsThree.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            btnAnsThree.BackColor = Color.FromArgb(189, 59, 59);
-            btnAnsThree.FlatAppearance.BorderSize = 0;
-            btnAnsThree.FlatStyle = FlatStyle.Flat;
-            btnAnsThree.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAnsThree.ForeColor = Color.FromArgb(246, 231, 222);
-            btnAnsThree.Location = new Point(15, 234);
-            btnAnsThree.Name = "btnAnsThree";
-            btnAnsThree.Size = new Size(506, 226);
-            btnAnsThree.TabIndex = 9;
-            btnAnsThree.Tag = "2";
-            btnAnsThree.Text = "AnsThree";
-            btnAnsThree.UseVisualStyleBackColor = false;
-            btnAnsThree.Click += btnAnswer_Click;
+            btnAnsOne.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btnAnsOne.BackColor = Color.FromArgb(189, 59, 59);
+            btnAnsOne.FlatAppearance.BorderSize = 0;
+            btnAnsOne.FlatStyle = FlatStyle.Flat;
+            btnAnsOne.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAnsOne.ForeColor = Color.FromArgb(246, 231, 222);
+            btnAnsOne.Location = new Point(15, 3);
+            btnAnsOne.Name = "btnAnsOne";
+            btnAnsOne.Size = new Size(506, 225);
+            btnAnsOne.TabIndex = 9;
+            btnAnsOne.Tag = "0";
+            btnAnsOne.Text = "AnsOne";
+            btnAnsOne.UseVisualStyleBackColor = false;
+            btnAnsOne.Click += btnAnswer_Click;
             // 
             // btnAnsTwo
             // 
@@ -213,23 +216,6 @@
             btnAnsTwo.UseVisualStyleBackColor = false;
             btnAnsTwo.Click += btnAnswer_Click;
             // 
-            // btnAnsOne
-            // 
-            btnAnsOne.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            btnAnsOne.BackColor = Color.FromArgb(189, 59, 59);
-            btnAnsOne.FlatAppearance.BorderSize = 0;
-            btnAnsOne.FlatStyle = FlatStyle.Flat;
-            btnAnsOne.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAnsOne.ForeColor = Color.FromArgb(246, 231, 222);
-            btnAnsOne.Location = new Point(15, 3);
-            btnAnsOne.Name = "btnAnsOne";
-            btnAnsOne.Size = new Size(506, 225);
-            btnAnsOne.TabIndex = 7;
-            btnAnsOne.Tag = "0";
-            btnAnsOne.Text = "AnsOne";
-            btnAnsOne.UseVisualStyleBackColor = false;
-            btnAnsOne.Click += btnAnswer_Click;
-            // 
             // btnAnsFour
             // 
             btnAnsFour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
@@ -238,14 +224,31 @@
             btnAnsFour.FlatStyle = FlatStyle.Flat;
             btnAnsFour.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             btnAnsFour.ForeColor = Color.FromArgb(246, 231, 222);
-            btnAnsFour.Location = new Point(551, 234);
+            btnAnsFour.Location = new Point(15, 234);
             btnAnsFour.Name = "btnAnsFour";
             btnAnsFour.Size = new Size(506, 226);
             btnAnsFour.TabIndex = 10;
-            btnAnsFour.Tag = "3";
+            btnAnsFour.Tag = "2";
             btnAnsFour.Text = "AnsFour";
             btnAnsFour.UseVisualStyleBackColor = false;
             btnAnsFour.Click += btnAnswer_Click;
+            // 
+            // btnAnsThree
+            // 
+            btnAnsThree.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btnAnsThree.BackColor = Color.FromArgb(189, 59, 59);
+            btnAnsThree.FlatAppearance.BorderSize = 0;
+            btnAnsThree.FlatStyle = FlatStyle.Flat;
+            btnAnsThree.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAnsThree.ForeColor = Color.FromArgb(246, 231, 222);
+            btnAnsThree.Location = new Point(551, 234);
+            btnAnsThree.Name = "btnAnsThree";
+            btnAnsThree.Size = new Size(506, 226);
+            btnAnsThree.TabIndex = 7;
+            btnAnsThree.Tag = "3";
+            btnAnsThree.Text = "AnsThree";
+            btnAnsThree.UseVisualStyleBackColor = false;
+            btnAnsThree.Click += btnAnswer_Click;
             // 
             // MultipleChoiceScreen
             // 
@@ -253,9 +256,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(53, 48, 46);
             ClientSize = new Size(1600, 900);
-            Controls.Add(tableLayoutPanel1);
+            Controls.Add(tlpAnswers);
             Controls.Add(pbAbility);
-            Controls.Add(lblTipText);
+            Controls.Add(lblQuestionText);
             Controls.Add(pnlHeader);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -266,7 +269,7 @@
             pnlHeader.ResumeLayout(false);
             pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbAbility).EndInit();
-            tableLayoutPanel1.ResumeLayout(false);
+            tlpAnswers.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -280,12 +283,12 @@
         private Label lblTimeRemaining;
         private Label lblScore;
         private Label lblScorePrefix;
-        private Label lblTipText;
+        private Label lblQuestionText;
         private PictureBox pbAbility;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Button btnAnsThree;
-        private Button btnAnsTwo;
+        private TableLayoutPanel tlpAnswers;
         private Button btnAnsOne;
+        private Button btnAnsTwo;
+        private Button btnAnsThree;
         private Button btnAnsFour;
     }
 }

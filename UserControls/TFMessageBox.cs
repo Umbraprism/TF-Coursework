@@ -2,12 +2,18 @@
 
 namespace Coursework.UserControls
 {
+    /// <summary>
+    /// Enumerator used to allow types of buttons to be input.
+    /// </summary>
     public enum TFMessageBoxButtons
     {
         OK,
         YesAndNo
     }
 
+    /// <summary>
+    /// The form used by TFMessageBox to show itself.
+    /// </summary>
     public partial class TFMessageBox : Form
     {
         private static DialogResult _result;
@@ -45,9 +51,8 @@ namespace Coursework.UserControls
         {
             get
             {
-                const int CS_DROPSHADOW = 0x20000;
                 CreateParams cp = base.CreateParams;
-                cp.ClassStyle = CS_DROPSHADOW;
+                cp.ClassStyle = 0x00020000;
                 return cp;
             }
         }

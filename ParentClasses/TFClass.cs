@@ -65,6 +65,7 @@
                 case 9:
                     this.Name = "Spy";
                     this.Description = "A dashing rogue hailing from who-knows-where in France. He has a penchant for dapper suits and even dapper-ier disguises.";
+                    this.TFClassAbility = new("Disguise Kit", "'Disguise' to switch to  an easier set of BLU questions, but be careful - if you get a question wrong, your disguise will break and you will return to the normal questions.", 100);
                     break;
                 default:
                     throw new IndexOutOfRangeException();

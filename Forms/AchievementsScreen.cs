@@ -41,12 +41,12 @@ namespace Coursework.Forms
 
         private void ttMyAchievementProgress_Draw(object sender, DrawToolTipEventArgs e)
         {
-            UIHelper.DrawToolTip(this, e);
+            UIHelper.DrawToolTip(sender, e);
         }
 
         private void ttMyAchievementProgress_Popup(object sender, PopupEventArgs e)
         {
-            UIHelper.SizeToolTip(this, e);
+            UIHelper.SizeToolTip(sender, e);
         }
     }
 }

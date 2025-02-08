@@ -61,3 +61,4 @@ E:\CourseworkRoot\CourseworkCode\bin\Debug\net6.0-windows\Coursework.pdb
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.genruntimeconfig.cache
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\ref\Coursework.dll
 U:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.UserControls.TFMessageBox.resources
+E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.UserControls.TFMessageBox.resources

@@ -1,4 +1,4 @@
-ö[
+÷D[
   {
     "Id": 1,
     "Username": "Scout",
@@ -65,6 +65,213 @@
     "Id": 3,
     "Username": "Sniper",
     "Password": "sn",
+    "TFClass": {
+      "Id": 8,
+      "Name": "Sniper",
+      "Description": "Coming from the sunken and lost land of New Zealand - but raised in the outback - he has a keen eye which is usually found planted in a scope.",
+      "TFClassAbility": null
+    },
+    "Achievements": [
+      {
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": "",
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": "",
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
+  },
+  {
+    "Id": 4,
+    "Username": "tspmo",
+    "Password": "pmo",
+    "TFClass": {
+      "Id": 5,
+      "Name": "Heavy",
+      "Description": "Some people think they can outsmart him. Maybe. He has yet to meet someone who can outsmart a bullet.",
+      "TFClassAbility": null
+    },
+    "Achievements": [
+      {
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": "",
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": "",
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
+  },
+  {
+    "Id": 5,
+    "Username": "Spy",
+    "Password": "s",
+    "TFClass": {
+      "Id": 9,
+      "Name": "Spy",
+      "Description": "A dashing rogue hailing from who-knows-where in France. He has a penchant for dapper suits and even dapper-ier disguises.",
+      "TFClassAbility": null
+    },
+    "Achievements": [
+      {
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": "",
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": "",
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
+  },
+  {
+    "Id": 6,
+    "Username": "eee",
+    "Password": "e",
+    "TFClass": {
+      "Id": 9,
+      "Name": "Spy",
+      "Description": "A dashing rogue hailing from who-knows-where in France. He has a penchant for dapper suits and even dapper-ier disguises.",
+      "TFClassAbility": null
+    },
+    "Achievements": [
+      {
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": "",
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": "",
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
+  },
+  {
+    "Id": 7,
+    "Username": "Harry",
+    "Password": "Harry",
+    "TFClass": {
+      "Id": 4,
+      "Name": "Demoman",
+      "Description": "Uses his one good eye for well timed explosions. Uses his liver to distil alcohol.",
+      "TFClassAbility": null
+    },
+    "Achievements": [
+      {
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": "",
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": "",
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
+  },
+  {
+    "Id": 8,
+    "Username": "admin",
+    "Password": "e",
+    "TFClass": {
+      "Id": 5,
+      "Name": "Heavy",
+      "Description": "Some people think they can outsmart him. Maybe. He has yet to meet someone who can outsmart a bullet.",
+      "TFClassAbility": null
+    },
+    "Achievements": [
+      {
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": "",
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": "",
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
+  },
+  {
+    "Id": 9,
+    "Username": "lespion",
+    "Password": "e",
+    "TFClass": {
+      "Id": 9,
+      "Name": "Spy",
+      "Description": "A dashing rogue hailing from who-knows-where in France. He has a penchant for dapper suits and even dapper-ier disguises.",
+      "TFClassAbility": {
+        "Name": "Disguise Kit",
+        "Info": "\u0027Disguise\u0027 to switch to  an easier set of BLU questions, but be careful - if you get a question wrong, your disguise will break and you will return to the normal questions.",
+        "ChargesRequired": 100
+      }
+    },
+    "Achievements": [
+      {
+        "Name": "Race For The Pennant",
+        "Description": "Complete any quiz in less than 50% of the allocated time.",
+        "IsRareAchievement": true,
+        "IsAchieved": false
+      }
+    ],
+    "WeaponsLatestScore": 0,
+    "WeaponsHighestScore": 0,
+    "WeaponsRank": "",
+    "TFClassLatestScore": 0,
+    "TFClassHighestScore": 0,
+    "TFClassRank": "",
+    "HistoryLatestScore": 0,
+    "HistoryHighestScore": 0,
+    "HistoryRank": "",
+    "GuessingGameLowestGuesses": 0
+  },
+  {
+    "Id": 10,
+    "Username": "er",
+    "Password": "re",
     "TFClass": {
       "Id": 8,
       "Name": "Sniper",

@@ -1,4 +1,5 @@
 ﻿using Coursework.Helpers;
+using Coursework.UserControls;
 
 namespace Coursework.Forms
 {
@@ -12,7 +13,7 @@ namespace Coursework.Forms
             InitializeComponent();
         }
 
-        private async void AnswerIndicationScreen_Load(object sender, EventArgs e) // change to appropriate colours soon
+        private void AnswerIndicationScreen_Load(object sender, EventArgs e) // change to appropriate colours soon
         {
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
@@ -36,9 +37,19 @@ namespace Coursework.Forms
                 lblScore.ForeColor = Color.FromArgb(0, 0, 0);
             }
 
-            await Task.Delay(2000);
+            Task.Delay(2000);
 
-            FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex + 1].Show();
+            try
+            {
+                //FormHelper.s_currentQuiz.currentDifficulty.RemoveAt(FormHelper.s_currentQuiz.currentQuestionIndex);
+                FormHelper.s_currentQuiz.currentQuestionIndex++;
+                FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex].Show();
+            }
+            catch (Exception ex)
+            {
+                TFMessageBox.Show($"you #win you must've been taught face to face instead of being handed a #freakinpacketyo", "end");
+            }
+
             this.Close();
         }
     }
