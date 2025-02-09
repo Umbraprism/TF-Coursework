@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TFMessageBox));
             pnlHeader = new Panel();
+            btnClose = new Button();
             lblTitle = new Label();
             lblMessage = new Label();
             tlpYesAndNo = new TableLayoutPanel();
             btnNo = new Button();
             btnYes = new Button();
             btnOk = new Button();
-            btnClose = new Button();
             pnlHeader.SuspendLayout();
             tlpYesAndNo.SuspendLayout();
             SuspendLayout();
@@ -50,6 +51,23 @@
             pnlHeader.Name = "pnlHeader";
             pnlHeader.Size = new Size(552, 93);
             pnlHeader.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.FromArgb(189, 59, 59);
+            btnClose.Dock = DockStyle.Right;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClose.ForeColor = Color.FromArgb(246, 231, 222);
+            btnClose.Location = new Point(459, 0);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(93, 93);
+            btnClose.TabIndex = 9;
+            btnClose.Tag = "No";
+            btnClose.Text = "X";
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // lblTitle
             // 
@@ -141,23 +159,6 @@
             btnOk.UseVisualStyleBackColor = false;
             btnOk.Click += btnOk_Click;
             // 
-            // btnClose
-            // 
-            btnClose.BackColor = Color.FromArgb(189, 59, 59);
-            btnClose.Dock = DockStyle.Right;
-            btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            btnClose.ForeColor = Color.FromArgb(246, 231, 222);
-            btnClose.Location = new Point(459, 0);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(93, 93);
-            btnClose.TabIndex = 9;
-            btnClose.Tag = "No";
-            btnClose.Text = "X";
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
-            // 
             // TFMessageBox
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -169,6 +170,7 @@
             Controls.Add(lblMessage);
             Controls.Add(pnlHeader);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TFMessageBox";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TFMessageBox";

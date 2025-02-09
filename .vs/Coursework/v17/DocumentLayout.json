@@ -1,38 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "U:\\CourseworkRoot\\CourseworkCode - Copy\\",
+  "WorkspaceRootPath": "U:\\CourseworkRoot\\CourseworkCode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode - copy\\parentclasses\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\usercontrols\\tfmessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:usercontrols\\tfmessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\parentclasses\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:parentclasses\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode - copy\\parentclasses\\tfclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:parentclasses\\tfclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode - copy\\forms\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode - copy\\parentclasses\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:parentclasses\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode - copy\\parentclasses\\ability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:parentclasses\\ability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode - copy\\forms\\multiplechoicescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\multiplechoicescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode - copy\\forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode - copy\\forms\\answerindicationscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\answerindicationscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,100 +27,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Player.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode - Copy\\ParentClasses\\Player.cs",
-              "RelativeDocumentMoniker": "ParentClasses\\Player.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode - Copy\\ParentClasses\\Player.cs",
-              "RelativeToolTip": "ParentClasses\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAkAAAAAAAAAA==",
+              "Title": "TFMessageBox.cs [Design]",
+              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\UserControls\\TFMessageBox.cs",
+              "RelativeDocumentMoniker": "UserControls\\TFMessageBox.cs",
+              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\UserControls\\TFMessageBox.cs [Design]",
+              "RelativeToolTip": "UserControls\\TFMessageBox.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T22:53:43.092Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RegisterScreen.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Forms\\RegisterScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\RegisterScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Forms\\RegisterScreen.cs",
-              "RelativeToolTip": "Forms\\RegisterScreen.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T22:53:08.387Z"
+              "WhenOpened": "2025-02-09T00:01:52.893Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TFClass.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode - Copy\\ParentClasses\\TFClass.cs",
-              "RelativeDocumentMoniker": "ParentClasses\\TFClass.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode - Copy\\ParentClasses\\TFClass.cs",
-              "RelativeToolTip": "ParentClasses\\TFClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Title": "Player.cs",
+              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\ParentClasses\\Player.cs",
+              "RelativeDocumentMoniker": "ParentClasses\\Player.cs",
+              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\ParentClasses\\Player.cs",
+              "RelativeToolTip": "ParentClasses\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T22:45:45.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MultipleChoiceScreen.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Forms\\MultipleChoiceScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\MultipleChoiceScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Forms\\MultipleChoiceScreen.cs",
-              "RelativeToolTip": "Forms\\MultipleChoiceScreen.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAASwCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T22:32:23.905Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Ability.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode - Copy\\ParentClasses\\Ability.cs",
-              "RelativeDocumentMoniker": "ParentClasses\\Ability.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode - Copy\\ParentClasses\\Ability.cs",
-              "RelativeToolTip": "ParentClasses\\Ability.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T22:31:37.752Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AnswerIndicationScreen.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Forms\\AnswerIndicationScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\AnswerIndicationScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Forms\\AnswerIndicationScreen.cs",
-              "RelativeToolTip": "Forms\\AnswerIndicationScreen.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowC8AAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T22:15:28.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Quiz.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode - Copy\\ParentClasses\\Quiz.cs",
-              "RelativeDocumentMoniker": "ParentClasses\\Quiz.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode - Copy\\ParentClasses\\Quiz.cs",
-              "RelativeToolTip": "ParentClasses\\Quiz.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAQwDIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T22:11:34.312Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainMenuScreen.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Forms\\MainMenuScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\MainMenuScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Forms\\MainMenuScreen.cs",
-              "RelativeToolTip": "Forms\\MainMenuScreen.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAiwDEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T20:36:30.791Z"
+              "WhenOpened": "2025-02-08T22:53:43.092Z"
             }
           ]
         },

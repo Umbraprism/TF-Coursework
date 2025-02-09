@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LlYjAV18vnI=",
+  "dgSpecHash": "5JR+zADT8oI=",
   "success": true,
-  "projectFilePath": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Coursework.csproj",
+  "projectFilePath": "U:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
