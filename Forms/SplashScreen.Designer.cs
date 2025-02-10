@@ -79,6 +79,7 @@
             // 
             // lblOnWayTo
             // 
+            lblOnWayTo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblOnWayTo.AutoSize = true;
             lblOnWayTo.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
             lblOnWayTo.ForeColor = Color.FromArgb(246, 231, 222);
@@ -185,12 +186,11 @@
             // 
             // pbClassImage
             // 
+            pbClassImage.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pbClassImage.BackColor = Color.Transparent;
-            pbClassImage.Dock = DockStyle.Fill;
             pbClassImage.Location = new Point(0, 0);
             pbClassImage.Name = "pbClassImage";
             pbClassImage.Size = new Size(892, 744);
-            pbClassImage.SizeMode = PictureBoxSizeMode.Zoom;
             pbClassImage.TabIndex = 3;
             pbClassImage.TabStop = false;
             // 
@@ -201,9 +201,9 @@
             BackgroundImage = Properties.Resources.cwBgWide;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1600, 900);
-            Controls.Add(pbClassImage);
             Controls.Add(pnlInfo);
             Controls.Add(pnlLoading);
+            Controls.Add(pbClassImage);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");

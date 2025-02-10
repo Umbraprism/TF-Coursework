@@ -36,7 +36,7 @@ namespace Coursework.Forms
             lblTFClassName.Text = TFClass.assetsHashmap[randomClass].Item4;
             lblTFClassName.Left = (pnlClassName.Width / 2 - (TextRenderer.MeasureText(lblTFClassName.Text, lblTFClassName.Font).Width / 2));
 
-            pbClassImage.Image = TFClass.assetsHashmap[randomClass].Item3;
+            pbClassImage.Image = TFClass.assetsHashmap[randomClass].Item2;
 
             tmrLoading.Start();
         }

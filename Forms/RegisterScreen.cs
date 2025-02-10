@@ -123,7 +123,7 @@ namespace Coursework
             PictureBox selectedClass = (PictureBox)sender;
 
             classId = UInt32.Parse(selectedClass.Tag.ToString()); // gets the Tag defined in the designer (which will be a number from 1 to 9) into a variable
-            pbClassSelected.Image = TFClass.assetsHashmap[classId].Item3;
+            pbClassSelected.Image = TFClass.assetsHashmap[classId].Item2;
         }
 
         private void linkToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

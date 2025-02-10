@@ -143,6 +143,16 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hwgPortrait {
+            get {
+                object obj = ResourceManager.GetObject("hwgPortrait", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap medicAva {
             get {
                 object obj = ResourceManager.GetObject("medicAva", resourceCulture);
@@ -213,6 +223,16 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap scoutPortrait {
+            get {
+                object obj = ResourceManager.GetObject("scoutPortrait", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sniperAva {
             get {
                 object obj = ResourceManager.GetObject("sniperAva", resourceCulture);
@@ -246,6 +266,16 @@ namespace Coursework.Properties {
         internal static System.Drawing.Bitmap soldierEmblem {
             get {
                 object obj = ResourceManager.GetObject("soldierEmblem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap soldierPortrait {
+            get {
+                object obj = ResourceManager.GetObject("soldierPortrait", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -36,7 +36,7 @@ namespace Coursework.Forms
             }
 
             lblScore.Text = score.ToString();
-            pbAbility.Image = TFClass.assetsHashmap[FormHelper.s_quizPlayer.TFClass.Id].Item1;
+            pbAbility.Image = TFClass.assetsHashmap[FormHelper.s_quizPlayer.TFClass.Id].Item3;
         }
 
         private void pbAbility_Click(object sender, EventArgs e)
