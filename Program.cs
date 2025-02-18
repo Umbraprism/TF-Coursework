@@ -18,15 +18,15 @@ namespace Coursework
             ApplicationConfiguration.Initialize();
 
             UIHelper.MakeFont();
-            using (StreamReader sr = new(FormHelper.s_tipJsonPath))
+            using (StreamReader sr = new(FormHelper.TipJsonPath))
             {
-                FormHelper.s_tips = JsonSerializer.Deserialize<Tip[]>(sr.ReadToEnd());
+                FormHelper.Tips = JsonSerializer.Deserialize<Tip[]>(sr.ReadToEnd());
             }
 
             // Allows main form (in this case the first SplashScreen) to be closed without killing the application.
             // See https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.form.close?view=windowsdesktop-9.0x for more info about the Form.Close() method.
             //new SplashScreen(FormHelper.s_registerScreen).Show();
-            new SplashScreen(FormHelper.s_registerScreen).Show();
+            new SplashScreen(FormHelper.RegisterScreen).Show();
             Application.Run();
         }
     }

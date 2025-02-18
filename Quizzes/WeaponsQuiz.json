@@ -1,39 +1,39 @@
 {
-    "Name":  "Weapons",
+    "Name": "Weapons",
+    "QuizType": 0,
+    "TimeRemaining": 60,
     "BaseQuestions": [
         {
-            "Text": "What Heavy weapon slows enemies down whilst they are being shot?",
+            "Text": "Which Scout unlock only partially reloads it's clip?",
             "Type": 0,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Natascha",
-                "Minigun",
-                "Family Business",
-                "Eviction Notice"
+                "Scattergun",
+                "Force-of-Nature",
+                "Backscatter",
+                "Baby Face's Blaster"
             ],
             "ImageId": 0
         },
         {
-            "Text": "What is the name of the weapon that coats enemies in gas?",
+            "Text": "The Scout's Scattergun has 8 bullets in the clip.",
             "Type": 0,
-            "CorrectAnswerIndex": 3,
+            "CorrectAnswerIndex": 1,
             "Answers": [
-                "Nostromo Napalmer",
-                "Backburner",
-                "Degreaser",
-                "Gas Passer"
+                "True",
+                "False"
             ],
             "ImageId": 0
         },
         {
-            "Text": "Which Spy unlock is capable of preventing death?",
+            "Text": "Which Scout unlock grants temporary invincibility?",
             "Type": 0,
             "CorrectAnswerIndex": 2,
             "Answers": [
-                "Red-Tape Recorder",
-                "Ap-Sap",
-                "Dead Ringer",
-                "Conniver's Kunai"
+                "Bonk! Atomic Punch",
+                "Crit-A-Cola",
+                "Atomizer",
+                "Sandman"
             ],
             "ImageId": 0
         }

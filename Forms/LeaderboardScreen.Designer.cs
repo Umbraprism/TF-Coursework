@@ -72,6 +72,7 @@
             ppbAvgAchievementProgress.Size = new Size(621, 86);
             ppbAvgAchievementProgress.Style = ProgressBarStyle.Continuous;
             ppbAvgAchievementProgress.TabIndex = 3;
+            ppbAvgAchievementProgress.Text = "PERCENTAGE";
             ppbAvgAchievementProgress.TextColour = Color.FromArgb(246, 231, 222);
             ppbAvgAchievementProgress.UsePercentage = true;
             // 
@@ -86,6 +87,7 @@
             ppbAchievementProgress.Size = new Size(621, 86);
             ppbAchievementProgress.Style = ProgressBarStyle.Continuous;
             ppbAchievementProgress.TabIndex = 2;
+            ppbAchievementProgress.Text = "PERCENTAGE";
             ppbAchievementProgress.TextColour = Color.FromArgb(246, 231, 222);
             ppbAchievementProgress.UsePercentage = true;
             // 
@@ -147,9 +149,10 @@
             btnTFClassLeaderboard.Name = "btnTFClassLeaderboard";
             btnTFClassLeaderboard.Size = new Size(506, 225);
             btnTFClassLeaderboard.TabIndex = 8;
+            btnTFClassLeaderboard.Tag = "TFClass";
             btnTFClassLeaderboard.Text = "CLASSES";
             btnTFClassLeaderboard.UseVisualStyleBackColor = false;
-            btnTFClassLeaderboard.Click += btnTFClassLeaderboard_Click;
+            btnTFClassLeaderboard.Click += btnQuizLeaderboard_Click;
             // 
             // btnWeaponsLeaderboard
             // 
@@ -163,9 +166,10 @@
             btnWeaponsLeaderboard.Name = "btnWeaponsLeaderboard";
             btnWeaponsLeaderboard.Size = new Size(506, 225);
             btnWeaponsLeaderboard.TabIndex = 7;
+            btnWeaponsLeaderboard.Tag = "Weapons";
             btnWeaponsLeaderboard.Text = "WEAPONS";
             btnWeaponsLeaderboard.UseVisualStyleBackColor = false;
-            btnWeaponsLeaderboard.Click += btnWeaponsLeaderboard_Click;
+            btnWeaponsLeaderboard.Click += btnQuizLeaderboard_Click;
             // 
             // btnHistoryLeaderboard
             // 
@@ -179,9 +183,10 @@
             btnHistoryLeaderboard.Name = "btnHistoryLeaderboard";
             btnHistoryLeaderboard.Size = new Size(506, 226);
             btnHistoryLeaderboard.TabIndex = 9;
+            btnHistoryLeaderboard.Tag = "History";
             btnHistoryLeaderboard.Text = "HISTORY";
             btnHistoryLeaderboard.UseVisualStyleBackColor = false;
-            btnHistoryLeaderboard.Click += btnHistoryLeaderboard_Click;
+            btnHistoryLeaderboard.Click += btnQuizLeaderboard_Click;
             // 
             // lblQuizSelected
             // 

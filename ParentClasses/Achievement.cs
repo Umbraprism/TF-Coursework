@@ -1,4 +1,6 @@
-﻿namespace Coursework.ParentClasses
+﻿using System.Text.Json.Serialization;
+
+namespace Coursework.ParentClasses
 {
     public class Achievement
     {
@@ -7,8 +9,7 @@
         public bool IsRareAchievement { get; set; }
         public bool IsAchieved { get; set; }
 
-        public Achievement() { }
-
+        [JsonConstructor]
         public Achievement(string name, string description, bool isRareAchievement, bool isAchieved)
         {
             Name = name;

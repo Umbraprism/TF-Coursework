@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MultipleChoiceScreen));
             pnlHeader = new Panel();
             lblTimeRemaining = new Label();
@@ -41,8 +42,9 @@
             tlpAnswers = new TableLayoutPanel();
             btnAnsOne = new Button();
             btnAnsTwo = new Button();
-            btnAnsFour = new Button();
             btnAnsThree = new Button();
+            btnAnsFour = new Button();
+            tmrQuiz = new System.Windows.Forms.Timer(components);
             pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAbility).BeginInit();
             tlpAnswers.SuspendLayout();
@@ -162,6 +164,7 @@
             pbAbility.SizeMode = PictureBoxSizeMode.Zoom;
             pbAbility.TabIndex = 3;
             pbAbility.TabStop = false;
+            pbAbility.Tag = "AbilityIndicator";
             pbAbility.Click += pbAbility_Click;
             // 
             // tlpAnswers
@@ -172,8 +175,8 @@
             tlpAnswers.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tlpAnswers.Controls.Add(btnAnsOne, 0, 0);
             tlpAnswers.Controls.Add(btnAnsTwo, 1, 0);
-            tlpAnswers.Controls.Add(btnAnsFour, 0, 1);
-            tlpAnswers.Controls.Add(btnAnsThree, 1, 1);
+            tlpAnswers.Controls.Add(btnAnsThree, 0, 1);
+            tlpAnswers.Controls.Add(btnAnsFour, 1, 1);
             tlpAnswers.Location = new Point(285, 416);
             tlpAnswers.Name = "tlpAnswers";
             tlpAnswers.RowCount = 2;
@@ -216,23 +219,6 @@
             btnAnsTwo.UseVisualStyleBackColor = false;
             btnAnsTwo.Click += btnAnswer_Click;
             // 
-            // btnAnsFour
-            // 
-            btnAnsFour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            btnAnsFour.BackColor = Color.FromArgb(189, 59, 59);
-            btnAnsFour.FlatAppearance.BorderSize = 0;
-            btnAnsFour.FlatStyle = FlatStyle.Flat;
-            btnAnsFour.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAnsFour.ForeColor = Color.FromArgb(246, 231, 222);
-            btnAnsFour.Location = new Point(15, 234);
-            btnAnsFour.Name = "btnAnsFour";
-            btnAnsFour.Size = new Size(506, 226);
-            btnAnsFour.TabIndex = 10;
-            btnAnsFour.Tag = "2";
-            btnAnsFour.Text = "AnsFour";
-            btnAnsFour.UseVisualStyleBackColor = false;
-            btnAnsFour.Click += btnAnswer_Click;
-            // 
             // btnAnsThree
             // 
             btnAnsThree.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
@@ -241,14 +227,36 @@
             btnAnsThree.FlatStyle = FlatStyle.Flat;
             btnAnsThree.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             btnAnsThree.ForeColor = Color.FromArgb(246, 231, 222);
-            btnAnsThree.Location = new Point(551, 234);
+            btnAnsThree.Location = new Point(15, 234);
             btnAnsThree.Name = "btnAnsThree";
             btnAnsThree.Size = new Size(506, 226);
-            btnAnsThree.TabIndex = 7;
-            btnAnsThree.Tag = "3";
+            btnAnsThree.TabIndex = 10;
+            btnAnsThree.Tag = "2";
             btnAnsThree.Text = "AnsThree";
             btnAnsThree.UseVisualStyleBackColor = false;
             btnAnsThree.Click += btnAnswer_Click;
+            // 
+            // btnAnsFour
+            // 
+            btnAnsFour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btnAnsFour.BackColor = Color.FromArgb(189, 59, 59);
+            btnAnsFour.FlatAppearance.BorderSize = 0;
+            btnAnsFour.FlatStyle = FlatStyle.Flat;
+            btnAnsFour.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAnsFour.ForeColor = Color.FromArgb(246, 231, 222);
+            btnAnsFour.Location = new Point(551, 234);
+            btnAnsFour.Name = "btnAnsFour";
+            btnAnsFour.Size = new Size(506, 226);
+            btnAnsFour.TabIndex = 7;
+            btnAnsFour.Tag = "3";
+            btnAnsFour.Text = "AnsFour";
+            btnAnsFour.UseVisualStyleBackColor = false;
+            btnAnsFour.Click += btnAnswer_Click;
+            // 
+            // tmrQuiz
+            // 
+            tmrQuiz.Interval = 1000;
+            tmrQuiz.Tick += tmrQuiz_Tick;
             // 
             // MultipleChoiceScreen
             // 
@@ -288,7 +296,8 @@
         private TableLayoutPanel tlpAnswers;
         private Button btnAnsOne;
         private Button btnAnsTwo;
-        private Button btnAnsThree;
         private Button btnAnsFour;
+        private Button btnAnsThree;
+        private System.Windows.Forms.Timer tmrQuiz;
     }
 }

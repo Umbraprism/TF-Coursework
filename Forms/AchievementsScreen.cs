@@ -19,15 +19,15 @@ namespace Coursework.Forms
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
             ttMyAchievementProgress.OwnerDraw = true;
 
-            ppbAchievementProgress.Maximum = FormHelper.s_quizPlayer.Achievements.Count;
+            ppbAchievementProgress.Maximum = FormHelper.QuizPlayer.Achievements.Count;
 
             if (ppbAchievementProgress.Value == ppbAchievementProgress.Maximum)
             {
-                ppbAchievementProgress.TextColour = FormHelper.s_ColourHashmap["Gold"];
-                ppbAchievementProgress.ProgressColour = FormHelper.s_ColourHashmap["Gold"];
+                ppbAchievementProgress.TextColour = FormHelper.ColourPalette["Gold"];
+                ppbAchievementProgress.ProgressColour = FormHelper.ColourPalette["Gold"];
             }
 
-            foreach (Achievement achievement in FormHelper.s_quizPlayer.Achievements)
+            foreach (Achievement achievement in FormHelper.QuizPlayer.Achievements)
             {
                 flpAchievements.Controls.Add(new AchievementView(achievement));
             }
@@ -36,7 +36,7 @@ namespace Coursework.Forms
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormHelper.s_mainMenuScreen.Show();
+            FormHelper.MainMenuScreen.Show();
         }
 
         private void ttMyAchievementProgress_Draw(object sender, DrawToolTipEventArgs e)

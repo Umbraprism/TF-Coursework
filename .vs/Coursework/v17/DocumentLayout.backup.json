@@ -1,41 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "U:\\CourseworkRoot\\CourseworkCode\\",
+  "WorkspaceRootPath": "E:\\CourseworkRoot\\CourseworkCode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\forms\\multiplechoicescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\multiplechoicescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|e:\\courseworkroot\\courseworkcode\\quizzes\\weaponsquiz.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:quizzes\\weaponsquiz.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\parentclasses\\tfclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:parentclasses\\tfclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\forms\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\forms\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\forms\\loginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\loginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\parentclasses\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:parentclasses\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|e:\\courseworkroot\\courseworkcode\\forms\\dragdropscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\dragdropscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,143 +18,32 @@
       "DocumentGroups": [
         {
           "DockedHeight": 329,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SplashScreen.cs [Design]",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\SplashScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\SplashScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\SplashScreen.cs [Design]",
-              "RelativeToolTip": "Forms\\SplashScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T21:30:47.835Z",
-              "EditorCaption": " [Design]"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MultipleChoiceScreen.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\MultipleChoiceScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\MultipleChoiceScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\MultipleChoiceScreen.cs",
-              "RelativeToolTip": "Forms\\MultipleChoiceScreen.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwCYAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T21:29:06.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SplashScreen.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\SplashScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\SplashScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\SplashScreen.cs",
-              "RelativeToolTip": "Forms\\SplashScreen.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAqwCwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T21:29:03.539Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegisterScreen.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\RegisterScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\RegisterScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\RegisterScreen.cs",
-              "RelativeToolTip": "Forms\\RegisterScreen.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAAAH0AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T21:29:02.348Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginScreen.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\LoginScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\LoginScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\LoginScreen.cs",
-              "RelativeToolTip": "Forms\\LoginScreen.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAFEAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T21:29:00.033Z",
+              "Title": "WeaponsQuiz.json",
+              "DocumentMoniker": "E:\\CourseworkRoot\\CourseworkCode\\Quizzes\\WeaponsQuiz.json",
+              "RelativeDocumentMoniker": "Quizzes\\WeaponsQuiz.json",
+              "ToolTip": "E:\\CourseworkRoot\\CourseworkCode\\Quizzes\\WeaponsQuiz.json",
+              "RelativeToolTip": "Quizzes\\WeaponsQuiz.json",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwCYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-18T12:19:39.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TFClass.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\ParentClasses\\TFClass.cs",
-              "RelativeDocumentMoniker": "ParentClasses\\TFClass.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\ParentClasses\\TFClass.cs",
-              "RelativeToolTip": "ParentClasses\\TFClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABRAAAAAAAAAA==",
+              "Title": "DragDropScreen.cs [Design]",
+              "DocumentMoniker": "E:\\CourseworkRoot\\CourseworkCode\\Forms\\DragDropScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\DragDropScreen.cs",
+              "ToolTip": "E:\\CourseworkRoot\\CourseworkCode\\Forms\\DragDropScreen.cs [Design]",
+              "RelativeToolTip": "Forms\\DragDropScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T21:28:25.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "ViewState": "AgIAALgAAAAABL1T13IcwMQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-02-10T21:28:03.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAD0NAAAAAAAAAIAwwFUNAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-02-10T21:28:00.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Player.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\ParentClasses\\Player.cs",
-              "RelativeDocumentMoniker": "ParentClasses\\Player.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\ParentClasses\\Player.cs",
-              "RelativeToolTip": "ParentClasses\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T22:53:43.092Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 65,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "WhenOpened": "2025-02-18T11:26:20.105Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

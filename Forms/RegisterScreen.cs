@@ -3,13 +3,15 @@ using Coursework.ParentClasses;
 using System.Text.Json;
 using Coursework.UserControls;
 using System.Diagnostics;
+using Coursework.Exceptions;
 
 namespace Coursework
 {
     public partial class RegisterScreen : Form
     {
-        List<Player>? playerList;
-        uint classId = 0;
+        private Player player;
+        private List<Player>? playerList;
+        private uint classId = 0;
 
         public RegisterScreen()
         {
@@ -39,62 +41,65 @@ namespace Coursework
 
         private async void btnRegister_Click(object? sender, EventArgs e)
         {
-            // Checks if file either doesn't exist or is empty to start JSON formatting (the square brackets are required as this will be deserialized into a list of objects of type Player). Also uses a binary file for security of user's credentials
-            if (!File.Exists(FormHelper.s_playerJsonPath) || File.ReadAllLines(FormHelper.s_playerJsonPath).Length == 0)
+            if (!File.Exists(FormHelper.PlayersJsonPath) || File.ReadAllLines(FormHelper.PlayersJsonPath).Length == 0)
             {
-                using (BinaryWriter bw = new(File.Open(FormHelper.s_playerJsonPath, FileMode.Create)))
+                using (BinaryWriter bw = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Create)))
                 {
                     bw.Write("[]");
                 }
             }
 
-            // Reads from file and deserializes JSON into a list of Player objects
-            using (BinaryReader br = new(File.Open(FormHelper.s_playerJsonPath, FileMode.Open)))
+            using (BinaryReader br = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Open)))
             {
                 string json = br.ReadString();
                 playerList = JsonSerializer.Deserialize<List<Player>>(json);
             }
 
-            // Checks if the entered password isnt the same as the re-entered password, removes click event to prevent making an incorrect account, and shows an error label.
             if (tbPassword.Text != tbReenter.Text)
             {
-                ErrorMessage(lblPassMatch);
+                ErrorMessage(lblPassMatch.Text);
             }
 
-            /* uses a LINQ query to check every user in the database and ensure the entered usenrame is not already registered, the method Any() returns a boolean value if the list contains the value found in tbUsername.Text
-               an anonymous method here is defined here with a lambda expression (=>) as this will only be used once here, so a full named method is not needed.
-               to the left of the => is a temporary parameter used for the anonmyous method, and to the right is the logic of the method.
-               i utilised a lambda expression here as it provides more readablity for the code and this is a one off condition which will not be re-used.
-            
-               LINQ will be utilised further in my project in ordser to say, select every user which has obtained a specific achievement, or check how many achievements an individual user has achieved (among other things, of course).
-             */
             else if (playerList.Any(player => player.Username == tbUsername.Text))
             {
-                ErrorMessage(lblAccExists);
+                ErrorMessage(lblAccExists.Text);
             }
 
-            // checks whether a username and password have been entered and class has been selected
             else if (String.IsNullOrEmpty(tbUsername.Text) || String.IsNullOrEmpty(tbPassword.Text))
             {
-                ErrorMessage(lblPleaseEnter);
+                ErrorMessage(lblPleaseEnter.Text);
             }
 
             else if (classId == 0)
             {
-                ErrorMessage(lblPleaseSelectClass);
+                ErrorMessage(lblPleaseSelectClass.Text);
             }
 
-            // if everything is correct, the user is written to the file
             else
             {
-                using (BinaryWriter bw = new(File.Open(FormHelper.s_playerJsonPath, FileMode.Create)))
+                using (BinaryWriter bw = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Create)))
                 {
-                    Player player = new(tbUsername.Text, tbPassword.Text, new TFClass(classId), (uint)playerList.Count + 1);
-                    playerList.Add(player);
+                    while (player == null)
+                    {
+                        try
+                        {
+                            player = new(tbUsername.Text, tbPassword.Text, new TFClass(classId), (uint)playerList.Count + 1, null);
+                            playerList.Add(player);
+                        }
+                        catch (InvalidUsernameException ex)
+                        {
+                            ErrorMessage(ex.Message);
+                            return;
+                        }
+                        catch (InvalidPasswordException ex)
+                        {
+                            ErrorMessage(ex.Message);
+                            return;
+                        }
+                    }
 
                     string updatedJson = JsonSerializer.Serialize(playerList, new JsonSerializerOptions { WriteIndented = true }); // writes indented so the debug output is easier to read
                     bw.Write(updatedJson);
-
                     Debug.WriteLine(updatedJson);
 
                     tbUsername.Clear();
@@ -110,10 +115,10 @@ namespace Coursework
 
                     btnRegister.BackColor = Color.FromArgb(189, 59, 59);
 
-                    FormHelper.s_playerList = playerList;
+                    FormHelper.PlayerList = playerList;
 
                     this.Hide();
-                    FormHelper.s_loginScreen.Show();
+                    FormHelper.LoginScreen.Show();
                 }
             }
         }
@@ -123,24 +128,21 @@ namespace Coursework
             PictureBox selectedClass = (PictureBox)sender;
 
             classId = UInt32.Parse(selectedClass.Tag.ToString()); // gets the Tag defined in the designer (which will be a number from 1 to 9) into a variable
-            pbClassSelected.Image = TFClass.assetsHashmap[classId].Item2;
+            pbClassSelected.Image = TFClass.Assets[classId].Portrait;
         }
 
         private void linkToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormHelper.s_loginScreen.Show();
+            FormHelper.LoginScreen.Show();
             Hide();
         }
 
-        private async void ErrorMessage(Control control)
+        private async void ErrorMessage(string text)
         {
-            control.Visible = true;
-
             btnRegister.Click -= btnRegister_Click;
 
-            await Task.Delay(1000);
+            TFMessageBox.Show(text, "Error");
 
-            control.Visible = false;
             btnRegister.Click += btnRegister_Click;
         }
     }

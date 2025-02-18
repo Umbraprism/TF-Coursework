@@ -19,13 +19,13 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            pbPfp.Image = TFClass.assetsHashmap[FormHelper.s_quizPlayer.TFClass.Id].Item1;
-            lblUsername.Text = FormHelper.s_quizPlayer.Username;
-            lblAchievementCount.Text = $"{FormHelper.s_quizPlayer.Achievements.Count(achievement => achievement.IsAchieved)} Achievements";
-            lblHighestScore.Text = $"Highest Score - {FormHelper.s_quizPlayer.GetHighestScore()}";
-            lblClass.Text = $"The {FormHelper.s_quizPlayer.TFClass.Name}";
+            pbPfp.Image = TFClass.Assets[FormHelper.QuizPlayer.TFClass.Id].Avatar;
+            lblUsername.Text = FormHelper.QuizPlayer.Username;
+            lblAchievementCount.Text = $"{FormHelper.QuizPlayer.Achievements.Count(achievement => achievement.IsAchieved)} Achievements";
+            lblHighestScore.Text = $"Highest Score - {FormHelper.QuizPlayer.GetHighestScore()}";
+            lblClass.Text = $"The {FormHelper.QuizPlayer.TFClass.Name}";
 
-            lblTipText.Text = FormHelper.s_tips[rnd.Next(0, FormHelper.s_tips.Length - 1)].Text;
+            lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Length - 1)].Text;
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -34,31 +34,39 @@ namespace Coursework.Forms
 
             if (quitQuery == DialogResult.Yes)
             {
+                int playerToReplace = FormHelper.PlayerList.FindIndex(player => player.Id == FormHelper.QuizPlayer.Id);
+                FormHelper.PlayerList[playerToReplace] = FormHelper.QuizPlayer;
+
+                using (BinaryWriter bw = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Create)))
+                {
+                    string json = JsonSerializer.Serialize(FormHelper.PlayerList);
+                    bw.Write(json);
+                }
+
                 Application.Exit();
             }
         }
 
         private void btnNextTip_Click(object sender, EventArgs e)
         {
-            if (lblTipText.Text == FormHelper.s_tips[rnd.Next(0, FormHelper.s_tips.Length - 1)].Text)
+            if (lblTipText.Text == FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Length - 1)].Text)
             {
                 btnNextTip_Click(sender, e);
             }
             else
             {
-                lblTipText.Text = FormHelper.s_tips[rnd.Next(0, FormHelper.s_tips.Length - 1)].Text;
+                lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Length - 1)].Text;
             }
         }
 
         private void btnWeaponsQuiz_Click(object sender, EventArgs e)
         {
-            string json = File.ReadAllText(Path.Combine(FormHelper.s_quizJsonPath, $"WeaponsQuiz.json"));
-            FormHelper.s_currentQuiz = JsonSerializer.Deserialize<Quiz>(json);
-            //FormHelper.s_currentQuiz.CreateQuiz();
+            string json = File.ReadAllText(Path.Combine(FormHelper.QuizJsonPath, $"WeaponsQuiz.json"));
+            FormHelper.CurrentQuiz = JsonSerializer.Deserialize<Quiz>(json);
 
-            TFMessageBox.Show($"{FormHelper.s_currentQuiz.CurrentDifficulty.Count}", "eee");
+            TFMessageBox.Show($"{FormHelper.CurrentQuiz.CurrentDifficulty.Count}", "eee");
 
-            Question question = FormHelper.s_currentQuiz.CurrentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex];
+            Question question = FormHelper.CurrentQuiz.CurrentDifficulty[FormHelper.CurrentQuiz.CurrentQuestionIndex];
 
             switch (question.Type)
             {
@@ -79,8 +87,8 @@ namespace Coursework.Forms
 
         private void btnTFClassQuiz_Click(object sender, EventArgs e)
         {
-            string json = File.ReadAllText(Path.Combine(FormHelper.s_quizJsonPath, $"TFClassQuiz.json"));
-            FormHelper.s_currentQuiz = JsonSerializer.Deserialize<Quiz>(json);
+            string json = File.ReadAllText(Path.Combine(FormHelper.QuizJsonPath, $"TFClassQuiz.json"));
+            FormHelper.CurrentQuiz = JsonSerializer.Deserialize<Quiz>(json);
             //FormHelper.s_currentQuiz.CreateQuizForms();
 
             //new SplashScreen(FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex]).Show();
@@ -89,8 +97,8 @@ namespace Coursework.Forms
 
         private void btnHistoryQuiz_Click(object sender, EventArgs e)
         {
-            string json = File.ReadAllText(Path.Combine(FormHelper.s_quizJsonPath, $"HistoryQuiz.json"));
-            FormHelper.s_currentQuiz = JsonSerializer.Deserialize<Quiz>(json);
+            string json = File.ReadAllText(Path.Combine(FormHelper.QuizJsonPath, $"HistoryQuiz.json"));
+            FormHelper.CurrentQuiz = JsonSerializer.Deserialize<Quiz>(json);
             //FormHelper.s_currentQuiz.CreateQuizForms();
 
             //new SplashScreen(FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex]).Show();
@@ -115,13 +123,13 @@ namespace Coursework.Forms
         private void btnAchievements_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormHelper.s_achievementsScreen.Show();
+            FormHelper.AchievementScreen.Show();
         }
 
         private void btnStats_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormHelper.s_leaderboardScreen.Show();
+            FormHelper.LeaderboardScreen.Show();
         }
     }
 }

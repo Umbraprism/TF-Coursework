@@ -87,7 +87,7 @@ namespace Coursework.UserControls
             {
                 e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias; // anti aliases text to remove jagged edges and artifacting
                 
-                // the following three lines are really gross and proprietary.. make sure to FIX these!!!
+                // fix or else
 
                 e.Graphics.DrawString(((int)PercentageProgress).ToString(), Font, solidBrushText, new PointF((Width - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Width - 10 * Font.Size / 10), (Height - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Height) / 2)); 
                 e.Graphics.DrawString("%", Font, solidBrushText, new PointF((Width - e.Graphics.MeasureString("%", Font).Width) - 1, (Height - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Height) / 2));

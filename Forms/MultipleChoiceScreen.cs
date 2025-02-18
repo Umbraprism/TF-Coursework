@@ -1,26 +1,30 @@
 ﻿using Coursework.Helpers;
 using Coursework.ParentClasses;
+using Coursework.UserControls;
 
 namespace Coursework.Forms
 {
     public partial class MultipleChoiceScreen : Form
     {
-        public Question question;
+        private Question question;
         private int score;
 
         public MultipleChoiceScreen(ref Question question)
         {
             InitializeComponent();
             this.question = question;
-            this.Text = $"{FormHelper.s_currentQuiz.Name} Quiz";
+            this.Text = $"{FormHelper.CurrentQuiz.Name} Quiz";
+            score = FormHelper.CurrentQuiz.Score;
         }
 
         private void MultipleChoiceScreen_Load(object sender, EventArgs e)
         {
             UIHelper.ApplyFonts(this);
+            lblQuizName.Text = $"{FormHelper.CurrentQuiz.Name.ToUpper()} QUIZ";
             lblQuestionText.Text = question.Text;
-
-            //lblQuestionText.Left = (this.Width / 2 - (TextRenderer.MeasureText(lblQuestionText.Text, lblQuestionText.Font).Width / 2));
+            lblScore.Text = score.ToString();
+            lblTimeRemaining.Text = FormHelper.CurrentQuiz.TimeRemaining.ToString();
+            tmrQuiz.Start();
 
             int i = 0;
 
@@ -29,30 +33,30 @@ namespace Coursework.Forms
                 button.Text = question.Answers[i];
                 i++;
 
-                if (FormHelper.s_currentQuiz.isDisguised)
+                if (FormHelper.CurrentQuiz.IsDisguised)
                 {
-                    button.BackColor = FormHelper.s_ColourHashmap["Blue"];
+                    button.BackColor = FormHelper.ColourPalette["Blue"];
                 }
             }
 
             lblScore.Text = score.ToString();
-            pbAbility.Image = TFClass.assetsHashmap[FormHelper.s_quizPlayer.TFClass.Id].Item3;
+            pbAbility.Image = TFClass.Assets[FormHelper.QuizPlayer.TFClass.Id].Emblem;
         }
 
         private void pbAbility_Click(object sender, EventArgs e)
         {
-            FormHelper.s_quizPlayer.TFClass.TFClassAbility.UseAbility(this, ref FormHelper.s_currentQuiz, ref question);
+            FormHelper.QuizPlayer.TFClass.TFClassAbility.UseAbility(this, ref FormHelper.CurrentQuiz, ref question);
 
-            if (question.isCorrect)
+            if (question.IsCorrect)
             {
-                int scoreAddition = FormHelper.s_currentQuiz.scoreMultiplier != 0 ? 20 * FormHelper.s_currentQuiz.scoreMultiplier : 20;
+                double scoreAddition = FormHelper.CurrentQuiz.ScoreMultiplier != 0 ? 20 * FormHelper.CurrentQuiz.ScoreMultiplier : 20;
 
-                score += scoreAddition;
+                score += (int)scoreAddition;
 
-                question.isCorrect = true;
+                question.IsCorrect = true;
 
-                new AnswerIndicationScreen(scoreAddition).Show();
-                this.Hide();
+                new AnswerIndicationScreen((int)scoreAddition).Show();
+                this.Close();
             }
         }
 
@@ -62,26 +66,37 @@ namespace Coursework.Forms
 
             if (UInt32.Parse(btn.Tag.ToString()) == question.CorrectAnswerIndex)
             {
-                int scoreAddition = FormHelper.s_currentQuiz.scoreMultiplier != 0 ? 20 * FormHelper.s_currentQuiz.scoreMultiplier : 20;
+                double scoreAddition = FormHelper.CurrentQuiz.ScoreMultiplier != 0 ? 20 * FormHelper.CurrentQuiz.ScoreMultiplier : 20;
 
-                score += scoreAddition;
+                score += (int)scoreAddition;
+                question.IsCorrect = true;
 
-                question.isCorrect = true;
-
-                new AnswerIndicationScreen(scoreAddition).Show();
+                new AnswerIndicationScreen((int)scoreAddition).Show();
                 this.Close();
             }
             else
             {
-                if (FormHelper.s_quizPlayer.TFClass.Id == 4)
+                if (FormHelper.QuizPlayer.TFClass.Id == 4)
                 {
-                    FormHelper.s_currentQuiz.scoreMultiplier = 0;
+                    FormHelper.CurrentQuiz.ScoreMultiplier = 0;
                 }
 
-                FormHelper.s_currentQuiz.isDisguised = false;
+                FormHelper.CurrentQuiz.IsDisguised = false;
 
                 new AnswerIndicationScreen(0).Show();
                 this.Close();
+            }
+        }
+
+        private void tmrQuiz_Tick(object sender, EventArgs e)
+        {
+            FormHelper.CurrentQuiz.TimeRemaining--;
+            lblTimeRemaining.Text = FormHelper.CurrentQuiz.TimeRemaining.ToString(); 
+
+            if (FormHelper.CurrentQuiz.TimeRemaining <= 0)
+            {
+                tmrQuiz.Stop();
+                TFMessageBox.Show("time over", "time out");
             }
         }
     }

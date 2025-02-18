@@ -1,5 +1,6 @@
 {
     "Name": "History",
+    "TimeRemaining": 60,
     "BaseQuestions": [
         {
             "Text": "",

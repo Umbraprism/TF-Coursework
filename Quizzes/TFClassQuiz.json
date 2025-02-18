@@ -1,5 +1,6 @@
 {
     "Name": "Class",
+    "TimeRemaining": 60,
     "BaseQuestions": [
         {
             "Text": "",

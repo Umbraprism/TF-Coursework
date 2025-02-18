@@ -7,46 +7,28 @@ namespace Coursework.ParentClasses
     public class Quiz
     {
         public string Name { get; set; }
-        public List<Question> BaseQuestions
-        {
-            get { return baseQuestions; }
-            set { baseQuestions = value; }
-        }
-        public List<Question> EasyQuestions
-        {
-            get { return easyQuestions; }
-            set { easyQuestions = value; }
-        }
+        public QuizScores QuizType { get; set; }
+        public int TimeRemaining { get; set; }
+        public int Score { get; set; } = 0;
+        public bool IsDisguised { get; set; } = false;
+        public double ScoreMultiplier { get; set; } = 0;
+        public int CurrentQuestionIndex { get; set; } = 0;
 
-        public List<Form> baseQuizForms = new();
-        public List<Form> easyQuizForms = new();
-
-        public List<Question> baseQuestions = new();
-        public List<Question> easyQuestions = new();
-
-        public bool isDisguised = false;
-        public int scoreMultiplier = 0;
-        public int currentQuestionIndex = 0;
-
-        public List<Question> CurrentDifficulty { get; set;  }
+        public List<Question> BaseQuestions { get; set; }
+        public List<Question> EasyQuestions { get; set; }
+        public List<Question> CurrentDifficulty { get; set; }
 
         [JsonConstructor]
-        public Quiz(string name, List<Question> baseQuestions, List<Question> easyQuestions)
+        public Quiz(string name, QuizScores quizType,int timeRemaining, List<Question> baseQuestions, List<Question> easyQuestions)
         {
-            this.Name = name;
-            this.BaseQuestions = baseQuestions;
-            this.EasyQuestions = easyQuestions;
+            Name = name;
+            QuizType = quizType;
+            TimeRemaining = timeRemaining;
+            BaseQuestions = baseQuestions;
+            EasyQuestions = easyQuestions;
 
-            baseQuestions.Shuffle();
-            easyQuestions.Shuffle();
-
-            CurrentDifficulty = BaseQuestions;
-        }
-
-        public void CreateQuiz()
-        {
-            baseQuestions.Shuffle();
-            easyQuestions.Shuffle();
+            BaseQuestions.Shuffle();
+            EasyQuestions.Shuffle();
 
             CurrentDifficulty = BaseQuestions;
         }

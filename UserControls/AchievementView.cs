@@ -22,7 +22,7 @@ namespace Coursework.UserControls
             {
                 this.ttRareAchievement.SetToolTip(pbIsAchieved, "This is a Rare Achievement. Less than 10% of players have achieved it.");
                 this.pbIsAchieved.BackgroundImage = Properties.Resources.starburst;
-                this.lblAchievementName.ForeColor = FormHelper.s_ColourHashmap["Gold"];
+                this.lblAchievementName.ForeColor = FormHelper.ColourPalette["Gold"];
             }
         }
 

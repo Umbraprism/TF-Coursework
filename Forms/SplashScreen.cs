@@ -26,17 +26,17 @@ namespace Coursework.Forms
 
             uint randomClass = (uint)rnd.Next(1, 10);
 
-            Tip[] tfClassTips = FormHelper.s_tips.Where(tip => tip.TFClassId == randomClass).ToArray();
+            Tip[] tfClassTips = FormHelper.Tips.Where(tip => tip.TFClassId == randomClass).ToArray();
             lblTipText.Text = tfClassTips[rnd.Next(0, tfClassTips.Length - 1)].Text;
 
             lblOnWayTo.Text = OnWayTo.Text;
             lblOnWayTo.Left = (pnlOnWayTo.Width / 2 - (TextRenderer.MeasureText(lblOnWayTo.Text, lblOnWayTo.Font).Width / 2));
             lblOnWayTo.Top = (pnlOnWayTo.Height / 2 - (TextRenderer.MeasureText(lblOnWayTo.Text, lblOnWayTo.Font).Height / 2));
 
-            lblTFClassName.Text = TFClass.assetsHashmap[randomClass].Item4;
+            lblTFClassName.Text = TFClass.Assets[randomClass].Name;
             lblTFClassName.Left = (pnlClassName.Width / 2 - (TextRenderer.MeasureText(lblTFClassName.Text, lblTFClassName.Font).Width / 2));
 
-            pbClassImage.Image = TFClass.assetsHashmap[randomClass].Item2;
+            pbClassImage.Image = TFClass.Assets[randomClass].Portrait;
 
             tmrLoading.Start();
         }

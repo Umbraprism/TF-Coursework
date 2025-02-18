@@ -1,4 +1,6 @@
-﻿namespace Coursework.ParentClasses
+﻿using System.Text.Json.Serialization;
+
+namespace Coursework.ParentClasses
 {
 
     public enum QuestionType
@@ -20,21 +22,14 @@
         public string[] Answers { get; set; }
         public uint CorrectAnswerIndex { get; set; }
         public uint ImageId { get; set; }
+        public bool IsCorrect { get; set; } = false;
 
-        private string questionText;
-        private string questionType;
-        private string[] answers;
-        private uint correctAnswerIndex;
-        private uint imageId;
-        public bool isCorrect = false;
-
-        public Question() { }
-
-        public Question(string questionText, string[] answers, QuestionType questionType, uint imageId)
+        [JsonConstructor]
+        public Question(string text, string[] answers, QuestionType type, uint imageId)
         {
-            Text = questionText;
+            Text = text;
             Answers = answers;
-            Type = questionType;
+            Type = type;
             ImageId = imageId;
         }
     }

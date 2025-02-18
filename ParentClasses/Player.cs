@@ -1,5 +1,7 @@
 ﻿using System.Text.Json;
 using Coursework.Helpers;
+using Coursework.Exceptions;
+using System.Text.Json.Serialization;
 
 namespace Coursework.ParentClasses
 {
@@ -11,13 +13,13 @@ namespace Coursework.ParentClasses
         GuessingGame
     }
 
-    public struct Scores
+    public class Scores
     {
         public int LatestScore { get; set; }
         public int HighestScore { get; set; }
         public string Rank { get; set; }
 
-        public Scores(int latestScore, int highestScore, string? rank)
+        public Scores(int latestScore, int highestScore, string rank)
         {
             LatestScore = latestScore;
             HighestScore = highestScore;
@@ -29,8 +31,45 @@ namespace Coursework.ParentClasses
     public class Player
     {
         public uint Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
+
+        public string Username 
+        { 
+            get
+            {
+                return username;
+            }
+            set
+            {
+                if (IsValidUsername(value))
+                {
+                    username = value;
+                }
+                else
+                {
+                    throw new InvalidUsernameException();
+                }
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                if (IsValidPassword(value))
+                {
+                    password = value;
+                }
+                else
+                {
+                    throw new InvalidPasswordException();
+                }
+            }
+        }
+
         public TFClass TFClass { get; set; }
         public List<Achievement> Achievements { get; set; }
         public Dictionary<QuizScores, Scores> ScoresHashmap 
@@ -39,7 +78,10 @@ namespace Coursework.ParentClasses
             set { scoresHashmap = value; }
         }
 
-        public Dictionary<QuizScores, Scores> scoresHashmap = new()
+        private string username;
+        private string password;
+
+        private Dictionary<QuizScores, Scores> scoresHashmap = new()
         {
             { QuizScores.Weapons, new(0, 0, String.Empty) },
             { QuizScores.TFClass, new(0, 0, String.Empty) },
@@ -47,17 +89,25 @@ namespace Coursework.ParentClasses
             { QuizScores.GuessingGame, new(0, 0, String.Empty) }
         };
 
-        public Player() { }
-
-        public Player(string username, string password, TFClass tfClass, uint id)
+        [JsonConstructor]
+        public Player(string username, string password, TFClass tfClass, uint id, Dictionary<QuizScores, Scores> scoresHashmap)
         {
             Username = username;
             Password = password;
             TFClass = tfClass;
             Id = id;
 
-            string json = File.ReadAllText(FormHelper.s_achievementsJsonPath);
+            string json = File.ReadAllText(FormHelper.AchievementsJsonPath);
             Achievements = JsonSerializer.Deserialize<List<Achievement>>(json);
+
+            if (scoresHashmap == null)
+            { 
+                ScoresHashmap = this.scoresHashmap;
+            }
+            else
+            {
+                ScoresHashmap = scoresHashmap;
+            }
         }
 
         public int GetHighestScore()
@@ -65,6 +115,64 @@ namespace Coursework.ParentClasses
             List<Int32?> scores = new() { scoresHashmap[QuizScores.Weapons].HighestScore, scoresHashmap[QuizScores.Weapons].HighestScore, scoresHashmap[QuizScores.Weapons].HighestScore };
 
             return (int)scores.Max();
+        }
+
+        private bool IsValidUsername(string value)
+        {
+            if (!String.IsNullOrEmpty(value) && value.Length > 3 && value.Length < 20)
+            {
+                return true;
+            }
+            
+            foreach (char character in value)
+            {
+                if (character == ' ')
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private bool IsValidPassword(string value)
+        {
+            int capitalCount = 0;
+            int lowercaseCount = 0;
+            int numberCount = 0;
+            int specialCount = 0;
+
+            if (String.IsNullOrEmpty(value) || value.Length < 8)
+            {
+                return false;
+            }
+
+            foreach(char character in value)
+            {
+                if (Char.IsDigit(character))
+                {
+                    numberCount++;
+                }
+                if (Char.IsSymbol(character) || Char.IsPunctuation(character))
+                {
+                    specialCount++;
+                }
+                if (Char.IsUpper(character))
+                {
+                    capitalCount++;
+                }
+                if (Char.IsLower(character))
+                {
+                    lowercaseCount++;
+                }
+            }
+
+            if (capitalCount > 0 && lowercaseCount > 0 && numberCount > 0 && specialCount > 0)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

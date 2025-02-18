@@ -31,7 +31,6 @@ U:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.genruntimec
 U:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\ref\Coursework.dll
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.AchievementsScreen.resources
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.AnswerIndicationScreen.resources
-E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.DragDropScreen.resources
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.GuessingGameScreen.resources
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.LeaderboardScreen.resources
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.LoginScreen.resources
@@ -40,7 +39,6 @@ E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.Multi
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.RegisterScreen.resources
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.SplashScreen.resources
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.StatsScreen.resources
-E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.TrueFalseScreen.resources
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Properties.Resources.resources
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.UserControls.AchievementView.resources
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.UserControls.PercentageProgressBar.resources
@@ -94,3 +92,5 @@ U:\CourseworkRoot\CourseworkCode - Copy\bin\Debug\net6.0-windows\Coursework.dll
 U:\CourseworkRoot\CourseworkCode - Copy\bin\Debug\net6.0-windows\Coursework.pdb
 U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net6.0-windows\Coursework.genruntimeconfig.cache
 U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net6.0-windows\ref\Coursework.dll
+E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.DragDropScreen.resources
+E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.TrueFalseScreen.resources

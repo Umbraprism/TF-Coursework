@@ -19,212 +19,79 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
         }
 
-        private void btnWeaponsLeaderboard_Click(object sender, EventArgs e)
-        {
-            lvLeaderboard.Items.Clear();
-            Button btn = (Button)sender;
-            TextInfo ti = new CultureInfo("en-US", false).TextInfo;
-
-            lblQuizSelected.Text = $"{ti.ToTitleCase(btn.Text.ToLower())} Quiz";
-
-            for (int i = 0; i < FormHelper.s_playerList.Count; i++)
-            {
-                Player player = FormHelper.s_playerList[i];
-
-                ListViewItem item = new();
-
-                item.SubItems.Add(player.Username);
-                item.SubItems.Add(player.scoresHashmap[QuizScores.Weapons].HighestScore.ToString());
-                item.SubItems.Add(player.scoresHashmap[QuizScores.Weapons].Rank);
-
-                item.UseItemStyleForSubItems = false;
-
-                UIHelper.ApplyFonts(this);
-
-                item.SubItems[0].Font = UIHelper.TF2Build;
-                item.SubItems[3].ForeColor = player.scoresHashmap[QuizScores.Weapons].Rank != String.Empty ? FormHelper.s_ColourHashmap[player.scoresHashmap[QuizScores.Weapons].Rank] : Color.FromArgb(0, 0, 0);
-
-                lvLeaderboard.Items.Add(item);
-            }
-
-            lvLeaderboard.Columns[1].Width += lvLeaderboard.Width - (lvLeaderboard.Columns[0].Width + lvLeaderboard.Columns[1].Width + lvLeaderboard.Columns[2].Width + lvLeaderboard.Columns[3].Width);
-
-            ListViewSorter sorter = new(2, SortOrder.Descending);
-            lvLeaderboard.ListViewItemSorter = sorter;
-
-            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
-            {
-                ListViewItem item = lvLeaderboard.Items[i];
-
-                item.SubItems[0].Text = (i + 1).ToString();
-            }
-
-            lvLeaderboard.Sort();
-
-            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
-            {
-                ListViewItem item = lvLeaderboard.Items[i];
-
-                switch (item.SubItems[0].Text)
-                {
-                    case "1":
-                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Gold"];
-                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Gold"];
-                        break;
-                    case "2":
-                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Silver"];
-                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Silver"];
-                        break;
-                    case "3":
-                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
-                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-
-        private void btnTFClassLeaderboard_Click(object sender, EventArgs e)
-        {
-            lvLeaderboard.Items.Clear();
-            Button btn = (Button)sender;
-            TextInfo ti = new CultureInfo("en-US", false).TextInfo;
-
-            lblQuizSelected.Text = $"{ti.ToTitleCase(btn.Text.ToLower())} Quiz";
-
-            for (int i = 0; i < FormHelper.s_playerList.Count; i++)
-            {
-                Player player = FormHelper.s_playerList[i];
-
-                ListViewItem item = new();
-
-                item.SubItems.Add(player.Username);
-                item.SubItems.Add(player.scoresHashmap[QuizScores.TFClass].HighestScore.ToString());
-                item.SubItems.Add(player.scoresHashmap[QuizScores.TFClass].Rank);
-
-                item.UseItemStyleForSubItems = false;
-
-                UIHelper.ApplyFonts(this);
-
-                item.SubItems[0].Font = UIHelper.TF2Build;
-                item.SubItems[3].ForeColor = player.scoresHashmap[QuizScores.Weapons].Rank != String.Empty ? FormHelper.s_ColourHashmap[player.scoresHashmap[QuizScores.Weapons].Rank] : Color.FromArgb(0, 0, 0);
-
-                lvLeaderboard.Items.Add(item);
-            }
-
-            lvLeaderboard.Columns[1].Width += lvLeaderboard.Width - (lvLeaderboard.Columns[0].Width + lvLeaderboard.Columns[1].Width + lvLeaderboard.Columns[2].Width + lvLeaderboard.Columns[3].Width);
-
-            ListViewSorter sorter = new(2, SortOrder.Descending);
-            lvLeaderboard.ListViewItemSorter = sorter;
-
-            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
-            {
-                ListViewItem item = lvLeaderboard.Items[i];
-
-                item.SubItems[0].Text = (i + 1).ToString();
-            }
-
-            lvLeaderboard.Sort();
-
-            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
-            {
-                ListViewItem item = lvLeaderboard.Items[i];
-
-                switch (item.SubItems[0].Text)
-                {
-                    case "1":
-                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Gold"];
-                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Gold"];
-                        break;
-                    case "2":
-                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Silver"];
-                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Silver"];
-                        break;
-                    case "3":
-                        item.SubItems[1].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
-                        item.SubItems[2].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-
-        private void btnHistoryLeaderboard_Click(object sender, EventArgs e)
-        {
-            lvLeaderboard.Items.Clear();
-            Button btn = (Button)sender;
-            TextInfo ti = new CultureInfo("en-US", false).TextInfo;
-
-            lblQuizSelected.Text = $"{ti.ToTitleCase(btn.Text.ToLower())} Quiz";
-
-            for (int i = 0; i < FormHelper.s_playerList.Count; i++)
-            {
-                Player player = FormHelper.s_playerList[i];
-
-                ListViewItem item = new();
-
-                item.SubItems.Add(player.Username);
-                item.SubItems.Add(player.scoresHashmap[QuizScores.History].HighestScore.ToString());
-                item.SubItems.Add(player.scoresHashmap[QuizScores.History].Rank);
-
-                item.UseItemStyleForSubItems = false;
-
-                UIHelper.ApplyFonts(this);
-
-                item.SubItems[0].Font = UIHelper.TF2Build;
-                item.SubItems[3].ForeColor = player.scoresHashmap[QuizScores.History].Rank != String.Empty ? FormHelper.s_ColourHashmap[player.scoresHashmap[QuizScores.Weapons].Rank] : Color.FromArgb(0, 0, 0);
-
-                lvLeaderboard.Items.Add(item);
-            }
-
-            lvLeaderboard.Columns[1].Width += lvLeaderboard.Width - (lvLeaderboard.Columns[0].Width + lvLeaderboard.Columns[1].Width + lvLeaderboard.Columns[2].Width + lvLeaderboard.Columns[3].Width);
-
-            ListViewSorter sorter = new(2, SortOrder.Descending);
-            lvLeaderboard.ListViewItemSorter = sorter;
-
-            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
-            {
-                ListViewItem item = lvLeaderboard.Items[i];
-
-                item.SubItems[0].Text = (i + 1).ToString();
-            }
-
-            lvLeaderboard.Sort();
-
-            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
-            { 
-                switch (Int32.Parse(lvLeaderboard.Items[i].SubItems[0].Text))
-                {
-                    case 1:
-                        for (int j = 0; j < 3; j++)
-                        {
-                            lvLeaderboard.Items[i].SubItems[j].ForeColor = FormHelper.s_ColourHashmap["Gold"];
-                        }
-                        break;
-                    case 2:
-                        for (int j = 0; j < 3; j++)
-                        {
-                            lvLeaderboard.Items[i].SubItems[j].ForeColor = FormHelper.s_ColourHashmap["Silver"];
-                        }
-                        break;
-                    case 3:
-                        for (int j = 0; j < 3; j++)
-                        {
-                            lvLeaderboard.Items[i].SubItems[j].ForeColor = FormHelper.s_ColourHashmap["Bronze"];
-                        }
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormHelper.s_mainMenuScreen.Show();
+            FormHelper.MainMenuScreen.Show();
+        }
+
+        private void btnQuizLeaderboard_Click(object sender, EventArgs e)
+        {
+            lvLeaderboard.Items.Clear();
+
+            Button btn = (Button)sender;
+            TextInfo ti = new CultureInfo("en-US", false).TextInfo;
+
+            QuizScores quizScore = (QuizScores)Enum.Parse(typeof(QuizScores), btn.Tag.ToString());
+
+            lblQuizSelected.Text = $"{ti.ToTitleCase(btn.Text.ToLower())} Quiz";
+
+            for (int i = 0; i < FormHelper.PlayerList.Count; i++)
+            {
+                Player player = FormHelper.PlayerList[i];
+
+                ListViewItem item = new();
+
+                item.SubItems.Add(player.Username);
+                item.SubItems.Add(player.ScoresHashmap[quizScore].HighestScore.ToString());
+                item.SubItems.Add(player.ScoresHashmap[quizScore].Rank);
+
+                item.UseItemStyleForSubItems = false;
+
+                UIHelper.ApplyFonts(this);
+
+                item.SubItems[0].Font = UIHelper.TF2Build;
+                item.SubItems[3].ForeColor = player.ScoresHashmap[quizScore].Rank != String.Empty ? FormHelper.ColourPalette[player.ScoresHashmap[quizScore].Rank] : Color.FromArgb(0, 0, 0);
+
+                lvLeaderboard.Items.Add(item);
+            }
+
+            lvLeaderboard.Columns[1].Width += lvLeaderboard.Width - (lvLeaderboard.Columns[0].Width + lvLeaderboard.Columns[1].Width + lvLeaderboard.Columns[2].Width + lvLeaderboard.Columns[3].Width);
+
+            ListViewSorter sorter = new(2, SortOrder.Descending);
+            lvLeaderboard.ListViewItemSorter = sorter;
+
+            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
+            {
+                ListViewItem item = lvLeaderboard.Items[i];
+
+                item.SubItems[0].Text = (i + 1).ToString();
+            }
+
+            lvLeaderboard.Sort();
+
+            for (int i = 0; i < lvLeaderboard.Items.Count; i++)
+            {
+                ListViewItem item = lvLeaderboard.Items[i];
+
+                switch (item.SubItems[0].Text)
+                {
+                    case "1":
+                        item.SubItems[1].ForeColor = FormHelper.ColourPalette["Gold"];
+                        item.SubItems[2].ForeColor = FormHelper.ColourPalette["Gold"];
+                        break;
+                    case "2":
+                        item.SubItems[1].ForeColor = FormHelper.ColourPalette["Silver"];
+                        item.SubItems[2].ForeColor = FormHelper.ColourPalette["Silver"];
+                        break;
+                    case "3":
+                        item.SubItems[1].ForeColor = FormHelper.ColourPalette["Bronze"];
+                        item.SubItems[2].ForeColor = FormHelper.ColourPalette["Bronze"];
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 
@@ -238,7 +105,7 @@ namespace Coursework.Forms
             this.columnToSort = columnToSort;
             this.sortOrder = sortOrder;
         }
-        public int Compare(Object x, Object y)
+        public int Compare(Object? x, Object? y)
         {
             try
             {

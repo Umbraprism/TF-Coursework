@@ -22,31 +22,31 @@ namespace Coursework.Forms
 
         private void linkToRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormHelper.s_registerScreen.Show();
+            FormHelper.RegisterScreen.Show();
             Hide();
         }
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
-            if (!File.Exists(FormHelper.s_playerJsonPath) || File.ReadAllLines(FormHelper.s_playerJsonPath).Length == 0)
+            if (!File.Exists(FormHelper.PlayersJsonPath) || File.ReadAllLines(FormHelper.PlayersJsonPath).Length == 0)
             {
-                using (BinaryWriter bw = new(File.Open(FormHelper.s_playerJsonPath, FileMode.Create)))
+                using (BinaryWriter bw = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Create)))
                 {
                     bw.Write("[]");
                 }
             }
 
             // Reads from file and deserializes JSON into a list of Player objects
-            using (BinaryReader br = new(File.Open(FormHelper.s_playerJsonPath, FileMode.Open)))
+            using (BinaryReader br = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Open)))
             {
                 string json = br.ReadString();
-                FormHelper.s_playerList = JsonSerializer.Deserialize<List<Player>>(json);
+                FormHelper.PlayerList = JsonSerializer.Deserialize<List<Player>>(json);
             }
 
-            if (FormHelper.s_playerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
+            if (FormHelper.PlayerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
             {
-                FormHelper.s_quizPlayer = FormHelper.s_playerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
-                FormHelper.s_mainMenuScreen.Show();
+                FormHelper.QuizPlayer = FormHelper.PlayerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
+                FormHelper.MainMenuScreen.Show();
                 Hide();
             }
             else
@@ -79,7 +79,7 @@ namespace Coursework.Forms
         private void LoginScreen_Activated(object sender, EventArgs e)
         {
             uint tfRandomClass = (uint)rnd.Next(1, 9);
-            pbClassImage.Image = TFClass.assetsHashmap[tfRandomClass].Item2;
+            pbClassImage.Image = TFClass.Assets[tfRandomClass].Portrait;
         }
     }
 }

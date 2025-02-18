@@ -5,15 +5,15 @@ namespace Coursework.Helpers
 {
     public static class FormHelper
     {
-        public static string s_playerJsonPath = Path.Combine(Environment.CurrentDirectory, "playerData.bin");
-        public static string s_tipJsonPath = Path.Combine(Environment.CurrentDirectory, "tips.json");
-        public static string s_achievementsJsonPath = Path.Combine(Environment.CurrentDirectory, "achievements.json");
-        public static string s_quizJsonPath = @$"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Quizzes\";
+        public static string PlayersJsonPath { get; } = Path.Combine(Environment.CurrentDirectory, "playerData.bin");
+        public static string TipJsonPath { get; } = Path.Combine(Environment.CurrentDirectory, "tips.json");
+        public static string AchievementsJsonPath { get; } = Path.Combine(Environment.CurrentDirectory, "achievements.json");
+        public static string QuizJsonPath { get; } = @$"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Quizzes\";
 
-        public static List<Player> s_playerList;
-        public static Player s_quizPlayer;
+        public static List<Player> PlayerList { get; set; }
+        public static Player QuizPlayer { get; set; }
 
-        public static Dictionary<string, Color> s_ColourHashmap = new()
+        public static Dictionary<string, Color> ColourPalette { get; } = new()
         {
             { "Background", Color.FromArgb(0, 0, 0) },
             { "BackgroundDark", Color.FromArgb(0, 0, 0) },
@@ -34,16 +34,15 @@ namespace Coursework.Helpers
             { "Junk", Color.FromArgb(178, 178, 178) }
         };
 
-        public static Tip[] s_tips;
-        public static Quiz s_currentQuiz;
+        public static Tip[] Tips { get; set; }
+        public static Quiz CurrentQuiz; 
 
-        public static RegisterScreen s_registerScreen = new();
-        public static LoginScreen s_loginScreen = new();
-        public static AchievementsScreen s_achievementsScreen = new();
-        public static LeaderboardScreen s_leaderboardScreen = new();
-        public static MainMenuScreen s_mainMenuScreen = new();
-        public static SplashScreen s_splashScreen = new(s_registerScreen);
-        public static StatsScreen s_statsScreen = new();
+        public static RegisterScreen RegisterScreen { get; } = new();
+        public static LoginScreen LoginScreen { get; } = new();
+        public static AchievementsScreen AchievementScreen { get; } = new();
+        public static LeaderboardScreen LeaderboardScreen { get; } = new();
+        public static MainMenuScreen MainMenuScreen { get; } = new();
+        public static StatsScreen StatsScreen { get; } = new();
 
         public static void Shuffle<T>(this List<T> toShuffle)
         {

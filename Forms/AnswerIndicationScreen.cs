@@ -7,7 +7,6 @@ namespace Coursework.Forms
     public partial class AnswerIndicationScreen : Form
     {
         private int score;
-        private int sleepTime = 0;
 
         public AnswerIndicationScreen(int score)
         {
@@ -30,22 +29,23 @@ namespace Coursework.Forms
             {
                 lblIndicator.Text = "CORRECT!";
                 lblScore.Text = $"+{score} Points";
-                lblScore.ForeColor = FormHelper.s_ColourHashmap["Green"];
+                lblScore.ForeColor = FormHelper.ColourPalette["Green"];
             }
             else
             {
                 lblIndicator.Text = "INCORRECT!";
                 lblScore.Text = $"+{score} Points";
-                lblScore.ForeColor = FormHelper.s_ColourHashmap["Red"];
+                lblScore.ForeColor = FormHelper.ColourPalette["Red"];
             }
+
+            FormHelper.CurrentQuiz.Score += score;
 
             await Task.Delay(2000);
 
             try
             {
-                FormHelper.s_currentQuiz.currentQuestionIndex++;
-
-                Question question = FormHelper.s_currentQuiz.BaseQuestions[FormHelper.s_currentQuiz.currentQuestionIndex];
+                FormHelper.CurrentQuiz.CurrentQuestionIndex++;
+                Question question = FormHelper.CurrentQuiz.BaseQuestions[FormHelper.CurrentQuiz.CurrentQuestionIndex];
 
                 switch (question.Type)
                 {
@@ -62,13 +62,13 @@ namespace Coursework.Forms
                         throw new FormatException("Question is not of a valid type.");
                 }
             }
-            catch (Exception ex)
+            catch (ArgumentOutOfRangeException)
             {
-                TFMessageBox.Show($"{ex.Message}", "bleghhh...");
-                FormHelper.s_mainMenuScreen.Show();
+                FormHelper.MainMenuScreen.Show();;
+                FormHelper.QuizPlayer.ScoresHashmap[FormHelper.CurrentQuiz.QuizType].HighestScore = FormHelper.CurrentQuiz.Score;
             }
 
-            Close();
+            this.Close();
         }
     }
 }
