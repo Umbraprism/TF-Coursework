@@ -129,5 +129,20 @@ namespace Coursework.Forms
             this.Hide();
             FormHelper.LeaderboardScreen.Show();
         }
+
+        private void btnHostOrJoin_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = TFMessageBox.Show("Would you like to host a match for others to join or join an already existing match?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Host", "Join" });
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                throw new NotImplementedException();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                throw new NotImplementedException();
+            }
+            else { }
+        }
     }
 }

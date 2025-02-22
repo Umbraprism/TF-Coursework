@@ -51,6 +51,10 @@
             btnNextTip = new Button();
             lblTipText = new Label();
             lblTip = new Label();
+            pnlOnline = new Panel();
+            ppbToNextRank = new UserControls.PercentageProgressBar();
+            btnHostOrJoin = new Button();
+            lblRank = new Label();
             pnlMain.SuspendLayout();
             tlpStatistics.SuspendLayout();
             tlpQuizSelect.SuspendLayout();
@@ -59,6 +63,7 @@
             pnlUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbPfp).BeginInit();
             pnlTip.SuspendLayout();
+            pnlOnline.SuspendLayout();
             SuspendLayout();
             // 
             // pnlMain
@@ -362,6 +367,63 @@
             lblTip.TabIndex = 0;
             lblTip.Text = "TIP";
             // 
+            // pnlOnline
+            // 
+            pnlOnline.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            pnlOnline.BackColor = Color.FromArgb(45, 41, 39);
+            pnlOnline.Controls.Add(ppbToNextRank);
+            pnlOnline.Controls.Add(btnHostOrJoin);
+            pnlOnline.Controls.Add(lblRank);
+            pnlOnline.Location = new Point(535, 768);
+            pnlOnline.Name = "pnlOnline";
+            pnlOnline.Size = new Size(1065, 132);
+            pnlOnline.TabIndex = 2;
+            // 
+            // ppbToNextRank
+            // 
+            ppbToNextRank.Anchor = AnchorStyles.Right;
+            ppbToNextRank.BackColor = Color.FromArgb(41, 39, 39);
+            ppbToNextRank.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbToNextRank.Location = new Point(296, 24);
+            ppbToNextRank.Name = "ppbToNextRank";
+            ppbToNextRank.ProgressColour = Color.FromArgb(246, 231, 222);
+            ppbToNextRank.Size = new Size(619, 88);
+            ppbToNextRank.Style = ProgressBarStyle.Continuous;
+            ppbToNextRank.TabIndex = 3;
+            ppbToNextRank.Text = "PERCENTAGE";
+            ppbToNextRank.TextColour = Color.FromArgb(246, 231, 222);
+            ppbToNextRank.UsePercentage = true;
+            // 
+            // btnHostOrJoin
+            // 
+            btnHostOrJoin.BackColor = Color.FromArgb(114, 158, 66);
+            btnHostOrJoin.BackgroundImageLayout = ImageLayout.Center;
+            btnHostOrJoin.Dock = DockStyle.Right;
+            btnHostOrJoin.FlatAppearance.BorderSize = 0;
+            btnHostOrJoin.FlatStyle = FlatStyle.Flat;
+            btnHostOrJoin.Font = new Font("Segoe UI", 69.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnHostOrJoin.ForeColor = Color.FromArgb(246, 231, 222);
+            btnHostOrJoin.Location = new Point(921, 0);
+            btnHostOrJoin.Name = "btnHostOrJoin";
+            btnHostOrJoin.Size = new Size(144, 132);
+            btnHostOrJoin.TabIndex = 2;
+            btnHostOrJoin.Text = "👥";
+            btnHostOrJoin.TextAlign = ContentAlignment.TopCenter;
+            btnHostOrJoin.UseVisualStyleBackColor = false;
+            btnHostOrJoin.Click += btnHostOrJoin_Click;
+            // 
+            // lblRank
+            // 
+            lblRank.Anchor = AnchorStyles.Left;
+            lblRank.AutoSize = true;
+            lblRank.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRank.ForeColor = Color.FromArgb(246, 231, 222);
+            lblRank.Location = new Point(6, 47);
+            lblRank.Name = "lblRank";
+            lblRank.Size = new Size(152, 65);
+            lblRank.TabIndex = 0;
+            lblRank.Text = "RANK";
+            // 
             // MainMenuScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -369,6 +431,7 @@
             BackgroundImage = Properties.Resources.cwBgWide;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1600, 900);
+            Controls.Add(pnlOnline);
             Controls.Add(pnlDetail);
             Controls.Add(pnlMain);
             DoubleBuffered = true;
@@ -388,6 +451,8 @@
             ((System.ComponentModel.ISupportInitialize)pbPfp).EndInit();
             pnlTip.ResumeLayout(false);
             pnlTip.PerformLayout();
+            pnlOnline.ResumeLayout(false);
+            pnlOnline.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -415,5 +480,9 @@
         private TableLayoutPanel tlpQuizSelect;
         private TableLayoutPanel tlpStatistics;
         private Button btnNextTip;
+        private Panel pnlOnline;
+        private Label lblRank;
+        private Button btnHostOrJoin;
+        private UserControls.PercentageProgressBar ppbToNextRank;
     }
 }

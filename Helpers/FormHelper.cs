@@ -10,7 +10,7 @@ namespace Coursework.Helpers
         public static string AchievementsJsonPath { get; } = Path.Combine(Environment.CurrentDirectory, "achievements.json");
         public static string QuizJsonPath { get; } = @$"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Quizzes\";
 
-        public static List<Player> PlayerList { get; set; }
+        public static List<Player> PlayerList { get; set; } = new();
         public static Player QuizPlayer { get; set; }
 
         public static Dictionary<string, Color> ColourPalette { get; } = new()
@@ -34,8 +34,8 @@ namespace Coursework.Helpers
             { "Junk", Color.FromArgb(178, 178, 178) }
         };
 
-        public static Tip[] Tips { get; set; }
-        public static Quiz CurrentQuiz; 
+        public static Tip[]? Tips { get; set; }
+        public static Quiz CurrentQuiz;
 
         public static RegisterScreen RegisterScreen { get; } = new();
         public static LoginScreen LoginScreen { get; } = new();

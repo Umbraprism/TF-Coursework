@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿#nullable disable
+
+using System.Diagnostics;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using Coursework.Exceptions;
@@ -20,8 +22,8 @@ namespace Coursework.Helpers
     {
         private static PrivateFontCollection fontCollection = new();
 
-        public static Font? TF2Build;
-        public static Font? TF2Secondary;
+        public static Font TF2Build { get; set; }
+        public static Font TF2Secondary { get; set; }
 
         /// <summary>
         /// <c>P/Invoke</c> Creates a cursor handle from a cursor file. Allows the custom cursor to utilise colour.

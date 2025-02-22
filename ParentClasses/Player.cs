@@ -15,9 +15,9 @@ namespace Coursework.ParentClasses
 
     public class Scores
     {
-        public int LatestScore { get; set; }
-        public int HighestScore { get; set; }
-        public string Rank { get; set; }
+        public int LatestScore { get; set; } = 0;
+        public int HighestScore { get; set; } = 0;
+        public string Rank { get; set; } = String.Empty;
 
         public Scores(int latestScore, int highestScore, string rank)
         {
@@ -36,7 +36,12 @@ namespace Coursework.ParentClasses
         { 
             get
             {
-                return username;
+                if (username != null)
+                {
+                    return username;
+                }
+
+                return String.Empty;
             }
             set
             {
@@ -55,7 +60,12 @@ namespace Coursework.ParentClasses
         {
             get
             {
-                return password;
+                if (password != null)
+                {
+                    return password;
+                }
+
+                return String.Empty;
             }
             set
             {
@@ -71,15 +81,15 @@ namespace Coursework.ParentClasses
         }
 
         public TFClass TFClass { get; set; }
-        public List<Achievement> Achievements { get; set; }
+        public List<Achievement>? Achievements { get; set; }
         public Dictionary<QuizScores, Scores> ScoresHashmap 
         {
             get { return scoresHashmap; } 
             set { scoresHashmap = value; }
         }
 
-        private string username;
-        private string password;
+        private string? username;
+        private string? password;
 
         private Dictionary<QuizScores, Scores> scoresHashmap = new()
         {
@@ -90,7 +100,7 @@ namespace Coursework.ParentClasses
         };
 
         [JsonConstructor]
-        public Player(string username, string password, TFClass tfClass, uint id, Dictionary<QuizScores, Scores> scoresHashmap)
+        public Player(string username, string password, TFClass tfClass, uint id, Dictionary<QuizScores, Scores>? scoresHashmap)
         {
             Username = username;
             Password = password;
@@ -179,7 +189,7 @@ namespace Coursework.ParentClasses
         {
             try
             {
-                Player player = (Player)obj;
+                Player? player = (Player?)obj;
 
                 return 0;
             }

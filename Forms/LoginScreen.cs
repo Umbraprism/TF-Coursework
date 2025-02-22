@@ -27,7 +27,7 @@ namespace Coursework.Forms
             Hide();
         }
 
-        private async void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object? sender, EventArgs e)
         {
             if (!File.Exists(FormHelper.PlayersJsonPath) || File.ReadAllLines(FormHelper.PlayersJsonPath).Length == 0)
             {

@@ -108,8 +108,8 @@ namespace Coursework.Forms
         {
             try
             {
-                ListViewItem lviX = (ListViewItem)x;
-                ListViewItem lviY = (ListViewItem)y;
+                ListViewItem? lviX = (ListViewItem?)x;
+                ListViewItem? lviY = (ListViewItem?)y;
 
                 int comparison = ciComparer.Compare(Int32.Parse(lviX.SubItems[columnToSort].Text), Int32.Parse(lviY.SubItems[columnToSort].Text));
 

@@ -63,8 +63,9 @@ namespace Coursework.Forms
         private void btnAnswer_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
+            uint questionIndex = UInt32.Parse(btn.Tag.ToString());
 
-            if (UInt32.Parse(btn.Tag.ToString()) == question.CorrectAnswerIndex)
+            if (questionIndex == question.CorrectAnswerIndex)
             {
                 double scoreAddition = FormHelper.CurrentQuiz.ScoreMultiplier != 0 ? 20 * FormHelper.CurrentQuiz.ScoreMultiplier : 20;
 

@@ -65,7 +65,7 @@ namespace Coursework.UserControls
             }
         }
 
-        public static DialogResult Show(string message, string title, TFMessageBoxButtons buttons = TFMessageBoxButtons.OK, string[] buttonText = null)
+        public static DialogResult Show(string message, string title, TFMessageBoxButtons buttons = TFMessageBoxButtons.OK, params string[] buttonText)
         {
             using (TFMessageBox msg = new(message, title, buttons, buttonText))
             {

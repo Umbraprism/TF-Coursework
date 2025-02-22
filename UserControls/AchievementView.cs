@@ -6,7 +6,7 @@ namespace Coursework.UserControls
 {
     public partial class AchievementView : UserControl
     {
-        private int percAchieved;
+        //private int percAchieved;
 
         public AchievementView(Achievement achievement)
         {

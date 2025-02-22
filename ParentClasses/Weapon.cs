@@ -1,4 +1,6 @@
-﻿namespace Coursework.ParentClasses
+﻿using System.Text.Json.Serialization;
+
+namespace Coursework.ParentClasses
 {
     public class Weapon
     {
@@ -13,8 +15,7 @@
         public string Update { get; set; }
         public uint ImageId { get; set; }
 
-        public Weapon() { }
-
+        [JsonConstructor]
         public Weapon(string name, string slot, uint usedBy, string update, uint imageId)
         {
             Name = name;
