@@ -39,11 +39,11 @@
       "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\endscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\forms\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|U:\\CourseworkRoot\\CourseworkCode\\forms\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\forms\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|U:\\CourseworkRoot\\CourseworkCode\\forms\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -74,8 +74,7 @@
               "RelativeToolTip": "Forms\\EndScreen.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAAD0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T23:36:27.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T23:36:27.247Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "UserControls\\TFMessageBox.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAUwEoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T23:30:45.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T23:30:45.917Z"
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "ParentClasses\\Player.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAABMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T23:30:07.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T23:30:07.75Z"
             },
             {
               "$type": "Document",
@@ -113,8 +110,7 @@
               "RelativeToolTip": "Helpers\\UIHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T23:28:47.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T23:28:47.124Z"
             },
             {
               "$type": "Document",
@@ -126,8 +122,7 @@
               "RelativeToolTip": "ParentClasses\\Weapon.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T23:28:05.544Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T23:28:05.544Z"
             },
             {
               "$type": "Document",
@@ -139,8 +134,7 @@
               "RelativeToolTip": "Forms\\LoginScreen.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAAACsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T23:27:32.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T23:27:32.482Z"
             },
             {
               "$type": "Document",
@@ -150,7 +144,7 @@
               "RelativeDocumentMoniker": "Helpers\\FormHelper.cs",
               "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Helpers\\FormHelper.cs",
               "RelativeToolTip": "Helpers\\FormHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-22T23:26:38.032Z",
               "EditorCaption": ""
@@ -177,8 +171,7 @@
               "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\SplashScreen.cs [Design]",
               "RelativeToolTip": "Forms\\SplashScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T23:16:08.527Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-22T23:16:08.527Z"
             },
             {
               "$type": "Document",
@@ -190,8 +183,7 @@
               "RelativeToolTip": "Forms\\SplashScreen.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T23:16:05.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T23:16:05.893Z"
             },
             {
               "$type": "Document",
@@ -203,8 +195,7 @@
               "RelativeToolTip": "Forms\\RegisterScreen.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAAAFAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T23:15:31.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T23:15:31.923Z"
             },
             {
               "$type": "Document",
@@ -215,8 +206,7 @@
               "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\MainMenuScreen.cs [Design]",
               "RelativeToolTip": "Forms\\MainMenuScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T23:06:40.57Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-22T23:06:40.57Z"
             }
           ]
         },
