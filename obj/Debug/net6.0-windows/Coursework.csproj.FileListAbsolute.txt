@@ -127,3 +127,4 @@ E:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net6.0-windows\Coursework.genr
 E:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net6.0-windows\ref\Coursework.dll
 E:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net6.0-windows\Coursework.Forms.EndScreen.resources
 E:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net6.0-windows\Coursework.sourcelink.json
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.EndScreen.resources

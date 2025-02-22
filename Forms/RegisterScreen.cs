@@ -9,7 +9,7 @@ namespace Coursework
 {
     public partial class RegisterScreen : Form
     {
-        private Player player;
+        private Player? player;
         private List<Player>? playerList;
         private uint classId = 0;
 
@@ -137,18 +137,18 @@ namespace Coursework
             Hide();
         }
 
-        private async void ErrorMessage(string text)
+        private void RegisterScreen_Deactivate(object sender, EventArgs e)
+        {
+            player = null;
+        }
+
+        private void ErrorMessage(string text)
         {
             btnRegister.Click -= btnRegister_Click;
 
             TFMessageBox.Show(text, "Error");
 
             btnRegister.Click += btnRegister_Click;
-        }
-
-        private void RegisterScreen_Deactivate(object sender, EventArgs e)
-        {
-            player = null;
         }
     }
 }

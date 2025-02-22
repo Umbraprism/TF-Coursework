@@ -36,7 +36,7 @@
             panel1 = new Panel();
             lblGradeTitle = new Label();
             lblGrade = new Label();
-            btnNextTip = new Button();
+            btnFinished = new Button();
             lblScore = new Label();
             lblIncorrect = new Label();
             lblCorrect = new Label();
@@ -56,7 +56,7 @@
             rpnlEnd.BorderSize = 10;
             rpnlEnd.Controls.Add(panel2);
             rpnlEnd.Controls.Add(panel1);
-            rpnlEnd.Controls.Add(btnNextTip);
+            rpnlEnd.Controls.Add(btnFinished);
             rpnlEnd.Controls.Add(lblScore);
             rpnlEnd.Controls.Add(lblIncorrect);
             rpnlEnd.Controls.Add(lblCorrect);
@@ -145,21 +145,21 @@
             lblGrade.TabIndex = 6;
             lblGrade.Text = "GRADE";
             // 
-            // btnNextTip
+            // btnFinished
             // 
-            btnNextTip.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnNextTip.BackColor = Color.FromArgb(159, 49, 49);
-            btnNextTip.FlatAppearance.BorderSize = 0;
-            btnNextTip.FlatStyle = FlatStyle.Flat;
-            btnNextTip.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnNextTip.ForeColor = Color.White;
-            btnNextTip.Location = new Point(664, 649);
-            btnNextTip.Name = "btnNextTip";
-            btnNextTip.Size = new Size(408, 79);
-            btnNextTip.TabIndex = 10;
-            btnNextTip.Text = "▶";
-            btnNextTip.UseVisualStyleBackColor = false;
-            btnNextTip.Click += btnNextTip_Click;
+            btnFinished.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnFinished.BackColor = Color.FromArgb(159, 49, 49);
+            btnFinished.FlatAppearance.BorderSize = 0;
+            btnFinished.FlatStyle = FlatStyle.Flat;
+            btnFinished.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFinished.ForeColor = Color.White;
+            btnFinished.Location = new Point(664, 649);
+            btnFinished.Name = "btnFinished";
+            btnFinished.Size = new Size(408, 79);
+            btnFinished.TabIndex = 10;
+            btnFinished.Text = "▶";
+            btnFinished.UseVisualStyleBackColor = false;
+            btnFinished.Click += btnFinished_Click;
             // 
             // lblScore
             // 
@@ -274,7 +274,7 @@
         private Label lblGradeTitle;
         private Label lblScore;
         private System.Windows.Forms.Timer tmrEnd;
-        private Button btnNextTip;
+        private Button btnFinished;
         private Panel panel1;
         private Panel panel2;
     }

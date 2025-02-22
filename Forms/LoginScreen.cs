@@ -7,7 +7,8 @@ namespace Coursework.Forms
 {
     public partial class LoginScreen : Form
     {
-        Random rnd = new();
+        private Random rnd = new();
+
         public LoginScreen()
         {
             InitializeComponent();

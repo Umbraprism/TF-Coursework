@@ -45,6 +45,25 @@ namespace Coursework.Forms
             CheckAchievements();
         }
 
+        private void tmrEnd_Tick(object sender, EventArgs e)
+        {
+            timeOnScreen--;
+
+            if (timeOnScreen >= 0)
+            {
+                FormHelper.MainMenuScreen.Show();
+                this.Close();
+                tmrEnd.Stop();
+            }
+        }
+
+        private void btnFinished_Click(object sender, EventArgs e)
+        {
+            FormHelper.CurrentQuiz = null;
+            this.Close();
+            FormHelper.MainMenuScreen.Show();
+        }
+
         private string SetRank()
         {
             int percentage = noCorrect / noAnswered * 100;
@@ -111,25 +130,6 @@ namespace Coursework.Forms
 
                 flpAchievementsUnlocked.Controls.Add(new AchievementView(achievement));
             }
-        }
-
-        private void tmrEnd_Tick(object sender, EventArgs e)
-        {
-            timeOnScreen--;
-
-            if (timeOnScreen >= 0)
-            {
-                FormHelper.MainMenuScreen.Show();
-                this.Close();
-                tmrEnd.Stop();
-            }
-        }
-
-        private void btnNextTip_Click(object sender, EventArgs e)
-        {
-            FormHelper.CurrentQuiz = null;
-            this.Close();
-            FormHelper.MainMenuScreen.Show();
         }
     }
 }

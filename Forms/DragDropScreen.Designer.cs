@@ -195,12 +195,12 @@
             lblAnsFour.AutoSize = true;
             lblAnsFour.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnsFour.ForeColor = Color.FromArgb(246, 231, 222);
-            lblAnsFour.Location = new Point(167, 38);
+            lblAnsFour.Location = new Point(171, 38);
             lblAnsFour.Name = "lblAnsFour";
-            lblAnsFour.Size = new Size(201, 65);
+            lblAnsFour.Size = new Size(194, 65);
             lblAnsFour.TabIndex = 3;
             lblAnsFour.Tag = "3";
-            lblAnsFour.Text = "AnsFour";
+            lblAnsFour.Text = "AnsOne";
             lblAnsFour.MouseDown += label_MouseDown;
             // 
             // lblAnsThree
@@ -209,12 +209,12 @@
             lblAnsThree.AutoSize = true;
             lblAnsThree.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnsThree.ForeColor = Color.FromArgb(246, 231, 222);
-            lblAnsThree.Location = new Point(691, 38);
+            lblAnsThree.Location = new Point(708, 38);
             lblAnsThree.Name = "lblAnsThree";
-            lblAnsThree.Size = new Size(225, 65);
+            lblAnsThree.Size = new Size(191, 65);
             lblAnsThree.TabIndex = 2;
             lblAnsThree.Tag = "2";
-            lblAnsThree.Text = "AnsThree";
+            lblAnsThree.Text = "AnsTwo";
             lblAnsThree.MouseDown += label_MouseDown;
             // 
             // lblAnsTwo
@@ -223,12 +223,12 @@
             lblAnsTwo.AutoSize = true;
             lblAnsTwo.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnsTwo.ForeColor = Color.FromArgb(246, 231, 222);
-            lblAnsTwo.Location = new Point(172, 179);
+            lblAnsTwo.Location = new Point(155, 179);
             lblAnsTwo.Name = "lblAnsTwo";
-            lblAnsTwo.Size = new Size(191, 65);
+            lblAnsTwo.Size = new Size(225, 65);
             lblAnsTwo.TabIndex = 1;
             lblAnsTwo.Tag = "1";
-            lblAnsTwo.Text = "AnsTwo";
+            lblAnsTwo.Text = "AnsThree";
             lblAnsTwo.MouseDown += label_MouseDown;
             // 
             // lblAnsOne
@@ -237,12 +237,12 @@
             lblAnsOne.AutoSize = true;
             lblAnsOne.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnsOne.ForeColor = Color.FromArgb(246, 231, 222);
-            lblAnsOne.Location = new Point(707, 179);
+            lblAnsOne.Location = new Point(703, 179);
             lblAnsOne.Name = "lblAnsOne";
-            lblAnsOne.Size = new Size(194, 65);
+            lblAnsOne.Size = new Size(201, 65);
             lblAnsOne.TabIndex = 0;
             lblAnsOne.Tag = "0";
-            lblAnsOne.Text = "AnsOne";
+            lblAnsOne.Text = "AnsFour";
             lblAnsOne.MouseDown += label_MouseDown;
             // 
             // tmrQuiz

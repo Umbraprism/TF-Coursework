@@ -64,8 +64,6 @@ namespace Coursework.Forms
             string json = File.ReadAllText(Path.Combine(FormHelper.QuizJsonPath, $"WeaponsQuiz.json"));
             FormHelper.CurrentQuiz = JsonSerializer.Deserialize<Quiz>(json);
 
-            TFMessageBox.Show($"{FormHelper.CurrentQuiz.CurrentDifficulty.Count}", "eee");
-
             Question question = FormHelper.CurrentQuiz.CurrentDifficulty[FormHelper.CurrentQuiz.CurrentQuestionIndex];
 
             switch (question.Type)

@@ -10,8 +10,8 @@ namespace Coursework.Helpers
         public static string AchievementsJsonPath { get; } = Path.Combine(Environment.CurrentDirectory, "achievements.json");
         public static string QuizJsonPath { get; } = @$"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Quizzes\";
 
-        public static List<Player>? PlayerList { get; set; }
-        public static Player? QuizPlayer { get; set; }
+        public static List<Player> PlayerList { get; set; }
+        public static Player QuizPlayer { get; set; }
 
         public static Dictionary<string, Color> ColourPalette { get; } = new()
         {
@@ -34,8 +34,8 @@ namespace Coursework.Helpers
             { "Junk", Color.FromArgb(178, 178, 178) }
         };
 
-        public static Tip[]? Tips { get; set; }
-        public static Quiz? CurrentQuiz; 
+        public static Tip[] Tips { get; set; }
+        public static Quiz CurrentQuiz; 
 
         public static RegisterScreen RegisterScreen { get; } = new();
         public static LoginScreen LoginScreen { get; } = new();
@@ -43,19 +43,5 @@ namespace Coursework.Helpers
         public static LeaderboardScreen LeaderboardScreen { get; } = new();
         public static MainMenuScreen MainMenuScreen { get; } = new();
         public static StatsScreen StatsScreen { get; } = new();
-
-        public static void Shuffle<T>(this List<T> toShuffle)
-        {
-            Random rnd = new();
-
-            for (int i = 0; i < toShuffle.Count; i++)
-            {
-                T store = toShuffle[i];
-                int rndNum = rnd.Next(0, toShuffle.Count);
-
-                toShuffle[i] = toShuffle[rndNum];
-                toShuffle[rndNum] = store;
-            }
-        }
     }
 }

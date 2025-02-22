@@ -1,6 +1,5 @@
 ﻿using Coursework.Helpers;
 using Coursework.ParentClasses;
-using Coursework.UserControls;
 
 namespace Coursework.Forms
 {
@@ -22,7 +21,7 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            lblQuizName.Text = $"{FormHelper.CurrentQuiz.Name.ToUpper()} QUIZ";
+            lblQuizName.Text = $"{Text.ToUpper()} QUIZ";
             lblQuestionText.Text = question.Text;
             lblScore.Text = score.ToString();
             lblTimeRemaining.Text = FormHelper.CurrentQuiz.TimeRemaining.ToString();
@@ -38,7 +37,7 @@ namespace Coursework.Forms
 
             int i = 0;
 
-            foreach (Label label in this.tlpAnswers.Controls)
+            foreach (Label label in tlpAnswers.Controls)
             {
                 label.AllowDrop = true;
                 label.Text = question.Answers[i];
