@@ -29,6 +29,11 @@ namespace Coursework.Forms
             pbImage.Tag = question.CorrectAnswerIndex;
             pbImage.AllowDrop = true;
 
+            if (FormHelper.QuizPlayer.TFClass.TFClassAbility.ChargeLevel < FormHelper.QuizPlayer.TFClass.TFClassAbility.ChargesRequired)
+            {
+                pbAbility.Visible = false;
+            }
+
             tmrQuiz.Start();
 
             int i = 0;
@@ -70,7 +75,7 @@ namespace Coursework.Forms
         {
             Label lbl = (Label)sender;
 
-            lbl.DoDragDrop(this, DragDropEffects.Copy);
+            lbl.DoDragDrop(lbl.Text, DragDropEffects.Copy);
         }
 
         private void image_DragEnter(object sender, DragEventArgs e)
@@ -80,15 +85,15 @@ namespace Coursework.Forms
 
         private void image_DragDrop(object sender, DragEventArgs e)
         {
-            PictureBox label = (PictureBox)sender;
-            uint result = UInt32.Parse(label.Tag.ToString());
+            string result = (string)e.Data.GetData(DataFormats.Text);
 
-            if (result == question.CorrectAnswerIndex)
+            if (result == question.Answers[question.CorrectAnswerIndex])
             {
                 double scoreAddition = FormHelper.CurrentQuiz.ScoreMultiplier != 0 ? 20 * FormHelper.CurrentQuiz.ScoreMultiplier : 20;
 
                 score += (int)scoreAddition;
                 question.IsCorrect = true;
+                question.IsAnswered = true;
 
                 new AnswerIndicationScreen((int)scoreAddition).Show();
                 this.Close();
@@ -101,6 +106,8 @@ namespace Coursework.Forms
                 }
 
                 FormHelper.CurrentQuiz.IsDisguised = false;
+
+                question.IsAnswered = true;
 
                 new AnswerIndicationScreen(0).Show();
                 this.Close();
@@ -115,7 +122,8 @@ namespace Coursework.Forms
             if (FormHelper.CurrentQuiz.TimeRemaining <= 0)
             {
                 tmrQuiz.Stop();
-                TFMessageBox.Show("time over", "time out");
+                new EndScreen().Show();
+                this.Close();
             }
         }
     }

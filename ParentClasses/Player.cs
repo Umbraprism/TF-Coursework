@@ -119,7 +119,7 @@ namespace Coursework.ParentClasses
 
         private bool IsValidUsername(string value)
         {
-            if (!String.IsNullOrEmpty(value) && value.Length > 3 && value.Length < 20)
+            if (!String.IsNullOrEmpty(value) && value.Length >= 3 && value.Length < 20)
             {
                 return true;
             }
@@ -132,7 +132,7 @@ namespace Coursework.ParentClasses
                 }
             }
 
-            return true;
+            return false;
         }
 
         private bool IsValidPassword(string value)
@@ -173,6 +173,20 @@ namespace Coursework.ParentClasses
             }
 
             return false;
+        }
+
+        public int CompareTo(object? obj)
+        {
+            try
+            {
+                Player player = (Player)obj;
+
+                return 0;
+            }
+            catch (InvalidCastException)
+            {
+                throw;
+            }
         }
     }
 }

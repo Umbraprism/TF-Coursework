@@ -126,9 +126,8 @@ namespace Coursework.Forms
                         return 0;
                 }
             }
-            catch (Exception ex)
+            catch (InvalidCastException)
             {
-                Debug.WriteLine(ex.Message);
                 throw;
             }
         }

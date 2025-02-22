@@ -23,6 +23,7 @@ namespace Coursework.ParentClasses
         public uint CorrectAnswerIndex { get; set; }
         public uint ImageId { get; set; }
         public bool IsCorrect { get; set; } = false;
+        public bool IsAnswered { get; set; } = false;
 
         [JsonConstructor]
         public Question(string text, string[] answers, QuestionType type, uint imageId)

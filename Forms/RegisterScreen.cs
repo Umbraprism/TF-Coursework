@@ -145,5 +145,10 @@ namespace Coursework
 
             btnRegister.Click += btnRegister_Click;
         }
+
+        private void RegisterScreen_Deactivate(object sender, EventArgs e)
+        {
+            player = null;
+        }
     }
 }

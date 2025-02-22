@@ -10,6 +10,9 @@
     <Compile Update="Forms\DragDropScreen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\EndScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\GuessingGameScreen.cs">
       <SubType>Form</SubType>
     </Compile>

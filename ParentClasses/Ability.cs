@@ -31,6 +31,7 @@ namespace Coursework.ParentClasses
                     if (ChargeLevel == ChargesRequired)
                     {
                         question.IsCorrect = true;
+                        question.IsAnswered = true;
                         ChargeLevel = 0;
                         TimesUsed++;
                     }
@@ -67,11 +68,21 @@ namespace Coursework.ParentClasses
                         {
                             if (control.Controls.Count > 0 && control.GetType() == typeof(TableLayoutPanel))
                             {
-                                foreach (Button button in control.Controls)
+                                foreach (Control answer in control.Controls)
                                 {
-                                    if (UInt32.Parse(control.Controls[i].Tag.ToString()) != question.CorrectAnswerIndex)
+                                    if (answer.GetType() == typeof(Label))
                                     {
-                                        control.Controls[i].BackgroundImage = Properties.Resources.achieved;
+                                        if (UInt32.Parse(control.Controls[i].Tag.ToString()) != question.CorrectAnswerIndex)
+                                        {
+                                            control.Controls[i].BackgroundImage = Properties.Resources.achieved;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (UInt32.Parse(control.Controls[i].Tag.ToString()) != question.CorrectAnswerIndex)
+                                        {
+                                            control.Controls[i].BackgroundImage = Properties.Resources.achieved;
+                                        }
                                     }
 
                                     i++;

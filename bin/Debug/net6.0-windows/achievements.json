@@ -2,7 +2,11 @@
     {
         "Name": "Race For The Pennant",
 	    "Description": "Complete any quiz in less than 50% of the allocated time.",
-	    "IsRareAchievement": true,
+	    "IsAchieved": false
+    },
+    {
+        "Name": "Top Gun",
+	    "Description": "Complete any quiz in less than 50% of the allocated time.",
 	    "IsAchieved": false
     }
 ]

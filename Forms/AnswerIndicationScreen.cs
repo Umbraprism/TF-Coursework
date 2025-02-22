@@ -64,8 +64,8 @@ namespace Coursework.Forms
             }
             catch (ArgumentOutOfRangeException)
             {
-                FormHelper.MainMenuScreen.Show();;
-                FormHelper.QuizPlayer.ScoresHashmap[FormHelper.CurrentQuiz.QuizType].HighestScore = FormHelper.CurrentQuiz.Score;
+                new EndScreen().Show();
+                this.Close();
             }
 
             this.Close();

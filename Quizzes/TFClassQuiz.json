@@ -1,5 +1,6 @@
 {
     "Name": "Class",
+    "QuizType":  1,
     "TimeRemaining": 60,
     "BaseQuestions": [
         {

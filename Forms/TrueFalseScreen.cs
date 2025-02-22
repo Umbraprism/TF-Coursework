@@ -70,6 +70,7 @@ namespace Coursework.Forms
 
                 score += (int)scoreAddition;
                 question.IsCorrect = true;
+                question.IsAnswered = true;
 
                 new AnswerIndicationScreen((int)scoreAddition).Show();
                 this.Close();
@@ -82,6 +83,8 @@ namespace Coursework.Forms
                 }
 
                 FormHelper.CurrentQuiz.IsDisguised = false;
+
+                question.IsAnswered = true;
 
                 new AnswerIndicationScreen(0).Show();
                 this.Close();
@@ -96,7 +99,8 @@ namespace Coursework.Forms
             if (FormHelper.CurrentQuiz.TimeRemaining <= 0)
             {
                 tmrQuiz.Stop();
-                TFMessageBox.Show("time over", "time out");
+                new EndScreen().Show();
+                this.Close();
             }
         }
     }

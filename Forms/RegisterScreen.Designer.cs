@@ -488,6 +488,7 @@
             Name = "RegisterScreen";
             Text = "Registration";
             WindowState = FormWindowState.Maximized;
+            Deactivate += RegisterScreen_Deactivate;
             Load += RegisterScreen_Load;
             ((System.ComponentModel.ISupportInitialize)pbScoutEmblem).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbSoldierEmblem).EndInit();

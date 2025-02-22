@@ -1,5 +1,6 @@
 {
     "Name": "History",
+    "QuizType":  2,
     "TimeRemaining": 60,
     "BaseQuestions": [
         {

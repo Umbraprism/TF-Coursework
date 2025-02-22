@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using Coursework.Helpers;
 
 namespace Coursework.ParentClasses
 {
@@ -6,15 +7,14 @@ namespace Coursework.ParentClasses
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public bool IsRareAchievement { get; set; }
+        public bool IsRareAchievement { get; set; } = false;
         public bool IsAchieved { get; set; }
 
         [JsonConstructor]
-        public Achievement(string name, string description, bool isRareAchievement, bool isAchieved)
+        public Achievement(string name, string description, bool isAchieved)
         {
             Name = name;
             Description = description;
-            IsRareAchievement = isRareAchievement;
             IsAchieved = isAchieved;
         }
     }

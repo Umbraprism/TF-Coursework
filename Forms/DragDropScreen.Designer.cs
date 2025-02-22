@@ -177,10 +177,10 @@
             tlpAnswers.ColumnCount = 2;
             tlpAnswers.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tlpAnswers.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tlpAnswers.Controls.Add(lblAnsFour, 1, 1);
-            tlpAnswers.Controls.Add(lblAnsThree, 0, 1);
-            tlpAnswers.Controls.Add(lblAnsTwo, 1, 0);
-            tlpAnswers.Controls.Add(lblAnsOne, 0, 0);
+            tlpAnswers.Controls.Add(lblAnsFour, 0, 0);
+            tlpAnswers.Controls.Add(lblAnsThree, 1, 0);
+            tlpAnswers.Controls.Add(lblAnsTwo, 0, 1);
+            tlpAnswers.Controls.Add(lblAnsOne, 1, 1);
             tlpAnswers.Location = new Point(285, 597);
             tlpAnswers.Name = "tlpAnswers";
             tlpAnswers.RowCount = 2;
@@ -195,7 +195,7 @@
             lblAnsFour.AutoSize = true;
             lblAnsFour.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnsFour.ForeColor = Color.FromArgb(246, 231, 222);
-            lblAnsFour.Location = new Point(703, 179);
+            lblAnsFour.Location = new Point(167, 38);
             lblAnsFour.Name = "lblAnsFour";
             lblAnsFour.Size = new Size(201, 65);
             lblAnsFour.TabIndex = 3;
@@ -209,7 +209,7 @@
             lblAnsThree.AutoSize = true;
             lblAnsThree.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnsThree.ForeColor = Color.FromArgb(246, 231, 222);
-            lblAnsThree.Location = new Point(155, 179);
+            lblAnsThree.Location = new Point(691, 38);
             lblAnsThree.Name = "lblAnsThree";
             lblAnsThree.Size = new Size(225, 65);
             lblAnsThree.TabIndex = 2;
@@ -223,7 +223,7 @@
             lblAnsTwo.AutoSize = true;
             lblAnsTwo.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnsTwo.ForeColor = Color.FromArgb(246, 231, 222);
-            lblAnsTwo.Location = new Point(708, 38);
+            lblAnsTwo.Location = new Point(172, 179);
             lblAnsTwo.Name = "lblAnsTwo";
             lblAnsTwo.Size = new Size(191, 65);
             lblAnsTwo.TabIndex = 1;
@@ -237,7 +237,7 @@
             lblAnsOne.AutoSize = true;
             lblAnsOne.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnsOne.ForeColor = Color.FromArgb(246, 231, 222);
-            lblAnsOne.Location = new Point(171, 38);
+            lblAnsOne.Location = new Point(707, 179);
             lblAnsOne.Name = "lblAnsOne";
             lblAnsOne.Size = new Size(194, 65);
             lblAnsOne.TabIndex = 0;

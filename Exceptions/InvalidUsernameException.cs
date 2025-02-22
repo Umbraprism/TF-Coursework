@@ -2,7 +2,7 @@
 {
     public class InvalidUsernameException : Exception
     {
-        private static readonly new string Message = "The font used does not exist. Please use either the Build or Secondary font.";
+        private static readonly new string Message = "The username entered is invalid. Please ensure that your username/n/nIs at least 3 characters long./nDoes not contain any spaces.".Replace("/n", Environment.NewLine);
 
         public InvalidUsernameException() : base(Message)
         {
