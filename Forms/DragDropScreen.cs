@@ -23,12 +23,19 @@ namespace Coursework.Forms
 
             lblQuizName.Text = $"{Text.ToUpper()} QUIZ";
             lblQuestionText.Text = question.Text;
+
             lblScore.Text = score.ToString();
             lblTimeRemaining.Text = FormHelper.CurrentQuiz.TimeRemaining.ToString();
+
+            if (question.ImageId != 0)
+            {
+                pbImage.Image = question.IdToImage[question.ImageId];
+            }
+
             pbImage.Tag = question.CorrectAnswerIndex;
             pbImage.AllowDrop = true;
 
-            if (FormHelper.QuizPlayer.TFClass.TFClassAbility.ChargeLevel < FormHelper.QuizPlayer.TFClass.TFClassAbility.ChargesRequired)
+            if (PlayerHelper.QuizPlayer.TFClass.TFClassAbility.ChargeLevel < PlayerHelper.QuizPlayer.TFClass.TFClassAbility.ChargesRequired)
             {
                 pbAbility.Visible = false;
             }
@@ -50,12 +57,12 @@ namespace Coursework.Forms
             }
 
             lblScore.Text = score.ToString();
-            pbAbility.Image = TFClass.Assets[FormHelper.QuizPlayer.TFClass.Id].Emblem;
+            pbAbility.Image = TFClass.Assets[PlayerHelper.QuizPlayer.TFClass.Id].Emblem;
         }
 
         private void pbAbility_Click(object sender, EventArgs e)
         {
-            FormHelper.QuizPlayer.TFClass.TFClassAbility.UseAbility(this, ref FormHelper.CurrentQuiz, ref question);
+            PlayerHelper.QuizPlayer.TFClass.TFClassAbility.UseAbility(this, ref FormHelper.CurrentQuiz, ref question);
 
             if (question.IsCorrect)
             {
@@ -104,7 +111,7 @@ namespace Coursework.Forms
             }
             else
             {
-                if (FormHelper.QuizPlayer.TFClass.Id == 4)
+                if (PlayerHelper.QuizPlayer.TFClass.Id == 4)
                 {
                     FormHelper.CurrentQuiz.ScoreMultiplier = 0;
                 }

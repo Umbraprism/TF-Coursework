@@ -115,7 +115,7 @@ namespace Coursework
 
                     btnRegister.BackColor = Color.FromArgb(189, 59, 59);
 
-                    FormHelper.PlayerList = playerList;
+                    PlayerHelper.PlayerList = playerList;
 
                     this.Hide();
                     FormHelper.LoginScreen.Show();

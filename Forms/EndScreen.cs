@@ -31,7 +31,7 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            lblUsername.Text = FormHelper.QuizPlayer.Username;
+            lblUsername.Text = PlayerHelper.QuizPlayer.Username;
 
             lblCorrect.Text = noCorrect.ToString();
             lblIncorrect.Text = noIncorrect.ToString();
@@ -100,11 +100,11 @@ namespace Coursework.Forms
 
         private int SetPlacement()
         {
-            List<Player> players = FormHelper.PlayerList;
+            List<Player> players = PlayerHelper.PlayerList;
 
             players.OrderBy(player => player.ScoresHashmap[FormHelper.CurrentQuiz.QuizType]);
 
-            return players.IndexOf(FormHelper.QuizPlayer);
+            return players.IndexOf(PlayerHelper.QuizPlayer);
         }
 
         private void CheckAchievements()
@@ -122,11 +122,11 @@ namespace Coursework.Forms
 
         private void UnlockAchievement(string name)
         {
-            Achievement achievement = FormHelper.QuizPlayer.Achievements.Where(achievement => achievement.Name == name).First();
+            Achievement achievement = PlayerHelper.QuizPlayer.Achievements.Where(achievement => achievement.Name == name).First();
 
             if (!achievement.IsAchieved)
             {
-                FormHelper.QuizPlayer.Achievements.Where(achievement => achievement.Name == name).First().IsAchieved = true;
+                PlayerHelper.QuizPlayer.Achievements.Where(achievement => achievement.Name == name).First().IsAchieved = true;
 
                 flpAchievementsUnlocked.Controls.Add(new AchievementView(achievement));
             }

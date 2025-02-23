@@ -15,7 +15,7 @@ namespace Coursework.UserControls
             this.lblAchievementName.Text = achievement.Name;
             this.lblAchievementDescription.Text = achievement.Description;
 
-            foreach (Player player in FormHelper.PlayerList)
+            foreach (Player player in PlayerHelper.PlayerList)
             {
 
             }

@@ -21,7 +21,7 @@ namespace Coursework.Forms
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormHelper.MainMenuScreen.Show();
+            FormHelper.StatsScreen.Show();
         }
 
         private void btnQuizLeaderboard_Click(object sender, EventArgs e)
@@ -35,9 +35,9 @@ namespace Coursework.Forms
 
             lblQuizSelected.Text = $"{ti.ToTitleCase(btn.Text.ToLower())} Quiz";
 
-            for (int i = 0; i < FormHelper.PlayerList.Count; i++)
+            for (int i = 0; i < PlayerHelper.PlayerList.Count; i++)
             {
-                Player player = FormHelper.PlayerList[i];
+                Player player = PlayerHelper.PlayerList[i];
 
                 ListViewItem item = new();
 

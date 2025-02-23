@@ -52,9 +52,9 @@
             lblTipText = new Label();
             lblTip = new Label();
             pnlOnline = new Panel();
-            ppbToNextRank = new UserControls.PercentageProgressBar();
+            ppbToNextOnlineRank = new UserControls.PercentageProgressBar();
             btnHostOrJoin = new Button();
-            lblRank = new Label();
+            lblOnlineRank = new Label();
             pnlMain.SuspendLayout();
             tlpStatistics.SuspendLayout();
             tlpQuizSelect.SuspendLayout();
@@ -374,28 +374,28 @@
             // 
             pnlOnline.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlOnline.BackColor = Color.FromArgb(45, 41, 39);
-            pnlOnline.Controls.Add(ppbToNextRank);
+            pnlOnline.Controls.Add(ppbToNextOnlineRank);
             pnlOnline.Controls.Add(btnHostOrJoin);
-            pnlOnline.Controls.Add(lblRank);
+            pnlOnline.Controls.Add(lblOnlineRank);
             pnlOnline.Location = new Point(535, 768);
             pnlOnline.Name = "pnlOnline";
             pnlOnline.Size = new Size(1065, 132);
             pnlOnline.TabIndex = 2;
             // 
-            // ppbToNextRank
+            // ppbToNextOnlineRank
             // 
-            ppbToNextRank.Anchor = AnchorStyles.Right;
-            ppbToNextRank.BackColor = Color.FromArgb(41, 39, 39);
-            ppbToNextRank.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            ppbToNextRank.Location = new Point(296, 24);
-            ppbToNextRank.Name = "ppbToNextRank";
-            ppbToNextRank.ProgressColour = Color.FromArgb(246, 231, 222);
-            ppbToNextRank.Size = new Size(619, 88);
-            ppbToNextRank.Style = ProgressBarStyle.Continuous;
-            ppbToNextRank.TabIndex = 3;
-            ppbToNextRank.Text = "PERCENTAGE";
-            ppbToNextRank.TextColour = Color.FromArgb(246, 231, 222);
-            ppbToNextRank.UsePercentage = true;
+            ppbToNextOnlineRank.Anchor = AnchorStyles.Right;
+            ppbToNextOnlineRank.BackColor = Color.FromArgb(41, 39, 39);
+            ppbToNextOnlineRank.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbToNextOnlineRank.Location = new Point(296, 24);
+            ppbToNextOnlineRank.Name = "ppbToNextOnlineRank";
+            ppbToNextOnlineRank.ProgressColour = Color.FromArgb(246, 231, 222);
+            ppbToNextOnlineRank.Size = new Size(619, 88);
+            ppbToNextOnlineRank.Style = ProgressBarStyle.Continuous;
+            ppbToNextOnlineRank.TabIndex = 3;
+            ppbToNextOnlineRank.Text = "PERCENTAGE";
+            ppbToNextOnlineRank.TextColour = Color.FromArgb(246, 231, 222);
+            ppbToNextOnlineRank.UsePercentage = true;
             // 
             // btnHostOrJoin
             // 
@@ -415,17 +415,17 @@
             btnHostOrJoin.UseVisualStyleBackColor = false;
             btnHostOrJoin.Click += btnHostOrJoin_Click;
             // 
-            // lblRank
+            // lblOnlineRank
             // 
-            lblRank.Anchor = AnchorStyles.Left;
-            lblRank.AutoSize = true;
-            lblRank.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            lblRank.ForeColor = Color.FromArgb(246, 231, 222);
-            lblRank.Location = new Point(6, 47);
-            lblRank.Name = "lblRank";
-            lblRank.Size = new Size(152, 65);
-            lblRank.TabIndex = 0;
-            lblRank.Text = "RANK";
+            lblOnlineRank.Anchor = AnchorStyles.Left;
+            lblOnlineRank.AutoSize = true;
+            lblOnlineRank.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOnlineRank.ForeColor = Color.FromArgb(246, 231, 222);
+            lblOnlineRank.Location = new Point(6, 47);
+            lblOnlineRank.Name = "lblOnlineRank";
+            lblOnlineRank.Size = new Size(152, 65);
+            lblOnlineRank.TabIndex = 0;
+            lblOnlineRank.Text = "RANK";
             // 
             // MainMenuScreen
             // 
@@ -484,8 +484,8 @@
         private TableLayoutPanel tlpStatistics;
         private Button btnNextTip;
         private Panel pnlOnline;
-        private Label lblRank;
+        private Label lblOnlineRank;
         private Button btnHostOrJoin;
-        private UserControls.PercentageProgressBar ppbToNextRank;
+        private UserControls.PercentageProgressBar ppbToNextOnlineRank;
     }
 }

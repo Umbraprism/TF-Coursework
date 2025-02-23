@@ -25,7 +25,7 @@ namespace Coursework.ParentClasses
 
         public virtual void UseAbility(Form form, ref Quiz quiz, ref Question question)
         {
-            switch (FormHelper.QuizPlayer.TFClass.Id)
+            switch (PlayerHelper.QuizPlayer.TFClass.Id)
             {
                 case 1:
                     if (ChargeLevel == ChargesRequired)

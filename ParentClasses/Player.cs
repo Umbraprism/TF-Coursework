@@ -1,5 +1,4 @@
 ﻿using System.Text.Json;
-using Coursework.Helpers;
 using Coursework.Exceptions;
 using System.Text.Json.Serialization;
 
@@ -17,7 +16,7 @@ namespace Coursework.ParentClasses
     {
         public int LatestScore { get; set; } = 0;
         public int HighestScore { get; set; } = 0;
-        public string Rank { get; set; } = String.Empty;
+        public string Rank { get; set; } = "Junk";
 
         public Scores(int latestScore, int highestScore, string rank)
         {
@@ -94,10 +93,10 @@ namespace Coursework.ParentClasses
 
         private Dictionary<QuizScores, Scores> scoresHashmap = new()
         {
-            { QuizScores.Weapons, new(0, 0, String.Empty) },
-            { QuizScores.TFClass, new(0, 0, String.Empty) },
-            { QuizScores.History, new(0, 0, String.Empty) },
-            { QuizScores.GuessingGame, new(0, 0, String.Empty) }
+            { QuizScores.Weapons, new(0, 0, "Junk") },
+            { QuizScores.TFClass, new(0, 0, "Junk") },
+            { QuizScores.History, new(0, 0, "Junk") },
+            { QuizScores.GuessingGame, new(0, 0, "Junk") }
         };
 
         [JsonConstructor]
@@ -108,7 +107,7 @@ namespace Coursework.ParentClasses
             TFClass = tfClass;
             Id = id;
 
-            string json = File.ReadAllText(FormHelper.AchievementsJsonPath);
+            string json = File.ReadAllText("achievements.json");
             Achievements = JsonSerializer.Deserialize<List<Achievement>>(json);
 
             if (scoresHashmap == null)

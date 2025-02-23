@@ -40,12 +40,12 @@ namespace Coursework.Forms
             }
 
             lblScore.Text = score.ToString();
-            pbAbility.Image = TFClass.Assets[FormHelper.QuizPlayer.TFClass.Id].Emblem;
+            pbAbility.Image = TFClass.Assets[PlayerHelper.QuizPlayer.TFClass.Id].Emblem;
         }
 
         private void pbAbility_Click(object sender, EventArgs e)
         {
-            FormHelper.QuizPlayer.TFClass.TFClassAbility.UseAbility(this, ref FormHelper.CurrentQuiz, ref question);
+            PlayerHelper.QuizPlayer.TFClass.TFClassAbility.UseAbility(this, ref FormHelper.CurrentQuiz, ref question);
 
             if (question.IsCorrect)
             {
@@ -78,7 +78,7 @@ namespace Coursework.Forms
             }
             else
             {
-                if (FormHelper.QuizPlayer.TFClass.Id == 4)
+                if (PlayerHelper.QuizPlayer.TFClass.Id == 4)
                 {
                     FormHelper.CurrentQuiz.ScoreMultiplier = 0;
                 }

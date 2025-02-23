@@ -6,11 +6,6 @@ namespace Coursework.Helpers
     public static class FormHelper
     {
         public static string PlayersJsonPath { get; } = Path.Combine(Environment.CurrentDirectory, "playerData.bin");
-        public static string TipJsonPath = Path.Combine(Environment.CurrentDirectory, "tips.json");
-        public static string AchievementsJsonPath { get; } = Path.Combine(Environment.CurrentDirectory, "achievements.json");
-
-        public static List<Player> PlayerList { get; set; } = new();
-        public static Player QuizPlayer { get; set; }
 
         public static Dictionary<string, Color> ColourPalette { get; } = new()
         {

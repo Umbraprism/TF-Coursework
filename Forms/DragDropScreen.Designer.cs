@@ -252,7 +252,7 @@
             // 
             // rpnlImageBox
             // 
-            rpnlImageBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            rpnlImageBox.Anchor = AnchorStyles.Top;
             rpnlImageBox.BorderColour = Color.FromArgb(45, 41, 39);
             rpnlImageBox.BorderSize = 0;
             rpnlImageBox.Controls.Add(pbImage);
@@ -268,9 +268,11 @@
             // 
             pbImage.Anchor = AnchorStyles.None;
             pbImage.BackColor = Color.FromArgb(45, 41, 39);
+            pbImage.Image = Properties.Resources.questionMark;
             pbImage.Location = new Point(7, 14);
             pbImage.Name = "pbImage";
             pbImage.Size = new Size(448, 278);
+            pbImage.SizeMode = PictureBoxSizeMode.Zoom;
             pbImage.TabIndex = 0;
             pbImage.TabStop = false;
             pbImage.DragDrop += image_DragDrop;

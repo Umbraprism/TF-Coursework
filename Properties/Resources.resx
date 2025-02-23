@@ -118,29 +118,74 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="medicAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medicAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spyAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spyAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="powerSymbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\powerSymbol3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="demoEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\demoEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="engineerEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\engineerEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spyEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spyEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hwgEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hwgEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="soldierEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\soldierEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="medicEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medicEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tfLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tfLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cwBgWide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cwBgWide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="starburst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\starburst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="demoAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\demoAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hwgAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hwgAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medicAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medicAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scoutEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scoutEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldierPortrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soldierPortrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TF2secondary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TF2secondary.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="demoEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\demoEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pyroEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pyroEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sniperEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sniperEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="achieved" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\achieved.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="engineerEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\engineerEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hwgPortrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hwgPortrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="engineerAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\engineerAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medicEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medicEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scoutAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scoutAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scoutPortrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scoutPortrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pyroAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pyroAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TF2Build" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TF2Build.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -148,58 +193,16 @@
   <data name="sniperAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sniperAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cwBgWide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cwBgWide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pyroEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pyroEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="demoAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\demoAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="soldierAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\soldierAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hwgEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hwgEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="powerSymbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\powerSymbol3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="achieved" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\achieved.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spyEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spyEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="scoutAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scoutAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pyroAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pyroAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="scoutEmblem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scoutEmblem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TF2secondary" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TF2secondary.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="engineerAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\engineerAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tfLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tfLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spyAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spyAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hwgAva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hwgAva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="starburst" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\starburst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="scoutPortrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scoutPortrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soldierPortrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\soldierPortrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hwgPortrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hwgPortrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="questionMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\questionMark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

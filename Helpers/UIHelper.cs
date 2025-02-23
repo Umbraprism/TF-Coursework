@@ -133,7 +133,7 @@ namespace Coursework.Helpers
             Cursor customCursor;
             string cursorPath = $@"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Cursors\";
 
-            uint id = FormHelper.QuizPlayer == null ? 0 : FormHelper.QuizPlayer.TFClass.Id;
+            uint id = PlayerHelper.QuizPlayer == null ? 0 : PlayerHelper.QuizPlayer.TFClass.Id;
 
             switch (cursorType)
             {

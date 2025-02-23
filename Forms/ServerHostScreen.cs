@@ -23,7 +23,7 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            PlayerView myPlayer = new PlayerView(FormHelper.QuizPlayer);
+            PlayerView myPlayer = new PlayerView(PlayerHelper.QuizPlayer);
             myPlayer.Anchor = AnchorStyles.None;
 
             tlpPlayers.Controls.Add(myPlayer);

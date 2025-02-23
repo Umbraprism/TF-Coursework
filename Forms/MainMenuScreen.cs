@@ -21,13 +21,16 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            pbPfp.Image = TFClass.Assets[FormHelper.QuizPlayer.TFClass.Id].Avatar;
-            lblUsername.Text = FormHelper.QuizPlayer.Username;
-            lblAchievementCount.Text = $"{FormHelper.QuizPlayer.Achievements.Count(achievement => achievement.IsAchieved)} Achievements";
-            lblHighestScore.Text = $"Highest Score - {FormHelper.QuizPlayer.GetHighestScore()}";
-            lblClass.Text = $"The {FormHelper.QuizPlayer.TFClass.Name}";
+            pbPfp.Image = TFClass.Assets[PlayerHelper.QuizPlayer.TFClass.Id].Avatar;
+            lblUsername.Text = PlayerHelper.QuizPlayer.Username;
+            lblAchievementCount.Text = $"{PlayerHelper.QuizPlayer.Achievements.Count(achievement => achievement.IsAchieved)} Achievements";
+            lblHighestScore.Text = $"Highest Score - {PlayerHelper.QuizPlayer.GetHighestScore()}";
+            lblClass.Text = $"The {PlayerHelper.QuizPlayer.TFClass.Name}";
 
             lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count - 1)].Text;
+
+            lblOnlineRank.Text = PlayerHelper.QuizPlayer.OnlineRank;
+            lblOnlineRank.ForeColor = FormHelper.ColourPalette[lblOnlineRank.Text];
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -36,12 +39,12 @@ namespace Coursework.Forms
 
             if (quitQuery == DialogResult.Yes)
             {
-                int playerToReplace = FormHelper.PlayerList.FindIndex(player => player.Id == FormHelper.QuizPlayer.Id);
-                FormHelper.PlayerList[playerToReplace] = FormHelper.QuizPlayer;
+                int playerToReplace = PlayerHelper.PlayerList.FindIndex(player => player.Id == PlayerHelper.QuizPlayer.Id);
+                PlayerHelper.PlayerList[playerToReplace] = PlayerHelper.QuizPlayer;
 
                 using (BinaryWriter bw = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Create)))
                 {
-                    string json = JsonSerializer.Serialize(FormHelper.PlayerList);
+                    string json = JsonSerializer.Serialize(PlayerHelper.PlayerList);
                     bw.Write(json);
                 }
 
@@ -86,6 +89,7 @@ namespace Coursework.Forms
                     default:
                         throw new FormatException("Question is not of a valid type.");
                 }
+
                 this.Hide();
             }
             else
@@ -117,7 +121,7 @@ namespace Coursework.Forms
         private void btnStats_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormHelper.LeaderboardScreen.Show();
+            FormHelper.StatsScreen.Show();
         }
 
         private void btnHostOrJoin_Click(object sender, EventArgs e)
@@ -137,7 +141,7 @@ namespace Coursework.Forms
                 {
                     client.Connect("localhost", 5001);
 
-                    string json = JsonSerializer.Serialize(FormHelper.QuizPlayer);
+                    string json = JsonSerializer.Serialize(PlayerHelper.QuizPlayer);
 
                     ServerHelper.SendPacket(client.GetStream(), Encoding.Unicode.GetBytes(json));
                 }

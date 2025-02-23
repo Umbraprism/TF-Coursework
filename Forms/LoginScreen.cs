@@ -41,14 +41,14 @@ namespace Coursework.Forms
             using (BinaryReader br = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Open)))
             {
                 string json = br.ReadString();
-                FormHelper.PlayerList = JsonSerializer.Deserialize<List<Player>>(json);
+                PlayerHelper.PlayerList = JsonSerializer.Deserialize<List<Player>>(json);
             }
 
-            if (FormHelper.PlayerList != null)
+            if (PlayerHelper.PlayerList != null)
             {
-                if (FormHelper.PlayerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
+                if (PlayerHelper.PlayerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
                 {
-                    FormHelper.QuizPlayer = FormHelper.PlayerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
+                    PlayerHelper.QuizPlayer = PlayerHelper.PlayerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
                     FormHelper.MainMenuScreen.Show();
                     Hide();
                 }

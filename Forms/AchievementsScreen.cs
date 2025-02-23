@@ -18,7 +18,7 @@ namespace Coursework.Forms
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
             ttMyAchievementProgress.OwnerDraw = true;
 
-            ppbAchievementProgress.Maximum = FormHelper.QuizPlayer.Achievements.Count;
+            ppbAchievementProgress.Maximum = PlayerHelper.QuizPlayer.Achievements.Count;
 
             if (ppbAchievementProgress.Value == ppbAchievementProgress.Maximum)
             {
@@ -26,7 +26,7 @@ namespace Coursework.Forms
                 ppbAchievementProgress.ProgressColour = FormHelper.ColourPalette["Gold"];
             }
 
-            foreach (Achievement achievement in FormHelper.QuizPlayer.Achievements)
+            foreach (Achievement achievement in PlayerHelper.QuizPlayer.Achievements)
             {
                 flpAchievements.Controls.Add(new AchievementView(achievement));
             }

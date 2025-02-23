@@ -11,9 +11,8 @@ namespace Coursework.ParentClasses
     }
     public class Question
     {
-        public Dictionary<int, Bitmap?> idToPhoto = new()
+        public Dictionary<uint, Bitmap?> IdToImage { get; } = new()
         {
-            {0, null},
             {1, Properties.Resources.soldierEmblem}
         };
 
