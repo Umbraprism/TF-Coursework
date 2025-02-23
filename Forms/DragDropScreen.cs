@@ -27,9 +27,9 @@ namespace Coursework.Forms
             lblScore.Text = score.ToString();
             lblTimeRemaining.Text = FormHelper.CurrentQuiz.TimeRemaining.ToString();
 
-            if (question.ImageId != 0)
+            if (question.Image != null)
             {
-                pbImage.Image = question.IdToImage[question.ImageId];
+                pbImage.Image = question.Image;
             }
 
             pbImage.Tag = question.CorrectAnswerIndex;

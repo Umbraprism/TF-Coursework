@@ -171,3 +171,4 @@ U:\CourseworkRoot\CourseworkCode - nullfix\bin\Debug\net6.0-windows\Quizzes\Weap
 U:\CourseworkRoot\CourseworkCode\bin\Debug\net6.0-windows\Quizzes\HistoryQuiz.json
 U:\CourseworkRoot\CourseworkCode\bin\Debug\net6.0-windows\Quizzes\TFClassQuiz.json
 U:\CourseworkRoot\CourseworkCode\bin\Debug\net6.0-windows\Quizzes\WeaponsQuiz.json
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.UserControls.Guess.resources

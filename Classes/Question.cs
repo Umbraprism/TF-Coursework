@@ -11,7 +11,7 @@ namespace Coursework.ParentClasses
     }
     public class Question
     {
-        public Dictionary<uint, Bitmap?> IdToImage { get; } = new()
+        private Dictionary<uint, Bitmap?> IdToImage { get; } = new()
         {
             {1, Properties.Resources.soldierEmblem}
         };
@@ -20,7 +20,7 @@ namespace Coursework.ParentClasses
         public QuestionType Type { get; set; }
         public string[] Answers { get; set; }
         public uint CorrectAnswerIndex { get; set; }
-        public uint ImageId { get; set; }
+        public Bitmap? Image { get; set; }
         public bool IsCorrect { get; set; } = false;
         public bool IsAnswered { get; set; } = false;
 
@@ -30,7 +30,7 @@ namespace Coursework.ParentClasses
             Text = text;
             Answers = answers;
             Type = type;
-            ImageId = imageId;
+            Image = IdToImage[imageId];
         }
     }
 }

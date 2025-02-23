@@ -46,6 +46,9 @@
     <Compile Update="UserControls\AchievementView.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\Guess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\PercentageProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
