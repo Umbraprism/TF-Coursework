@@ -10,7 +10,7 @@ namespace Coursework
     public partial class RegisterScreen : Form
     {
         private Player? player;
-        private List<Player>? playerList = new();
+        private List<Player> playerList = new();
         private uint classId = 0;
 
         public RegisterScreen()

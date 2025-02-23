@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ChildClasses\**" />
+    <EmbeddedResource Remove="ChildClasses\**" />
+    <None Remove="ChildClasses\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Resources\spyAva.jpg" />
     <None Remove="Resources\TF2.ttf" />
     <None Remove="Resources\TF2Build.ttf" />
@@ -37,7 +43,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ChildClasses\" />
+    <None Update="Quizzes\HistoryQuiz.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Quizzes\TFClassQuiz.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Quizzes\WeaponsQuiz.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -106,12 +106,17 @@ namespace Coursework.Forms
         }
         public int Compare(Object? x, Object? y)
         {
+            int comparison = 0;
+
             try
             {
                 ListViewItem? lviX = (ListViewItem?)x;
                 ListViewItem? lviY = (ListViewItem?)y;
 
-                int comparison = ciComparer.Compare(Int32.Parse(lviX.SubItems[columnToSort].Text), Int32.Parse(lviY.SubItems[columnToSort].Text));
+                if (lviX != null && lviY != null)
+                {
+                    comparison = ciComparer.Compare(Int32.Parse(lviX.SubItems[columnToSort].Text), Int32.Parse(lviY.SubItems[columnToSort].Text));
+                }
 
                 switch (sortOrder)
                 {

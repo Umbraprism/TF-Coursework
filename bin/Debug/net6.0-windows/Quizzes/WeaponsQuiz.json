@@ -1,0 +1,147 @@
+{
+    "Name": "Weapons",
+    "QuizType": 0,
+    "TimeRemaining": 60,
+    "BaseQuestions": [
+        {
+            "Text": "Which Scout weapon only partially reloads it's clip?",
+            "Type": 0,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "Scattergun",
+                "Force-of-Nature",
+                "Backscatter",
+                "Baby Face's Blaster"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Scout's Scattergun has 8 bullets in the clip.",
+            "Type": 1,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Scout weapon grants temporary invincibility?",
+            "Type": 2,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Bonk! Atomic Punch",
+                "Crit-A-Cola",
+                "Atomizer",
+                "Sandman"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Soldier weapon has infinite ammuntion?",
+            "Type": 0,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Beggar's Bazooka",
+                "Black Box",
+                "Cow Mangler",
+                "Liberty Launcher"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Soldier has 3 different Banner type items.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which weapon is not used by the Soldier?",
+            "Type": 2,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Rocket Launcher",
+                "Righteous Bison",
+                "Beggar's Bazooka",
+                "Loch n' Load"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Pyro weapon is capable of propelling the user with a flare?",
+            "Type": 0,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Backburner",
+                "Phlogistinator",
+                "Flare Gun",
+                "Detonator"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Gas Passer is fully recharged on respawn.",
+            "Type": 1,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Pyro weapon has a chargeable 'MMPH' meter?",
+            "Type": 2,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "Scorch Shot",
+                "Phlogistinator",
+                "Dragon's Fury'",
+                "Sharpened Volcano Fragment"
+            ],
+            "ImageId": 0
+        }
+    ],
+    "EasyQuestions": [
+        {
+            "Text": "Which of the following is the Heavy's stock primary weapon?'",
+            "Type": 0,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Minigun",
+                "Tomislav",
+                "Shotgun",
+                "Sandvich"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Of the following, which item is used by the Sniper?",
+            "Type": 0,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "Knife",
+                "SMG",
+                "Bottle",
+                "Dalokohs Bar"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "What Pyro weapon delivers critical hits on burning enemies?",
+            "Type": 0,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Flamethrower",
+                "Scorch Shot",
+                "Flare Gun",
+                "Fire Axe"
+            ],
+            "ImageId": 0
+        }
+    ]
+}

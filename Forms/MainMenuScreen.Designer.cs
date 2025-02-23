@@ -156,9 +156,10 @@
             btnWeaponsQuiz.Name = "btnWeaponsQuiz";
             btnWeaponsQuiz.Size = new Size(506, 149);
             btnWeaponsQuiz.TabIndex = 6;
+            btnWeaponsQuiz.Tag = "Weapons";
             btnWeaponsQuiz.Text = "WEAPONS";
             btnWeaponsQuiz.UseVisualStyleBackColor = false;
-            btnWeaponsQuiz.Click += btnWeaponsQuiz_Click;
+            btnWeaponsQuiz.Click += btnQuiz_Click;
             // 
             // btnTFClassQuiz
             // 
@@ -172,9 +173,10 @@
             btnTFClassQuiz.Name = "btnTFClassQuiz";
             btnTFClassQuiz.Size = new Size(506, 149);
             btnTFClassQuiz.TabIndex = 7;
+            btnTFClassQuiz.Tag = "TFClass";
             btnTFClassQuiz.Text = "CLASSES";
             btnTFClassQuiz.UseVisualStyleBackColor = false;
-            btnTFClassQuiz.Click += btnTFClassQuiz_Click;
+            btnTFClassQuiz.Click += btnQuiz_Click;
             // 
             // btnGuessingGame
             // 
@@ -204,9 +206,10 @@
             btnHistoryQuiz.Name = "btnHistoryQuiz";
             btnHistoryQuiz.Size = new Size(506, 149);
             btnHistoryQuiz.TabIndex = 8;
+            btnHistoryQuiz.Tag = "History";
             btnHistoryQuiz.Text = "HISTORY";
             btnHistoryQuiz.UseVisualStyleBackColor = false;
-            btnHistoryQuiz.Click += btnHistoryQuiz_Click;
+            btnHistoryQuiz.Click += btnQuiz_Click;
             // 
             // pbLogo
             // 
@@ -369,7 +372,7 @@
             // 
             // pnlOnline
             // 
-            pnlOnline.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            pnlOnline.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlOnline.BackColor = Color.FromArgb(45, 41, 39);
             pnlOnline.Controls.Add(ppbToNextRank);
             pnlOnline.Controls.Add(btnHostOrJoin);

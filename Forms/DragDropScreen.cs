@@ -84,7 +84,12 @@ namespace Coursework.Forms
 
         private void image_DragDrop(object sender, DragEventArgs e)
         {
-            string result = (string)e.Data.GetData(DataFormats.Text);
+            string result = String.Empty;
+
+            if (e.Data != null)
+            {
+                result = (string)e.Data.GetData(DataFormats.Text);
+            }
 
             if (result == question.Answers[question.CorrectAnswerIndex])
             {

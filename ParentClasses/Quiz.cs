@@ -7,7 +7,7 @@ namespace Coursework.ParentClasses
 {
     public class Quiz
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = String.Empty;
         public QuizScores QuizType { get; set; }
         public int TimeRemaining { get; set; }
         public int TotalTime { get; set; }
@@ -16,11 +16,13 @@ namespace Coursework.ParentClasses
         public double ScoreMultiplier { get; set; } = 0;
         public int CurrentQuestionIndex { get; set; } = 0;
 
-        public List<Question> BaseQuestions { get; set; } = new List<Question>();
-        public List<Question> EasyQuestions { get; set; } = new List<Question>();
+        public List<Question> BaseQuestions { get; set; } = new();
+        public List<Question> EasyQuestions { get; set; } = new();
         public List<Question> CurrentDifficulty { get; set; }
 
         private Random rnd = new();
+
+        public Quiz() { CurrentDifficulty = BaseQuestions; }
 
         [JsonConstructor]
         public Quiz(string name, QuizScores quizType,int timeRemaining, List<Question> baseQuestions, List<Question> easyQuestions)

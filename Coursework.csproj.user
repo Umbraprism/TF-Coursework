@@ -31,6 +31,9 @@
     <Compile Update="Forms\RegisterScreen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\ServerHostScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -45,6 +48,9 @@
     </Compile>
     <Compile Update="UserControls\PercentageProgressBar.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UserControls\PlayerView.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\RoundedPanel.cs">
       <SubType>Component</SubType>

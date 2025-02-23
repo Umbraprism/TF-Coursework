@@ -81,15 +81,16 @@ namespace Coursework.ParentClasses
         }
 
         public TFClass TFClass { get; set; }
-        public List<Achievement>? Achievements { get; set; }
+        public List<Achievement> Achievements { get; set; } = new();
         public Dictionary<QuizScores, Scores> ScoresHashmap 
         {
             get { return scoresHashmap; } 
             set { scoresHashmap = value; }
         }
+        public string OnlineRank { get; set; } = "Junk";
 
-        private string? username;
-        private string? password;
+        private string username = String.Empty;
+        private string password = String.Empty;
 
         private Dictionary<QuizScores, Scores> scoresHashmap = new()
         {
@@ -122,7 +123,7 @@ namespace Coursework.ParentClasses
 
         public int GetHighestScore()
         {
-            List<Int32?> scores = new() { scoresHashmap[QuizScores.Weapons].HighestScore, scoresHashmap[QuizScores.Weapons].HighestScore, scoresHashmap[QuizScores.Weapons].HighestScore };
+            List<Int32> scores = new() { scoresHashmap[QuizScores.Weapons].HighestScore, scoresHashmap[QuizScores.Weapons].HighestScore, scoresHashmap[QuizScores.Weapons].HighestScore };
 
             return (int)scores.Max();
         }

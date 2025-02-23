@@ -44,24 +44,27 @@ namespace Coursework.Forms
                 FormHelper.PlayerList = JsonSerializer.Deserialize<List<Player>>(json);
             }
 
-            if (FormHelper.PlayerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
+            if (FormHelper.PlayerList != null)
             {
-                FormHelper.QuizPlayer = FormHelper.PlayerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
-                FormHelper.MainMenuScreen.Show();
-                Hide();
-            }
-            else
-            {
-                lblPasswordIncorrect.Visible = true;
+                if (FormHelper.PlayerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
+                {
+                    FormHelper.QuizPlayer = FormHelper.PlayerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
+                    FormHelper.MainMenuScreen.Show();
+                    Hide();
+                }
+                else
+                {
+                    lblPasswordIncorrect.Visible = true;
 
-                tbPassword.Clear();
+                    tbPassword.Clear();
 
-                btnLogin.Click -= btnLogin_Click;
+                    btnLogin.Click -= btnLogin_Click;
 
-                await Task.Delay(1000);
+                    await Task.Delay(1000);
 
-                lblPasswordIncorrect.Visible = false;
-                btnLogin.Click += btnLogin_Click;
+                    lblPasswordIncorrect.Visible = false;
+                    btnLogin.Click += btnLogin_Click;
+                }
             }
         }
 

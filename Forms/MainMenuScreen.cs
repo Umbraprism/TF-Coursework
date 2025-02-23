@@ -2,6 +2,8 @@
 using Coursework.Helpers;
 using Coursework.UserControls;
 using System.Text.Json;
+using System.Net.Sockets;
+using System.Text;
 
 namespace Coursework.Forms
 {
@@ -25,7 +27,7 @@ namespace Coursework.Forms
             lblHighestScore.Text = $"Highest Score - {FormHelper.QuizPlayer.GetHighestScore()}";
             lblClass.Text = $"The {FormHelper.QuizPlayer.TFClass.Name}";
 
-            lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Length - 1)].Text;
+            lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count - 1)].Text;
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -49,73 +51,61 @@ namespace Coursework.Forms
 
         private void btnNextTip_Click(object sender, EventArgs e)
         {
-            if (lblTipText.Text == FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Length - 1)].Text)
+            if (lblTipText.Text == FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count - 1)].Text)
             {
                 btnNextTip_Click(sender, e);
             }
             else
             {
-                lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Length - 1)].Text;
+                lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count - 1)].Text;
             }
         }
 
-        private void btnWeaponsQuiz_Click(object sender, EventArgs e)
+        private void btnQuiz_Click(object sender, EventArgs e)
         {
-            string json = File.ReadAllText(Path.Combine(FormHelper.QuizJsonPath, $"WeaponsQuiz.json"));
+            Button btn = (Button)sender;
+
+            string json = File.ReadAllText(@$"Quizzes\{btn.Tag}Quiz.json");
             FormHelper.CurrentQuiz = JsonSerializer.Deserialize<Quiz>(json);
 
-            Question question = FormHelper.CurrentQuiz.CurrentDifficulty[FormHelper.CurrentQuiz.CurrentQuestionIndex];
-
-            switch (question.Type)
+            if (FormHelper.CurrentQuiz != null)
             {
-                case QuestionType.MultipleChoice:
-                    new MultipleChoiceScreen(ref question).Show();
-                    break;
-                case QuestionType.TrueFalse:
-                    new TrueFalseScreen(ref question).Show();
-                    break;
-                case QuestionType.DragDrop:
-                    new DragDropScreen(ref question).Show();
-                    break;
-                default:
-                    throw new FormatException("Question is not of a valid type.");
+                Question question = FormHelper.CurrentQuiz.CurrentDifficulty[FormHelper.CurrentQuiz.CurrentQuestionIndex];
+
+                switch (question.Type)
+                {
+                    case QuestionType.MultipleChoice:
+                        new MultipleChoiceScreen(ref question).Show();
+                        break;
+                    case QuestionType.TrueFalse:
+                        new TrueFalseScreen(ref question).Show();
+                        break;
+                    case QuestionType.DragDrop:
+                        new DragDropScreen(ref question).Show();
+                        break;
+                    default:
+                        throw new FormatException("Question is not of a valid type.");
+                }
+                this.Hide();
             }
-            this.Hide();
-        }
-
-        private void btnTFClassQuiz_Click(object sender, EventArgs e)
-        {
-            string json = File.ReadAllText(Path.Combine(FormHelper.QuizJsonPath, $"TFClassQuiz.json"));
-            FormHelper.CurrentQuiz = JsonSerializer.Deserialize<Quiz>(json);
-            //FormHelper.s_currentQuiz.CreateQuizForms();
-
-            //new SplashScreen(FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex]).Show();
-            this.Hide();
-        }
-
-        private void btnHistoryQuiz_Click(object sender, EventArgs e)
-        {
-            string json = File.ReadAllText(Path.Combine(FormHelper.QuizJsonPath, $"HistoryQuiz.json"));
-            FormHelper.CurrentQuiz = JsonSerializer.Deserialize<Quiz>(json);
-            //FormHelper.s_currentQuiz.CreateQuizForms();
-
-            //new SplashScreen(FormHelper.s_currentQuiz.currentDifficulty[FormHelper.s_currentQuiz.currentQuestionIndex]).Show();
-            this.Hide();
+            else
+            {
+                throw new FormatException();
+            }
         }
 
         private void btnGuessingGame_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = TFMessageBox.Show("Would you like to guess today's weapon in the 'Daily' mode, or test your ability to identify weapons endlessly 'TF∞' mode?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Daily", "TF∞" });
+            DialogResult modeSelect = TFMessageBox.Show("Would you like to guess today's weapon in the 'Daily' mode, or test your ability to identify weapons endlessly 'TF∞' mode?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Daily", "TF∞" });
 
-            if (dialogResult == DialogResult.Yes)
+            if (modeSelect == DialogResult.Yes)
             {
                 throw new NotImplementedException();
             }
-            else if (dialogResult == DialogResult.No)
+            else if (modeSelect == DialogResult.No)
             {
                 throw new NotImplementedException();
             }
-            else { }
         }
 
         private void btnAchievements_Click(object sender, EventArgs e)
@@ -132,17 +122,32 @@ namespace Coursework.Forms
 
         private void btnHostOrJoin_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = TFMessageBox.Show("Would you like to host a match for others to join or join an already existing match?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Host", "Join" });
+            TcpClient client = new();
 
-            if (dialogResult == DialogResult.Yes)
+            DialogResult hostOrJoinQuery = TFMessageBox.Show("Would you like to host a match for others to join or join an already existing match?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Host", "Join" });
+
+            if (hostOrJoinQuery == DialogResult.Yes)
             {
-                throw new NotImplementedException();
+                new ServerHostScreen().Show();
+                this.Hide();
             }
-            else if (dialogResult == DialogResult.No)
+            else if (hostOrJoinQuery == DialogResult.No)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    client.Connect("localhost", 5001);
+
+                    string json = JsonSerializer.Serialize(FormHelper.QuizPlayer);
+
+                    ServerHelper.SendPacket(client.GetStream(), Encoding.Unicode.GetBytes(json));
+                }
+                catch (SocketException)
+                {
+                    string msg = Encoding.Unicode.GetString(ServerHelper.ReadStream(client.GetStream()));
+
+                    TFMessageBox.Show(msg, "Connection Error");
+                }
             }
-            else { }
         }
     }
 }

@@ -59,7 +59,7 @@ namespace Coursework.Forms
 
         private void btnFinished_Click(object sender, EventArgs e)
         {
-            FormHelper.CurrentQuiz = null;
+            FormHelper.CurrentQuiz = new();
             this.Close();
             FormHelper.MainMenuScreen.Show();
         }

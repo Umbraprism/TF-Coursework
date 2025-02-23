@@ -18,9 +18,10 @@ namespace Coursework
             ApplicationConfiguration.Initialize();
 
             UIHelper.MakeFont();
-            using (StreamReader sr = new(FormHelper.TipJsonPath))
+
+            using (StreamReader sr = new("tips.json"))
             {
-                FormHelper.Tips = JsonSerializer.Deserialize<Tip[]>(sr.ReadToEnd());
+                FormHelper.Tips = JsonSerializer.Deserialize<List<Tip>>(sr.ReadToEnd());
             }
 
             // Allows main form (in this case the first SplashScreen) to be closed without killing the application.
