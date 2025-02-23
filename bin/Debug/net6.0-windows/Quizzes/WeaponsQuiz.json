@@ -38,7 +38,7 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Soldier weapon has infinite ammuntion?",
+            "Text": "Which Soldier weapon has infinite ammunition?",
             "Type": 0,
             "CorrectAnswerIndex": 2,
             "Answers": [
@@ -100,7 +100,7 @@
             "Answers": [
                 "Scorch Shot",
                 "Phlogistinator",
-                "Dragon's Fury'",
+                "Dragon's Fury",
                 "Sharpened Volcano Fragment"
             ],
             "ImageId": 0
