@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Scattergun",
+        "Slot": "Primary",
+        "UsedBy": 1,
+        "Update": "Release",
+        "ImageId": 1
+    },
+    {
+        "Name": "Pistol",
+        "Slot": "Secondary",
+        "UsedBy": 1,
+        "Update": "Release",
+        "ImageId": 1
+    }
+]

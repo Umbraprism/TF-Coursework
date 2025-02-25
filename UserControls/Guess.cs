@@ -13,6 +13,19 @@ namespace Coursework.UserControls
             InitializeComponent();
             this.guessedWeapon = guessedWeapon;
             this.correctWeapon = correctWeapon;
+
+            this.Anchor = AnchorStyles.Top;
+        }
+
+        private void Guess_Load(object sender, EventArgs e)
+        {
+            UIHelper.ApplyFonts(this);
+            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
+
+            lblGuessedWeapon.Text = guessedWeapon.Name;
+            lblUsedBy.Text = TFClass.Assets[guessedWeapon.UsedBy].Name;
+            lblSlot.Text = guessedWeapon.Slot;
+            lblUpdate.Text = guessedWeapon.Update;
         }
 
         public bool CheckGuess()

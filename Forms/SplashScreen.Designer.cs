@@ -75,7 +75,6 @@
             ppbLoading.Text = "PERCENTAGE";
             ppbLoading.TextColour = Color.FromArgb(246, 231, 222);
             ppbLoading.UsePercentage = true;
-            ppbLoading.Click += ppbLoading_Click;
             // 
             // lblOnWayTo
             // 
@@ -91,6 +90,7 @@
             // 
             // tmrLoading
             // 
+            tmrLoading.Interval = 1;
             tmrLoading.Tick += tmrLoading_Tick;
             // 
             // pnlInfo

@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatsScreen));
             pnlStats = new Panel();
             pnlQuizStats = new Panel();
+            pnlGuessingGame = new Panel();
+            lblCurrentStreak = new Label();
+            lblHighestStreak = new Label();
+            lblLatestGuesses = new Label();
+            lblLowestGuesses = new Label();
+            lblGuessingGame = new Label();
             lblQuizRank = new Label();
             lblLatestScore = new Label();
             lblHighestScore = new Label();
@@ -44,16 +50,17 @@
             lblTFClass = new Label();
             lblUsername = new Label();
             pbAvatar = new PictureBox();
-            panel1 = new Panel();
+            pnlHeader = new Panel();
             btnLeaderboard = new Button();
             lblStats = new Label();
             btnBack = new Button();
             pbPortrait = new PictureBox();
             pnlStats.SuspendLayout();
             pnlQuizStats.SuspendLayout();
+            pnlGuessingGame.SuspendLayout();
             tlpQuizSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAvatar).BeginInit();
-            panel1.SuspendLayout();
+            pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbPortrait).BeginInit();
             SuspendLayout();
             // 
@@ -65,7 +72,7 @@
             pnlStats.Controls.Add(lblTFClass);
             pnlStats.Controls.Add(lblUsername);
             pnlStats.Controls.Add(pbAvatar);
-            pnlStats.Controls.Add(panel1);
+            pnlStats.Controls.Add(pnlHeader);
             pnlStats.Dock = DockStyle.Left;
             pnlStats.Location = new Point(0, 0);
             pnlStats.Name = "pnlStats";
@@ -75,6 +82,7 @@
             // pnlQuizStats
             // 
             pnlQuizStats.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlQuizStats.Controls.Add(pnlGuessingGame);
             pnlQuizStats.Controls.Add(lblQuizRank);
             pnlQuizStats.Controls.Add(lblLatestScore);
             pnlQuizStats.Controls.Add(lblHighestScore);
@@ -85,11 +93,83 @@
             pnlQuizStats.TabIndex = 6;
             pnlQuizStats.Visible = false;
             // 
+            // pnlGuessingGame
+            // 
+            pnlGuessingGame.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlGuessingGame.Controls.Add(lblCurrentStreak);
+            pnlGuessingGame.Controls.Add(lblHighestStreak);
+            pnlGuessingGame.Controls.Add(lblLatestGuesses);
+            pnlGuessingGame.Controls.Add(lblLowestGuesses);
+            pnlGuessingGame.Controls.Add(lblGuessingGame);
+            pnlGuessingGame.Location = new Point(0, 3);
+            pnlGuessingGame.Name = "pnlGuessingGame";
+            pnlGuessingGame.Size = new Size(893, 303);
+            pnlGuessingGame.TabIndex = 7;
+            pnlGuessingGame.Visible = false;
+            // 
+            // lblCurrentStreak
+            // 
+            lblCurrentStreak.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblCurrentStreak.AutoSize = true;
+            lblCurrentStreak.Font = new Font("Segoe UI", 26.25F);
+            lblCurrentStreak.ForeColor = Color.FromArgb(246, 231, 222);
+            lblCurrentStreak.Location = new Point(19, 247);
+            lblCurrentStreak.Name = "lblCurrentStreak";
+            lblCurrentStreak.Size = new Size(295, 47);
+            lblCurrentStreak.TabIndex = 7;
+            lblCurrentStreak.Text = "Current Streak - n";
+            // 
+            // lblHighestStreak
+            // 
+            lblHighestStreak.Anchor = AnchorStyles.Bottom;
+            lblHighestStreak.AutoSize = true;
+            lblHighestStreak.Font = new Font("Segoe UI", 26.25F);
+            lblHighestStreak.ForeColor = Color.FromArgb(246, 231, 222);
+            lblHighestStreak.Location = new Point(19, 193);
+            lblHighestStreak.Name = "lblHighestStreak";
+            lblHighestStreak.Size = new Size(298, 47);
+            lblHighestStreak.TabIndex = 6;
+            lblHighestStreak.Text = "Highest Streak - n";
+            // 
+            // lblLatestGuesses
+            // 
+            lblLatestGuesses.Anchor = AnchorStyles.Bottom;
+            lblLatestGuesses.AutoSize = true;
+            lblLatestGuesses.Font = new Font("Segoe UI", 26.25F);
+            lblLatestGuesses.ForeColor = Color.FromArgb(246, 231, 222);
+            lblLatestGuesses.Location = new Point(19, 137);
+            lblLatestGuesses.Name = "lblLatestGuesses";
+            lblLatestGuesses.Size = new Size(300, 47);
+            lblLatestGuesses.TabIndex = 5;
+            lblLatestGuesses.Text = "Latest Guesses - n";
+            // 
+            // lblLowestGuesses
+            // 
+            lblLowestGuesses.AutoSize = true;
+            lblLowestGuesses.Font = new Font("Segoe UI", 26.25F);
+            lblLowestGuesses.ForeColor = Color.FromArgb(246, 231, 222);
+            lblLowestGuesses.Location = new Point(19, 80);
+            lblLowestGuesses.Name = "lblLowestGuesses";
+            lblLowestGuesses.Size = new Size(316, 47);
+            lblLowestGuesses.TabIndex = 4;
+            lblLowestGuesses.Text = "Lowest Guesses - n";
+            // 
+            // lblGuessingGame
+            // 
+            lblGuessingGame.AutoSize = true;
+            lblGuessingGame.Font = new Font("Segoe UI", 36F);
+            lblGuessingGame.ForeColor = Color.FromArgb(246, 231, 222);
+            lblGuessingGame.Location = new Point(19, 12);
+            lblGuessingGame.Name = "lblGuessingGame";
+            lblGuessingGame.Size = new Size(396, 65);
+            lblGuessingGame.TabIndex = 3;
+            lblGuessingGame.Text = "GUESSING GAME";
+            // 
             // lblQuizRank
             // 
             lblQuizRank.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblQuizRank.AutoSize = true;
-            lblQuizRank.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblQuizRank.Font = new Font("Segoe UI", 26.25F);
             lblQuizRank.ForeColor = Color.FromArgb(246, 231, 222);
             lblQuizRank.Location = new Point(19, 237);
             lblQuizRank.Name = "lblQuizRank";
@@ -101,7 +181,7 @@
             // 
             lblLatestScore.Anchor = AnchorStyles.Left;
             lblLatestScore.AutoSize = true;
-            lblLatestScore.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLatestScore.Font = new Font("Segoe UI", 26.25F);
             lblLatestScore.ForeColor = Color.FromArgb(246, 231, 222);
             lblLatestScore.Location = new Point(19, 167);
             lblLatestScore.Name = "lblLatestScore";
@@ -112,7 +192,7 @@
             // lblHighestScore
             // 
             lblHighestScore.AutoSize = true;
-            lblHighestScore.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHighestScore.Font = new Font("Segoe UI", 26.25F);
             lblHighestScore.ForeColor = Color.FromArgb(246, 231, 222);
             lblHighestScore.Location = new Point(19, 98);
             lblHighestScore.Name = "lblHighestScore";
@@ -123,7 +203,7 @@
             // lblQuizType
             // 
             lblQuizType.AutoSize = true;
-            lblQuizType.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblQuizType.Font = new Font("Segoe UI", 36F);
             lblQuizType.ForeColor = Color.FromArgb(246, 231, 222);
             lblQuizType.Location = new Point(19, 12);
             lblQuizType.Name = "lblQuizType";
@@ -156,7 +236,7 @@
             btnGuessingGame.BackColor = Color.FromArgb(189, 59, 59);
             btnGuessingGame.FlatAppearance.BorderSize = 0;
             btnGuessingGame.FlatStyle = FlatStyle.Flat;
-            btnGuessingGame.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGuessingGame.Font = new Font("Segoe UI", 24F);
             btnGuessingGame.ForeColor = Color.FromArgb(246, 231, 222);
             btnGuessingGame.Location = new Point(686, 3);
             btnGuessingGame.Name = "btnGuessingGame";
@@ -173,7 +253,7 @@
             btnHistoryQuiz.BackColor = Color.FromArgb(189, 59, 59);
             btnHistoryQuiz.FlatAppearance.BorderSize = 0;
             btnHistoryQuiz.FlatStyle = FlatStyle.Flat;
-            btnHistoryQuiz.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            btnHistoryQuiz.Font = new Font("Segoe UI", 24F);
             btnHistoryQuiz.ForeColor = Color.FromArgb(246, 231, 222);
             btnHistoryQuiz.Location = new Point(463, 3);
             btnHistoryQuiz.Name = "btnHistoryQuiz";
@@ -190,7 +270,7 @@
             bntTFClassQuiz.BackColor = Color.FromArgb(189, 59, 59);
             bntTFClassQuiz.FlatAppearance.BorderSize = 0;
             bntTFClassQuiz.FlatStyle = FlatStyle.Flat;
-            bntTFClassQuiz.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            bntTFClassQuiz.Font = new Font("Segoe UI", 24F);
             bntTFClassQuiz.ForeColor = Color.FromArgb(246, 231, 222);
             bntTFClassQuiz.Location = new Point(241, 3);
             bntTFClassQuiz.Name = "bntTFClassQuiz";
@@ -207,7 +287,7 @@
             btnWeaponsQuiz.BackColor = Color.FromArgb(189, 59, 59);
             btnWeaponsQuiz.FlatAppearance.BorderSize = 0;
             btnWeaponsQuiz.FlatStyle = FlatStyle.Flat;
-            btnWeaponsQuiz.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            btnWeaponsQuiz.Font = new Font("Segoe UI", 24F);
             btnWeaponsQuiz.ForeColor = Color.FromArgb(246, 231, 222);
             btnWeaponsQuiz.Location = new Point(19, 3);
             btnWeaponsQuiz.Name = "btnWeaponsQuiz";
@@ -221,7 +301,7 @@
             // lblOnlineRank
             // 
             lblOnlineRank.AutoSize = true;
-            lblOnlineRank.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOnlineRank.Font = new Font("Segoe UI", 36F);
             lblOnlineRank.ForeColor = Color.FromArgb(246, 231, 222);
             lblOnlineRank.Location = new Point(272, 349);
             lblOnlineRank.Name = "lblOnlineRank";
@@ -232,7 +312,7 @@
             // lblTFClass
             // 
             lblTFClass.AutoSize = true;
-            lblTFClass.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTFClass.Font = new Font("Segoe UI", 36F);
             lblTFClass.ForeColor = Color.FromArgb(246, 231, 222);
             lblTFClass.Location = new Point(272, 271);
             lblTFClass.Name = "lblTFClass";
@@ -243,7 +323,7 @@
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.Font = new Font("Segoe UI", 36F);
             lblUsername.ForeColor = Color.FromArgb(246, 231, 222);
             lblUsername.Location = new Point(272, 189);
             lblUsername.Name = "lblUsername";
@@ -261,17 +341,17 @@
             pbAvatar.TabIndex = 1;
             pbAvatar.TabStop = false;
             // 
-            // panel1
+            // pnlHeader
             // 
-            panel1.BackColor = Color.FromArgb(41, 39, 39);
-            panel1.Controls.Add(btnLeaderboard);
-            panel1.Controls.Add(lblStats);
-            panel1.Controls.Add(btnBack);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(893, 156);
-            panel1.TabIndex = 0;
+            pnlHeader.BackColor = Color.FromArgb(41, 39, 39);
+            pnlHeader.Controls.Add(btnLeaderboard);
+            pnlHeader.Controls.Add(lblStats);
+            pnlHeader.Controls.Add(btnBack);
+            pnlHeader.Dock = DockStyle.Top;
+            pnlHeader.Location = new Point(0, 0);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(893, 156);
+            pnlHeader.TabIndex = 0;
             // 
             // btnLeaderboard
             // 
@@ -279,7 +359,7 @@
             btnLeaderboard.Dock = DockStyle.Right;
             btnLeaderboard.FlatAppearance.BorderSize = 0;
             btnLeaderboard.FlatStyle = FlatStyle.Flat;
-            btnLeaderboard.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLeaderboard.Font = new Font("Segoe UI", 24F);
             btnLeaderboard.ForeColor = Color.FromArgb(246, 231, 222);
             btnLeaderboard.Location = new Point(618, 0);
             btnLeaderboard.Name = "btnLeaderboard";
@@ -293,7 +373,7 @@
             // 
             lblStats.Anchor = AnchorStyles.Left;
             lblStats.AutoSize = true;
-            lblStats.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStats.Font = new Font("Segoe UI", 48F);
             lblStats.ForeColor = Color.FromArgb(246, 231, 222);
             lblStats.Location = new Point(198, 43);
             lblStats.Name = "lblStats";
@@ -307,7 +387,7 @@
             btnBack.Dock = DockStyle.Left;
             btnBack.FlatAppearance.BorderSize = 0;
             btnBack.FlatStyle = FlatStyle.Flat;
-            btnBack.Font = new Font("Segoe UI", 95F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBack.Font = new Font("Segoe UI", 95F);
             btnBack.ForeColor = Color.FromArgb(246, 231, 222);
             btnBack.Location = new Point(0, 0);
             btnBack.Name = "btnBack";
@@ -348,10 +428,12 @@
             pnlStats.PerformLayout();
             pnlQuizStats.ResumeLayout(false);
             pnlQuizStats.PerformLayout();
+            pnlGuessingGame.ResumeLayout(false);
+            pnlGuessingGame.PerformLayout();
             tlpQuizSelect.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbAvatar).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlHeader.ResumeLayout(false);
+            pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbPortrait).EndInit();
             ResumeLayout(false);
         }
@@ -359,7 +441,7 @@
         #endregion
 
         private Panel pnlStats;
-        private Panel panel1;
+        private Panel pnlHeader;
         private Button btnBack;
         private Button btnLeaderboard;
         private Label lblStats;
@@ -378,5 +460,12 @@
         private Label lblLatestScore;
         private Label lblHighestScore;
         private PictureBox pbPortrait;
+        private Panel pnlGuessingGame;
+        //private Label label1;
+        private Label lblLatestGuesses;
+        private Label lblLowestGuesses;
+        private Label lblGuessingGame;
+        private Label lblCurrentStreak;
+        private Label lblHighestStreak;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Net;
+using System.Net.Http;
 using System.Net.Sockets;
 using System.Text;
 using System.Text.Json;
@@ -12,6 +13,7 @@ namespace Coursework.Forms
     public partial class ServerHostScreen : Form
     {
         private Client? client;
+        private TcpListener listener = new(IPAddress.Loopback, 5001);
 
         public ServerHostScreen()
         {
@@ -30,20 +32,14 @@ namespace Coursework.Forms
 
             try
             {
-                ServerHelper.Server = new(IPAddress.Parse("127.0.0.1"), 5001);
-                ServerHelper.Server.Start();
+                listener.Start();
 
-                if (ServerHelper.Clients.Count! >= 4)
-                {
-                    Thread t = new(WaitForPlayers);
-                    t.Start();
-                }
+                Thread t = new(WaitForPlayers);
+                t.Start();
             }
             catch (SocketException)
             {
                 Debug.WriteLine("Server already open on current port.");
-                this.Close();
-                FormHelper.MainMenuScreen.Show();
             }
         }
 
@@ -53,7 +49,8 @@ namespace Coursework.Forms
             {
                 while (true)
                 {
-                    TcpClient client = ServerHelper.Server.AcceptTcpClient();
+                    TcpClient client = listener.AcceptTcpClient();
+                    Debug.WriteLine("Connected!");
 
                     Thread clientThread = new(() => AddClients(client.GetStream(), client));
                     clientThread.Start();
@@ -65,10 +62,6 @@ namespace Coursework.Forms
                     }
                 }
             }
-            else
-            {
-                throw new SocketException();
-            }
         }
 
         private void AddClients(NetworkStream stream, TcpClient tcpClient)
@@ -79,7 +72,7 @@ namespace Coursework.Forms
                 {
                     Player clientPlayer = JsonSerializer.Deserialize<Player>(Encoding.Unicode.GetString(ServerHelper.ReadStream(stream)));
 
-                    if (clientPlayer != null && 1 != 1)
+                    if (clientPlayer != null)
                     {
                         client = new(tcpClient, clientPlayer, this.Text);
 
@@ -98,17 +91,16 @@ namespace Coursework.Forms
                     }
                 }
             }
-
-            tcpClient.Close();
-            Thread.CurrentThread.Join();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             DialogResult disconnectQuery = TFMessageBox.Show("Are you sure you would like to exit? The server will shut down and all other players will be disconnected!", "Are you sure?", TFMessageBoxButtons.YesAndNo);
 
-            if (disconnectQuery == DialogResult.Yes)
+            if (disconnectQuery == DialogResult.Yes && listener != null)
             {
+                listener.Stop();
+
                 this.Close();
                 FormHelper.MainMenuScreen.Show();
             }

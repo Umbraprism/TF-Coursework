@@ -51,7 +51,7 @@
             // lblLogin
             // 
             lblLogin.AutoSize = true;
-            lblLogin.Font = new Font("Segoe UI", 35F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLogin.Font = new Font("Segoe UI", 35F);
             lblLogin.ForeColor = Color.FromArgb(246, 231, 222);
             lblLogin.Location = new Point(3, 306);
             lblLogin.Name = "lblLogin";
@@ -72,7 +72,7 @@
             // tbUsername
             // 
             tbUsername.BorderStyle = BorderStyle.None;
-            tbUsername.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            tbUsername.Font = new Font("Segoe UI", 30F);
             tbUsername.Location = new Point(3, 13);
             tbUsername.Name = "tbUsername";
             tbUsername.PlaceholderText = "Username";
@@ -95,7 +95,7 @@
             // tbPassword
             // 
             tbPassword.BorderStyle = BorderStyle.None;
-            tbPassword.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            tbPassword.Font = new Font("Segoe UI", 30F);
             tbPassword.Location = new Point(3, 13);
             tbPassword.Name = "tbPassword";
             tbPassword.PlaceholderText = "Password";
@@ -122,7 +122,7 @@
             linkToRegister.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             linkToRegister.AutoSize = true;
             linkToRegister.BackColor = Color.Transparent;
-            linkToRegister.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            linkToRegister.Font = new Font("Segoe UI", 20F);
             linkToRegister.LinkColor = Color.FromArgb(189, 59, 59);
             linkToRegister.Location = new Point(1496, 874);
             linkToRegister.Name = "linkToRegister";
@@ -153,7 +153,7 @@
             // 
             cbShowPassword.Anchor = AnchorStyles.None;
             cbShowPassword.AutoSize = true;
-            cbShowPassword.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            cbShowPassword.Font = new Font("Segoe UI", 30F);
             cbShowPassword.ForeColor = Color.FromArgb(246, 231, 222);
             cbShowPassword.Location = new Point(15, 653);
             cbShowPassword.Name = "cbShowPassword";
@@ -169,7 +169,7 @@
             btnLogin.BackColor = Color.FromArgb(189, 59, 59);
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Segoe UI", 52F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLogin.Font = new Font("Segoe UI", 52F);
             btnLogin.ForeColor = Color.FromArgb(246, 231, 222);
             btnLogin.Location = new Point(12, 790);
             btnLogin.Name = "btnLogin";
@@ -182,7 +182,7 @@
             // lblPasswordIncorrect
             // 
             lblPasswordIncorrect.AutoSize = true;
-            lblPasswordIncorrect.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPasswordIncorrect.Font = new Font("Segoe UI", 20F);
             lblPasswordIncorrect.ForeColor = Color.FromArgb(189, 59, 59);
             lblPasswordIncorrect.Location = new Point(12, 552);
             lblPasswordIncorrect.Name = "lblPasswordIncorrect";

@@ -18,11 +18,21 @@ namespace Coursework.ParentClasses
         public int HighestScore { get; set; } = 0;
         public string Rank { get; set; } = "Junk";
 
-        public Scores(int latestScore, int highestScore, string rank)
+        public int LatestGuessAmount { get; set; } = 0;
+        public int LowestGuessAmount { get; set; } = 0;
+        public int CurrentStreak { get; set; } = 0;
+        public int HighestStreak { get; set; } = 0;
+
+        public Scores(int latestScore, int highestScore, string rank, int latestGuessAmount, int lowestGuessAmount, int currentStreak, int highestStreak)
         {
             LatestScore = latestScore;
             HighestScore = highestScore;
             Rank = rank;
+
+            LatestGuessAmount = latestGuessAmount;
+            LowestGuessAmount = lowestGuessAmount;
+            CurrentStreak = currentStreak;
+            HighestStreak = highestStreak;
         }
     }
 
@@ -93,10 +103,10 @@ namespace Coursework.ParentClasses
 
         private Dictionary<QuizScores, Scores> scoresHashmap = new()
         {
-            { QuizScores.Weapons, new(0, 0, "Junk") },
-            { QuizScores.TFClass, new(0, 0, "Junk") },
-            { QuizScores.History, new(0, 0, "Junk") },
-            { QuizScores.GuessingGame, new(0, 0, "Junk") }
+            { QuizScores.Weapons, new(0, 0, "Junk", 0, 0, 0, 0) },
+            { QuizScores.TFClass, new(0, 0, "Junk", 0, 0, 0, 0) },
+            { QuizScores.History, new(0, 0, "Junk", 0, 0, 0, 0) },
+            { QuizScores.GuessingGame, new(0, 0, "Junk", 0, 0, 0, 0) }
         };
 
         [JsonConstructor]

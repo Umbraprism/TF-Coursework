@@ -60,7 +60,7 @@
             lblGuessedWeapon.Anchor = AnchorStyles.None;
             lblGuessedWeapon.AutoSize = true;
             lblGuessedWeapon.BackColor = Color.FromArgb(114, 158, 66);
-            lblGuessedWeapon.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblGuessedWeapon.Font = new Font("Segoe UI", 14.25F);
             lblGuessedWeapon.ForeColor = Color.FromArgb(246, 231, 222);
             lblGuessedWeapon.Location = new Point(71, 37);
             lblGuessedWeapon.Name = "lblGuessedWeapon";
@@ -86,7 +86,7 @@
             lblUsedBy.Anchor = AnchorStyles.None;
             lblUsedBy.AutoSize = true;
             lblUsedBy.BackColor = Color.FromArgb(114, 158, 66);
-            lblUsedBy.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsedBy.Font = new Font("Segoe UI", 14.25F);
             lblUsedBy.ForeColor = Color.FromArgb(246, 231, 222);
             lblUsedBy.Location = new Point(52, 38);
             lblUsedBy.Name = "lblUsedBy";
@@ -112,7 +112,7 @@
             lblSlot.Anchor = AnchorStyles.None;
             lblSlot.AutoSize = true;
             lblSlot.BackColor = Color.FromArgb(114, 158, 66);
-            lblSlot.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSlot.Font = new Font("Segoe UI", 14.25F);
             lblSlot.ForeColor = Color.FromArgb(246, 231, 222);
             lblSlot.Location = new Point(68, 38);
             lblSlot.Name = "lblSlot";
@@ -138,7 +138,7 @@
             lblUpdate.Anchor = AnchorStyles.None;
             lblUpdate.AutoSize = true;
             lblUpdate.BackColor = Color.FromArgb(114, 158, 66);
-            lblUpdate.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUpdate.Font = new Font("Segoe UI", 14.25F);
             lblUpdate.ForeColor = Color.FromArgb(246, 231, 222);
             lblUpdate.Location = new Point(53, 37);
             lblUpdate.Name = "lblUpdate";
@@ -146,7 +146,7 @@
             lblUpdate.TabIndex = 5;
             lblUpdate.Text = "Update";
             // 
-            // GuessView
+            // Guess
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -155,8 +155,9 @@
             Controls.Add(rpnlSlot);
             Controls.Add(rpnlUsedBy);
             Controls.Add(rpnlGuessedWeapon);
-            Name = "GuessView";
+            Name = "Guess";
             Size = new Size(1084, 150);
+            Load += Guess_Load;
             rpnlGuessedWeapon.ResumeLayout(false);
             rpnlGuessedWeapon.PerformLayout();
             rpnlUsedBy.ResumeLayout(false);

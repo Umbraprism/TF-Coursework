@@ -6,12 +6,15 @@ namespace Coursework.UserControls
     public partial class RoundedPanel : Panel
     {
         [Browsable(false)] // done to hide the backcolor proerty so user can not change it  
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new Color BackColor { get; set; }       
 
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new Color ForeColor { get; set; }
 
         [Category("Appearance")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int Radius
         {
             get
@@ -29,6 +32,7 @@ namespace Coursework.UserControls
         }
 
         [Category("Appearance")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int BorderSize
         {
             get
@@ -43,6 +47,7 @@ namespace Coursework.UserControls
         }
 
         [Category("Appearance")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Color PanelColour
         {
             get
@@ -57,6 +62,7 @@ namespace Coursework.UserControls
         }
 
         [Category("Appearance")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Color BorderColour
         {
             get
@@ -71,6 +77,7 @@ namespace Coursework.UserControls
         }
 
         [Category("Border Style")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public DashStyle Style
         {
             get

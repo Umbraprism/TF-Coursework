@@ -13,6 +13,7 @@ namespace Coursework.ParentClasses
     {
         private Dictionary<uint, Bitmap?> IdToImage { get; } = new()
         {
+            {0, null },
             {1, Properties.Resources.soldierEmblem}
         };
 
@@ -23,6 +24,9 @@ namespace Coursework.ParentClasses
         public Bitmap? Image { get; set; }
         public bool IsCorrect { get; set; } = false;
         public bool IsAnswered { get; set; } = false;
+
+        [JsonInclude]
+        private uint imageId = 0;
 
         [JsonConstructor]
         public Question(string text, string[] answers, QuestionType type, uint imageId)

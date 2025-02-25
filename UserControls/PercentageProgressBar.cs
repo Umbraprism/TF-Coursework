@@ -6,6 +6,7 @@ namespace Coursework.UserControls
     public partial class PercentageProgressBar : ProgressBar
     {
         [Category("Appearance")] // groups the property into the Apperance category within the designer.
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Color TextColour // This property will be used to change the colour of the text, the american spelling is used to align with the standard in the designer for easier readability
         {
             get
@@ -20,6 +21,7 @@ namespace Coursework.UserControls
         }
 
         [Category("Appearance")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Color ProgressColour // this gets the colour property of the SolidBrush used for drawing
         {
             get
@@ -34,9 +36,11 @@ namespace Coursework.UserControls
         }
 
         [Category("Appearance")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool UsePercentage { get; set; }
 
         [Category("Appearance"), Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public override Font Font
         {
             get

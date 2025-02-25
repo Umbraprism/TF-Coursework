@@ -1,22 +1,20 @@
 ﻿using Coursework.Helpers;
 using Coursework.ParentClasses;
 using Coursework.UserControls;
+using System.ComponentModel;
 namespace Coursework.Forms
 {
     public partial class SplashScreen : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Form OnWayTo { get; set; }
+
         private Random rnd = new();
 
         public SplashScreen(Form OnWayTo)
         {
             InitializeComponent();
             this.OnWayTo = OnWayTo;
-        }
-
-        private void ppbLoading_Click(object sender, EventArgs e)
-        {
-            ppbLoading.Value += 5;
         }
 
         private void SplashScreen_Load(object sender, EventArgs e)
@@ -50,13 +48,11 @@ namespace Coursework.Forms
         {
             try
             {
-                tmrLoading.Interval -= (int)Math.Ceiling((double)ppbLoading.Value / 100);
                 ppbLoading.Increment(1);
 
             }
             catch (ArgumentOutOfRangeException)
             {
-                tmrLoading.Interval = 1;
                 ppbLoading.Value = ppbLoading.Maximum;
             }
 

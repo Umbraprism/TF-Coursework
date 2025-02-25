@@ -78,13 +78,13 @@ namespace Coursework.Forms
                 switch (question.Type)
                 {
                     case QuestionType.MultipleChoice:
-                        new MultipleChoiceScreen(ref question).Show();
+                        new SplashScreen(new MultipleChoiceScreen(ref question)).Show();
                         break;
                     case QuestionType.TrueFalse:
-                        new TrueFalseScreen(ref question).Show();
+                        new SplashScreen(new TrueFalseScreen(ref question)).Show();
                         break;
                     case QuestionType.DragDrop:
-                        new DragDropScreen(ref question).Show();
+                        new SplashScreen(new DragDropScreen(ref question)).Show();
                         break;
                     default:
                         throw new FormatException("Question is not of a valid type.");
@@ -104,11 +104,13 @@ namespace Coursework.Forms
 
             if (modeSelect == DialogResult.Yes)
             {
-                throw new NotImplementedException();
+                this.Hide();
+                new GuessingGameScreen(false).Show();
             }
             else if (modeSelect == DialogResult.No)
             {
-                throw new NotImplementedException();
+                this.Hide();
+                new GuessingGameScreen(true).Show();
             }
         }
 
@@ -132,14 +134,14 @@ namespace Coursework.Forms
 
             if (hostOrJoinQuery == DialogResult.Yes)
             {
-                new ServerHostScreen().Show();
+                new SplashScreen(new ServerHostScreen()).Show();
                 this.Hide();
             }
             else if (hostOrJoinQuery == DialogResult.No)
             {
                 try
                 {
-                    client.Connect("localhost", 5001);
+                    client.Connect("127.0.0.1", 5001);
 
                     string json = JsonSerializer.Serialize(PlayerHelper.QuizPlayer);
 

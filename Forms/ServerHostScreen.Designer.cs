@@ -187,7 +187,7 @@
             Controls.Add(pnlHeader);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ServerHostScreen";
-            Text = "ServerHostScreen";
+            Text = "Online Match";
             WindowState = FormWindowState.Maximized;
             Load += ServerHostScreen_Load;
             pnlHeader.ResumeLayout(false);

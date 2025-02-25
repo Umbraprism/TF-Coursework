@@ -73,7 +73,7 @@
             // 
             lblTimeRemaining.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTimeRemaining.AutoSize = true;
-            lblTimeRemaining.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTimeRemaining.Font = new Font("Segoe UI", 24F);
             lblTimeRemaining.ForeColor = Color.FromArgb(246, 231, 222);
             lblTimeRemaining.Location = new Point(1489, 23);
             lblTimeRemaining.Name = "lblTimeRemaining";
@@ -85,7 +85,7 @@
             // 
             lblScore.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblScore.AutoSize = true;
-            lblScore.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblScore.Font = new Font("Segoe UI", 24F);
             lblScore.ForeColor = Color.FromArgb(246, 231, 222);
             lblScore.Location = new Point(1489, 98);
             lblScore.Name = "lblScore";
@@ -97,7 +97,7 @@
             // 
             lblScorePrefix.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblScorePrefix.AutoSize = true;
-            lblScorePrefix.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblScorePrefix.Font = new Font("Segoe UI", 24F);
             lblScorePrefix.ForeColor = Color.FromArgb(246, 231, 222);
             lblScorePrefix.Location = new Point(1003, 98);
             lblScorePrefix.Name = "lblScorePrefix";
@@ -109,7 +109,7 @@
             // 
             lblTimeRemainingPrefix.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTimeRemainingPrefix.AutoSize = true;
-            lblTimeRemainingPrefix.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTimeRemainingPrefix.Font = new Font("Segoe UI", 24F);
             lblTimeRemainingPrefix.ForeColor = Color.FromArgb(246, 231, 222);
             lblTimeRemainingPrefix.Location = new Point(1003, 23);
             lblTimeRemainingPrefix.Name = "lblTimeRemainingPrefix";
@@ -121,7 +121,7 @@
             // 
             ppbAchievementProgress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ppbAchievementProgress.BackColor = Color.FromArgb(26, 26, 26);
-            ppbAchievementProgress.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbAchievementProgress.Font = new Font("Segoe UI", 48F);
             ppbAchievementProgress.Location = new Point(2367, 34);
             ppbAchievementProgress.Name = "ppbAchievementProgress";
             ppbAchievementProgress.ProgressColour = Color.FromArgb(246, 231, 222);
@@ -136,7 +136,7 @@
             // 
             lblQuizName.Anchor = AnchorStyles.Left;
             lblQuizName.AutoSize = true;
-            lblQuizName.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblQuizName.Font = new Font("Segoe UI", 48F);
             lblQuizName.ForeColor = Color.FromArgb(246, 231, 222);
             lblQuizName.Location = new Point(12, 44);
             lblQuizName.Name = "lblQuizName";
@@ -148,7 +148,7 @@
             // 
             lblQuestionText.Anchor = AnchorStyles.Top;
             lblQuestionText.AutoSize = true;
-            lblQuestionText.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblQuestionText.Font = new Font("Segoe UI", 36F);
             lblQuestionText.ForeColor = Color.FromArgb(246, 231, 222);
             lblQuestionText.Location = new Point(72, 174);
             lblQuestionText.MaximumSize = new Size(1500, 0);
@@ -193,56 +193,60 @@
             // 
             lblAnsFour.Anchor = AnchorStyles.None;
             lblAnsFour.AutoSize = true;
-            lblAnsFour.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAnsFour.Font = new Font("Segoe UI", 36F);
             lblAnsFour.ForeColor = Color.FromArgb(246, 231, 222);
             lblAnsFour.Location = new Point(171, 38);
             lblAnsFour.Name = "lblAnsFour";
             lblAnsFour.Size = new Size(194, 65);
             lblAnsFour.TabIndex = 3;
-            lblAnsFour.Tag = "3";
+            lblAnsFour.Tag = "";
             lblAnsFour.Text = "AnsOne";
+            lblAnsFour.TextAlign = ContentAlignment.TopCenter;
             lblAnsFour.MouseDown += label_MouseDown;
             // 
             // lblAnsThree
             // 
             lblAnsThree.Anchor = AnchorStyles.None;
             lblAnsThree.AutoSize = true;
-            lblAnsThree.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAnsThree.Font = new Font("Segoe UI", 36F);
             lblAnsThree.ForeColor = Color.FromArgb(246, 231, 222);
             lblAnsThree.Location = new Point(708, 38);
             lblAnsThree.Name = "lblAnsThree";
             lblAnsThree.Size = new Size(191, 65);
             lblAnsThree.TabIndex = 2;
-            lblAnsThree.Tag = "2";
+            lblAnsThree.Tag = "";
             lblAnsThree.Text = "AnsTwo";
+            lblAnsThree.TextAlign = ContentAlignment.TopCenter;
             lblAnsThree.MouseDown += label_MouseDown;
             // 
             // lblAnsTwo
             // 
             lblAnsTwo.Anchor = AnchorStyles.None;
             lblAnsTwo.AutoSize = true;
-            lblAnsTwo.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAnsTwo.Font = new Font("Segoe UI", 36F);
             lblAnsTwo.ForeColor = Color.FromArgb(246, 231, 222);
             lblAnsTwo.Location = new Point(155, 179);
             lblAnsTwo.Name = "lblAnsTwo";
             lblAnsTwo.Size = new Size(225, 65);
             lblAnsTwo.TabIndex = 1;
-            lblAnsTwo.Tag = "1";
+            lblAnsTwo.Tag = "";
             lblAnsTwo.Text = "AnsThree";
+            lblAnsTwo.TextAlign = ContentAlignment.TopCenter;
             lblAnsTwo.MouseDown += label_MouseDown;
             // 
             // lblAnsOne
             // 
             lblAnsOne.Anchor = AnchorStyles.None;
             lblAnsOne.AutoSize = true;
-            lblAnsOne.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAnsOne.Font = new Font("Segoe UI", 36F);
             lblAnsOne.ForeColor = Color.FromArgb(246, 231, 222);
             lblAnsOne.Location = new Point(703, 179);
             lblAnsOne.Name = "lblAnsOne";
             lblAnsOne.Size = new Size(201, 65);
             lblAnsOne.TabIndex = 0;
-            lblAnsOne.Tag = "0";
+            lblAnsOne.Tag = "";
             lblAnsOne.Text = "AnsFour";
+            lblAnsOne.TextAlign = ContentAlignment.TopCenter;
             lblAnsOne.MouseDown += label_MouseDown;
             // 
             // tmrQuiz

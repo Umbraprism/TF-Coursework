@@ -441,7 +441,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainMenuScreen";
-            Text = "MainMenuScreen";
+            Text = "Main Menu";
             WindowState = FormWindowState.Maximized;
             Load += MainMenuScreen_Load;
             pnlMain.ResumeLayout(false);

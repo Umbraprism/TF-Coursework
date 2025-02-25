@@ -172,3 +172,10 @@ U:\CourseworkRoot\CourseworkCode\bin\Debug\net6.0-windows\Quizzes\HistoryQuiz.js
 U:\CourseworkRoot\CourseworkCode\bin\Debug\net6.0-windows\Quizzes\TFClassQuiz.json
 U:\CourseworkRoot\CourseworkCode\bin\Debug\net6.0-windows\Quizzes\WeaponsQuiz.json
 U:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.UserControls.Guess.resources
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net6.0-windows\Quizzes\HistoryQuiz.json
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net6.0-windows\Quizzes\TFClassQuiz.json
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net6.0-windows\Quizzes\WeaponsQuiz.json
+E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.EndScreen.resources
+E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.Forms.ServerHostScreen.resources
+E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.UserControls.Guess.resources
+E:\CourseworkRoot\CourseworkCode\obj\Debug\net6.0-windows\Coursework.UserControls.PlayerView.resources

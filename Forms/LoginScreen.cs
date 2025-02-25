@@ -49,7 +49,7 @@ namespace Coursework.Forms
                 if (PlayerHelper.PlayerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
                 {
                     PlayerHelper.QuizPlayer = PlayerHelper.PlayerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
-                    FormHelper.MainMenuScreen.Show();
+                    new SplashScreen(FormHelper.MainMenuScreen).Show();
                     Hide();
                 }
                 else
