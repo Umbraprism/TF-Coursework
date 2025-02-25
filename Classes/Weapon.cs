@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using Coursework.Extensions;
 
 namespace Coursework.ParentClasses
 {
@@ -6,7 +7,7 @@ namespace Coursework.ParentClasses
     {
         private Dictionary<uint, Bitmap> idToWeaponImage = new()
         {
-            {1, Properties.Resources.tfLogo}
+            {1, Properties.Resources.scoutEmblem}
         };
 
         public string Name { get; set; }
@@ -27,6 +28,11 @@ namespace Coursework.ParentClasses
             Update = update;
             ImageId = imageId;
             Image = idToWeaponImage[imageId];
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
         }
     }
 }

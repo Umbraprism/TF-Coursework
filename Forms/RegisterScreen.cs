@@ -83,7 +83,9 @@ namespace Coursework
                     {
                         try
                         {
-                            player = new(tbUsername.Text, tbPassword.Text, new TFClass(classId), (uint)playerList.Count + 1, null);
+                            List<Achievement> achievements = JsonSerializer.Deserialize<List<Achievement>>(File.ReadAllText("achievements.json"));
+
+                            player = new(tbUsername.Text, tbPassword.Text, new TFClass(classId), (uint)playerList.Count + 1, null, achievements);
                             playerList.Add(player);
                         }
                         catch (InvalidUsernameException ex)

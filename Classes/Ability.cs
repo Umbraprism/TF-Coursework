@@ -5,7 +5,10 @@ using Coursework.Helpers;
 
 namespace Coursework.ParentClasses
 {
-    [Serializable]
+    /// <summary>
+    /// Holds info on the user's TFCLass' ability, including a method to use it.
+    /// </summary>
+    [Serializable] // Allows serialization to binary file so it is not easily edited by the end-user. UNNEEDED?
     public class Ability
     {
         public string Name { get; private set; }
@@ -14,7 +17,7 @@ namespace Coursework.ParentClasses
         public int ChargeLevel { get; set; }
         public int TimesUsed { get; set; }
 
-        [JsonConstructor]
+        [JsonConstructor] // Marks this as the constructor used by System.Json.Text
         public Ability(string name, string info, int chargesRequired)
         {
             Name = name;
@@ -23,6 +26,9 @@ namespace Coursework.ParentClasses
             ChargeLevel = this.ChargesRequired;
         }
 
+        /// <summary>
+        /// Passes the quiz and question by reference, and enacts an ability dependent on the user's TFClass on the current question.
+        /// </summary>
         public virtual void UseAbility(Form form, ref Quiz quiz, ref Question question)
         {
             switch (PlayerHelper.QuizPlayer.TFClass.Id)

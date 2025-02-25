@@ -14,7 +14,7 @@ namespace Coursework.Forms
 
         private bool isEndless;
         private Weapon? weapon;
-        private int guessCount = 0;
+        private int guessCount = 1;
         private int streak = 0;
 
         private Guess? guess;
@@ -52,7 +52,12 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            pbImage.Image = weapon.Image.Silhoutte(Color.DarkGray);
+            if  (weapon != null && weapon.Image != null)
+            {
+                Bitmap silhouette = (Bitmap)weapon.Image.Clone();
+
+                pbImage.Image = silhouette.Silhoutte(Color.Black);
+            }
         }
 
         private void tbGuess_KeyDown(object sender, KeyEventArgs e)

@@ -42,6 +42,8 @@
             tbGuess = new TextBox();
             lblGuessesUntilImage = new Label();
             tlpGuesses = new TableLayoutPanel();
+            lblGuessCountPrefix = new Label();
+            lblGuessCount = new Label();
             pnlHeader.SuspendLayout();
             rpnlImageBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbImage).BeginInit();
@@ -51,6 +53,8 @@
             // pnlHeader
             // 
             pnlHeader.BackColor = Color.FromArgb(41, 39, 39);
+            pnlHeader.Controls.Add(lblGuessCount);
+            pnlHeader.Controls.Add(lblGuessCountPrefix);
             pnlHeader.Controls.Add(lblTimeRemaining);
             pnlHeader.Controls.Add(lblScore);
             pnlHeader.Controls.Add(lblScorePrefix);
@@ -179,8 +183,9 @@
             // 
             // tbGuess
             // 
-            tbGuess.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbGuess.Location = new Point(7, 3);
+            tbGuess.BorderStyle = BorderStyle.None;
+            tbGuess.Font = new Font("Segoe UI", 30F);
+            tbGuess.Location = new Point(7, 4);
             tbGuess.Name = "tbGuess";
             tbGuess.PlaceholderText = "Guess...";
             tbGuess.Size = new Size(448, 54);
@@ -209,6 +214,30 @@
             tlpGuesses.RowStyles.Add(new RowStyle());
             tlpGuesses.Size = new Size(1600, 297);
             tlpGuesses.TabIndex = 10;
+            // 
+            // lblGuessCountPrefix
+            // 
+            lblGuessCountPrefix.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblGuessCountPrefix.AutoSize = true;
+            lblGuessCountPrefix.Font = new Font("Segoe UI", 24F);
+            lblGuessCountPrefix.ForeColor = Color.FromArgb(246, 231, 222);
+            lblGuessCountPrefix.Location = new Point(1003, 64);
+            lblGuessCountPrefix.Name = "lblGuessCountPrefix";
+            lblGuessCountPrefix.Size = new Size(226, 45);
+            lblGuessCountPrefix.TabIndex = 7;
+            lblGuessCountPrefix.Text = "Guesses Made";
+            // 
+            // lblGuessCount
+            // 
+            lblGuessCount.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblGuessCount.AutoSize = true;
+            lblGuessCount.Font = new Font("Segoe UI", 24F);
+            lblGuessCount.ForeColor = Color.FromArgb(246, 231, 222);
+            lblGuessCount.Location = new Point(1489, 64);
+            lblGuessCount.Name = "lblGuessCount";
+            lblGuessCount.Size = new Size(38, 45);
+            lblGuessCount.TabIndex = 8;
+            lblGuessCount.Text = "n";
             // 
             // GuessingGameScreen
             // 
@@ -252,5 +281,7 @@
         private Label lblGuessesUntilImage;
         private TextBox tbGuess;
         private TableLayoutPanel tlpGuesses;
+        private Label lblGuessCountPrefix;
+        private Label lblGuessCount;
     }
 }

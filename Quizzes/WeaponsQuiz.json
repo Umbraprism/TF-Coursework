@@ -104,6 +104,108 @@
                 "Sharpened Volcano Fragment"
             ],
             "ImageId": 0
+        },
+        {
+            "Text": "Which Demoman weapon can deal knockback when the projectiles hit?",
+            "Type": 0,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Scottish Resistance",
+                "Loch n' Load",
+                "Iron Bomber",
+                "Loose Cannon"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Stickybomb Launcher can be charged to launh stickybombs further.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Demoman weapon collects heads?",
+            "Type": 2,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "Persian Persuader",
+                "Eyelander",
+                "Claidmhor",
+                "Scotsman's Skullcutter"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Heavy weapon slows players down whilst they are being shot?",
+            "Type": 0,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Natascha",
+                "Tomislav",
+                "Brass Beast",
+                "Minigun"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Sandwich cannot be refilled by Ammo Boxes",
+            "Type": 1,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Heavy weapon produces a ring of fire around the Heavy whilst revved?",
+            "Type": 2,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Warrior's Spirit",
+                "Eviction Notice",
+                "Huo-Long Heater",
+                "Killing Gloves of Boxing"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Engineer weapon always hits a critical hit on the 3rd succesive attack on an enemy?",
+            "Type": 0,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Gunslinger",
+                "Jag",
+                "Eureka Effect",
+                "Wrench"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Teleporters cost 50 Metal whilst using the Eureka Effect.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which building cannot be built whilst using the Gunslinger?",
+            "Type": 2,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Dispensers",
+                "Teleporter Entrances",
+                "Sentries",
+                "Teleporter Exits"
+            ],
+            "ImageId": 0
         }
     ],
     "EasyQuestions": [

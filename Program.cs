@@ -17,8 +17,10 @@ namespace Coursework
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
+            // Instantiates the custom fonts that will be utilised throughout the program
             UIHelper.MakeFont();
 
+            // Reads all text from 'tips.json' and deserializes the json string into an array of Tip objects
             using (StreamReader sr = new("tips.json"))
             {
                 FormHelper.Tips = JsonSerializer.Deserialize<List<Tip>>(sr.ReadToEnd());
