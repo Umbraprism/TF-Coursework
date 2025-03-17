@@ -2,7 +2,7 @@
 {
     public static class CollectionExtensions
     {
-        public static void Shuffle<T>(this List<T> toShuffle)
+        public static List<T> Shuffle<T>(this List<T> toShuffle)
         {
             Random rnd = new();
 
@@ -14,9 +14,11 @@
                 toShuffle[i] = toShuffle[rndNum];
                 toShuffle[rndNum] = store;
             }
+
+            return toShuffle;
         }
 
-        public static void Shuffle<T>(this T[] toShuffle)
+        public static T[] Shuffle<T>(this T[] toShuffle)
         {
             Random rnd = new();
 
@@ -28,6 +30,8 @@
                 toShuffle[i] = toShuffle[rndNum];
                 toShuffle[rndNum] = store;
             }
+
+            return toShuffle.ToArray();
         }
     }
 }

@@ -5,19 +5,11 @@ namespace Coursework.ParentClasses
 {
     public class Weapon
     {
-        private Dictionary<uint, Bitmap> idToWeaponImage = new()
-        {
-            {1, Properties.Resources.scoutEmblem}
-        };
-
         public string Name { get; set; }
         public string Slot {  get; set; }
         public uint UsedBy { get; set; }
         public string Update { get; set; }
         public Bitmap? Image { get; set; }
-
-        [JsonInclude]
-        private uint ImageId { get; set; }
 
         [JsonConstructor]
         public Weapon(string name, string slot, uint usedBy, string update, uint imageId)
@@ -26,13 +18,7 @@ namespace Coursework.ParentClasses
             Slot = slot;
             UsedBy = usedBy;
             Update = update;
-            ImageId = imageId;
-            Image = idToWeaponImage[imageId];
-        }
-
-        public object Clone()
-        {
-            return this.MemberwiseClone();
+            Image = (Bitmap?)Bitmap.FromFile(@$"Weapons/{name.Replace(" ", "").ToLower()}.png");
         }
     }
 }

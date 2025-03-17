@@ -28,6 +28,9 @@
     <Compile Update="Forms\MultipleChoiceScreen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\GapFillScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\RegisterScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -42,6 +45,9 @@
     </Compile>
     <Compile Update="Forms\TrueFalseScreen.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserControls\AchievementView.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\AchievementView.cs">
       <SubType>UserControl</SubType>

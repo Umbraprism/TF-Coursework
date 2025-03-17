@@ -35,15 +35,16 @@ namespace Coursework.ParentClasses
 
         private static Dictionary<uint, TFClassAssets> assetsHashmap = new()
         {
-            {1, new(Properties.Resources.scoutAva, Properties.Resources.achieved, Properties.Resources.scoutEmblem, "THE SCOUT")},
-            {2, new(Properties.Resources.soldierAva, Properties.Resources.soldierPortrait, Properties.Resources.soldierEmblem, "THE SOLDIER")},
-            {3, new(Properties.Resources.pyroAva, Properties.Resources.achieved, Properties.Resources.pyroEmblem, "THE PYRO")},
-            {4, new(Properties.Resources.demoAva, Properties.Resources.achieved, Properties.Resources.demoEmblem, "THE DEMOMAN")},
-            {5, new(Properties.Resources.hwgAva, Properties.Resources.hwgPortrait, Properties.Resources.hwgEmblem, "THE HEAVY")},
-            {6, new(Properties.Resources.engineerAva, Properties.Resources.achieved, Properties.Resources.engineerEmblem, "THE ENGINEER")},
-            {7, new(Properties.Resources.medicAva, Properties.Resources.achieved, Properties.Resources.medicEmblem, "THE MEDIC")},
-            {8, new(Properties.Resources.sniperAva, Properties.Resources.achieved, Properties.Resources.sniperEmblem, "THE SNIPER")},
-            {9, new(Properties.Resources.spyAva, Properties.Resources.achieved, Properties.Resources.spyEmblem, "THE SPY")}
+            {0, new(Properties.Resources.starburst, Properties.Resources.achieved, Properties.Resources.starburst, "Multiclass")},
+            {1, new(Properties.Resources.scoutAva, Properties.Resources.achieved, Properties.Resources.scoutEmblem, "The Scout")},
+            {2, new(Properties.Resources.soldierAva, Properties.Resources.soldierPortrait, Properties.Resources.soldierEmblem, "The Soldier")},
+            {3, new(Properties.Resources.pyroAva, Properties.Resources.achieved, Properties.Resources.pyroEmblem, "The Pyro")},
+            {4, new(Properties.Resources.demoAva, Properties.Resources.achieved, Properties.Resources.demoEmblem, "The Demoman")},
+            {5, new(Properties.Resources.hwgAva, Properties.Resources.hwgPortrait, Properties.Resources.hwgEmblem, "The Heavy")},
+            {6, new(Properties.Resources.engineerAva, Properties.Resources.achieved, Properties.Resources.engineerEmblem, "The Engineer")},
+            {7, new(Properties.Resources.medicAva, Properties.Resources.achieved, Properties.Resources.medicEmblem, "The Medic")},
+            {8, new(Properties.Resources.sniperAva, Properties.Resources.achieved, Properties.Resources.sniperEmblem, "The Sniper")},
+            {9, new(Properties.Resources.spyAva, Properties.Resources.achieved, Properties.Resources.spyEmblem, "The Spy")}
         };
 
         [JsonConstructor]

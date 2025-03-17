@@ -3,14 +3,138 @@
         "Name": "Scattergun",
         "Slot": "Primary",
         "UsedBy": 1,
-        "Update": "Release",
-        "ImageId": 1
+        "Update": "Release"
     },
     {
         "Name": "Pistol",
         "Slot": "Secondary",
+        "UsedBy": 0,
+        "Update": "Release"
+    },
+    {
+        "Name": "Bat",
+        "Slot": "Melee",
         "UsedBy": 1,
-        "Update": "Release",
-        "ImageId": 1
+        "Update": "Release"
+    },
+    {
+        "Name": "Rocket Launcher",
+        "Slot": "Primary",
+        "UsedBy": 2,
+        "Update": "Release"
+    },
+    {
+        "Name": "Shotgun",
+        "Slot": "Secondary",
+        "UsedBy": 0,
+        "Update": "Release"
+    },
+    {
+        "Name": "Shovel",
+        "Slot": "Melee",
+        "UsedBy": 2,
+        "Update": "Release"
+    },
+        {
+        "Name": "Flamethrower",
+        "Slot": "Primary",
+        "UsedBy": 3,
+        "Update": "Release"
+    },
+    {
+        "Name": "Fire Axe",
+        "Slot": "Melee",
+        "UsedBy": 3,
+        "Update": "Release"
+    },
+        {
+        "Name": "Grenade Launcher",
+        "Slot": "Primary",
+        "UsedBy": 4,
+        "Update": "Release"
+    },
+    {
+        "Name": "Stickybomb Launcher",
+        "Slot": "Secondary",
+        "UsedBy": 4,
+        "Update": "Release"
+    },
+    {
+        "Name": "Bottle",
+        "Slot": "Melee",
+        "UsedBy": 4,
+        "Update": "Release"
+    },
+    {
+        "Name": "Minigun",
+        "Slot": "Primary",
+        "UsedBy": 5,
+        "Update": "Release"
+    },
+    {
+        "Name": "Fists",
+        "Slot": "Melee",
+        "UsedBy": 5,
+        "Update": "Release"
+    },
+    {
+        "Name": "Wrench",
+        "Slot": "Melee",
+        "UsedBy": 6,
+        "Update": "Release"
+    },
+    {
+        "Name": "Syringe Gun",
+        "Slot": "Primary",
+        "UsedBy": 7,
+        "Update": "Release"
+    },
+    {
+        "Name": "Medigun",
+        "Slot": "Secondary",
+        "UsedBy": 7,
+        "Update": "Release"
+    },
+    {
+        "Name": "Bone Saw",
+        "Slot": "Melee",
+        "UsedBy": 7,
+        "Update": "Release"
+    },
+        {
+        "Name": "Sniper Rifle",
+        "Slot": "Primary",
+        "UsedBy": 8,
+        "Update": "Release"
+    },
+    {
+        "Name": "SMG",
+        "Slot": "Secondary",
+        "UsedBy": 8,
+        "Update": "Release"
+    },
+    {
+        "Name": "Kukri",
+        "Slot": "Melee",
+        "UsedBy": 8,
+        "Update": "Release"
+    },
+    {
+        "Name": "Revolver",
+        "Slot": "Primary",
+        "UsedBy": 9,
+        "Update": "Release"
+    },
+    {
+        "Name": "Invis Watch",
+        "Slot": "Secondary",
+        "UsedBy": 9,
+        "Update": "Release"
+    },
+    {
+        "Name": "Knife",
+        "Slot": "Melee",
+        "UsedBy": 9,
+        "Update": "Release"
     }
 ]

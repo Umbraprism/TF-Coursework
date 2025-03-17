@@ -35,28 +35,27 @@
             // 
             // lblIndicator
             // 
-            lblIndicator.Anchor = AnchorStyles.None;
-            lblIndicator.AutoSize = true;
-            lblIndicator.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblIndicator.Dock = DockStyle.Top;
+            lblIndicator.Font = new Font("Segoe UI", 48F);
             lblIndicator.ForeColor = Color.FromArgb(246, 231, 222);
-            lblIndicator.Location = new Point(235, 148);
+            lblIndicator.Location = new Point(0, 0);
             lblIndicator.Name = "lblIndicator";
-            lblIndicator.Size = new Size(375, 86);
+            lblIndicator.Size = new Size(845, 273);
             lblIndicator.TabIndex = 0;
             lblIndicator.Text = "INDICATOR!";
+            lblIndicator.TextAlign = ContentAlignment.BottomCenter;
             // 
             // lblScore
             // 
-            lblScore.Anchor = AnchorStyles.None;
-            lblScore.AutoSize = true;
-            lblScore.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblScore.Dock = DockStyle.Top;
+            lblScore.Font = new Font("Segoe UI", 20F);
             lblScore.ForeColor = Color.FromArgb(246, 231, 222);
-            lblScore.Location = new Point(347, 234);
+            lblScore.Location = new Point(0, 273);
             lblScore.Name = "lblScore";
-            lblScore.Size = new Size(129, 37);
+            lblScore.Size = new Size(845, 61);
             lblScore.TabIndex = 1;
             lblScore.Text = "+n Points";
-            lblScore.TextAlign = ContentAlignment.MiddleCenter;
+            lblScore.TextAlign = ContentAlignment.TopCenter;
             // 
             // AnswerIndicationScreen
             // 
@@ -73,7 +72,6 @@
             WindowState = FormWindowState.Maximized;
             Load += AnswerIndicationScreen_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

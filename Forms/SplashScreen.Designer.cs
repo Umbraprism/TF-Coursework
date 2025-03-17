@@ -65,7 +65,7 @@
             // 
             ppbLoading.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             ppbLoading.BackColor = Color.FromArgb(41, 39, 39);
-            ppbLoading.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbLoading.Font = new Font("Segoe UI", 48F);
             ppbLoading.Location = new Point(12, 41);
             ppbLoading.Name = "ppbLoading";
             ppbLoading.ProgressColour = Color.FromArgb(246, 231, 222);
@@ -78,15 +78,15 @@
             // 
             // lblOnWayTo
             // 
-            lblOnWayTo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblOnWayTo.AutoSize = true;
-            lblOnWayTo.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOnWayTo.Dock = DockStyle.Fill;
+            lblOnWayTo.Font = new Font("Segoe UI", 48F);
             lblOnWayTo.ForeColor = Color.FromArgb(246, 231, 222);
-            lblOnWayTo.Location = new Point(14, 126);
+            lblOnWayTo.Location = new Point(0, 0);
             lblOnWayTo.Name = "lblOnWayTo";
-            lblOnWayTo.Size = new Size(315, 86);
+            lblOnWayTo.Size = new Size(649, 238);
             lblOnWayTo.TabIndex = 1;
             lblOnWayTo.Text = "NextForm";
+            lblOnWayTo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tmrLoading
             // 
@@ -121,7 +121,7 @@
             // lblTipText
             // 
             lblTipText.AutoSize = true;
-            lblTipText.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTipText.Font = new Font("Segoe UI", 12F);
             lblTipText.ForeColor = Color.FromArgb(246, 231, 222);
             lblTipText.Location = new Point(6, 41);
             lblTipText.MaximumSize = new Size(637, 0);
@@ -134,7 +134,7 @@
             // lblTip
             // 
             lblTip.AutoSize = true;
-            lblTip.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTip.Font = new Font("Segoe UI", 18F);
             lblTip.ForeColor = Color.FromArgb(246, 231, 222);
             lblTip.Location = new Point(6, 9);
             lblTip.Name = "lblTip";
@@ -155,14 +155,18 @@
             // 
             // lblYoureOnWayTo
             // 
-            lblYoureOnWayTo.AutoSize = true;
-            lblYoureOnWayTo.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblYoureOnWayTo.BackColor = Color.Transparent;
+            lblYoureOnWayTo.Dock = DockStyle.Top;
+            lblYoureOnWayTo.Font = new Font("Segoe UI", 24F);
             lblYoureOnWayTo.ForeColor = Color.FromArgb(246, 231, 222);
-            lblYoureOnWayTo.Location = new Point(97, 33);
+            lblYoureOnWayTo.Location = new Point(0, 0);
+            lblYoureOnWayTo.Margin = new Padding(3, 20, 3, 0);
             lblYoureOnWayTo.Name = "lblYoureOnWayTo";
-            lblYoureOnWayTo.Size = new Size(418, 45);
+            lblYoureOnWayTo.Padding = new Padding(0, 12, 0, 0);
+            lblYoureOnWayTo.Size = new Size(649, 69);
             lblYoureOnWayTo.TabIndex = 0;
             lblYoureOnWayTo.Text = "YOU'RE ON YOUR WAY TO...";
+            lblYoureOnWayTo.TextAlign = ContentAlignment.TopCenter;
             // 
             // pnlClassName
             // 
@@ -175,14 +179,15 @@
             // 
             // lblTFClassName
             // 
-            lblTFClassName.AutoSize = true;
-            lblTFClassName.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTFClassName.Dock = DockStyle.Fill;
+            lblTFClassName.Font = new Font("Segoe UI", 48F);
             lblTFClassName.ForeColor = Color.FromArgb(246, 231, 222);
-            lblTFClassName.Location = new Point(151, 32);
+            lblTFClassName.Location = new Point(0, 0);
             lblTFClassName.Name = "lblTFClassName";
-            lblTFClassName.Size = new Size(347, 86);
+            lblTFClassName.Size = new Size(649, 131);
             lblTFClassName.TabIndex = 0;
             lblTFClassName.Text = "THE CLASS";
+            lblTFClassName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbClassImage
             // 
@@ -217,9 +222,7 @@
             pnlTip.ResumeLayout(false);
             pnlTip.PerformLayout();
             pnlOnWayTo.ResumeLayout(false);
-            pnlOnWayTo.PerformLayout();
             pnlClassName.ResumeLayout(false);
-            pnlClassName.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbClassImage).EndInit();
             ResumeLayout(false);
         }

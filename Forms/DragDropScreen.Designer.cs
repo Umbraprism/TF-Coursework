@@ -46,6 +46,7 @@
             lblAnsOne = new Label();
             tmrQuiz = new System.Windows.Forms.Timer(components);
             rpnlImageBox = new UserControls.RoundedPanel();
+            label1 = new Label();
             pbImage = new PictureBox();
             pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAbility).BeginInit();
@@ -259,6 +260,7 @@
             rpnlImageBox.Anchor = AnchorStyles.Top;
             rpnlImageBox.BorderColour = Color.FromArgb(45, 41, 39);
             rpnlImageBox.BorderSize = 0;
+            rpnlImageBox.Controls.Add(label1);
             rpnlImageBox.Controls.Add(pbImage);
             rpnlImageBox.Location = new Point(587, 287);
             rpnlImageBox.Name = "rpnlImageBox";
@@ -267,6 +269,17 @@
             rpnlImageBox.Size = new Size(462, 304);
             rpnlImageBox.Style = System.Drawing.Drawing2D.DashStyle.Solid;
             rpnlImageBox.TabIndex = 5;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.ForeColor = Color.FromArgb(246, 231, 222);
+            label1.Location = new Point(12, 282);
+            label1.Name = "label1";
+            label1.Size = new Size(204, 15);
+            label1.TabIndex = 6;
+            label1.Text = "Please drag your answer into the box.";
             // 
             // pbImage
             // 
@@ -305,6 +318,7 @@
             tlpAnswers.ResumeLayout(false);
             tlpAnswers.PerformLayout();
             rpnlImageBox.ResumeLayout(false);
+            rpnlImageBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -329,5 +343,6 @@
         private Label lblAnsTwo;
         private UserControls.RoundedPanel rpnlImageBox;
         private PictureBox pbImage;
+        private Label label1;
     }
 }

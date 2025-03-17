@@ -94,6 +94,7 @@ namespace Coursework.UserControls
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            _result = DialogResult.Cancel;
             this.Close();
         }
     }

@@ -5,8 +5,6 @@ namespace Coursework.Helpers
 {
     public static class FormHelper
     {
-        public static string PlayersJsonPath { get; } = Path.Combine(Environment.CurrentDirectory, "playerData.bin");
-
         public static Dictionary<string, Color> ColourPalette { get; } = new()
         {
             { "Background", Color.FromArgb(0, 0, 0) },
@@ -22,20 +20,13 @@ namespace Coursework.Helpers
             { "Unusual", Color.FromArgb(134, 80, 172) },
             { "Strange", Color.FromArgb(207, 106, 50) },
             { "Genuine", Color.FromArgb(77, 116, 85) },
-            { "Vintage", Color.FromArgb(134, 80, 172) },
+            { "Vintage", Color.FromArgb(71, 98, 145) },
             { "Unique", Color.FromArgb(255, 215, 0) },
             { "Basic", Color.FromArgb(250, 250, 250) },
             { "Junk", Color.FromArgb(178, 178, 178) }
         };
 
         public static List<Tip> Tips { get; set; } = new();
-        public static Quiz CurrentQuiz = new();
-
-        public static RegisterScreen RegisterScreen { get; } = new();
-        public static LoginScreen LoginScreen { get; } = new();
-        public static AchievementsScreen AchievementScreen { get; } = new();
-        public static LeaderboardScreen LeaderboardScreen { get; } = new();
-        public static MainMenuScreen MainMenuScreen { get; } = new();
-        public static StatsScreen StatsScreen { get; } = new();
+        public static Quiz Quiz = new();
     }
 }

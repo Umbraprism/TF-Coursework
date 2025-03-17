@@ -58,9 +58,9 @@ namespace Coursework.ParentClasses
             TotalTime = timeRemaining;
 
             // Selects n random questions from the json.
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < baseQuestions.Count ; i++)
             {
-                int rndQuestionIndex = rnd.Next(i, baseQuestions.Count - 1);
+                int rndQuestionIndex = rnd.Next(i, baseQuestions.Count);
 
                 BaseQuestions.Add(baseQuestions[rndQuestionIndex]);
                 //EasyQuestions.Add(easyQuestions[rndQuestionIndex]);

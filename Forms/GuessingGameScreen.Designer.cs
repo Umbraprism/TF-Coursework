@@ -30,20 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuessingGameScreen));
             pnlHeader = new Panel();
+            lblQuizName = new Label();
+            btnBack = new Button();
+            lblGuessCount = new Label();
+            lblGuessCountPrefix = new Label();
             lblTimeRemaining = new Label();
             lblScore = new Label();
             lblScorePrefix = new Label();
             lblTimeRemainingPrefix = new Label();
             ppbAchievementProgress = new UserControls.PercentageProgressBar();
-            lblQuizName = new Label();
             rpnlImageBox = new UserControls.RoundedPanel();
+            lblGuessesUntilImage = new Label();
             pbImage = new PictureBox();
             rpnlGuessInput = new UserControls.RoundedPanel();
-            tbGuess = new TextBox();
-            lblGuessesUntilImage = new Label();
+            cbGuess = new ComboBox();
             tlpGuesses = new TableLayoutPanel();
-            lblGuessCountPrefix = new Label();
-            lblGuessCount = new Label();
             pnlHeader.SuspendLayout();
             rpnlImageBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbImage).BeginInit();
@@ -53,6 +54,8 @@
             // pnlHeader
             // 
             pnlHeader.BackColor = Color.FromArgb(41, 39, 39);
+            pnlHeader.Controls.Add(lblQuizName);
+            pnlHeader.Controls.Add(btnBack);
             pnlHeader.Controls.Add(lblGuessCount);
             pnlHeader.Controls.Add(lblGuessCountPrefix);
             pnlHeader.Controls.Add(lblTimeRemaining);
@@ -60,12 +63,64 @@
             pnlHeader.Controls.Add(lblScorePrefix);
             pnlHeader.Controls.Add(lblTimeRemainingPrefix);
             pnlHeader.Controls.Add(ppbAchievementProgress);
-            pnlHeader.Controls.Add(lblQuizName);
             pnlHeader.Dock = DockStyle.Top;
             pnlHeader.Location = new Point(0, 0);
             pnlHeader.Name = "pnlHeader";
             pnlHeader.Size = new Size(1600, 156);
             pnlHeader.TabIndex = 2;
+            // 
+            // lblQuizName
+            // 
+            lblQuizName.Dock = DockStyle.Left;
+            lblQuizName.Font = new Font("Segoe UI", 48F);
+            lblQuizName.ForeColor = Color.FromArgb(246, 231, 222);
+            lblQuizName.Location = new Point(290, 0);
+            lblQuizName.Name = "lblQuizName";
+            lblQuizName.Size = new Size(707, 156);
+            lblQuizName.TabIndex = 1;
+            lblQuizName.Text = "GUESSING GAME";
+            lblQuizName.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.FromArgb(189, 59, 59);
+            btnBack.Dock = DockStyle.Left;
+            btnBack.FlatAppearance.BorderSize = 0;
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.Font = new Font("Segoe UI", 95F);
+            btnBack.ForeColor = Color.FromArgb(246, 231, 222);
+            btnBack.Location = new Point(0, 0);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(290, 156);
+            btnBack.TabIndex = 9;
+            btnBack.Text = "❰";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Visible = false;
+            btnBack.Click += btnBack_Click;
+            // 
+            // lblGuessCount
+            // 
+            lblGuessCount.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblGuessCount.AutoSize = true;
+            lblGuessCount.Font = new Font("Segoe UI", 24F);
+            lblGuessCount.ForeColor = Color.FromArgb(246, 231, 222);
+            lblGuessCount.Location = new Point(1489, 64);
+            lblGuessCount.Name = "lblGuessCount";
+            lblGuessCount.Size = new Size(38, 45);
+            lblGuessCount.TabIndex = 8;
+            lblGuessCount.Text = "n";
+            // 
+            // lblGuessCountPrefix
+            // 
+            lblGuessCountPrefix.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblGuessCountPrefix.AutoSize = true;
+            lblGuessCountPrefix.Font = new Font("Segoe UI", 24F);
+            lblGuessCountPrefix.ForeColor = Color.FromArgb(246, 231, 222);
+            lblGuessCountPrefix.Location = new Point(1003, 64);
+            lblGuessCountPrefix.Name = "lblGuessCountPrefix";
+            lblGuessCountPrefix.Size = new Size(226, 45);
+            lblGuessCountPrefix.TabIndex = 7;
+            lblGuessCountPrefix.Text = "Guesses Made";
             // 
             // lblTimeRemaining
             // 
@@ -130,23 +185,12 @@
             ppbAchievementProgress.TextColour = Color.FromArgb(246, 231, 222);
             ppbAchievementProgress.UsePercentage = true;
             // 
-            // lblQuizName
-            // 
-            lblQuizName.Anchor = AnchorStyles.Left;
-            lblQuizName.AutoSize = true;
-            lblQuizName.Font = new Font("Segoe UI", 48F);
-            lblQuizName.ForeColor = Color.FromArgb(246, 231, 222);
-            lblQuizName.Location = new Point(12, 40);
-            lblQuizName.Name = "lblQuizName";
-            lblQuizName.Size = new Size(526, 86);
-            lblQuizName.TabIndex = 1;
-            lblQuizName.Text = "GUESSING GAME";
-            // 
             // rpnlImageBox
             // 
             rpnlImageBox.Anchor = AnchorStyles.Top;
             rpnlImageBox.BorderColour = Color.FromArgb(45, 41, 39);
             rpnlImageBox.BorderSize = 0;
+            rpnlImageBox.Controls.Add(lblGuessesUntilImage);
             rpnlImageBox.Controls.Add(pbImage);
             rpnlImageBox.Location = new Point(587, 210);
             rpnlImageBox.Name = "rpnlImageBox";
@@ -155,6 +199,17 @@
             rpnlImageBox.Size = new Size(462, 304);
             rpnlImageBox.Style = System.Drawing.Drawing2D.DashStyle.Solid;
             rpnlImageBox.TabIndex = 6;
+            // 
+            // lblGuessesUntilImage
+            // 
+            lblGuessesUntilImage.AutoSize = true;
+            lblGuessesUntilImage.BackColor = Color.Transparent;
+            lblGuessesUntilImage.ForeColor = Color.FromArgb(246, 231, 222);
+            lblGuessesUntilImage.Location = new Point(12, 282);
+            lblGuessesUntilImage.Name = "lblGuessesUntilImage";
+            lblGuessesUntilImage.Size = new Size(298, 15);
+            lblGuessesUntilImage.TabIndex = 9;
+            lblGuessesUntilImage.Text = "Weapon image will be fully revealed in n more guesses.";
             // 
             // pbImage
             // 
@@ -170,9 +225,10 @@
             // 
             // rpnlGuessInput
             // 
+            rpnlGuessInput.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             rpnlGuessInput.BorderColour = Color.White;
             rpnlGuessInput.BorderSize = 0;
-            rpnlGuessInput.Controls.Add(tbGuess);
+            rpnlGuessInput.Controls.Add(cbGuess);
             rpnlGuessInput.Location = new Point(587, 566);
             rpnlGuessInput.Name = "rpnlGuessInput";
             rpnlGuessInput.PanelColour = Color.White;
@@ -181,26 +237,21 @@
             rpnlGuessInput.Style = System.Drawing.Drawing2D.DashStyle.Solid;
             rpnlGuessInput.TabIndex = 7;
             // 
-            // tbGuess
+            // cbGuess
             // 
-            tbGuess.BorderStyle = BorderStyle.None;
-            tbGuess.Font = new Font("Segoe UI", 30F);
-            tbGuess.Location = new Point(7, 4);
-            tbGuess.Name = "tbGuess";
-            tbGuess.PlaceholderText = "Guess...";
-            tbGuess.Size = new Size(448, 54);
-            tbGuess.TabIndex = 10;
-            tbGuess.KeyDown += tbGuess_KeyDown;
-            // 
-            // lblGuessesUntilImage
-            // 
-            lblGuessesUntilImage.AutoSize = true;
-            lblGuessesUntilImage.ForeColor = Color.FromArgb(246, 231, 222);
-            lblGuessesUntilImage.Location = new Point(587, 517);
-            lblGuessesUntilImage.Name = "lblGuessesUntilImage";
-            lblGuessesUntilImage.Size = new Size(298, 15);
-            lblGuessesUntilImage.TabIndex = 9;
-            lblGuessesUntilImage.Text = "Weapon image will be fully revealed in n more guesses.";
+            cbGuess.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cbGuess.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbGuess.BackColor = Color.White;
+            cbGuess.DropDownHeight = 100;
+            cbGuess.FlatStyle = FlatStyle.Flat;
+            cbGuess.Font = new Font("Segoe UI", 24F);
+            cbGuess.FormattingEnabled = true;
+            cbGuess.IntegralHeight = false;
+            cbGuess.Location = new Point(5, 8);
+            cbGuess.Name = "cbGuess";
+            cbGuess.Size = new Size(453, 53);
+            cbGuess.TabIndex = 11;
+            cbGuess.KeyDown += cbGuess_KeyDown;
             // 
             // tlpGuesses
             // 
@@ -215,30 +266,6 @@
             tlpGuesses.Size = new Size(1600, 297);
             tlpGuesses.TabIndex = 10;
             // 
-            // lblGuessCountPrefix
-            // 
-            lblGuessCountPrefix.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblGuessCountPrefix.AutoSize = true;
-            lblGuessCountPrefix.Font = new Font("Segoe UI", 24F);
-            lblGuessCountPrefix.ForeColor = Color.FromArgb(246, 231, 222);
-            lblGuessCountPrefix.Location = new Point(1003, 64);
-            lblGuessCountPrefix.Name = "lblGuessCountPrefix";
-            lblGuessCountPrefix.Size = new Size(226, 45);
-            lblGuessCountPrefix.TabIndex = 7;
-            lblGuessCountPrefix.Text = "Guesses Made";
-            // 
-            // lblGuessCount
-            // 
-            lblGuessCount.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblGuessCount.AutoSize = true;
-            lblGuessCount.Font = new Font("Segoe UI", 24F);
-            lblGuessCount.ForeColor = Color.FromArgb(246, 231, 222);
-            lblGuessCount.Location = new Point(1489, 64);
-            lblGuessCount.Name = "lblGuessCount";
-            lblGuessCount.Size = new Size(38, 45);
-            lblGuessCount.TabIndex = 8;
-            lblGuessCount.Text = "n";
-            // 
             // GuessingGameScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -246,7 +273,6 @@
             BackColor = Color.FromArgb(53, 48, 46);
             ClientSize = new Size(1600, 900);
             Controls.Add(tlpGuesses);
-            Controls.Add(lblGuessesUntilImage);
             Controls.Add(rpnlGuessInput);
             Controls.Add(rpnlImageBox);
             Controls.Add(pnlHeader);
@@ -259,11 +285,10 @@
             pnlHeader.ResumeLayout(false);
             pnlHeader.PerformLayout();
             rpnlImageBox.ResumeLayout(false);
+            rpnlImageBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbImage).EndInit();
             rpnlGuessInput.ResumeLayout(false);
-            rpnlGuessInput.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -279,9 +304,10 @@
         private PictureBox pbImage;
         private UserControls.RoundedPanel rpnlGuessInput;
         private Label lblGuessesUntilImage;
-        private TextBox tbGuess;
+        private ComboBox cbGuess;
         private TableLayoutPanel tlpGuesses;
         private Label lblGuessCountPrefix;
         private Label lblGuessCount;
+        private Button btnBack;
     }
 }

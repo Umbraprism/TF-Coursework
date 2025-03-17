@@ -6,7 +6,7 @@ namespace Coursework.Forms
 {
     public partial class SplashScreen : Form
     {
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Form OnWayTo { get; set; }
 
         private Random rnd = new();
@@ -28,11 +28,8 @@ namespace Coursework.Forms
             lblTipText.Text = tfClassTips[rnd.Next(0, tfClassTips.Length - 1)].Text;
 
             lblOnWayTo.Text = OnWayTo.Text;
-            lblOnWayTo.Left = (pnlOnWayTo.Width / 2 - (TextRenderer.MeasureText(lblOnWayTo.Text, lblOnWayTo.Font).Width / 2));
-            lblOnWayTo.Top = (pnlOnWayTo.Height / 2 - (TextRenderer.MeasureText(lblOnWayTo.Text, lblOnWayTo.Font).Height / 2));
 
-            lblTFClassName.Text = TFClass.Assets[randomClass].Name;
-            lblTFClassName.Left = (pnlClassName.Width / 2 - (TextRenderer.MeasureText(lblTFClassName.Text, lblTFClassName.Font).Width / 2));
+            lblTFClassName.Text = TFClass.Assets[randomClass].Name.ToUpper();
 
             pbClassImage.Image = TFClass.Assets[randomClass].Portrait;
 
@@ -44,25 +41,19 @@ namespace Coursework.Forms
             ppbLoading.Value = ppbLoading.Minimum;
         }
 
-        private async void tmrLoading_Tick(object sender, EventArgs e)
+        private void tmrLoading_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                ppbLoading.Increment(1);
-
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                ppbLoading.Value = ppbLoading.Maximum;
-            }
+            ppbLoading.Increment(1);
+            Application.DoEvents();
 
             if (ppbLoading.Value >= ppbLoading.Maximum)
             {
-                await Task.Delay(1000);
+                Thread.Sleep(1000);
 
-                tmrLoading.Stop();
                 OnWayTo.Show();
                 this.Close();
+
+                tmrLoading.Stop();
             }
         }
     }

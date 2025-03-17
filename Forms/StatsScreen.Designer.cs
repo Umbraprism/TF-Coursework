@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatsScreen));
             pnlStats = new Panel();
-            pnlQuizStats = new Panel();
             pnlGuessingGame = new Panel();
             lblCurrentStreak = new Label();
             lblHighestStreak = new Label();
             lblLatestGuesses = new Label();
             lblLowestGuesses = new Label();
             lblGuessingGame = new Label();
+            pnlQuizStats = new Panel();
             lblQuizRank = new Label();
             lblLatestScore = new Label();
             lblHighestScore = new Label();
@@ -56,8 +56,8 @@
             btnBack = new Button();
             pbPortrait = new PictureBox();
             pnlStats.SuspendLayout();
-            pnlQuizStats.SuspendLayout();
             pnlGuessingGame.SuspendLayout();
+            pnlQuizStats.SuspendLayout();
             tlpQuizSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAvatar).BeginInit();
             pnlHeader.SuspendLayout();
@@ -66,6 +66,7 @@
             // 
             // pnlStats
             // 
+            pnlStats.Controls.Add(pnlGuessingGame);
             pnlStats.Controls.Add(pnlQuizStats);
             pnlStats.Controls.Add(tlpQuizSelect);
             pnlStats.Controls.Add(lblOnlineRank);
@@ -79,20 +80,6 @@
             pnlStats.Size = new Size(893, 900);
             pnlStats.TabIndex = 0;
             // 
-            // pnlQuizStats
-            // 
-            pnlQuizStats.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pnlQuizStats.Controls.Add(pnlGuessingGame);
-            pnlQuizStats.Controls.Add(lblQuizRank);
-            pnlQuizStats.Controls.Add(lblLatestScore);
-            pnlQuizStats.Controls.Add(lblHighestScore);
-            pnlQuizStats.Controls.Add(lblQuizType);
-            pnlQuizStats.Location = new Point(0, 594);
-            pnlQuizStats.Name = "pnlQuizStats";
-            pnlQuizStats.Size = new Size(893, 306);
-            pnlQuizStats.TabIndex = 6;
-            pnlQuizStats.Visible = false;
-            // 
             // pnlGuessingGame
             // 
             pnlGuessingGame.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -101,9 +88,9 @@
             pnlGuessingGame.Controls.Add(lblLatestGuesses);
             pnlGuessingGame.Controls.Add(lblLowestGuesses);
             pnlGuessingGame.Controls.Add(lblGuessingGame);
-            pnlGuessingGame.Location = new Point(0, 3);
+            pnlGuessingGame.Location = new Point(0, 592);
             pnlGuessingGame.Name = "pnlGuessingGame";
-            pnlGuessingGame.Size = new Size(893, 303);
+            pnlGuessingGame.Size = new Size(893, 306);
             pnlGuessingGame.TabIndex = 7;
             pnlGuessingGame.Visible = false;
             // 
@@ -113,7 +100,7 @@
             lblCurrentStreak.AutoSize = true;
             lblCurrentStreak.Font = new Font("Segoe UI", 26.25F);
             lblCurrentStreak.ForeColor = Color.FromArgb(246, 231, 222);
-            lblCurrentStreak.Location = new Point(19, 247);
+            lblCurrentStreak.Location = new Point(19, 250);
             lblCurrentStreak.Name = "lblCurrentStreak";
             lblCurrentStreak.Size = new Size(295, 47);
             lblCurrentStreak.TabIndex = 7;
@@ -121,11 +108,11 @@
             // 
             // lblHighestStreak
             // 
-            lblHighestStreak.Anchor = AnchorStyles.Bottom;
+            lblHighestStreak.Anchor = AnchorStyles.Left;
             lblHighestStreak.AutoSize = true;
             lblHighestStreak.Font = new Font("Segoe UI", 26.25F);
             lblHighestStreak.ForeColor = Color.FromArgb(246, 231, 222);
-            lblHighestStreak.Location = new Point(19, 193);
+            lblHighestStreak.Location = new Point(19, 196);
             lblHighestStreak.Name = "lblHighestStreak";
             lblHighestStreak.Size = new Size(298, 47);
             lblHighestStreak.TabIndex = 6;
@@ -133,11 +120,11 @@
             // 
             // lblLatestGuesses
             // 
-            lblLatestGuesses.Anchor = AnchorStyles.Bottom;
+            lblLatestGuesses.Anchor = AnchorStyles.Left;
             lblLatestGuesses.AutoSize = true;
             lblLatestGuesses.Font = new Font("Segoe UI", 26.25F);
             lblLatestGuesses.ForeColor = Color.FromArgb(246, 231, 222);
-            lblLatestGuesses.Location = new Point(19, 137);
+            lblLatestGuesses.Location = new Point(19, 138);
             lblLatestGuesses.Name = "lblLatestGuesses";
             lblLatestGuesses.Size = new Size(300, 47);
             lblLatestGuesses.TabIndex = 5;
@@ -164,6 +151,19 @@
             lblGuessingGame.Size = new Size(396, 65);
             lblGuessingGame.TabIndex = 3;
             lblGuessingGame.Text = "GUESSING GAME";
+            // 
+            // pnlQuizStats
+            // 
+            pnlQuizStats.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlQuizStats.Controls.Add(lblQuizRank);
+            pnlQuizStats.Controls.Add(lblLatestScore);
+            pnlQuizStats.Controls.Add(lblHighestScore);
+            pnlQuizStats.Controls.Add(lblQuizType);
+            pnlQuizStats.Location = new Point(0, 594);
+            pnlQuizStats.Name = "pnlQuizStats";
+            pnlQuizStats.Size = new Size(893, 306);
+            pnlQuizStats.TabIndex = 6;
+            pnlQuizStats.Visible = false;
             // 
             // lblQuizRank
             // 
@@ -213,7 +213,7 @@
             // 
             // tlpQuizSelect
             // 
-            tlpQuizSelect.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tlpQuizSelect.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tlpQuizSelect.ColumnCount = 4;
             tlpQuizSelect.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tlpQuizSelect.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
@@ -426,10 +426,10 @@
             Load += StatsScreen_Load;
             pnlStats.ResumeLayout(false);
             pnlStats.PerformLayout();
-            pnlQuizStats.ResumeLayout(false);
-            pnlQuizStats.PerformLayout();
             pnlGuessingGame.ResumeLayout(false);
             pnlGuessingGame.PerformLayout();
+            pnlQuizStats.ResumeLayout(false);
+            pnlQuizStats.PerformLayout();
             tlpQuizSelect.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbAvatar).EndInit();
             pnlHeader.ResumeLayout(false);

@@ -1,15 +1,39 @@
 {
     "Name": "History",
     "QuizType":  2,
-    "TimeRemaining": 60,
+    "TimeRemaining": 540,
     "BaseQuestions": [
         {
-            "Text": "",
-            "Type": 2,
+            "Text": "Which gamemode was not present in TF2 upon its release?",
+            "Type": 0,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Capture Points",
+                "King of the Hill",
+                "Attack & Defend",
+                "Payload"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "TF2 had no unlockable weapons when it originally released.",
+            "Type": 1,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "1",
-                "2"
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "In what year did TF2 first release?",
+            "Type": 2,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "2010",
+                "2007",
+                "2015",
+                "2000"
             ],
             "ImageId": 0
         }
@@ -20,8 +44,10 @@
             "Type": 0,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "1",
-                "2"
+                "",
+                "",
+                "",
+                ""
             ],
             "ImageId": 0
         }

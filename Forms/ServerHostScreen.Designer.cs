@@ -57,7 +57,7 @@
             // 
             ppbAchievementProgress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ppbAchievementProgress.BackColor = Color.FromArgb(26, 26, 26);
-            ppbAchievementProgress.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbAchievementProgress.Font = new Font("Segoe UI", 48F);
             ppbAchievementProgress.Location = new Point(2367, 34);
             ppbAchievementProgress.Name = "ppbAchievementProgress";
             ppbAchievementProgress.ProgressColour = Color.FromArgb(246, 231, 222);
@@ -72,7 +72,7 @@
             // 
             lblHost.Anchor = AnchorStyles.Left;
             lblHost.AutoSize = true;
-            lblHost.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHost.Font = new Font("Segoe UI", 48F);
             lblHost.ForeColor = Color.FromArgb(246, 231, 222);
             lblHost.Location = new Point(296, 46);
             lblHost.Name = "lblHost";
@@ -86,7 +86,7 @@
             btnBack.Dock = DockStyle.Left;
             btnBack.FlatAppearance.BorderSize = 0;
             btnBack.FlatStyle = FlatStyle.Flat;
-            btnBack.Font = new Font("Segoe UI", 95F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBack.Font = new Font("Segoe UI", 95F);
             btnBack.ForeColor = Color.FromArgb(246, 231, 222);
             btnBack.Location = new Point(0, 0);
             btnBack.Name = "btnBack";
@@ -134,7 +134,7 @@
             btnTFClassQuiz.BackColor = Color.FromArgb(189, 59, 59);
             btnTFClassQuiz.FlatAppearance.BorderSize = 0;
             btnTFClassQuiz.FlatStyle = FlatStyle.Flat;
-            btnTFClassQuiz.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTFClassQuiz.Font = new Font("Segoe UI", 48F);
             btnTFClassQuiz.ForeColor = Color.FromArgb(246, 231, 222);
             btnTFClassQuiz.Location = new Point(76, 234);
             btnTFClassQuiz.Name = "btnTFClassQuiz";
@@ -150,7 +150,7 @@
             btnWeaponsQuiz.BackColor = Color.FromArgb(189, 59, 59);
             btnWeaponsQuiz.FlatAppearance.BorderSize = 0;
             btnWeaponsQuiz.FlatStyle = FlatStyle.Flat;
-            btnWeaponsQuiz.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            btnWeaponsQuiz.Font = new Font("Segoe UI", 48F);
             btnWeaponsQuiz.ForeColor = Color.FromArgb(246, 231, 222);
             btnWeaponsQuiz.Location = new Point(76, 3);
             btnWeaponsQuiz.Name = "btnWeaponsQuiz";
@@ -166,7 +166,7 @@
             btnHistoryQuiz.BackColor = Color.FromArgb(189, 59, 59);
             btnHistoryQuiz.FlatAppearance.BorderSize = 0;
             btnHistoryQuiz.FlatStyle = FlatStyle.Flat;
-            btnHistoryQuiz.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            btnHistoryQuiz.Font = new Font("Segoe UI", 48F);
             btnHistoryQuiz.ForeColor = Color.FromArgb(246, 231, 222);
             btnHistoryQuiz.Location = new Point(76, 465);
             btnHistoryQuiz.Name = "btnHistoryQuiz";

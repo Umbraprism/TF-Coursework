@@ -1,7 +1,9 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Media;
+using System.Runtime.CompilerServices;
 using System.Text.Json.Serialization;
 using Coursework.Forms;
 using Coursework.Helpers;
+using WMPLib;
 
 namespace Coursework.ParentClasses
 {
@@ -31,11 +33,13 @@ namespace Coursework.ParentClasses
         /// </summary>
         public virtual void UseAbility(Form form, ref Quiz quiz, ref Question question)
         {
-            switch (PlayerHelper.QuizPlayer.TFClass.Id)
+            switch (PlayerHelper.Player.TFClass.Id)
             {
                 case 1:
                     if (ChargeLevel == ChargesRequired)
                     {
+                        PlayVoiceline();
+
                         question.IsCorrect = true;
                         question.IsAnswered = true;
                         ChargeLevel = 0;
@@ -46,6 +50,8 @@ namespace Coursework.ParentClasses
                 case 2:
                     if (ChargeLevel == ChargesRequired)
                     {
+                        PlayVoiceline();
+
                         quiz.ScoreMultiplier = 2;
                         ChargeLevel = 0;
                         TimesUsed++;
@@ -54,6 +60,8 @@ namespace Coursework.ParentClasses
                 case 3:
                     if (ChargeLevel == ChargesRequired)
                     {
+                        PlayVoiceline();
+
                         if (quiz.CurrentDifficulty[quiz.CurrentQuestionIndex - 1].IsCorrect)
                         { 
                             quiz.ScoreMultiplier = 2;
@@ -68,27 +76,19 @@ namespace Coursework.ParentClasses
                 case 5:
                     if (ChargeLevel == ChargesRequired)
                     {
+                        PlayVoiceline();
+
                         int i = 0;
 
                         foreach (Control control in form.Controls)
                         {
-                            if (control.Controls.Count > 0 && control.GetType() == typeof(TableLayoutPanel))
+                            if (control.GetType() == typeof(TableLayoutPanel) && question.Type != QuestionType.GapFill)
                             {
                                 foreach (Control answer in control.Controls)
                                 {
-                                    if (answer.GetType() == typeof(Label))
+                                    if (UInt32.Parse(answer.Controls[i].Tag.ToString()) != question.CorrectAnswerIndex)
                                     {
-                                        if (UInt32.Parse(control.Controls[i].Tag.ToString()) != question.CorrectAnswerIndex)
-                                        {
-                                            control.Controls[i].BackgroundImage = Properties.Resources.achieved;
-                                        }
-                                    }
-                                    else
-                                    {
-                                        if (UInt32.Parse(control.Controls[i].Tag.ToString()) != question.CorrectAnswerIndex)
-                                        {
-                                            control.Controls[i].BackgroundImage = Properties.Resources.achieved;
-                                        }
+                                        answer.Controls[i].ForeColor = Color.DarkGray;
                                     }
 
                                     i++;
@@ -97,6 +97,7 @@ namespace Coursework.ParentClasses
                         }
 
                         ChargeLevel = 0;
+                        TimesUsed++;
                     }
                     break;
                 case 6:
@@ -116,6 +117,31 @@ namespace Coursework.ParentClasses
                     quiz.IsDisguised = true;
                     break;
                     // 'disguise' to blu until question wrong - once
+            }
+        }
+
+        public void Reset()
+        {
+            this.ChargeLevel = this.ChargesRequired;
+            this.TimesUsed = 0;
+        }
+
+        private void PlayVoiceline()
+        {
+            Random rnd = new();
+
+            string[] vo = Directory.GetFiles(@$"Sounds/Classes/{PlayerHelper.Player.TFClass.Id}");
+
+            WindowsMediaPlayer wmp = new();
+
+            wmp.URL = vo[rnd.Next(1, vo.Length)];
+
+            if (vo.Contains("auxillary"))
+            {
+                SoundPlayer sp = new();
+
+                sp.SoundLocation = vo[0];
+                sp.Play();
             }
         }
     }

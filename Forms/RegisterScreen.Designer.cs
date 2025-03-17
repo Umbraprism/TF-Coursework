@@ -78,7 +78,7 @@
             // lblSelectClass
             // 
             lblSelectClass.AutoSize = true;
-            lblSelectClass.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSelectClass.Font = new Font("Microsoft Sans Serif", 36F);
             lblSelectClass.ForeColor = Color.FromArgb(246, 231, 222);
             lblSelectClass.Location = new Point(24, 0);
             lblSelectClass.Name = "lblSelectClass";
@@ -102,6 +102,7 @@
             pbScoutEmblem.TabStop = false;
             pbScoutEmblem.Tag = "1";
             pbScoutEmblem.Click += classSelect_Click;
+            pbScoutEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbSoldierEmblem
             // 
@@ -117,6 +118,7 @@
             pbSoldierEmblem.TabStop = false;
             pbSoldierEmblem.Tag = "2";
             pbSoldierEmblem.Click += classSelect_Click;
+            pbSoldierEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbPyroEmblem
             // 
@@ -132,6 +134,7 @@
             pbPyroEmblem.TabStop = false;
             pbPyroEmblem.Tag = "3";
             pbPyroEmblem.Click += classSelect_Click;
+            pbPyroEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbDemoEmblem
             // 
@@ -147,6 +150,7 @@
             pbDemoEmblem.TabStop = false;
             pbDemoEmblem.Tag = "4";
             pbDemoEmblem.Click += classSelect_Click;
+            pbDemoEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbHWGEmblem
             // 
@@ -162,6 +166,7 @@
             pbHWGEmblem.TabStop = false;
             pbHWGEmblem.Tag = "5";
             pbHWGEmblem.Click += classSelect_Click;
+            pbHWGEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbEngineerEmblem
             // 
@@ -177,6 +182,7 @@
             pbEngineerEmblem.TabStop = false;
             pbEngineerEmblem.Tag = "6";
             pbEngineerEmblem.Click += classSelect_Click;
+            pbEngineerEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbMedicEmblem
             // 
@@ -192,6 +198,7 @@
             pbMedicEmblem.TabStop = false;
             pbMedicEmblem.Tag = "7";
             pbMedicEmblem.Click += classSelect_Click;
+            pbMedicEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbSniperEmblem
             // 
@@ -207,6 +214,7 @@
             pbSniperEmblem.TabStop = false;
             pbSniperEmblem.Tag = "8";
             pbSniperEmblem.Click += classSelect_Click;
+            pbSniperEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbSpyEmblem
             // 
@@ -222,6 +230,7 @@
             pbSpyEmblem.TabStop = false;
             pbSpyEmblem.Tag = "9";
             pbSpyEmblem.Click += classSelect_Click;
+            pbSpyEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pnlRegister
             // 
@@ -247,7 +256,7 @@
             // 
             lblPleaseSelectClass.Anchor = AnchorStyles.Left;
             lblPleaseSelectClass.AutoSize = true;
-            lblPleaseSelectClass.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPleaseSelectClass.Font = new Font("Segoe UI", 20F);
             lblPleaseSelectClass.ForeColor = Color.FromArgb(189, 59, 59);
             lblPleaseSelectClass.Location = new Point(12, 507);
             lblPleaseSelectClass.Name = "lblPleaseSelectClass";
@@ -260,7 +269,7 @@
             // 
             cbShowPassword.Anchor = AnchorStyles.None;
             cbShowPassword.AutoSize = true;
-            cbShowPassword.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            cbShowPassword.Font = new Font("Segoe UI", 30F);
             cbShowPassword.ForeColor = Color.FromArgb(246, 231, 222);
             cbShowPassword.Location = new Point(12, 537);
             cbShowPassword.Name = "cbShowPassword";
@@ -274,7 +283,7 @@
             // 
             lblPleaseEnter.Anchor = AnchorStyles.Left;
             lblPleaseEnter.AutoSize = true;
-            lblPleaseEnter.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPleaseEnter.Font = new Font("Segoe UI", 20F);
             lblPleaseEnter.ForeColor = Color.FromArgb(189, 59, 59);
             lblPleaseEnter.Location = new Point(12, 506);
             lblPleaseEnter.Name = "lblPleaseEnter";
@@ -287,7 +296,7 @@
             // 
             lblPassMatch.Anchor = AnchorStyles.Left;
             lblPassMatch.AutoSize = true;
-            lblPassMatch.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPassMatch.Font = new Font("Segoe UI", 20F);
             lblPassMatch.ForeColor = Color.FromArgb(189, 59, 59);
             lblPassMatch.Location = new Point(15, 507);
             lblPassMatch.Name = "lblPassMatch";
@@ -300,7 +309,7 @@
             // 
             lblAccExists.Anchor = AnchorStyles.Left;
             lblAccExists.AutoSize = true;
-            lblAccExists.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAccExists.Font = new Font("Segoe UI", 20F);
             lblAccExists.ForeColor = Color.FromArgb(189, 59, 59);
             lblAccExists.Location = new Point(12, 284);
             lblAccExists.Name = "lblAccExists";
@@ -325,7 +334,7 @@
             btnRegister.BackColor = Color.FromArgb(189, 59, 59);
             btnRegister.FlatAppearance.BorderSize = 0;
             btnRegister.FlatStyle = FlatStyle.Flat;
-            btnRegister.Font = new Font("Segoe UI", 52F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegister.Font = new Font("Segoe UI", 52F);
             btnRegister.ForeColor = Color.FromArgb(246, 231, 222);
             btnRegister.Location = new Point(15, 610);
             btnRegister.Name = "btnRegister";
@@ -352,7 +361,7 @@
             // tbReenter
             // 
             tbReenter.BorderStyle = BorderStyle.None;
-            tbReenter.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            tbReenter.Font = new Font("Segoe UI", 30F);
             tbReenter.Location = new Point(3, 13);
             tbReenter.Name = "tbReenter";
             tbReenter.PlaceholderText = "Re-enter Password";
@@ -377,7 +386,7 @@
             // tbPassword
             // 
             tbPassword.BorderStyle = BorderStyle.None;
-            tbPassword.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            tbPassword.Font = new Font("Segoe UI", 30F);
             tbPassword.Location = new Point(3, 13);
             tbPassword.Name = "tbPassword";
             tbPassword.PlaceholderText = "Password";
@@ -402,8 +411,9 @@
             // tbUsername
             // 
             tbUsername.BorderStyle = BorderStyle.None;
-            tbUsername.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            tbUsername.Font = new Font("Segoe UI", 30F);
             tbUsername.Location = new Point(3, 11);
+            tbUsername.MaxLength = 20;
             tbUsername.Name = "tbUsername";
             tbUsername.PlaceholderText = "Username";
             tbUsername.Size = new Size(557, 54);
@@ -413,7 +423,7 @@
             // 
             lblRegister.Anchor = AnchorStyles.Left;
             lblRegister.AutoSize = true;
-            lblRegister.Font = new Font("Segoe UI", 35F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRegister.Font = new Font("Segoe UI", 35F);
             lblRegister.ForeColor = Color.FromArgb(246, 231, 222);
             lblRegister.Location = new Point(0, 151);
             lblRegister.Margin = new Padding(0);
@@ -429,7 +439,7 @@
             linkToLogin.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             linkToLogin.AutoSize = true;
             linkToLogin.BackColor = Color.Transparent;
-            linkToLogin.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            linkToLogin.Font = new Font("Segoe UI", 20F);
             linkToLogin.LinkColor = Color.FromArgb(189, 59, 59);
             linkToLogin.Location = new Point(1497, 854);
             linkToLogin.Name = "linkToLogin";
@@ -488,7 +498,6 @@
             Name = "RegisterScreen";
             Text = "Registration";
             WindowState = FormWindowState.Maximized;
-            Deactivate += RegisterScreen_Deactivate;
             Load += RegisterScreen_Load;
             ((System.ComponentModel.ISupportInitialize)pbScoutEmblem).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbSoldierEmblem).EndInit();

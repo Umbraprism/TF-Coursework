@@ -69,7 +69,7 @@
             // 
             lblTimeRemaining.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTimeRemaining.AutoSize = true;
-            lblTimeRemaining.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTimeRemaining.Font = new Font("Segoe UI", 24F);
             lblTimeRemaining.ForeColor = Color.FromArgb(246, 231, 222);
             lblTimeRemaining.Location = new Point(1489, 23);
             lblTimeRemaining.Name = "lblTimeRemaining";
@@ -81,7 +81,7 @@
             // 
             lblScore.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblScore.AutoSize = true;
-            lblScore.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblScore.Font = new Font("Segoe UI", 24F);
             lblScore.ForeColor = Color.FromArgb(246, 231, 222);
             lblScore.Location = new Point(1489, 98);
             lblScore.Name = "lblScore";
@@ -93,7 +93,7 @@
             // 
             lblScorePrefix.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblScorePrefix.AutoSize = true;
-            lblScorePrefix.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblScorePrefix.Font = new Font("Segoe UI", 24F);
             lblScorePrefix.ForeColor = Color.FromArgb(246, 231, 222);
             lblScorePrefix.Location = new Point(1003, 98);
             lblScorePrefix.Name = "lblScorePrefix";
@@ -105,7 +105,7 @@
             // 
             lblTimeRemainingPrefix.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTimeRemainingPrefix.AutoSize = true;
-            lblTimeRemainingPrefix.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTimeRemainingPrefix.Font = new Font("Segoe UI", 24F);
             lblTimeRemainingPrefix.ForeColor = Color.FromArgb(246, 231, 222);
             lblTimeRemainingPrefix.Location = new Point(1003, 23);
             lblTimeRemainingPrefix.Name = "lblTimeRemainingPrefix";
@@ -117,7 +117,7 @@
             // 
             ppbAchievementProgress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ppbAchievementProgress.BackColor = Color.FromArgb(26, 26, 26);
-            ppbAchievementProgress.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbAchievementProgress.Font = new Font("Segoe UI", 48F);
             ppbAchievementProgress.Location = new Point(2367, 34);
             ppbAchievementProgress.Name = "ppbAchievementProgress";
             ppbAchievementProgress.ProgressColour = Color.FromArgb(246, 231, 222);
@@ -132,7 +132,7 @@
             // 
             lblQuizName.Anchor = AnchorStyles.Left;
             lblQuizName.AutoSize = true;
-            lblQuizName.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblQuizName.Font = new Font("Segoe UI", 48F);
             lblQuizName.ForeColor = Color.FromArgb(246, 231, 222);
             lblQuizName.Location = new Point(12, 44);
             lblQuizName.Name = "lblQuizName";
@@ -144,7 +144,7 @@
             // 
             lblQuestionText.Anchor = AnchorStyles.Top;
             lblQuestionText.AutoSize = true;
-            lblQuestionText.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblQuestionText.Font = new Font("Segoe UI", 36F);
             lblQuestionText.ForeColor = Color.FromArgb(246, 231, 222);
             lblQuestionText.Location = new Point(501, 225);
             lblQuestionText.MaximumSize = new Size(637, 0);
@@ -191,7 +191,7 @@
             btnAnsOne.BackColor = Color.FromArgb(189, 59, 59);
             btnAnsOne.FlatAppearance.BorderSize = 0;
             btnAnsOne.FlatStyle = FlatStyle.Flat;
-            btnAnsOne.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAnsOne.Font = new Font("Segoe UI", 36F);
             btnAnsOne.ForeColor = Color.FromArgb(246, 231, 222);
             btnAnsOne.Location = new Point(15, 3);
             btnAnsOne.Name = "btnAnsOne";
@@ -208,7 +208,7 @@
             btnAnsTwo.BackColor = Color.FromArgb(189, 59, 59);
             btnAnsTwo.FlatAppearance.BorderSize = 0;
             btnAnsTwo.FlatStyle = FlatStyle.Flat;
-            btnAnsTwo.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAnsTwo.Font = new Font("Segoe UI", 36F);
             btnAnsTwo.ForeColor = Color.FromArgb(246, 231, 222);
             btnAnsTwo.Location = new Point(551, 3);
             btnAnsTwo.Name = "btnAnsTwo";
@@ -225,7 +225,7 @@
             btnAnsThree.BackColor = Color.FromArgb(189, 59, 59);
             btnAnsThree.FlatAppearance.BorderSize = 0;
             btnAnsThree.FlatStyle = FlatStyle.Flat;
-            btnAnsThree.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAnsThree.Font = new Font("Segoe UI", 36F);
             btnAnsThree.ForeColor = Color.FromArgb(246, 231, 222);
             btnAnsThree.Location = new Point(15, 234);
             btnAnsThree.Name = "btnAnsThree";
@@ -242,7 +242,7 @@
             btnAnsFour.BackColor = Color.FromArgb(189, 59, 59);
             btnAnsFour.FlatAppearance.BorderSize = 0;
             btnAnsFour.FlatStyle = FlatStyle.Flat;
-            btnAnsFour.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAnsFour.Font = new Font("Segoe UI", 36F);
             btnAnsFour.ForeColor = Color.FromArgb(246, 231, 222);
             btnAnsFour.Location = new Point(551, 234);
             btnAnsFour.Name = "btnAnsFour";

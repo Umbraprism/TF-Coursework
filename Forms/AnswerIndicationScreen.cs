@@ -14,7 +14,7 @@ namespace Coursework.Forms
             InitializeComponent();
         }
 
-        private async void AnswerIndicationScreen_Load(object sender, EventArgs e) // change to appropriate colours soon
+        private async void AnswerIndicationScreen_Load(object sender, EventArgs e)
         {
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
@@ -38,14 +38,14 @@ namespace Coursework.Forms
                 lblScore.ForeColor = FormHelper.ColourPalette["Red"];
             }
 
-            FormHelper.CurrentQuiz.Score += score;
+            FormHelper.Quiz.Score += score;
 
             await Task.Delay(2000);
 
             try
             {
-                FormHelper.CurrentQuiz.CurrentQuestionIndex++;
-                Question question = FormHelper.CurrentQuiz.BaseQuestions[FormHelper.CurrentQuiz.CurrentQuestionIndex];
+                FormHelper.Quiz.CurrentQuestionIndex++;
+                Question question = FormHelper.Quiz.BaseQuestions[FormHelper.Quiz.CurrentQuestionIndex];
 
                 switch (question.Type)
                 {

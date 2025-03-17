@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeaderboardScreen));
             pnlHeader = new Panel();
-            ppbAvgAchievementProgress = new UserControls.PercentageProgressBar();
             ppbAchievementProgress = new UserControls.PercentageProgressBar();
             lblLeaderboardHeader = new Label();
             btnBack = new Button();
@@ -51,7 +50,6 @@
             // pnlHeader
             // 
             pnlHeader.BackColor = Color.FromArgb(41, 39, 39);
-            pnlHeader.Controls.Add(ppbAvgAchievementProgress);
             pnlHeader.Controls.Add(ppbAchievementProgress);
             pnlHeader.Controls.Add(lblLeaderboardHeader);
             pnlHeader.Controls.Add(btnBack);
@@ -61,26 +59,11 @@
             pnlHeader.Size = new Size(1600, 156);
             pnlHeader.TabIndex = 1;
             // 
-            // ppbAvgAchievementProgress
-            // 
-            ppbAvgAchievementProgress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            ppbAvgAchievementProgress.BackColor = Color.FromArgb(26, 26, 26);
-            ppbAvgAchievementProgress.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            ppbAvgAchievementProgress.Location = new Point(967, 36);
-            ppbAvgAchievementProgress.Name = "ppbAvgAchievementProgress";
-            ppbAvgAchievementProgress.ProgressColour = Color.FromArgb(246, 231, 222);
-            ppbAvgAchievementProgress.Size = new Size(621, 86);
-            ppbAvgAchievementProgress.Style = ProgressBarStyle.Continuous;
-            ppbAvgAchievementProgress.TabIndex = 3;
-            ppbAvgAchievementProgress.Text = "PERCENTAGE";
-            ppbAvgAchievementProgress.TextColour = Color.FromArgb(246, 231, 222);
-            ppbAvgAchievementProgress.UsePercentage = true;
-            // 
             // ppbAchievementProgress
             // 
             ppbAchievementProgress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ppbAchievementProgress.BackColor = Color.FromArgb(26, 26, 26);
-            ppbAchievementProgress.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbAchievementProgress.Font = new Font("Segoe UI", 48F);
             ppbAchievementProgress.Location = new Point(2367, 34);
             ppbAchievementProgress.Name = "ppbAchievementProgress";
             ppbAchievementProgress.ProgressColour = Color.FromArgb(246, 231, 222);
@@ -95,7 +78,7 @@
             // 
             lblLeaderboardHeader.Anchor = AnchorStyles.Left;
             lblLeaderboardHeader.AutoSize = true;
-            lblLeaderboardHeader.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLeaderboardHeader.Font = new Font("Segoe UI", 48F);
             lblLeaderboardHeader.ForeColor = Color.FromArgb(246, 231, 222);
             lblLeaderboardHeader.Location = new Point(296, 43);
             lblLeaderboardHeader.Name = "lblLeaderboardHeader";
@@ -109,7 +92,7 @@
             btnBack.Dock = DockStyle.Left;
             btnBack.FlatAppearance.BorderSize = 0;
             btnBack.FlatStyle = FlatStyle.Flat;
-            btnBack.Font = new Font("Segoe UI", 95F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBack.Font = new Font("Segoe UI", 95F);
             btnBack.ForeColor = Color.FromArgb(246, 231, 222);
             btnBack.Location = new Point(0, 0);
             btnBack.Name = "btnBack";
@@ -143,7 +126,7 @@
             btnTFClassLeaderboard.BackColor = Color.FromArgb(189, 59, 59);
             btnTFClassLeaderboard.FlatAppearance.BorderSize = 0;
             btnTFClassLeaderboard.FlatStyle = FlatStyle.Flat;
-            btnTFClassLeaderboard.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTFClassLeaderboard.Font = new Font("Segoe UI", 48F);
             btnTFClassLeaderboard.ForeColor = Color.FromArgb(246, 231, 222);
             btnTFClassLeaderboard.Location = new Point(76, 234);
             btnTFClassLeaderboard.Name = "btnTFClassLeaderboard";
@@ -160,7 +143,7 @@
             btnWeaponsLeaderboard.BackColor = Color.FromArgb(189, 59, 59);
             btnWeaponsLeaderboard.FlatAppearance.BorderSize = 0;
             btnWeaponsLeaderboard.FlatStyle = FlatStyle.Flat;
-            btnWeaponsLeaderboard.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            btnWeaponsLeaderboard.Font = new Font("Segoe UI", 48F);
             btnWeaponsLeaderboard.ForeColor = Color.FromArgb(246, 231, 222);
             btnWeaponsLeaderboard.Location = new Point(76, 3);
             btnWeaponsLeaderboard.Name = "btnWeaponsLeaderboard";
@@ -177,7 +160,7 @@
             btnHistoryLeaderboard.BackColor = Color.FromArgb(189, 59, 59);
             btnHistoryLeaderboard.FlatAppearance.BorderSize = 0;
             btnHistoryLeaderboard.FlatStyle = FlatStyle.Flat;
-            btnHistoryLeaderboard.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            btnHistoryLeaderboard.Font = new Font("Segoe UI", 48F);
             btnHistoryLeaderboard.ForeColor = Color.FromArgb(246, 231, 222);
             btnHistoryLeaderboard.Location = new Point(76, 465);
             btnHistoryLeaderboard.Name = "btnHistoryLeaderboard";
@@ -191,7 +174,7 @@
             // lblQuizSelected
             // 
             lblQuizSelected.AutoSize = true;
-            lblQuizSelected.Font = new Font("Segoe UI", 72F, FontStyle.Regular, GraphicsUnit.Point);
+            lblQuizSelected.Font = new Font("Segoe UI", 72F);
             lblQuizSelected.ForeColor = Color.FromArgb(246, 231, 222);
             lblQuizSelected.Location = new Point(675, 159);
             lblQuizSelected.Name = "lblQuizSelected";
@@ -217,7 +200,7 @@
             lvLeaderboard.BackColor = Color.FromArgb(41, 39, 39);
             lvLeaderboard.BorderStyle = BorderStyle.None;
             lvLeaderboard.Columns.AddRange(new ColumnHeader[] { chPlacement, chUsername, chScore, chHighestRank });
-            lvLeaderboard.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lvLeaderboard.Font = new Font("Segoe UI", 24F);
             lvLeaderboard.ForeColor = Color.FromArgb(246, 231, 222);
             lvLeaderboard.HeaderStyle = ColumnHeaderStyle.None;
             lvLeaderboard.Location = new Point(675, 290);
@@ -266,6 +249,5 @@
         private ColumnHeader chScore;
         private ColumnHeader chHighestRank;
         private ListView lvLeaderboard;
-        private UserControls.PercentageProgressBar ppbAvgAchievementProgress;
     }
 }

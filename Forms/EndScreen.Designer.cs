@@ -30,10 +30,10 @@
         {
             components = new System.ComponentModel.Container();
             rpnlEnd = new UserControls.RoundedPanel();
-            panel2 = new Panel();
+            pnlPlacement = new Panel();
             lblRankingTitle = new Label();
             lblPlacement = new Label();
-            panel1 = new Panel();
+            pnlGrade = new Panel();
             lblGradeTitle = new Label();
             lblGrade = new Label();
             btnFinished = new Button();
@@ -45,17 +45,17 @@
             lblUsername = new Label();
             tmrEnd = new System.Windows.Forms.Timer(components);
             rpnlEnd.SuspendLayout();
-            panel2.SuspendLayout();
-            panel1.SuspendLayout();
+            pnlPlacement.SuspendLayout();
+            pnlGrade.SuspendLayout();
             SuspendLayout();
             // 
             // rpnlEnd
             // 
-            rpnlEnd.Anchor = AnchorStyles.None;
+            rpnlEnd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             rpnlEnd.BorderColour = Color.White;
             rpnlEnd.BorderSize = 10;
-            rpnlEnd.Controls.Add(panel2);
-            rpnlEnd.Controls.Add(panel1);
+            rpnlEnd.Controls.Add(pnlPlacement);
+            rpnlEnd.Controls.Add(pnlGrade);
             rpnlEnd.Controls.Add(btnFinished);
             rpnlEnd.Controls.Add(lblScore);
             rpnlEnd.Controls.Add(lblIncorrect);
@@ -71,79 +71,79 @@
             rpnlEnd.Style = System.Drawing.Drawing2D.DashStyle.Solid;
             rpnlEnd.TabIndex = 0;
             // 
-            // panel2
+            // pnlPlacement
             // 
-            panel2.Anchor = AnchorStyles.Right;
-            panel2.BackColor = Color.FromArgb(189, 59, 59);
-            panel2.Controls.Add(lblRankingTitle);
-            panel2.Controls.Add(lblPlacement);
-            panel2.Location = new Point(664, 426);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(408, 217);
-            panel2.TabIndex = 12;
+            pnlPlacement.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            pnlPlacement.BackColor = Color.FromArgb(189, 59, 59);
+            pnlPlacement.Controls.Add(lblRankingTitle);
+            pnlPlacement.Controls.Add(lblPlacement);
+            pnlPlacement.Location = new Point(664, 426);
+            pnlPlacement.Name = "pnlPlacement";
+            pnlPlacement.Size = new Size(408, 217);
+            pnlPlacement.TabIndex = 12;
             // 
             // lblRankingTitle
             // 
-            lblRankingTitle.Anchor = AnchorStyles.Top;
-            lblRankingTitle.AutoSize = true;
             lblRankingTitle.BackColor = Color.FromArgb(189, 59, 59);
-            lblRankingTitle.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRankingTitle.Dock = DockStyle.Top;
+            lblRankingTitle.Font = new Font("Segoe UI", 36F);
             lblRankingTitle.ForeColor = Color.White;
-            lblRankingTitle.Location = new Point(88, 0);
+            lblRankingTitle.Location = new Point(0, 0);
             lblRankingTitle.Name = "lblRankingTitle";
-            lblRankingTitle.Size = new Size(234, 65);
+            lblRankingTitle.Size = new Size(408, 65);
             lblRankingTitle.TabIndex = 7;
             lblRankingTitle.Text = "RANKING";
+            lblRankingTitle.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblPlacement
             // 
-            lblPlacement.Anchor = AnchorStyles.Top;
-            lblPlacement.AutoSize = true;
             lblPlacement.BackColor = Color.FromArgb(189, 59, 59);
-            lblPlacement.Font = new Font("Segoe UI", 72F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlacement.Dock = DockStyle.Fill;
+            lblPlacement.Font = new Font("Segoe UI", 72F);
             lblPlacement.ForeColor = Color.White;
-            lblPlacement.Location = new Point(115, 55);
+            lblPlacement.Location = new Point(0, 0);
             lblPlacement.Name = "lblPlacement";
-            lblPlacement.Size = new Size(183, 128);
+            lblPlacement.Size = new Size(408, 217);
             lblPlacement.TabIndex = 8;
             lblPlacement.Text = "#N";
+            lblPlacement.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // pnlGrade
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            panel1.BackColor = Color.FromArgb(189, 59, 59);
-            panel1.Controls.Add(lblGradeTitle);
-            panel1.Controls.Add(lblGrade);
-            panel1.Location = new Point(664, 172);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(391, 183);
-            panel1.TabIndex = 11;
+            pnlGrade.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            pnlGrade.BackColor = Color.FromArgb(189, 59, 59);
+            pnlGrade.Controls.Add(lblGradeTitle);
+            pnlGrade.Controls.Add(lblGrade);
+            pnlGrade.Location = new Point(664, 172);
+            pnlGrade.Name = "pnlGrade";
+            pnlGrade.Size = new Size(391, 183);
+            pnlGrade.TabIndex = 11;
             // 
             // lblGradeTitle
             // 
-            lblGradeTitle.Anchor = AnchorStyles.Top;
-            lblGradeTitle.AutoSize = true;
             lblGradeTitle.BackColor = Color.FromArgb(189, 59, 59);
-            lblGradeTitle.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblGradeTitle.Dock = DockStyle.Top;
+            lblGradeTitle.Font = new Font("Segoe UI", 36F);
             lblGradeTitle.ForeColor = Color.White;
-            lblGradeTitle.Location = new Point(106, 0);
+            lblGradeTitle.Location = new Point(0, 0);
             lblGradeTitle.Name = "lblGradeTitle";
-            lblGradeTitle.Size = new Size(179, 65);
+            lblGradeTitle.Size = new Size(391, 65);
             lblGradeTitle.TabIndex = 5;
             lblGradeTitle.Text = "GRADE";
+            lblGradeTitle.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblGrade
             // 
-            lblGrade.Anchor = AnchorStyles.Top;
-            lblGrade.AutoSize = true;
             lblGrade.BackColor = Color.FromArgb(189, 59, 59);
-            lblGrade.Font = new Font("Segoe UI", 72F, FontStyle.Regular, GraphicsUnit.Point);
+            lblGrade.Dock = DockStyle.Bottom;
+            lblGrade.Font = new Font("Segoe UI", 72F);
             lblGrade.ForeColor = Color.White;
-            lblGrade.Location = new Point(19, 55);
+            lblGrade.Location = new Point(0, 55);
             lblGrade.Name = "lblGrade";
-            lblGrade.Size = new Size(355, 128);
+            lblGrade.Size = new Size(391, 128);
             lblGrade.TabIndex = 6;
             lblGrade.Text = "GRADE";
+            lblGrade.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnFinished
             // 
@@ -151,7 +151,7 @@
             btnFinished.BackColor = Color.FromArgb(159, 49, 49);
             btnFinished.FlatAppearance.BorderSize = 0;
             btnFinished.FlatStyle = FlatStyle.Flat;
-            btnFinished.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFinished.Font = new Font("Segoe UI", 21.75F);
             btnFinished.ForeColor = Color.White;
             btnFinished.Location = new Point(664, 649);
             btnFinished.Name = "btnFinished";
@@ -165,7 +165,7 @@
             // 
             lblScore.AutoSize = true;
             lblScore.BackColor = Color.FromArgb(189, 59, 59);
-            lblScore.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblScore.Font = new Font("Segoe UI", 36F);
             lblScore.ForeColor = Color.White;
             lblScore.Location = new Point(31, 324);
             lblScore.Name = "lblScore";
@@ -177,7 +177,7 @@
             // 
             lblIncorrect.AutoSize = true;
             lblIncorrect.BackColor = Color.FromArgb(189, 59, 59);
-            lblIncorrect.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblIncorrect.Font = new Font("Segoe UI", 36F);
             lblIncorrect.ForeColor = Color.White;
             lblIncorrect.Location = new Point(31, 259);
             lblIncorrect.Name = "lblIncorrect";
@@ -189,7 +189,7 @@
             // 
             lblCorrect.AutoSize = true;
             lblCorrect.BackColor = Color.FromArgb(189, 59, 59);
-            lblCorrect.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCorrect.Font = new Font("Segoe UI", 36F);
             lblCorrect.ForeColor = Color.White;
             lblCorrect.Location = new Point(31, 194);
             lblCorrect.Name = "lblCorrect";
@@ -213,7 +213,7 @@
             lblAchievements.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblAchievements.AutoSize = true;
             lblAchievements.BackColor = Color.FromArgb(189, 59, 59);
-            lblAchievements.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAchievements.Font = new Font("Segoe UI", 36F);
             lblAchievements.ForeColor = Color.White;
             lblAchievements.Location = new Point(31, 386);
             lblAchievements.Name = "lblAchievements";
@@ -223,16 +223,18 @@
             // 
             // lblUsername
             // 
-            lblUsername.Anchor = AnchorStyles.Top;
-            lblUsername.AutoSize = true;
-            lblUsername.BackColor = Color.FromArgb(189, 59, 59);
-            lblUsername.Font = new Font("Segoe UI", 72F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.BackColor = Color.Transparent;
+            lblUsername.Dock = DockStyle.Top;
+            lblUsername.Font = new Font("Segoe UI", 72F);
             lblUsername.ForeColor = Color.White;
-            lblUsername.Location = new Point(90, 41);
+            lblUsername.Location = new Point(0, 0);
+            lblUsername.Margin = new Padding(3, 20, 3, 0);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(996, 128);
+            lblUsername.Padding = new Padding(0, 20, 0, 0);
+            lblUsername.Size = new Size(1176, 128);
             lblUsername.TabIndex = 0;
             lblUsername.Text = "%USERNAME% WINS!";
+            lblUsername.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tmrEnd
             // 
@@ -253,10 +255,8 @@
             Load += EndScreen_Load;
             rpnlEnd.ResumeLayout(false);
             rpnlEnd.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlPlacement.ResumeLayout(false);
+            pnlGrade.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -275,7 +275,7 @@
         private Label lblScore;
         private System.Windows.Forms.Timer tmrEnd;
         private Button btnFinished;
-        private Panel panel1;
-        private Panel panel2;
+        private Panel pnlGrade;
+        private Panel pnlPlacement;
     }
 }

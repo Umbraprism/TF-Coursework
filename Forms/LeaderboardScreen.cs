@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Globalization;
 using Coursework.Helpers;
 using Coursework.ParentClasses;
@@ -21,7 +22,7 @@ namespace Coursework.Forms
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormHelper.StatsScreen.Show();
+            new StatsScreen().Show();
         }
 
         private void btnQuizLeaderboard_Click(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace Coursework.Forms
                 ListViewItem item = new();
 
                 item.SubItems.Add(player.Username);
-                item.SubItems.Add(player.ScoresHashmap[quizScore].HighestScore.ToString());
+                item.SubItems.Add(player.ScoresHashmap[quizScore].LatestScore.ToString());
                 item.SubItems.Add(player.ScoresHashmap[quizScore].Rank);
 
                 item.UseItemStyleForSubItems = false;
@@ -57,8 +58,7 @@ namespace Coursework.Forms
 
             lvLeaderboard.Columns[1].Width += lvLeaderboard.Width - (lvLeaderboard.Columns[0].Width + lvLeaderboard.Columns[1].Width + lvLeaderboard.Columns[2].Width + lvLeaderboard.Columns[3].Width);
 
-            ListViewSorter sorter = new(2, SortOrder.Descending);
-            lvLeaderboard.ListViewItemSorter = sorter;
+            lvLeaderboard.ListViewItemSorter = new ListViewSorter(2, SortOrder.Descending);
 
             for (int i = 0; i < lvLeaderboard.Items.Count; i++)
             {
@@ -99,11 +99,13 @@ namespace Coursework.Forms
         public int columnToSort = 0;
         public SortOrder sortOrder = SortOrder.None;
         private CaseInsensitiveComparer ciComparer = new();
+
         public ListViewSorter(int columnToSort, SortOrder sortOrder)
         {
             this.columnToSort = columnToSort;
             this.sortOrder = sortOrder;
         }
+
         public int Compare(Object? x, Object? y)
         {
             int comparison = 0;

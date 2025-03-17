@@ -39,7 +39,7 @@
             // lblAchievementName
             // 
             lblAchievementName.AutoSize = true;
-            lblAchievementName.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAchievementName.Font = new Font("Segoe UI", 15.75F);
             lblAchievementName.ForeColor = Color.FromArgb(246, 231, 222);
             lblAchievementName.Location = new Point(140, 13);
             lblAchievementName.Name = "lblAchievementName";
@@ -50,7 +50,7 @@
             // lblAchievementDescription
             // 
             lblAchievementDescription.AutoSize = true;
-            lblAchievementDescription.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAchievementDescription.Font = new Font("Segoe UI", 9F);
             lblAchievementDescription.ForeColor = Color.FromArgb(246, 231, 222);
             lblAchievementDescription.Location = new Point(140, 54);
             lblAchievementDescription.MaximumSize = new Size(240, 0);
@@ -62,7 +62,7 @@
             // 
             // pbIsAchieved
             // 
-            pbIsAchieved.BackColor = Color.FromArgb(26, 26, 26);
+            pbIsAchieved.BackColor = Color.FromArgb(200, 26, 26, 26);
             pbIsAchieved.Location = new Point(13, 13);
             pbIsAchieved.Name = "pbIsAchieved";
             pbIsAchieved.Size = new Size(121, 121);
@@ -83,7 +83,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            BackColor = Color.FromArgb(53, 48, 46);
+            BackColor = Color.Transparent;
             Controls.Add(pbIsAchieved);
             Controls.Add(lblAchievementDescription);
             Controls.Add(lblAchievementName);

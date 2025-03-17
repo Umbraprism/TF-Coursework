@@ -1,15 +1,17 @@
 ﻿using Coursework.Helpers;
 using Coursework.UserControls;
 using Coursework.ParentClasses;
+using System.Windows.Forms;
 
 namespace Coursework.Forms
 {
     public partial class AchievementsScreen : Form
     {
+        private int achieved = 0;
+
         public AchievementsScreen()
         {
             InitializeComponent();
-            SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
         }
 
         private void AchievementsScreen_Load(object sender, EventArgs e)
@@ -18,7 +20,7 @@ namespace Coursework.Forms
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
             ttMyAchievementProgress.OwnerDraw = true;
 
-            ppbAchievementProgress.Maximum = PlayerHelper.QuizPlayer.Achievements.Count;
+            ppbAchievementProgress.Value = (PlayerHelper.Player.Achievements.Where(achievement => achievement.IsAchieved).Count() * 100) / PlayerHelper.Player.Achievements.Count;
 
             if (ppbAchievementProgress.Value == ppbAchievementProgress.Maximum)
             {
@@ -26,7 +28,7 @@ namespace Coursework.Forms
                 ppbAchievementProgress.ProgressColour = FormHelper.ColourPalette["Gold"];
             }
 
-            foreach (Achievement achievement in PlayerHelper.QuizPlayer.Achievements)
+            foreach (Achievement achievement in PlayerHelper.Player.Achievements)
             {
                 flpAchievements.Controls.Add(new AchievementView(achievement));
             }
@@ -34,8 +36,8 @@ namespace Coursework.Forms
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormHelper.MainMenuScreen.Show();
+            this.Close();
+            new MainMenuScreen().Show();
         }
 
         private void ttMyAchievementProgress_Draw(object sender, DrawToolTipEventArgs e)

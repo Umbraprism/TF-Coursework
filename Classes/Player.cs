@@ -21,7 +21,7 @@ namespace Coursework.ParentClasses
     [Serializable] // Allows serialization to binary file so it is not easily edited by the end-user.
     public class Player
     {
-        // Holds a primary key ID.
+        // Holds a primary key, which is the user's ID.
         public uint Id { get; set; }
 
         // Holds the Player's username, whilst checking if it is valid.

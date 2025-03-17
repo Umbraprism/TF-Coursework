@@ -55,7 +55,7 @@
             // 
             ppbAchievementProgress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ppbAchievementProgress.BackColor = Color.FromArgb(26, 26, 26);
-            ppbAchievementProgress.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbAchievementProgress.Font = new Font("Segoe UI", 48F);
             ppbAchievementProgress.Location = new Point(967, 34);
             ppbAchievementProgress.Name = "ppbAchievementProgress";
             ppbAchievementProgress.ProgressColour = Color.FromArgb(246, 231, 222);
@@ -71,7 +71,7 @@
             // 
             lblAchievements.Anchor = AnchorStyles.Left;
             lblAchievements.AutoSize = true;
-            lblAchievements.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAchievements.Font = new Font("Segoe UI", 48F);
             lblAchievements.ForeColor = Color.FromArgb(246, 231, 222);
             lblAchievements.Location = new Point(296, 46);
             lblAchievements.Name = "lblAchievements";
@@ -85,7 +85,7 @@
             btnBack.Dock = DockStyle.Left;
             btnBack.FlatAppearance.BorderSize = 0;
             btnBack.FlatStyle = FlatStyle.Flat;
-            btnBack.Font = new Font("Segoe UI", 95F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBack.Font = new Font("Segoe UI", 95F);
             btnBack.ForeColor = Color.FromArgb(246, 231, 222);
             btnBack.Location = new Point(0, 0);
             btnBack.Name = "btnBack";

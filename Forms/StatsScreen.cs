@@ -24,17 +24,17 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            pbAvatar.Image = TFClass.Assets[PlayerHelper.QuizPlayer.TFClass.Id].Avatar;
-            lblUsername.Text = PlayerHelper.QuizPlayer.Username;
-            lblTFClass.Text = $"The {PlayerHelper.QuizPlayer.TFClass.Name}";
-            lblOnlineRank.Text = PlayerHelper.QuizPlayer.OnlineRank;
+            pbAvatar.Image = TFClass.Assets[PlayerHelper.Player.TFClass.Id].Avatar;
+            lblUsername.Text = PlayerHelper.Player.Username;
+            lblTFClass.Text = $"The {PlayerHelper.Player.TFClass.Name}";
+            lblOnlineRank.Text = PlayerHelper.Player.OnlineRank;
             lblOnlineRank.ForeColor = FormHelper.ColourPalette[lblOnlineRank.Text];
         }
 
         private void btnLeaderboard_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormHelper.LeaderboardScreen.Show();
+            this.Close();
+            new LeaderboardScreen().Show();
         }
 
         private void btnQuiz_Click(object sender, EventArgs e)
@@ -47,31 +47,31 @@ namespace Coursework.Forms
             {
                 lblQuizType.Text = $"{btn.Text.ToUpper()} QUIZ";
 
-                lblHighestScore.Text = $"Highest Score - {PlayerHelper.QuizPlayer.ScoresHashmap[quizScore].HighestScore}";
-                lblLatestScore.Text = $"Highest Score - {PlayerHelper.QuizPlayer.ScoresHashmap[quizScore].LatestScore}";
+                lblHighestScore.Text = $"Highest Score - {PlayerHelper.Player.ScoresHashmap[quizScore].HighestScore}";
+                lblLatestScore.Text = $"Latest Score - {PlayerHelper.Player.ScoresHashmap[quizScore].LatestScore}";
 
-                lblQuizRank.Text = $"{PlayerHelper.QuizPlayer.ScoresHashmap[quizScore].Rank}";
-                lblQuizRank.ForeColor = FormHelper.ColourPalette[lblQuizRank.Text];
+                lblQuizRank.Text = $"Latest Rank - {PlayerHelper.Player.ScoresHashmap[quizScore].Rank}";
+                lblQuizRank.ForeColor = FormHelper.ColourPalette[lblQuizRank.Text.Replace("Latest Rank - ", String.Empty)];
 
                 pnlGuessingGame.Visible = false;
                 pnlQuizStats.Visible = true;
             }
             else
             {
-                lblLowestGuesses.Text = $"Lowest Guesses = {PlayerHelper.QuizPlayer.ScoresHashmap[quizScore].LowestGuessAmount}";
-                lblLatestGuesses.Text = $"Latest Guesses = {PlayerHelper.QuizPlayer.ScoresHashmap[quizScore].LatestGuessAmount}";
-                lblHighestStreak.Text = $"Highest Streak = {PlayerHelper.QuizPlayer.ScoresHashmap[quizScore].HighestStreak}";
-                lblCurrentStreak.Text = $"Current Streak = {PlayerHelper.QuizPlayer.ScoresHashmap[quizScore].CurrentStreak}";
+                lblLowestGuesses.Text = $"Lowest Guesses - {PlayerHelper.Player.ScoresHashmap[quizScore].LowestGuessAmount}";
+                lblLatestGuesses.Text = $"Latest Guesses - {PlayerHelper.Player.ScoresHashmap[quizScore].LatestGuessAmount}";
+                lblHighestStreak.Text = $"Highest Streak - {PlayerHelper.Player.ScoresHashmap[quizScore].HighestStreak}";
+                lblCurrentStreak.Text = $"Current Streak - {PlayerHelper.Player.ScoresHashmap[quizScore].CurrentStreak}";
 
-                pnlQuizStats.Visible = false;
                 pnlGuessingGame.Visible = true;
+                pnlQuizStats.Visible = false;
             }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormHelper.MainMenuScreen.Show();
+            this.Close();
+            new MainMenuScreen().Show();
         }
     }
 }

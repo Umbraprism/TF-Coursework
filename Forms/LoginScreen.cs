@@ -23,22 +23,22 @@ namespace Coursework.Forms
 
         private void linkToRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormHelper.RegisterScreen.Show();
+            new RegisterScreen().Show();
             Hide();
         }
 
         private async void btnLogin_Click(object? sender, EventArgs e)
         {
-            if (!File.Exists(FormHelper.PlayersJsonPath) || File.ReadAllLines(FormHelper.PlayersJsonPath).Length == 0)
+            if (!File.Exists("playerData.bin") || File.ReadAllLines("playerData.bin").Length == 0)
             {
-                using (BinaryWriter bw = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Create)))
+                using (BinaryWriter bw = new(File.Open("playerData.bin", FileMode.Create)))
                 {
                     bw.Write("[]");
                 }
             }
 
             // Reads from file and deserializes JSON into a list of Player objects
-            using (BinaryReader br = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Open)))
+            using (BinaryReader br = new(File.Open("playerData.bin", FileMode.Open)))
             {
                 string json = br.ReadString();
                 PlayerHelper.PlayerList = JsonSerializer.Deserialize<List<Player>>(json);
@@ -46,10 +46,10 @@ namespace Coursework.Forms
 
             if (PlayerHelper.PlayerList != null)
             {
-                if (PlayerHelper.PlayerList.Any(player => player.Username == tbUsername.Text && player.Password == tbPassword.Text))
+                if (PlayerHelper.PlayerList.Any(player => player.Username == tbUsername.Text.Trim() && player.Password == tbPassword.Text.Trim()))
                 {
-                    PlayerHelper.QuizPlayer = PlayerHelper.PlayerList.Where(u => u.Username == tbUsername.Text && u.Password == tbPassword.Text).First();
-                    new SplashScreen(FormHelper.MainMenuScreen).Show();
+                    PlayerHelper.Player = PlayerHelper.PlayerList.Where(user => user.Username == tbUsername.Text.Trim() && user.Password == tbPassword.Text.Trim()).First();
+                    new SplashScreen(new MainMenuScreen()).Show();
                     Hide();
                 }
                 else

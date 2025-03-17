@@ -99,7 +99,7 @@
             btnStats.Dock = DockStyle.Fill;
             btnStats.FlatAppearance.BorderSize = 0;
             btnStats.FlatStyle = FlatStyle.Flat;
-            btnStats.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            btnStats.Font = new Font("Segoe UI", 24F);
             btnStats.ForeColor = Color.FromArgb(246, 231, 222);
             btnStats.Location = new Point(259, 3);
             btnStats.Name = "btnStats";
@@ -115,7 +115,7 @@
             btnAchievements.Dock = DockStyle.Fill;
             btnAchievements.FlatAppearance.BorderSize = 0;
             btnAchievements.FlatStyle = FlatStyle.Flat;
-            btnAchievements.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAchievements.Font = new Font("Segoe UI", 20.25F);
             btnAchievements.ForeColor = Color.FromArgb(246, 231, 222);
             btnAchievements.Location = new Point(3, 3);
             btnAchievements.Name = "btnAchievements";
@@ -150,7 +150,7 @@
             btnWeaponsQuiz.BackColor = Color.FromArgb(189, 59, 59);
             btnWeaponsQuiz.FlatAppearance.BorderSize = 0;
             btnWeaponsQuiz.FlatStyle = FlatStyle.Flat;
-            btnWeaponsQuiz.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnWeaponsQuiz.Font = new Font("Segoe UI", 36F);
             btnWeaponsQuiz.ForeColor = Color.FromArgb(246, 231, 222);
             btnWeaponsQuiz.Location = new Point(3, 3);
             btnWeaponsQuiz.Name = "btnWeaponsQuiz";
@@ -167,7 +167,7 @@
             btnTFClassQuiz.BackColor = Color.FromArgb(189, 59, 59);
             btnTFClassQuiz.FlatAppearance.BorderSize = 0;
             btnTFClassQuiz.FlatStyle = FlatStyle.Flat;
-            btnTFClassQuiz.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTFClassQuiz.Font = new Font("Segoe UI", 36F);
             btnTFClassQuiz.ForeColor = Color.FromArgb(246, 231, 222);
             btnTFClassQuiz.Location = new Point(3, 158);
             btnTFClassQuiz.Name = "btnTFClassQuiz";
@@ -184,7 +184,7 @@
             btnGuessingGame.BackColor = Color.FromArgb(189, 59, 59);
             btnGuessingGame.FlatAppearance.BorderSize = 0;
             btnGuessingGame.FlatStyle = FlatStyle.Flat;
-            btnGuessingGame.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGuessingGame.Font = new Font("Segoe UI", 36F);
             btnGuessingGame.ForeColor = Color.FromArgb(246, 231, 222);
             btnGuessingGame.Location = new Point(3, 468);
             btnGuessingGame.Name = "btnGuessingGame";
@@ -200,7 +200,7 @@
             btnHistoryQuiz.BackColor = Color.FromArgb(189, 59, 59);
             btnHistoryQuiz.FlatAppearance.BorderSize = 0;
             btnHistoryQuiz.FlatStyle = FlatStyle.Flat;
-            btnHistoryQuiz.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnHistoryQuiz.Font = new Font("Segoe UI", 36F);
             btnHistoryQuiz.ForeColor = Color.FromArgb(246, 231, 222);
             btnHistoryQuiz.Location = new Point(3, 313);
             btnHistoryQuiz.Name = "btnHistoryQuiz";
@@ -252,7 +252,7 @@
             // lblClass
             // 
             lblClass.AutoSize = true;
-            lblClass.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblClass.Font = new Font("Segoe UI", 12F);
             lblClass.ForeColor = Color.FromArgb(246, 231, 222);
             lblClass.Location = new Point(133, 104);
             lblClass.Name = "lblClass";
@@ -263,7 +263,7 @@
             // lblHighestScore
             // 
             lblHighestScore.AutoSize = true;
-            lblHighestScore.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHighestScore.Font = new Font("Segoe UI", 12F);
             lblHighestScore.ForeColor = Color.FromArgb(246, 231, 222);
             lblHighestScore.Location = new Point(133, 76);
             lblHighestScore.Name = "lblHighestScore";
@@ -274,7 +274,7 @@
             // lblAchievementCount
             // 
             lblAchievementCount.AutoSize = true;
-            lblAchievementCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAchievementCount.Font = new Font("Segoe UI", 12F);
             lblAchievementCount.ForeColor = Color.FromArgb(246, 231, 222);
             lblAchievementCount.Location = new Point(133, 48);
             lblAchievementCount.Name = "lblAchievementCount";
@@ -285,7 +285,7 @@
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.Font = new Font("Segoe UI", 12F);
             lblUsername.ForeColor = Color.FromArgb(246, 231, 222);
             lblUsername.Location = new Point(133, 19);
             lblUsername.Name = "lblUsername";
@@ -311,7 +311,7 @@
             btnQuit.Dock = DockStyle.Right;
             btnQuit.FlatAppearance.BorderSize = 0;
             btnQuit.FlatStyle = FlatStyle.Flat;
-            btnQuit.Font = new Font("Segoe UI", 69.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnQuit.Font = new Font("Segoe UI", 69.75F);
             btnQuit.Location = new Point(921, 0);
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(144, 144);
@@ -349,7 +349,7 @@
             // lblTipText
             // 
             lblTipText.AutoSize = true;
-            lblTipText.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTipText.Font = new Font("Segoe UI", 12F);
             lblTipText.ForeColor = Color.FromArgb(246, 231, 222);
             lblTipText.Location = new Point(6, 41);
             lblTipText.MaximumSize = new Size(440, 0);
@@ -362,7 +362,7 @@
             // lblTip
             // 
             lblTip.AutoSize = true;
-            lblTip.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTip.Font = new Font("Segoe UI", 18F);
             lblTip.ForeColor = Color.FromArgb(246, 231, 222);
             lblTip.Location = new Point(6, 9);
             lblTip.Name = "lblTip";
@@ -386,7 +386,7 @@
             // 
             ppbToNextOnlineRank.Anchor = AnchorStyles.Right;
             ppbToNextOnlineRank.BackColor = Color.FromArgb(41, 39, 39);
-            ppbToNextOnlineRank.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            ppbToNextOnlineRank.Font = new Font("Segoe UI", 48F);
             ppbToNextOnlineRank.Location = new Point(296, 24);
             ppbToNextOnlineRank.Name = "ppbToNextOnlineRank";
             ppbToNextOnlineRank.ProgressColour = Color.FromArgb(246, 231, 222);
@@ -404,7 +404,7 @@
             btnHostOrJoin.Dock = DockStyle.Right;
             btnHostOrJoin.FlatAppearance.BorderSize = 0;
             btnHostOrJoin.FlatStyle = FlatStyle.Flat;
-            btnHostOrJoin.Font = new Font("Segoe UI", 69.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnHostOrJoin.Font = new Font("Segoe UI", 69.75F);
             btnHostOrJoin.ForeColor = Color.FromArgb(246, 231, 222);
             btnHostOrJoin.Location = new Point(921, 0);
             btnHostOrJoin.Name = "btnHostOrJoin";
@@ -419,7 +419,7 @@
             // 
             lblOnlineRank.Anchor = AnchorStyles.Left;
             lblOnlineRank.AutoSize = true;
-            lblOnlineRank.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOnlineRank.Font = new Font("Segoe UI", 36F);
             lblOnlineRank.ForeColor = Color.FromArgb(246, 231, 222);
             lblOnlineRank.Location = new Point(6, 47);
             lblOnlineRank.Name = "lblOnlineRank";

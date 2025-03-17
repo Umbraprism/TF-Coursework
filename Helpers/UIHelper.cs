@@ -24,6 +24,8 @@ namespace Coursework.Helpers
 
         public static Font TF2Build { get; set; }
         public static Font TF2Secondary { get; set; }
+        public static Cursor TFCursor { get; set; }
+        public static Cursor DefaultCursor { get; set; }
 
         /// <summary>
         /// <c>P/Invoke</c> Creates a cursor handle from a cursor file. Allows the custom cursor to utilise colour.
@@ -34,15 +36,20 @@ namespace Coursework.Helpers
         /// <summary>
         /// Loads the font into a location in a PrivateFontCollection and instantiates it to a variable.
         /// </summary>
-        public static void MakeFont()
+        public static void MakeUIElements()
         {
             string fontPath = @$"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Resources\";
+
             fontCollection.AddFontFile(Path.Combine(fontPath, "TF2Build.ttf"));
             fontCollection.AddFontFile(Path.Combine(fontPath, "TF2secondary.ttf"));
 
             // Instantiation to font variables from PrivateFontCollection
             TF2Secondary = new Font(fontCollection.Families[1], 12.0F);
             TF2Build = new Font(fontCollection.Families[0], 16.0F);
+
+            string cursorPath = $@"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Cursors\";
+
+            DefaultCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "defaultCursor.cur")));
         }
 
         /// <summary>
@@ -113,7 +120,6 @@ namespace Coursework.Helpers
                     }
                 }
 
-
                 if (!String.IsNullOrEmpty(control.Text) && control.Text.ToUpper() == control.Text) // Ignores TextBoxes (handled above) and checks if the string (with spaces removed - these always count as lowercase) matches itself when it is fully capitalised, which ensures the string iss all caps)
                 {
                     control.UseFont(CustomFont.Build); // strings which are made all caps are set to use the Build font, which acts as a title display font
@@ -130,60 +136,51 @@ namespace Coursework.Helpers
         /// </summary>
         public static void ApplyCursor(Control form, CursorStyle cursorType)
         {
-            Cursor customCursor;
+
             string cursorPath = $@"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Cursors\";
 
-            uint id = PlayerHelper.QuizPlayer == null ? 0 : PlayerHelper.QuizPlayer.TFClass.Id;
+            uint id = PlayerHelper.Player == null ? 0 : PlayerHelper.Player.TFClass.Id;
 
-            switch (cursorType)
+            switch (id)
             {
-                case CursorStyle.Default:
-                    customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "defaultCursor.cur")));
+                case 1:
+                    TFCursor = new Cursor(@"Cursors\scoutCursor.cur");
                     break;
 
-                case CursorStyle.TFClass:
-                    switch (id)
-                    {
-                        case 1:
-                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "scoutCursor.cur")));
-                            break;
+                case 2:
+                    TFCursor = new Cursor(@"Cursors/soldierCursor.cur");
+                    break;
 
-                        case 2:
-                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "soldierCursor.cur")));
-                            break;
+                case 3:
+                    TFCursor = new Cursor(@"Cursors/pyroCursor.cur");
+                    break;
 
-                        case 3:
-                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "pyroCursor.cur")));
-                            break;
+                case 4:
+                    TFCursor = new Cursor(@"Cursors/demoCursor.cur");
+                    break;
 
-                        case 4:
-                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "demoCursor.cur")));
-                            break;
+                case 5:
+                    TFCursor = new Cursor(@"Cursors/hwgCursor.cur");
+                    break;
 
-                        case 5:
-                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "hwgCursor.cur")));
-                            break;
+                case 6:
+                    TFCursor = new Cursor(@"Cursors/engineerCursor.cur");
+                    break;
 
-                        case 6:
-                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "engineerCursor.cur")));
-                            break;
+                case 7:
+                    TFCursor = new Cursor(@"Cursors/medicCursor.cur");
+                    break;
 
-                        case 7:
-                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "medicCursor.cur")));
-                            break;
+                case 8:
+                    TFCursor = new Cursor(@"Cursors/sniperCursor.cur");
+                    break;
 
-                        case 8:
-                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "sniperCursor.cur")));
-                            break;
+                case 9:
+                    TFCursor = new Cursor(@"Cursors/spyCursor.cur");
+                    break;
 
-                        case 9:
-                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "spyCursor.cur")));
-                            break;
-
-                        default:
-                            customCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "defaultCursor.cur")));
-                            break;
-                    }
+                case 0:
+                    TFCursor = DefaultCursor;
                     break;
 
                 default:
@@ -197,10 +194,10 @@ namespace Coursework.Helpers
                     ApplyCursor(control, cursorType);
                 }
 
-                control.Cursor = customCursor;
+                control.Cursor = cursorType == CursorStyle.Default ? DefaultCursor : TFCursor;
             }
 
-            form.Cursor = customCursor;
+            form.Cursor = cursorType == CursorStyle.Default ? DefaultCursor : TFCursor;
         }
 
         /// <summary>

@@ -47,7 +47,7 @@
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.Font = new Font("Segoe UI", 20.25F);
             lblUsername.ForeColor = Color.FromArgb(246, 231, 222);
             lblUsername.Location = new Point(171, 20);
             lblUsername.Name = "lblUsername";
@@ -58,7 +58,7 @@
             // lblRank
             // 
             lblRank.AutoSize = true;
-            lblRank.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRank.Font = new Font("Segoe UI", 27.75F);
             lblRank.ForeColor = Color.FromArgb(246, 231, 222);
             lblRank.Location = new Point(171, 85);
             lblRank.Name = "lblRank";
@@ -70,7 +70,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(41, 39, 39);
+            BackColor = Color.Transparent;
             Controls.Add(lblRank);
             Controls.Add(lblUsername);
             Controls.Add(pbAvatar);

@@ -12,8 +12,8 @@ namespace Coursework.Forms
         {
             InitializeComponent();
             this.question = question;
-            this.Text = $"{FormHelper.CurrentQuiz.Name} Quiz";
-            score = FormHelper.CurrentQuiz.Score;
+            this.Text = $"{FormHelper.Quiz.Name} Quiz";
+            score = FormHelper.Quiz.Score;
         }
 
         private void MultipleChoiceScreen_Load(object sender, EventArgs e)
@@ -21,24 +21,14 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            lblQuizName.Text = $"{Text.ToUpper()} QUIZ";
+            lblQuizName.Text = $"{FormHelper.Quiz.Name.ToUpper()} QUIZ";
             lblQuestionText.Text = question.Text;
 
             lblScore.Text = score.ToString();
-            lblTimeRemaining.Text = FormHelper.CurrentQuiz.TimeRemaining.ToString();
-
-            if (question.Image != null)
-            {
-                pbImage.Image = question.Image;
-            }
+            lblTimeRemaining.Text = TimeSpan.FromSeconds(FormHelper.Quiz.TimeRemaining).ToString(@"m\:ss");
 
             pbImage.Tag = question.CorrectAnswerIndex;
             pbImage.AllowDrop = true;
-
-            if (PlayerHelper.QuizPlayer.TFClass.TFClassAbility.ChargeLevel < PlayerHelper.QuizPlayer.TFClass.TFClassAbility.ChargesRequired)
-            {
-                pbAbility.Visible = false;
-            }
 
             tmrQuiz.Start();
 
@@ -50,23 +40,23 @@ namespace Coursework.Forms
                 label.Text = question.Answers[i];
                 i++;
 
-                if (FormHelper.CurrentQuiz.IsDisguised)
+                if (FormHelper.Quiz.IsDisguised)
                 {
                     label.ForeColor = FormHelper.ColourPalette["Blue"];
                 }
             }
 
             lblScore.Text = score.ToString();
-            pbAbility.Image = TFClass.Assets[PlayerHelper.QuizPlayer.TFClass.Id].Emblem;
+            pbAbility.Image = TFClass.Assets[PlayerHelper.Player.TFClass.Id].Emblem;
         }
 
         private void pbAbility_Click(object sender, EventArgs e)
         {
-            PlayerHelper.QuizPlayer.TFClass.TFClassAbility.UseAbility(this, ref FormHelper.CurrentQuiz, ref question);
+            PlayerHelper.Player.TFClass.TFClassAbility.UseAbility(this, ref FormHelper.Quiz, ref question);
 
             if (question.IsCorrect)
             {
-                double scoreAddition = FormHelper.CurrentQuiz.ScoreMultiplier != 0 ? 20 * FormHelper.CurrentQuiz.ScoreMultiplier : 20;
+                double scoreAddition = FormHelper.Quiz.ScoreMultiplier != 0 ? 20 * FormHelper.Quiz.ScoreMultiplier : 20;
 
                 score += (int)scoreAddition;
 
@@ -91,16 +81,16 @@ namespace Coursework.Forms
 
         private void image_DragDrop(object sender, DragEventArgs e)
         {
-            string result = String.Empty;
+            string? result = String.Empty;
 
             if (e.Data != null)
             {
-                result = (string)e.Data.GetData(DataFormats.Text);
+                result = (string?)e.Data.GetData(DataFormats.Text);
             }
 
             if (result == question.Answers[question.CorrectAnswerIndex])
             {
-                double scoreAddition = FormHelper.CurrentQuiz.ScoreMultiplier != 0 ? 20 * FormHelper.CurrentQuiz.ScoreMultiplier : 20;
+                double scoreAddition = FormHelper.Quiz.ScoreMultiplier != 0 ? 20 * FormHelper.Quiz.ScoreMultiplier : 20;
 
                 score += (int)scoreAddition;
                 question.IsCorrect = true;
@@ -109,14 +99,15 @@ namespace Coursework.Forms
                 new AnswerIndicationScreen((int)scoreAddition).Show();
                 this.Close();
             }
+
             else
             {
-                if (PlayerHelper.QuizPlayer.TFClass.Id == 4)
+                if (PlayerHelper.Player.TFClass.Id == 4)
                 {
-                    FormHelper.CurrentQuiz.ScoreMultiplier = 0;
+                    FormHelper.Quiz.ScoreMultiplier = 0;
                 }
 
-                FormHelper.CurrentQuiz.IsDisguised = false;
+                FormHelper.Quiz.IsDisguised = false;
 
                 question.IsAnswered = true;
 
@@ -127,10 +118,10 @@ namespace Coursework.Forms
 
         private void tmrQuiz_Tick(object sender, EventArgs e)
         {
-            FormHelper.CurrentQuiz.TimeRemaining--;
-            lblTimeRemaining.Text = FormHelper.CurrentQuiz.TimeRemaining.ToString();
+            FormHelper.Quiz.TimeRemaining--;
+            lblTimeRemaining.Text = TimeSpan.FromSeconds(FormHelper.Quiz.TimeRemaining).ToString(@"m\:ss");
 
-            if (FormHelper.CurrentQuiz.TimeRemaining <= 0)
+            if (FormHelper.Quiz.TimeRemaining <= 0)
             {
                 tmrQuiz.Stop();
                 new EndScreen().Show();

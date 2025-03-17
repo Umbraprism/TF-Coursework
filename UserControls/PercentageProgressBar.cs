@@ -5,24 +5,26 @@ namespace Coursework.UserControls
 {
     public partial class PercentageProgressBar : ProgressBar
     {
-        [Category("Appearance")] // groups the property into the Apperance category within the designer.
+        [Category("Appearance")]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-        public Color TextColour // This property will be used to change the colour of the text, the american spelling is used to align with the standard in the designer for easier readability
+        public Color TextColour 
         {
             get
             {
-                return solidBrushText.Color; // gets the colour of the SolidBrush used for drawing text
+                // Gets the colour of the SolidBrush used for drawing text
+                return solidBrushText.Color; 
             }
             set
             {
-                solidBrushText.Dispose(); // disposes of old brush  to prevent leaks
-                solidBrushText = new(value); // creates a new SolidBrush with the new colour
+                // Creates a new SolidBrush with the new colour to draw the text
+                solidBrushText.Dispose();
+                solidBrushText = new(value); 
             }
         }
 
         [Category("Appearance")]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-        public Color ProgressColour // this gets the colour property of the SolidBrush used for drawing
+        public Color ProgressColour 
         {
             get
             {
@@ -30,15 +32,18 @@ namespace Coursework.UserControls
             }
             set
             {
+                // Creates a new SolidBrush with the new colour to draw the progress
                 solidBrushProgress.Dispose();
                 solidBrushProgress = new(value);
             }
         }
 
+        // Dictates whether the progress bar will display its percentage.
         [Category("Appearance")]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool UsePercentage { get; set; }
 
+        // Allows changing of the percentage font.
         [Category("Appearance"), Browsable(true)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public override Font Font
@@ -54,11 +59,12 @@ namespace Coursework.UserControls
             }
         }
 
+        // Holds the percentage of the progress bar which has been filled.
         private float PercentageProgress
         {
             get
             {
-                return (float)Value / (float)Maximum * 100;
+                return ((float)Value * 100) / (float)Maximum;
             }
         }
 
@@ -67,35 +73,47 @@ namespace Coursework.UserControls
         private RectangleF barProgress;
         public PercentageProgressBar()
         {
+            // Sets style to be Continuous by default.
             Style = ProgressBarStyle.Continuous;
-            SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true); // Removes the automatic VisualStyles which would overwrite the custom OnPaint
+
+            // Sets the UserPaint bit to allow the control to handle painting rather than the OS. The AllPaintingInWmPaint bit is also set to reduce flicker by ignoring a message from the OS. Also sets DoubleBuffer to reduce flickering.
+            SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
+
             InitializeComponent();
-            this.Text = "PERCENTAGE"; // ensures text value is not empty so the font is correctly applied as 'Build'. Without this line, the 'Secondary' font would be used, which is not meant to be utilised on numbers.
+
+            // Ensures text value is not empty so the font is correctly applied as 'Build'. Without this line, the 'Secondary' font would be used, which is not meant to be utilised on numbers.
+            this.Text = "PERCENTAGE";
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            // Calls the base OnPaint method.
             base.OnPaint(e);
 
+            // Creates the Background as the ClientRectangle (the parts of the control which are visible)
             Rectangle barBackground = ClientRectangle;
 
+            // Fills background colour.
             e.Graphics.Clear(BackColor);
 
+            // Draws the progress bar as it fills.
             if (Value > 0)
             {
                 barProgress = new(barBackground.X, barBackground.Y, (int)Math.Ceiling(PercentageProgress / 100 * barBackground.Width), barBackground.Height);
                 e.Graphics.FillRectangle(solidBrushProgress, barProgress);
             }
 
-            if (UsePercentage) // this will check if the progress bar will display the percentage completed, this allows me to use this as a progress bar with a custom back colour and progress bar colour
+            // Checks if the percentage is to be displayed on the ProgressBar.
+            if (UsePercentage)
             {
-                e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias; // anti aliases text to remove jagged edges and artifacting
+                // Anti aliases text to remove jagged edges and artifacting
+                e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
                 
-                // fix or else
-
+                // Draws the percentage and percentage symbol seperately to provide spacing.
                 e.Graphics.DrawString(((int)PercentageProgress).ToString(), Font, solidBrushText, new PointF((Width - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Width - 10 * Font.Size / 10), (Height - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Height) / 2)); 
                 e.Graphics.DrawString("%", Font, solidBrushText, new PointF((Width - e.Graphics.MeasureString("%", Font).Width) - 1, (Height - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Height) / 2));
 
+                // Checks if the progress bar has intersected with the text. If it has, the colour of the text will to the background colour change to ensure it remains legible.
                 if (barProgress.IntersectsWith(new Rectangle(new Point((int)(Width - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Width - 10 * Font.Size / 5), (int)(Height - e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Height) / 2 + 5), new Size((int)e.Graphics.MeasureString(((int)PercentageProgress).ToString(), Font).Width, Font.Height))))
                 {
                     TextColour = this.BackColor;
@@ -105,6 +123,7 @@ namespace Coursework.UserControls
 
         protected override void OnResize(EventArgs e)
         {
+            // Redraws the control when it is resized.
             base.OnResize(e);  
             this.Invalidate();
         }

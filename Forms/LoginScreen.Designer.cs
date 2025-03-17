@@ -74,6 +74,7 @@
             tbUsername.BorderStyle = BorderStyle.None;
             tbUsername.Font = new Font("Segoe UI", 30F);
             tbUsername.Location = new Point(3, 13);
+            tbUsername.MaxLength = 20;
             tbUsername.Name = "tbUsername";
             tbUsername.PlaceholderText = "Username";
             tbUsername.Size = new Size(557, 54);

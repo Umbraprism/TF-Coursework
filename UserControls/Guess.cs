@@ -40,22 +40,22 @@ namespace Coursework.UserControls
                 if (guessedWeapon.Name != correctWeapon.Name)
                 {
                     rpnlGuessedWeapon.PanelColour = FormHelper.ColourPalette["Red"];
-                    lblGuessedWeapon.BackColor = FormHelper.ColourPalette["Red"];
+                    rpnlGuessedWeapon.BorderColour = FormHelper.ColourPalette["Red"];
                 }
-                if (guessedWeapon.UsedBy != guessedWeapon.UsedBy)
+                if (guessedWeapon.UsedBy != correctWeapon.UsedBy)
                 {
                     rpnlUsedBy.PanelColour = FormHelper.ColourPalette["Red"];
-                    lblUsedBy.BackColor = FormHelper.ColourPalette["Red"];
+                    rpnlUsedBy.BorderColour = FormHelper.ColourPalette["Red"];
                 }
                 if (guessedWeapon.Slot != correctWeapon.Slot)
                 {
                     rpnlSlot.PanelColour = FormHelper.ColourPalette["Red"];
-                    lblSlot.BackColor = FormHelper.ColourPalette["Red"];
+                    rpnlSlot.BorderColour = FormHelper.ColourPalette["Red"];
                 }
                 if (guessedWeapon.Update != correctWeapon.Update)
                 {
                     rpnlUpdate.PanelColour = FormHelper.ColourPalette["Red"];
-                    lblUpdate.BackColor = FormHelper.ColourPalette["Red"];
+                    rpnlUpdate.BorderColour = FormHelper.ColourPalette["Red"];
                 }
             }
 

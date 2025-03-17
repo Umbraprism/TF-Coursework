@@ -6,7 +6,47 @@
     },
     {
         "Name": "Top Gun",
-	    "Description": "Complete any quiz in less than 50% of the allocated time.",
+	    "Description": "Achieve the 'Unusual' rank in the Weapons Quiz by getting every question correct.",
+	    "IsAchieved": false
+    },
+    {
+        "Name": "Top of the Class",
+	    "Description": "Achieve the 'Unusual' rank in the Classes Quiz by getting every question correct..",
+	    "IsAchieved": false
+    },
+    {
+        "Name": "Time Machine",
+	    "Description": "Achieve the 'Unusual' rank in the History Quiz by getting every question correct.",
+	    "IsAchieved": false
+    },
+    {
+        "Name": "Global Elite",
+	    "Description": "Reach 1st place on any leaderboard.",
+	    "IsAchieved": false
+    },
+    {
+        "Name": "Specialist",
+	    "Description": "Complete any quiz without using your ability.",
+	    "IsAchieved": false
+    },
+    {
+        "Name": "Charge n' Targe",
+	    "Description": "Complete any quiz in less than 25% of the allocated time.",
+	    "IsAchieved": false
+    },
+        {
+        "Name": "A Perfect Disguise",
+	    "Description": "After disguising as the Spy, complete the quiz without your disguise breaking.",
+	    "IsAchieved": false
+    },
+    {
+        "Name": "Hard to Kill",
+	    "Description": "Reach a streak of 5 in the TF∞ mode of the Guessing Game.",
+	    "IsAchieved": false
+    },
+    {
+        "Name": "Iron Kurtain",
+	    "Description": "Reach 1st place in every leaderboard.",
 	    "IsAchieved": false
     }
 ]

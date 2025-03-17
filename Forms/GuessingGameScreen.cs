@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Text.Json;
 using Coursework.Extensions;
 using Coursework.Helpers;
 using Coursework.ParentClasses;
@@ -14,7 +15,7 @@ namespace Coursework.Forms
 
         private bool isEndless;
         private Weapon? weapon;
-        private int guessCount = 1;
+        private int guessCount = 0;
         private int streak = 0;
 
         private Guess? guess;
@@ -22,6 +23,7 @@ namespace Coursework.Forms
         public GuessingGameScreen(bool isEndless)
         {
             InitializeComponent();
+
             this.isEndless = isEndless;
 
             if (!isEndless)
@@ -31,7 +33,7 @@ namespace Coursework.Forms
 
                 if (weaponsList != null)
                 {
-                    weapon = weaponsList[rnd.Next(0, weaponsList.Count - 1)];
+                    weapon = weaponsList[rnd.Next(0, weaponsList.Count)];
                 }
                 else
                 {
@@ -40,19 +42,38 @@ namespace Coursework.Forms
             }
             else
             {
+                btnBack.Visible = true;
+
                 if (weaponsList != null)
                 {
-                    weapon = weaponsList[rnd.Next(0, weaponsList.Count - 1)];
+                    weapon = weaponsList[rnd.Next(0, weaponsList.Count)];
                 }
             }
+
+            AutoCompleteStringCollection autoCompleteWeapon = [];
+
+            foreach (Weapon weapon in weaponsList)
+            {
+                autoCompleteWeapon.Add(weapon.Name);
+            }
+
+            cbGuess.DataSource = autoCompleteWeapon;
+
+            cbGuess.AutoCompleteCustomSource = autoCompleteWeapon;
+            cbGuess.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbGuess.AutoCompleteMode = AutoCompleteMode.Append;
+
+            ResetLabels();
         }
 
-        private void GuessingGameScreen_Load(object sender, EventArgs e)
+        private void GuessingGameScreen_Load(object? sender, EventArgs? e)
         {
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            if  (weapon != null && weapon.Image != null)
+            cbGuess.Text = String.Empty;
+
+            if (weapon != null && weapon.Image != null)
             {
                 Bitmap silhouette = (Bitmap)weapon.Image.Clone();
 
@@ -60,80 +81,113 @@ namespace Coursework.Forms
             }
         }
 
-        private void tbGuess_KeyDown(object sender, KeyEventArgs e)
+        private void cbGuess_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter && weapon != null)
             {
-                if (guessCount >= 3)
-                {
-                    pbImage.Image = weapon.Image;
-                }
-
                 try
                 {
-                    guess = new(weaponsList.Where(weapon => weapon.Name.ToUpper() == tbGuess.Text.ToUpper()).First(), weapon);
+                    guess = new(weaponsList.Where(weapon => weapon.Name.ToUpper() == cbGuess.Text.ToUpper()).First(), weapon);
                 }
                 catch (InvalidOperationException)
                 {
-                    TFMessageBox.Show("invalid", "bruh!");
-                    tbGuess.Text = String.Empty;
-
+                    TFMessageBox.Show("The weapon guessed does not exist.", "Invalid Weapon");
                     return;
                 }
 
+                guessCount++;
+
+                ResetLabels();
+
+                if (guessCount >= 3)
+                {
+                    pbImage.Image = weapon.Image;
+                    lblGuessesUntilImage.Visible = false;
+                }
+
+                cbGuess.Text = String.Empty;
+
                 bool isCorrect = guess.CheckGuess();
 
-                if (isCorrect)
+                tlpGuesses.Controls.Add(guess);
+                tlpGuesses.Controls.SetChildIndex(guess, 0);
+
+                if (isCorrect && isEndless)
                 {
-                    tlpGuesses.Controls.Add(guess);
+                    TFMessageBox.Show($"Congratulations! You have guessed the weapon correctly in {guessCount} guesses.", "Congratulations!");
 
-                    tbGuess.Text = String.Empty;
-                    guessCount++;
+                    weapon = weaponsList[rnd.Next(0, weaponsList.Count)];
 
-                    if (guessCount < PlayerHelper.QuizPlayer.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount)
-                    {
-                        PlayerHelper.QuizPlayer.ScoresHashmap[QuizScores.GuessingGame].HighestScore = guessCount;
-                    }
+                    streak++;
 
-                    PlayerHelper.QuizPlayer.ScoresHashmap[QuizScores.GuessingGame].LatestGuessAmount = guessCount;
+                    ApplyScores();
 
-                    if (isEndless)
-                    {
-                        DialogResult keepGuessingQuery = TFMessageBox.Show($"Well done! You guessed the weapon {weapon.Name} correctly! Would you like to keep guessing?", "Congrats!", TFMessageBoxButtons.YesAndNo);
+                    guessCount = 0;
 
-                        if (keepGuessingQuery == DialogResult.Yes)
-                        {
-                            // Assigns new weapon
-                        }
-                        else
-                        {
-                            streak++;
+                    ResetLabels();
 
-                            if (streak > PlayerHelper.QuizPlayer.ScoresHashmap[QuizScores.GuessingGame].HighestStreak)
-                            {
-                                PlayerHelper.QuizPlayer.ScoresHashmap[QuizScores.GuessingGame].HighestStreak = streak;
-                            }
+                    tlpGuesses.Controls.Clear();
 
-                            PlayerHelper.QuizPlayer.ScoresHashmap[QuizScores.GuessingGame].CurrentStreak = streak;
-
-                            this.Close();
-                            FormHelper.MainMenuScreen.Show();
-                        }
-                    }
-                    else
-                    {
-                        TFMessageBox.Show($"Well done! You guessed the weapon {weapon.Name} correctly! Click 'OK' to return to the main menu.", "Congrats!");
-
-                        this.Close();
-                        FormHelper.MainMenuScreen.Show();
-                    }
+                    return;
                 }
-                else
+                else if (isCorrect)
                 {
-                    tlpGuesses.Controls.Add(guess);
+                    TFMessageBox.Show($"Congratulations! You have guessed the weapon correctly in {guessCount} guesses.", "Congratulations!");
 
-                    tbGuess.Text = String.Empty;
-                    guessCount++;
+                    ApplyScores();
+
+                    ResetLabels();
+
+                    this.Close();
+                    new MainMenuScreen().Show();
+                }
+            }
+        }
+
+        private void ApplyScores()
+        {
+            if (guessCount < PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount || PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount == 0)
+            {
+                PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount = guessCount;
+            }
+
+            if (streak > PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].HighestStreak)
+            {
+                PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].HighestStreak = streak;
+            }
+
+            PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].LatestGuessAmount = guessCount;
+            PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].CurrentStreak = streak;
+
+            guessCount = 0;
+        }
+
+        private void ResetLabels()
+        {
+            lblGuessesUntilImage.Visible = true;
+            lblGuessesUntilImage.Text = $"Weapon image will be fully revealed in {3 - guessCount} guesses.";
+            lblGuessCount.Text = guessCount.ToString();
+
+            if (weapon.Image != null)
+            {
+                Bitmap silhouette = (Bitmap)weapon.Image.Clone();
+
+                pbImage.Image = silhouette.Silhoutte(Color.Black);
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (isEndless)
+            {
+                DialogResult backQuery = TFMessageBox.Show("Would you like to stop guessing weapons and return to the main menu?", "Are you sure?", TFMessageBoxButtons.YesAndNo);
+
+                if (backQuery == DialogResult.Yes)
+                {
+                    ApplyScores();
+
+                    this.Close();
+                    new MainMenuScreen().Show();
                 }
             }
         }

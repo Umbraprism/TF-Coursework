@@ -9,20 +9,61 @@ namespace Coursework.Forms
     {
         private int noCorrect = 0;
         private int noIncorrect = 0;
-        private int noAnswered = 0;
         private int timeOnScreen = 10;
 
-        private string rank = String.Empty;
-        private int placement = 0;
+        private string Rank
+        {
+            get
+            {
+                double percentage = (noCorrect * 100) / FormHelper.Quiz.BaseQuestions.Count;
+
+                if (percentage == 100)
+                {
+                    return "Unusual";
+                }
+                else if (percentage >= 80)
+                {
+                    return "Strange";
+                }
+                else if (percentage >= 60)
+                {
+                    return "Genuine";
+                }
+                else if (percentage >= 40)
+                {
+                    return "Vintage";
+                }
+                else if (percentage >= 20)
+                {
+                    return "Unique";
+                }
+                else if (percentage >= 10)
+                {
+                    return "Basic";
+                }
+                else
+                {
+                    return "Junk";
+                }
+            }
+        }
+
+        private int Placement
+        {
+            get
+            {
+                List<Player> players = PlayerHelper.PlayerList;
+
+                players.OrderByDescending(player => player.ScoresHashmap[FormHelper.Quiz.QuizType]);
+
+                return players.IndexOf(PlayerHelper.Player);
+            }
+        }
 
         public EndScreen()
         {
-            noCorrect = FormHelper.CurrentQuiz.BaseQuestions.Where(question => question.IsCorrect && question.IsAnswered).Count();
-            noIncorrect = FormHelper.CurrentQuiz.EasyQuestions.Where(question => question.IsCorrect && question.IsAnswered).Count();
-            noAnswered = FormHelper.CurrentQuiz.BaseQuestions.Where(question => question.IsAnswered == true).Count();
-
-            rank = SetRank();
-            placement = SetPlacement();
+            noCorrect = FormHelper.Quiz.BaseQuestions.Where(question => question.IsCorrect && question.IsAnswered).Count() + FormHelper.Quiz.EasyQuestions.Where(question => question.IsCorrect && question.IsAnswered).Count();
+            noIncorrect = FormHelper.Quiz.BaseQuestions.Where(question => !question.IsCorrect && question.IsAnswered).Count() + FormHelper.Quiz.EasyQuestions.Where(question => !question.IsCorrect && question.IsAnswered).Count();
             InitializeComponent();
         }
 
@@ -31,18 +72,26 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            lblUsername.Text = PlayerHelper.QuizPlayer.Username;
+            lblUsername.Text = $"{PlayerHelper.Player.Username} wins!".ToUpper();
+            lblCorrect.Text = $"{noCorrect} Correct";
+            lblIncorrect.Text = $"{noIncorrect} Incorrect";
+            lblScore.Text = $"Score - {FormHelper.Quiz.Score}";
 
-            lblCorrect.Text = noCorrect.ToString();
-            lblIncorrect.Text = noIncorrect.ToString();
-            lblScore.Text = $"Score - {FormHelper.CurrentQuiz.Score}";
+            lblGrade.Text = Rank.ToUpper();
+            lblGrade.ForeColor = FormHelper.ColourPalette[Rank];
 
-            lblGrade.Text = rank.ToUpper();
-            lblGrade.ForeColor = FormHelper.ColourPalette[rank];
-
-            lblPlacement.Text = $"#{placement}";
+            lblPlacement.Text = $"#{Placement + 1}";
 
             CheckAchievements();
+
+            if (FormHelper.Quiz.Score > PlayerHelper.Player.ScoresHashmap[FormHelper.Quiz.QuizType].HighestScore)
+            {
+                PlayerHelper.Player.ScoresHashmap[FormHelper.Quiz.QuizType].HighestScore = FormHelper.Quiz.Score;
+            }
+
+            PlayerHelper.Player.ScoresHashmap[FormHelper.Quiz.QuizType].LatestScore = FormHelper.Quiz.Score;
+
+            PlayerHelper.Player.ScoresHashmap[FormHelper.Quiz.QuizType].Rank = Rank;
         }
 
         private void tmrEnd_Tick(object sender, EventArgs e)
@@ -51,7 +100,7 @@ namespace Coursework.Forms
 
             if (timeOnScreen >= 0)
             {
-                FormHelper.MainMenuScreen.Show();
+                new MainMenuScreen().Show();
                 this.Close();
                 tmrEnd.Stop();
             }
@@ -59,74 +108,50 @@ namespace Coursework.Forms
 
         private void btnFinished_Click(object sender, EventArgs e)
         {
-            FormHelper.CurrentQuiz = new();
+            FormHelper.Quiz = new();
             this.Close();
-            FormHelper.MainMenuScreen.Show();
-        }
-
-        private string SetRank()
-        {
-            int percentage = noCorrect / noAnswered * 100;
-
-            if (percentage == 100)
-            {
-                return "Unusual";
-            }
-            else if (percentage >= 80)
-            {
-                return "Strange";
-            }
-            else if (percentage >= 60)
-            {
-                return "Genuine";
-            }
-            else if (percentage >= 40)
-            {
-                return "Vintage";
-            }
-            else if (percentage >= 20)
-            {
-                return "Unique";
-            }
-            else if (percentage >= 10)
-            {
-                return "Basic";
-            }
-            else
-            {
-                return "Junk";
-            }
-        }
-
-        private int SetPlacement()
-        {
-            List<Player> players = PlayerHelper.PlayerList;
-
-            players.OrderBy(player => player.ScoresHashmap[FormHelper.CurrentQuiz.QuizType]);
-
-            return players.IndexOf(PlayerHelper.QuizPlayer);
+            new MainMenuScreen().Show();
         }
 
         private void CheckAchievements()
         {
-            if (((double)FormHelper.CurrentQuiz.TimeRemaining / (double)FormHelper.CurrentQuiz.TotalTime) * 100 >= 50)
+            if (((double)FormHelper.Quiz.TimeRemaining / (double)FormHelper.Quiz.TotalTime) * 100 >= 50)
             {
                 UnlockAchievement("Race For The Pennant");
             }
-            if (rank == "Unusual" && FormHelper.CurrentQuiz.QuizType == QuizScores.Weapons)
+            if (((double)FormHelper.Quiz.TimeRemaining / (double)FormHelper.Quiz.TotalTime) * 100 >= 25)
+            {
+                UnlockAchievement("Charge n' Targe");
+            }
+            if (Rank == "Unusual" && FormHelper.Quiz.QuizType == QuizScores.Weapons)
             {
                 UnlockAchievement("Top Gun");
             }
-
+            if (Rank == "Unusual" && FormHelper.Quiz.QuizType == QuizScores.TFClass)
+            {
+                UnlockAchievement("Top of the Class");
+            }
+            if (Rank == "Unusual" && FormHelper.Quiz.QuizType == QuizScores.History)
+            {
+                UnlockAchievement("Time Machine");
+            }
+            if (PlayerHelper.Player.TFClass.TFClassAbility.TimesUsed == 0)
+            {
+                UnlockAchievement("Specialist");
+            }
+            if (PlayerHelper.Player.TFClass.Id == 9 && FormHelper.Quiz.IsDisguised)
+            {
+                UnlockAchievement("A Perfect Disguise");
+            }
         }
 
         private void UnlockAchievement(string name)
         {
-            Achievement achievement = PlayerHelper.QuizPlayer.Achievements.Where(achievement => achievement.Name == name).First();
+            Achievement achievement = PlayerHelper.Player.Achievements.Where(achievement => achievement.Name == name).First();
 
             if (!achievement.IsAchieved)
             {
-                PlayerHelper.QuizPlayer.Achievements.Where(achievement => achievement.Name == name).First().IsAchieved = true;
+                PlayerHelper.Player.Achievements.Where(achievement => achievement.Name == name).First().IsAchieved = true;
 
                 flpAchievementsUnlocked.Controls.Add(new AchievementView(achievement));
             }

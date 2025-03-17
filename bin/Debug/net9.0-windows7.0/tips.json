@@ -1,38 +1,42 @@
 [
     {
         "Text": "As the Scout, use your 'Double Jump' ability when you are unsure of an answer. It will allow you to skip the question, immediately getting it right.",
-	"TFClassId": 1
+	    "TFClassId": 1
     },
     {
         "Text": "As the Soldier, use your 'Buff Banner' ability when you are already on a streak of correctly answered questions to make best use of the bonus.",
-	"TFClassId": 2
+	    "TFClassId": 2
     },
     {
         "Text": "As the Pyro, use your 'Flare Gun' ability to score triple points on a question if you got the previous answer correct.",
-	"TFClassId": 3
+	    "TFClassId": 3
     },
     {
         "Text": "As the Demoman, your 'Eyelander' ability will grant you more points for every answer you get right up to a maximum of 2 extra points.",
-	"TFClassId": 4
+	    "TFClassId": 4
     },
     {
         "Text": "As the Heavy, use your 'Brass Beast' ability to remove 2 answers from the potential choices, giving you a 50/50 shot at answering correctly.",
-	"TFClassId": 5
+	    "TFClassId": 5
     },
     {
         "Text": "As the Engineer, use your 'Teleporter' ability when you wish to return to another question and have another attempt.",
-	"TFClassId": 6
+	    "TFClassId": 6
     },
     {
         "Text": "As the Medic, use your 'Übercharge' ability to gain immunity to incorrect answers for 3 questions.",
-	"TFClassId": 7
+	    "TFClassId": 7
     },
     {
         "Text": "As the Sniper, use your 'Razorback' ability when you are unsure of your answer to gain another try.",
-	"TFClassId": 8
+	    "TFClassId": 8
     },
     {
         "Text": "As the Spy, use your 'Disguise Kit' ability to switch to an easier set of BLU side questions in order to gain points more easily.",
-	"TFClassId": 9
+	    "TFClassId": 9
+    },
+    {
+        "Text": "If you have achieved a high score in a quiz, you should be careful when reattempting it so as not to lose your place in the leaderboard.",
+	    "TFClassId": 0
     }
 ]

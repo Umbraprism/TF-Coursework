@@ -1,7 +1,7 @@
 {
     "Name": "Weapons",
     "QuizType": 0,
-    "TimeRemaining": 60,
+    "TimeRemaining": 300,
     "BaseQuestions": [
         {
             "Text": "Which Scout weapon only partially reloads it's clip?",
@@ -34,6 +34,15 @@
                 "Crit-A-Cola",
                 "Atomizer",
                 "Sandman"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "Answer"
             ],
             "ImageId": 0
         },
@@ -118,7 +127,7 @@
             "ImageId": 0
         },
         {
-            "Text": "The Stickybomb Launcher can be charged to launh stickybombs further.",
+            "Text": "The Stickybomb Launcher can be charged to launch stickybombs further.",
             "Type": 1,
             "CorrectAnswerIndex": 0,
             "Answers": [
@@ -152,7 +161,7 @@
             "ImageId": 0
         },
         {
-            "Text": "The Sandwich cannot be refilled by Ammo Boxes",
+            "Text": "The Sandwich cannot be refilled by Ammo Boxes.",
             "Type": 1,
             "CorrectAnswerIndex": 1,
             "Answers": [
@@ -206,42 +215,414 @@
                 "Teleporter Exits"
             ],
             "ImageId": 0
+        },
+        {
+            "Text": "Which Medic weapon gains charge in the Übercharge meter on hit?",
+            "Type": 0,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Vitasaw",
+                "Amputator",
+                "Übersaw",
+                "Syringe Gun"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Vaccinator can provide 3 distinct types of immunity.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Medic Übercharge grants guaranteed critical hits?",
+            "Type": 2,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Overdose",
+                "Medigun",
+                "Vaccinator",
+                "Kritzkrieg"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Sniper weapon can hit more than one player per bullet?",
+            "Type": 0,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Machina",
+                "Hitman's Heatmaker",
+                "The Classic",
+                "Sniper Rifle"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Huntsman's arrows cannot be lit on fire.",
+            "Type": 1,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Sniper weapon converts Mini-Crits into full critical hits?",
+            "Type": 2,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Kukri",
+                "Tribalman's Shiv",
+                "Shanshaha",
+                "Bushwacka"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Spy weapon disguises you on backstabs?",
+            "Type": 0,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Conniver's Kunai",
+                "Knife",
+                "Big Earner",
+                "Your Eternal Reward"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Dead Ringer cannot be refilled by Ammo Boxes.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Spy weapon freezes backstab victims?",
+            "Type": 2,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Red-Tape Recorder",
+                "Electro-Sapper",
+                "Spycicle",
+                "Cloak and Dagger"
+            ],
+            "ImageId": 0
         }
     ],
     "EasyQuestions": [
         {
-            "Text": "Which of the following is the Heavy's stock primary weapon?'",
-            "Type": 0,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Minigun",
-                "Tomislav",
-                "Shotgun",
-                "Sandvich"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Of the following, which item is used by the Sniper?",
-            "Type": 0,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Knife",
-                "SMG",
-                "Bottle",
-                "Dalokohs Bar"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What Pyro weapon delivers critical hits on burning enemies?",
+            "Text": "Which Scout weapon deals Mini-Crits from behind?",
             "Type": 0,
             "CorrectAnswerIndex": 2,
             "Answers": [
-                "Flamethrower",
-                "Scorch Shot",
+                "Bat",
+                "Soda Popper",
+                "Backscatter",
+                "Boston Basher"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Atomizer allows the Scout to jump 4 times.",
+            "Type": 1,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "What is the Scout's stock secondary weapon?",
+            "Type": 2,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Pistol",
+                "Winger",
+                "Bonk! Atomic Punch",
+                "Shotgun"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Soldier weapon has infinite ammunition?",
+            "Type": 0,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Beggar's Bazooka",
+                "Black Box",
+                "Cow Mangler",
+                "Liberty Launcher"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Soldier has 3 different Banner type items.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which weapon is not used by the Soldier?",
+            "Type": 2,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Rocket Launcher",
+                "Righteous Bison",
+                "Beggar's Bazooka",
+                "Loch n' Load"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Pyro weapon is capable of propelling the user with a flare?",
+            "Type": 0,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Backburner",
+                "Phlogistinator",
                 "Flare Gun",
-                "Fire Axe"
+                "Detonator"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Gas Passer is fully recharged on respawn.",
+            "Type": 1,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Pyro weapon has a chargeable 'MMMPH' meter?",
+            "Type": 2,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "Scorch Shot",
+                "Phlogistinator",
+                "Dragon's Fury",
+                "Sharpened Volcano Fragment"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Demoman weapon can deal knockback when the projectiles hit?",
+            "Type": 0,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Scottish Resistance",
+                "Loch n' Load",
+                "Iron Bomber",
+                "Loose Cannon"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Stickybomb Launcher cannot be charged to launch stickybombs further.",
+            "Type": 1,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Demoman weapon collects heads?",
+            "Type": 2,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "Persian Persuader",
+                "Eyelander",
+                "Claidmhor",
+                "Scotsman's Skullcutter"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Heavy weapon slows players down whilst they are being shot?",
+            "Type": 0,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Natascha",
+                "Tomislav",
+                "Brass Beast",
+                "Minigun"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Sandwich cannot be refilled by Ammo Boxes.",
+            "Type": 1,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Heavy weapon produces a ring of fire around the Heavy whilst revved?",
+            "Type": 2,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Warrior's Spirit",
+                "Eviction Notice",
+                "Huo-Long Heater",
+                "Killing Gloves of Boxing"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Engineer weapon always hits a critical hit on the 3rd succesive attack on an enemy?",
+            "Type": 0,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Gunslinger",
+                "Jag",
+                "Eureka Effect",
+                "Wrench"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Teleporters cost 50 Metal whilst using the Eureka Effect.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which building cannot be built whilst using the Gunslinger?",
+            "Type": 2,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Dispensers",
+                "Teleporter Entrances",
+                "Sentries",
+                "Teleporter Exits"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Medic weapon gains charge in the Übercharge meter on hit?",
+            "Type": 0,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Vitasaw",
+                "Amputator",
+                "Übersaw",
+                "Syringe Gun"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Vaccinator can provide 3 distinct types of immunity.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Medic Übercharge grants guaranteed critical hits?",
+            "Type": 2,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Overdose",
+                "Medigun",
+                "Vaccinator",
+                "Kritzkrieg"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Sniper weapon can hit more than one player per bullet?",
+            "Type": 0,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Machina",
+                "Hitman's Heatmaker",
+                "The Classic",
+                "Sniper Rifle"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Huntsman's arrows can be lit on fire.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Sniper weapon converts Mini-Crits into full critical hits?",
+            "Type": 2,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Kukri",
+                "Tribalman's Shiv",
+                "Shanshaha",
+                "Bushwacka"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Spy weapon disguises you on backstabs?",
+            "Type": 0,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Conniver's Kunai",
+                "Knife",
+                "Big Earner",
+                "Your Eternal Reward"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Dead Ringer cannot be refilled by Ammo Boxes.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which Spy weapon freezes backstab victims?",
+            "Type": 2,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Red-Tape Recorder",
+                "Electro-Sapper",
+                "Spycicle",
+                "Cloak and Dagger"
             ],
             "ImageId": 0
         }

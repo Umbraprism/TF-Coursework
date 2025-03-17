@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using System.Net;
-using System.Net.Http;
 using System.Net.Sockets;
 using System.Text;
 using System.Text.Json;
@@ -25,7 +24,7 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            PlayerView myPlayer = new PlayerView(PlayerHelper.QuizPlayer);
+            PlayerView myPlayer = new PlayerView(PlayerHelper.Player);
             myPlayer.Anchor = AnchorStyles.None;
 
             tlpPlayers.Controls.Add(myPlayer);
@@ -34,8 +33,8 @@ namespace Coursework.Forms
             {
                 listener.Start();
 
-                Thread t = new(WaitForPlayers);
-                t.Start();
+                Thread connectionThread = new(WaitForPlayers);
+                connectionThread.Start();
             }
             catch (SocketException)
             {
@@ -102,7 +101,7 @@ namespace Coursework.Forms
                 listener.Stop();
 
                 this.Close();
-                FormHelper.MainMenuScreen.Show();
+                new MainMenuScreen().Show();
             }
         }
     }

@@ -10,6 +10,7 @@ namespace Coursework.Forms
     public partial class MainMenuScreen : Form
     {
         private Random rnd = new();
+        private static bool dailyPlayed = false;
 
         public MainMenuScreen()
         {
@@ -21,15 +22,17 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            pbPfp.Image = TFClass.Assets[PlayerHelper.QuizPlayer.TFClass.Id].Avatar;
-            lblUsername.Text = PlayerHelper.QuizPlayer.Username;
-            lblAchievementCount.Text = $"{PlayerHelper.QuizPlayer.Achievements.Count(achievement => achievement.IsAchieved)} Achievements";
-            lblHighestScore.Text = $"Highest Score - {PlayerHelper.QuizPlayer.GetHighestScore()}";
-            lblClass.Text = $"The {PlayerHelper.QuizPlayer.TFClass.Name}";
+            PlayerHelper.Player.TFClass.TFClassAbility.Reset();
+
+            pbPfp.Image = TFClass.Assets[PlayerHelper.Player.TFClass.Id].Avatar;
+            lblUsername.Text = PlayerHelper.Player.Username;
+            lblAchievementCount.Text = $"{PlayerHelper.Player.Achievements.Count(achievement => achievement.IsAchieved)} Achievements";
+            lblHighestScore.Text = $"Highest Score - {PlayerHelper.Player.GetHighestScore()}";
+            lblClass.Text = $"The {PlayerHelper.Player.TFClass.Name}";
 
             lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count - 1)].Text;
 
-            lblOnlineRank.Text = PlayerHelper.QuizPlayer.OnlineRank;
+            lblOnlineRank.Text = PlayerHelper.Player.OnlineRank;
             lblOnlineRank.ForeColor = FormHelper.ColourPalette[lblOnlineRank.Text];
         }
 
@@ -39,10 +42,10 @@ namespace Coursework.Forms
 
             if (quitQuery == DialogResult.Yes)
             {
-                int playerToReplace = PlayerHelper.PlayerList.FindIndex(player => player.Id == PlayerHelper.QuizPlayer.Id);
-                PlayerHelper.PlayerList[playerToReplace] = PlayerHelper.QuizPlayer;
+                int playerToReplace = PlayerHelper.PlayerList.FindIndex(player => player.Id == PlayerHelper.Player.Id);
+                PlayerHelper.PlayerList[playerToReplace] = PlayerHelper.Player;
 
-                using (BinaryWriter bw = new(File.Open(FormHelper.PlayersJsonPath, FileMode.Create)))
+                using (BinaryWriter bw = new(File.Open("playerData.bin", FileMode.Create)))
                 {
                     string json = JsonSerializer.Serialize(PlayerHelper.PlayerList);
                     bw.Write(json);
@@ -54,13 +57,13 @@ namespace Coursework.Forms
 
         private void btnNextTip_Click(object sender, EventArgs e)
         {
-            if (lblTipText.Text == FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count - 1)].Text)
+            if (lblTipText.Text == FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count)].Text)
             {
                 btnNextTip_Click(sender, e);
             }
             else
             {
-                lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count - 1)].Text;
+                lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count)].Text;
             }
         }
 
@@ -69,11 +72,11 @@ namespace Coursework.Forms
             Button btn = (Button)sender;
 
             string json = File.ReadAllText(@$"Quizzes\{btn.Tag}Quiz.json");
-            FormHelper.CurrentQuiz = JsonSerializer.Deserialize<Quiz>(json);
+            FormHelper.Quiz = JsonSerializer.Deserialize<Quiz>(json);
 
-            if (FormHelper.CurrentQuiz != null)
+            if (FormHelper.Quiz != null)
             {
-                Question question = FormHelper.CurrentQuiz.CurrentDifficulty[FormHelper.CurrentQuiz.CurrentQuestionIndex];
+                Question question = FormHelper.Quiz.CurrentDifficulty[FormHelper.Quiz.CurrentQuestionIndex];
 
                 switch (question.Type)
                 {
@@ -90,7 +93,7 @@ namespace Coursework.Forms
                         throw new FormatException("Question is not of a valid type.");
                 }
 
-                this.Hide();
+                this.Close();
             }
             else
             {
@@ -102,28 +105,30 @@ namespace Coursework.Forms
         {
             DialogResult modeSelect = TFMessageBox.Show("Would you like to guess today's weapon in the 'Daily' mode, or test your ability to identify weapons endlessly 'TF∞' mode?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Daily", "TF∞" });
 
-            if (modeSelect == DialogResult.Yes)
+            if (modeSelect == DialogResult.Yes && !dailyPlayed)
             {
-                this.Hide();
+                dailyPlayed = true;
+
+                this.Close();
                 new GuessingGameScreen(false).Show();
             }
             else if (modeSelect == DialogResult.No)
             {
-                this.Hide();
+                this.Close();
                 new GuessingGameScreen(true).Show();
             }
         }
 
         private void btnAchievements_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormHelper.AchievementScreen.Show();
+            this.Close();
+            new AchievementsScreen().Show();
         }
 
         private void btnStats_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormHelper.StatsScreen.Show();
+            this.Close();
+            new StatsScreen().Show();
         }
 
         private void btnHostOrJoin_Click(object sender, EventArgs e)
@@ -135,7 +140,7 @@ namespace Coursework.Forms
             if (hostOrJoinQuery == DialogResult.Yes)
             {
                 new SplashScreen(new ServerHostScreen()).Show();
-                this.Hide();
+                this.Close();
             }
             else if (hostOrJoinQuery == DialogResult.No)
             {
@@ -143,7 +148,7 @@ namespace Coursework.Forms
                 {
                     client.Connect("127.0.0.1", 5001);
 
-                    string json = JsonSerializer.Serialize(PlayerHelper.QuizPlayer);
+                    string json = JsonSerializer.Serialize(PlayerHelper.Player);
 
                     ServerHelper.SendPacket(client.GetStream(), Encoding.Unicode.GetBytes(json));
                 }
