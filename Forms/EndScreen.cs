@@ -54,9 +54,9 @@ namespace Coursework.Forms
             {
                 List<Player> players = PlayerHelper.PlayerList;
 
-                players.OrderByDescending(player => player.ScoresHashmap[FormHelper.Quiz.QuizType]);
+                players.OrderBy(player => player.ScoresHashmap[FormHelper.Quiz.QuizType].LatestScore);
 
-                return players.IndexOf(PlayerHelper.Player);
+                return players.IndexOf(PlayerHelper.Player) + 1;
             }
         }
 
@@ -72,16 +72,6 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            lblUsername.Text = $"{PlayerHelper.Player.Username} wins!".ToUpper();
-            lblCorrect.Text = $"{noCorrect} Correct";
-            lblIncorrect.Text = $"{noIncorrect} Incorrect";
-            lblScore.Text = $"Score - {FormHelper.Quiz.Score}";
-
-            lblGrade.Text = Rank.ToUpper();
-            lblGrade.ForeColor = FormHelper.ColourPalette[Rank];
-
-            lblPlacement.Text = $"#{Placement + 1}";
-
             CheckAchievements();
 
             if (FormHelper.Quiz.Score > PlayerHelper.Player.ScoresHashmap[FormHelper.Quiz.QuizType].HighestScore)
@@ -92,6 +82,16 @@ namespace Coursework.Forms
             PlayerHelper.Player.ScoresHashmap[FormHelper.Quiz.QuizType].LatestScore = FormHelper.Quiz.Score;
 
             PlayerHelper.Player.ScoresHashmap[FormHelper.Quiz.QuizType].Rank = Rank;
+
+            lblUsername.Text = $"{PlayerHelper.Player.Username} wins!".ToUpper();
+            lblCorrect.Text = $"{noCorrect} Correct";
+            lblIncorrect.Text = $"{noIncorrect} Incorrect";
+            lblScore.Text = $"Score - {FormHelper.Quiz.Score}";
+
+            lblGrade.Text = Rank.ToUpper();
+            lblGrade.ForeColor = FormHelper.ColourPalette[Rank];
+
+            lblPlacement.Text = $"#{Placement}";
         }
 
         private void tmrEnd_Tick(object sender, EventArgs e)

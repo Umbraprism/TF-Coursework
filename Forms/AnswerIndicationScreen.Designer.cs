@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnswerIndicationScreen));
             lblIndicator = new Label();
             lblScore = new Label();
+            lblCorrectAnswer = new Label();
             SuspendLayout();
             // 
             // lblIndicator
@@ -47,6 +48,7 @@
             // 
             // lblScore
             // 
+            lblScore.BackColor = Color.Transparent;
             lblScore.Dock = DockStyle.Top;
             lblScore.Font = new Font("Segoe UI", 20F);
             lblScore.ForeColor = Color.FromArgb(246, 231, 222);
@@ -57,12 +59,26 @@
             lblScore.Text = "+n Points";
             lblScore.TextAlign = ContentAlignment.TopCenter;
             // 
+            // lblCorrectAnswer
+            // 
+            lblCorrectAnswer.BackColor = Color.Transparent;
+            lblCorrectAnswer.Dock = DockStyle.Bottom;
+            lblCorrectAnswer.Font = new Font("Segoe UI", 20F);
+            lblCorrectAnswer.ForeColor = Color.FromArgb(246, 231, 222);
+            lblCorrectAnswer.Location = new Point(0, 370);
+            lblCorrectAnswer.Name = "lblCorrectAnswer";
+            lblCorrectAnswer.Size = new Size(845, 130);
+            lblCorrectAnswer.TabIndex = 2;
+            lblCorrectAnswer.Text = "Correct Answer - ";
+            lblCorrectAnswer.TextAlign = ContentAlignment.TopCenter;
+            // 
             // AnswerIndicationScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(53, 48, 46);
             ClientSize = new Size(845, 500);
+            Controls.Add(lblCorrectAnswer);
             Controls.Add(lblScore);
             Controls.Add(lblIndicator);
             FormBorderStyle = FormBorderStyle.None;
@@ -78,5 +94,6 @@
 
         private Label lblIndicator;
         private Label lblScore;
+        private Label lblCorrectAnswer;
     }
 }

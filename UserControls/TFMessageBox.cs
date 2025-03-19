@@ -18,7 +18,7 @@ namespace Coursework.UserControls
     /// </summary>
     public partial class TFMessageBox : Form
     {
-        private static DialogResult _result;
+        private static DialogResult result;
 
         public TFMessageBox(string message, string title, TFMessageBoxButtons? buttons, string[] buttonText)
         {
@@ -70,31 +70,31 @@ namespace Coursework.UserControls
             using (TFMessageBox msg = new(message, title, buttons, buttonText))
             {
                 msg.ShowDialog();
-                return _result;
+                return result;
             }
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            _result = DialogResult.OK;
+            result = DialogResult.OK;
             this.Close();
         }
 
         private void btnNo_Click(object sender, EventArgs e)
         {
-            _result = DialogResult.No;
+            result = DialogResult.No;
             this.Close();
         }
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            _result = DialogResult.Yes;
+            result = DialogResult.Yes;
             this.Close();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            _result = DialogResult.Cancel;
+            result = DialogResult.Cancel;
             this.Close();
         }
     }

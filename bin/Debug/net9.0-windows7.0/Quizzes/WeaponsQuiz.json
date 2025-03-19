@@ -40,7 +40,7 @@
         {
             "Text": "Which ____ weapon ____?",
             "Type": 3,
-            "CorrectAnswerIndex": 1,
+            "CorrectAnswerIndex": 0,
             "Answers": [
                 "Answer"
             ],

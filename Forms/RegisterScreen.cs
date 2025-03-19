@@ -31,13 +31,13 @@ namespace Coursework
         {
             if (cbShowPassword.Checked)
             {
-                tbPassword.UseSystemPasswordChar = false;
-                tbReenter.UseSystemPasswordChar = false;
+                tbPassword.PasswordChar = '\0';
+                tbReenter.PasswordChar = '\0';
             }
             else
             {
-                tbPassword.UseSystemPasswordChar = true;
-                tbReenter.UseSystemPasswordChar = true;
+                tbPassword.PasswordChar = '●';
+                tbReenter.PasswordChar = '●';
             }
         }
 

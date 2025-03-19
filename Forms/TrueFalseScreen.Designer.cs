@@ -144,11 +144,11 @@
             lblQuestionText.AutoSize = true;
             lblQuestionText.Font = new Font("Segoe UI", 36F);
             lblQuestionText.ForeColor = Color.FromArgb(246, 231, 222);
-            lblQuestionText.Location = new Point(501, 225);
-            lblQuestionText.MaximumSize = new Size(637, 0);
-            lblQuestionText.MinimumSize = new Size(637, 0);
+            lblQuestionText.Location = new Point(50, 225);
+            lblQuestionText.MaximumSize = new Size(1500, 0);
+            lblQuestionText.MinimumSize = new Size(1500, 0);
             lblQuestionText.Name = "lblQuestionText";
-            lblQuestionText.Size = new Size(637, 65);
+            lblQuestionText.Size = new Size(1500, 65);
             lblQuestionText.TabIndex = 2;
             lblQuestionText.Text = "questionText";
             lblQuestionText.TextAlign = ContentAlignment.MiddleCenter;
@@ -235,7 +235,7 @@
             Name = "TrueFalseScreen";
             Text = "TrueFalseScreen";
             WindowState = FormWindowState.Maximized;
-            Load += MultipleChoiceScreen_Load;
+            Load += TrueFalseScreen_Load;
             pnlHeader.ResumeLayout(false);
             pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbAbility).EndInit();

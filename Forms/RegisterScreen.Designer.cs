@@ -452,11 +452,11 @@
             // 
             // pbClassSelected
             // 
-            pbClassSelected.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pbClassSelected.BackColor = Color.Transparent;
-            pbClassSelected.Location = new Point(598, 156);
+            pbClassSelected.Dock = DockStyle.Fill;
+            pbClassSelected.Location = new Point(592, 156);
             pbClassSelected.Name = "pbClassSelected";
-            pbClassSelected.Size = new Size(1002, 744);
+            pbClassSelected.Size = new Size(1008, 744);
             pbClassSelected.SizeMode = PictureBoxSizeMode.Zoom;
             pbClassSelected.TabIndex = 4;
             pbClassSelected.TabStop = false;

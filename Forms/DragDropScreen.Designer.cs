@@ -257,7 +257,7 @@
             // 
             // rpnlImageBox
             // 
-            rpnlImageBox.Anchor = AnchorStyles.Top;
+            rpnlImageBox.Anchor = AnchorStyles.None;
             rpnlImageBox.BorderColour = Color.FromArgb(45, 41, 39);
             rpnlImageBox.BorderSize = 0;
             rpnlImageBox.Controls.Add(label1);
@@ -311,7 +311,7 @@
             Name = "DragDropScreen";
             Text = "DragDropScreen";
             WindowState = FormWindowState.Maximized;
-            Load += MultipleChoiceScreen_Load;
+            Load += DragDropScreen_Load;
             pnlHeader.ResumeLayout(false);
             pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbAbility).EndInit();

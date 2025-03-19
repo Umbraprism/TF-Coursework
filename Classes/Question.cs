@@ -36,12 +36,16 @@ namespace Coursework.ParentClasses
         // Marks if the question is answered.
         public bool IsAnswered { get; set; } = false;
 
+        [JsonInclude]
+        private uint imageId = 0;
+
         [JsonConstructor] // Marks this as the constructor used by System.Json.Text
         public Question(string text, string[] answers, QuestionType type, uint imageId)
         {
             Text = text;
             Answers = answers;
             Type = type;
+            this.imageId = imageId;
         }
     }
 }

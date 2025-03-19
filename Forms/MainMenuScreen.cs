@@ -4,6 +4,7 @@ using Coursework.UserControls;
 using System.Text.Json;
 using System.Net.Sockets;
 using System.Text;
+using System.Net;
 
 namespace Coursework.Forms
 {
@@ -146,17 +147,18 @@ namespace Coursework.Forms
             {
                 try
                 {
-                    client.Connect("127.0.0.1", 5001);
+                    IPHostEntry ipHostEntry = Dns.GetHostEntry(Dns.GetHostName());
+                    IPAddress ip = ipHostEntry.AddressList[0];
+
+                    client.Connect(ip, 5001);
 
                     string json = JsonSerializer.Serialize(PlayerHelper.Player);
 
                     ServerHelper.SendPacket(client.GetStream(), Encoding.Unicode.GetBytes(json));
                 }
-                catch (SocketException)
+                catch (SocketException ex)
                 {
-                    string msg = Encoding.Unicode.GetString(ServerHelper.ReadStream(client.GetStream()));
-
-                    TFMessageBox.Show(msg, "Connection Error");
+                    TFMessageBox.Show(ex.Message, "Connection Error");
                 }
             }
         }

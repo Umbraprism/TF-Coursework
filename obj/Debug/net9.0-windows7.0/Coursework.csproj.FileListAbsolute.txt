@@ -148,3 +148,176 @@ U:\CourseworkRoot\CourseworkCode - Copy\bin\Debug\net9.0-windows7.0\Cursors\scou
 U:\CourseworkRoot\CourseworkCode - Copy\bin\Debug\net9.0-windows7.0\Cursors\sniperCursor.cur
 U:\CourseworkRoot\CourseworkCode - Copy\bin\Debug\net9.0-windows7.0\Cursors\soldierCursor.cur
 U:\CourseworkRoot\CourseworkCode - Copy\bin\Debug\net9.0-windows7.0\Cursors\spyCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\defaultCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\demoCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\engineerCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\hwgCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\medicCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\pyroCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\scoutCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\sniperCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\soldierCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\spyCursor.cur
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Coursework.exe
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Quizzes\GuessingGame.json
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Quizzes\HistoryQuiz.json
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Quizzes\TFClassQuiz.json
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Quizzes\WeaponsQuiz.json
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Coursework.deps.json
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Coursework.runtimeconfig.json
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Coursework.dll
+U:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Coursework.pdb
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Interop.MediaPlayer.dll
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Interop.WMPLib.dll
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.csproj.ResolveComReference.cache
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.AchievementsScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.AnswerIndicationScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.DragDropScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.EndScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.GapFillScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.GuessingGameScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.LeaderboardScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.LoginScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.MainMenuScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.MultipleChoiceScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.RegisterScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.ServerHostScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.SplashScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.StatsScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.TrueFalseScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Properties.Resources.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.UserControls.AchievementView.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.UserControls.Guess.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PercentageProgressBar.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PlayerView.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.UserControls.TFMessageBox.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.csproj.GenerateResource.cache
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.GeneratedMSBuildEditorConfig.editorconfig
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.AssemblyInfoInputs.cache
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.AssemblyInfo.cs
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.csproj.CoreCompileInputs.cache
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.sourcelink.json
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.dll
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\refint\Coursework.dll
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.pdb
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.genruntimeconfig.cache
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\ref\Coursework.dll
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\defaultCursor.cur
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\demoCursor.cur
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\engineerCursor.cur
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\hwgCursor.cur
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\medicCursor.cur
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\pyroCursor.cur
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\scoutCursor.cur
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\sniperCursor.cur
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\soldierCursor.cur
+E:\CourseworkRoot\CourseworkCode\bin\Debug\net9.0-windows7.0\Cursors\spyCursor.cur
+E:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.GapFillScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\defaultCursor.cur
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\demoCursor.cur
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\engineerCursor.cur
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\hwgCursor.cur
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\medicCursor.cur
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\pyroCursor.cur
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\scoutCursor.cur
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\sniperCursor.cur
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\soldierCursor.cur
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\spyCursor.cur
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Coursework.exe
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Quizzes\GuessingGame.json
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Quizzes\HistoryQuiz.json
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Quizzes\TFClassQuiz.json
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Quizzes\WeaponsQuiz.json
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Coursework.deps.json
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Coursework.runtimeconfig.json
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Coursework.dll
+E:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Coursework.pdb
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Interop.MediaPlayer.dll
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Interop.WMPLib.dll
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.csproj.ResolveComReference.cache
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.AchievementsScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.AnswerIndicationScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.DragDropScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.EndScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.GapFillScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.GuessingGameScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.LeaderboardScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.LoginScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.MainMenuScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.MultipleChoiceScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.RegisterScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.ServerHostScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.SplashScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.StatsScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.TrueFalseScreen.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Properties.Resources.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.AchievementView.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.Guess.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PercentageProgressBar.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PlayerView.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.TFMessageBox.resources
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.csproj.GenerateResource.cache
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.GeneratedMSBuildEditorConfig.editorconfig
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.AssemblyInfoInputs.cache
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.AssemblyInfo.cs
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.csproj.CoreCompileInputs.cache
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.sourcelink.json
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.dll
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\refint\Coursework.dll
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.pdb
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.genruntimeconfig.cache
+E:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\ref\Coursework.dll
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\defaultCursor.cur
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\demoCursor.cur
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\engineerCursor.cur
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\hwgCursor.cur
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\medicCursor.cur
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\pyroCursor.cur
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\scoutCursor.cur
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\sniperCursor.cur
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\soldierCursor.cur
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Cursors\spyCursor.cur
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Coursework.exe
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Quizzes\GuessingGame.json
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Quizzes\HistoryQuiz.json
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Quizzes\TFClassQuiz.json
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Quizzes\WeaponsQuiz.json
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Coursework.deps.json
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Coursework.runtimeconfig.json
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Coursework.dll
+U:\CourseworkRoot\CourseworkCode - Copy (2)\bin\Debug\net9.0-windows7.0\Coursework.pdb
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Interop.MediaPlayer.dll
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Interop.WMPLib.dll
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.csproj.ResolveComReference.cache
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.AchievementsScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.AnswerIndicationScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.DragDropScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.EndScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.GapFillScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.GuessingGameScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.LeaderboardScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.LoginScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.MainMenuScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.MultipleChoiceScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.RegisterScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.ServerHostScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.SplashScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.StatsScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.TrueFalseScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Properties.Resources.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.AchievementView.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.Guess.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PercentageProgressBar.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PlayerView.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.TFMessageBox.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.csproj.GenerateResource.cache
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.GeneratedMSBuildEditorConfig.editorconfig
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.AssemblyInfoInputs.cache
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.AssemblyInfo.cs
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.csproj.CoreCompileInputs.cache
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.sourcelink.json
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.dll
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\refint\Coursework.dll
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.pdb
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.genruntimeconfig.cache
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\ref\Coursework.dll

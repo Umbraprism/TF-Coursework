@@ -57,21 +57,9 @@ namespace Coursework.ParentClasses
             TimeRemaining = timeRemaining;
             TotalTime = timeRemaining;
 
-            // Selects n random questions from the json.
-            for (int i = 0; i < baseQuestions.Count ; i++)
-            {
-                int rndQuestionIndex = rnd.Next(i, baseQuestions.Count);
-
-                BaseQuestions.Add(baseQuestions[rndQuestionIndex]);
-                //EasyQuestions.Add(easyQuestions[rndQuestionIndex]);
-
-                baseQuestions.RemoveAt(rndQuestionIndex);
-                //easyQuestions.RemoveAt(rndQuestionIndex);
-            }
-
-            // Shuffles thee questions using an extension method.
-            BaseQuestions.Shuffle();
-            EasyQuestions.Shuffle();
+            // Shuffles the questions using an extension method.
+            BaseQuestions = baseQuestions.Shuffle();
+            EasyQuestions = easyQuestions.Shuffle();
 
             // Sets the current difficulty.
             CurrentDifficulty = BaseQuestions;

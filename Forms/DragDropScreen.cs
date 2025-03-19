@@ -16,7 +16,7 @@ namespace Coursework.Forms
             score = FormHelper.Quiz.Score;
         }
 
-        private void MultipleChoiceScreen_Load(object sender, EventArgs e)
+        private void DragDropScreen_Load(object sender, EventArgs e)
         {
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);

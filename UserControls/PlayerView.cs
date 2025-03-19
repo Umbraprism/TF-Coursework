@@ -21,6 +21,8 @@ namespace Coursework.UserControls
             pbAvatar.Image = TFClass.Assets[player.TFClass.Id].Avatar;
             lblUsername.Text = player.Username;
             lblRank.Text = player.OnlineRank;
+
+            lblRank.ForeColor = FormHelper.ColourPalette[lblRank.Text];
         }
     }
 }

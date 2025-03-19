@@ -7,8 +7,6 @@ namespace Coursework.Forms
 {
     public partial class AchievementsScreen : Form
     {
-        private int achieved = 0;
-
         public AchievementsScreen()
         {
             InitializeComponent();

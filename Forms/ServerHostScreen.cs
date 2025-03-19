@@ -12,7 +12,7 @@ namespace Coursework.Forms
     public partial class ServerHostScreen : Form
     {
         private Client? client;
-        private TcpListener listener = new(IPAddress.Loopback, 5001);
+        private TcpListener listener = new(IPAddress.Any, 5001);
 
         public ServerHostScreen()
         {
@@ -24,8 +24,10 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            PlayerView myPlayer = new PlayerView(PlayerHelper.Player);
-            myPlayer.Anchor = AnchorStyles.None;
+            PlayerView myPlayer = new(PlayerHelper.Player)
+            {
+                Anchor = AnchorStyles.None
+            };
 
             tlpPlayers.Controls.Add(myPlayer);
 

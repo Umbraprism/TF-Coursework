@@ -144,47 +144,44 @@ namespace Coursework.Helpers
             switch (id)
             {
                 case 1:
-                    TFCursor = new Cursor(@"Cursors\scoutCursor.cur");
+                    TFCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "scoutCursor.cur")));
                     break;
 
                 case 2:
-                    TFCursor = new Cursor(@"Cursors/soldierCursor.cur");
+                    TFCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "soldierCursor.cur")));
                     break;
 
                 case 3:
-                    TFCursor = new Cursor(@"Cursors/pyroCursor.cur");
+                    TFCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "pyroCursor.cur")));
                     break;
 
                 case 4:
-                    TFCursor = new Cursor(@"Cursors/demoCursor.cur");
+                    TFCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "demoCursor.cur")));
                     break;
 
                 case 5:
-                    TFCursor = new Cursor(@"Cursors/hwgCursor.cur");
+                    TFCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "hwgCursor.cur")));
                     break;
 
                 case 6:
-                    TFCursor = new Cursor(@"Cursors/engineerCursor.cur");
+                    TFCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "engineerCursor.cur")));
                     break;
 
                 case 7:
-                    TFCursor = new Cursor(@"Cursors/medicCursor.cur");
+                    TFCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "medicCursor.cur")));
                     break;
 
                 case 8:
-                    TFCursor = new Cursor(@"Cursors/sniperCursor.cur");
+                    TFCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "sniperCursor.cur")));
                     break;
 
                 case 9:
-                    TFCursor = new Cursor(@"Cursors/spyCursor.cur");
-                    break;
-
-                case 0:
-                    TFCursor = DefaultCursor;
+                    TFCursor = new Cursor(LoadCursorFromFile(Path.Combine(cursorPath, "spyCursor.cur")));
                     break;
 
                 default:
-                    throw new CursorNotFoundException();
+                    TFCursor = DefaultCursor;
+                    break;
             }
 
             foreach (Control control in form.Controls)

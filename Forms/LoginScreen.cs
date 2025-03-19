@@ -72,11 +72,11 @@ namespace Coursework.Forms
         {
             if (cbShowPassword.Checked)
             {
-                tbPassword.UseSystemPasswordChar = false;
+                tbPassword.PasswordChar = '\0';
             }
             else
             {
-                tbPassword.UseSystemPasswordChar = true;
+                tbPassword.PasswordChar = '●';
             }
         }
 

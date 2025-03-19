@@ -123,7 +123,7 @@
             // 
             lblGradeTitle.BackColor = Color.FromArgb(189, 59, 59);
             lblGradeTitle.Dock = DockStyle.Top;
-            lblGradeTitle.Font = new Font("Segoe UI", 36F);
+            lblGradeTitle.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblGradeTitle.ForeColor = Color.White;
             lblGradeTitle.Location = new Point(0, 0);
             lblGradeTitle.Name = "lblGradeTitle";
@@ -136,7 +136,7 @@
             // 
             lblGrade.BackColor = Color.FromArgb(189, 59, 59);
             lblGrade.Dock = DockStyle.Bottom;
-            lblGrade.Font = new Font("Segoe UI", 72F);
+            lblGrade.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblGrade.ForeColor = Color.White;
             lblGrade.Location = new Point(0, 55);
             lblGrade.Name = "lblGrade";

@@ -17,7 +17,7 @@ namespace Coursework.Forms
             score = FormHelper.Quiz.Score;
         }
 
-        private void MultipleChoiceScreen_Load(object sender, EventArgs e)
+        private void GapFillScreen_Load(object sender, EventArgs e)
         {
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
@@ -36,7 +36,7 @@ namespace Coursework.Forms
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (tbAnswer.Text.Trim().ToLower() == question.Answers[0])
+                if (tbAnswer.Text.Trim().ToLower() == question.Answers[0].ToLower())
                 {
                     double scoreAddition = FormHelper.Quiz.ScoreMultiplier != 0 ? 20 * FormHelper.Quiz.ScoreMultiplier : 20;
 

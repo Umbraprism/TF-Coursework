@@ -1,6 +1,7 @@
 ﻿using Coursework.Helpers;
 using Coursework.ParentClasses;
 using Coursework.UserControls;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Coursework.Forms
 {
@@ -19,6 +20,8 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
+            Question previousQuestion = FormHelper.Quiz.BaseQuestions[FormHelper.Quiz.CurrentQuestionIndex];
+
             lblIndicator.Width = this.Width / 2;
             lblIndicator.Height = this.Height / 2;
 
@@ -36,6 +39,8 @@ namespace Coursework.Forms
                 lblIndicator.Text = "INCORRECT!";
                 lblScore.Text = $"+{score} Points";
                 lblScore.ForeColor = FormHelper.ColourPalette["Red"];
+
+                lblCorrectAnswer.Text = $"Correct Answer - {previousQuestion.Answers[previousQuestion.CorrectAnswerIndex]}";
             }
 
             FormHelper.Quiz.Score += score;
@@ -45,18 +50,22 @@ namespace Coursework.Forms
             try
             {
                 FormHelper.Quiz.CurrentQuestionIndex++;
-                Question question = FormHelper.Quiz.BaseQuestions[FormHelper.Quiz.CurrentQuestionIndex];
 
-                switch (question.Type)
+                Question nextQuestion = FormHelper.Quiz.BaseQuestions[FormHelper.Quiz.CurrentQuestionIndex];
+
+                switch (nextQuestion.Type)
                 {
                     case QuestionType.MultipleChoice:
-                        new MultipleChoiceScreen(ref question).Show();
+                        new MultipleChoiceScreen(ref nextQuestion).Show();
                         break;
                     case QuestionType.TrueFalse:
-                        new TrueFalseScreen(ref question).Show();
+                        new TrueFalseScreen(ref nextQuestion).Show();
                         break;
                     case QuestionType.DragDrop:
-                        new DragDropScreen(ref question).Show();
+                        new DragDropScreen(ref nextQuestion).Show();
+                        break;
+                    case QuestionType.GapFill:
+                        new GapFillScreen(ref nextQuestion).Show();
                         break;
                     default:
                         throw new FormatException("Question is not of a valid type.");

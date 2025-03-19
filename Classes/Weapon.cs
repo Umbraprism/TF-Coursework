@@ -12,7 +12,7 @@ namespace Coursework.ParentClasses
         public Bitmap? Image { get; set; }
 
         [JsonConstructor]
-        public Weapon(string name, string slot, uint usedBy, string update, uint imageId)
+        public Weapon(string name, string slot, uint usedBy, string update)
         {
             Name = name;
             Slot = slot;
