@@ -5,7 +5,7 @@ using Coursework.UserControls;
 
 namespace Coursework.Forms
 {
-    public partial class EndScreen : Form
+    public partial class EndScreen : Form, IComparable<Player>
     {
         private int noCorrect = 0;
         private int noIncorrect = 0;
@@ -52,11 +52,17 @@ namespace Coursework.Forms
         {
             get
             {
-                List<Player> players = PlayerHelper.PlayerList;
+                List<int> scores = new();
 
-                players.OrderBy(player => player.ScoresHashmap[FormHelper.Quiz.QuizType].LatestScore);
+                foreach (Player player in PlayerHelper.PlayerList)
+                {
+                    scores.Add(player.ScoresHashmap[FormHelper.Quiz.QuizType].LatestScore);
+                }
 
-                return players.IndexOf(PlayerHelper.Player) + 1;
+                scores.Sort();
+                scores.Reverse();
+
+                return scores.IndexOf(PlayerHelper.Player.ScoresHashmap[FormHelper.Quiz.QuizType].LatestScore) + 1;
             }
         }
 
@@ -135,7 +141,7 @@ namespace Coursework.Forms
             {
                 UnlockAchievement("Time Machine");
             }
-            if (PlayerHelper.Player.TFClass.TFClassAbility.TimesUsed == 0)
+            if (PlayerHelper.Player.TFClass.Ability.TimesUsed == 0)
             {
                 UnlockAchievement("Specialist");
             }
@@ -154,6 +160,25 @@ namespace Coursework.Forms
                 PlayerHelper.Player.Achievements.Where(achievement => achievement.Name == name).First().IsAchieved = true;
 
                 flpAchievementsUnlocked.Controls.Add(new AchievementView(achievement));
+            }
+        }
+
+        public int CompareTo(Player? other)
+        {
+            try
+            {
+                if (other != null)
+                {
+                    Player player = (Player)other;
+
+                    return PlayerHelper.Player.ScoresHashmap[FormHelper.Quiz.QuizType].LatestScore.CompareTo(player.ScoresHashmap[FormHelper.Quiz.QuizType].LatestScore);
+                }
+
+                return 0;
+            }
+            catch (FormatException)
+            {
+                throw;
             }
         }
     }

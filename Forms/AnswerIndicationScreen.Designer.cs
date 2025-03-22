@@ -71,6 +71,7 @@
             lblCorrectAnswer.TabIndex = 2;
             lblCorrectAnswer.Text = "Correct Answer - ";
             lblCorrectAnswer.TextAlign = ContentAlignment.TopCenter;
+            lblCorrectAnswer.Visible = false;
             // 
             // AnswerIndicationScreen
             // 

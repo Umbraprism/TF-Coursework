@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\CourseworkRoot\\CourseworkCode - Copy (2)\\Coursework.csproj",
+      "projectUniqueName": "U:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj",
       "projectName": "Coursework",
-      "projectPath": "U:\\CourseworkRoot\\CourseworkCode - Copy (2)\\Coursework.csproj",
+      "projectPath": "U:\\CourseworkRoot\\CourseworkCode\\Coursework.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "U:\\CourseworkRoot\\CourseworkCode - Copy (2)\\obj\\",
+      "outputPath": "U:\\CourseworkRoot\\CourseworkCode\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

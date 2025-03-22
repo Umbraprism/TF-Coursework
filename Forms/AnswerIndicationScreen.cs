@@ -28,6 +28,11 @@ namespace Coursework.Forms
             lblScore.Width = this.Width / 2;
             lblScore.Height = this.Height / 2;
 
+            if (PlayerHelper.Player.TFClass.Ability.ChargeLevel < PlayerHelper.Player.TFClass.Ability.ChargesRequired)
+            {
+                PlayerHelper.Player.TFClass.Ability.ChargeLevel++;
+            }
+
             if (score > 0)
             {
                 lblIndicator.Text = "CORRECT!";
@@ -40,6 +45,7 @@ namespace Coursework.Forms
                 lblScore.Text = $"+{score} Points";
                 lblScore.ForeColor = FormHelper.ColourPalette["Red"];
 
+                lblCorrectAnswer.Visible = true;
                 lblCorrectAnswer.Text = $"Correct Answer - {previousQuestion.Answers[previousQuestion.CorrectAnswerIndex]}";
             }
 

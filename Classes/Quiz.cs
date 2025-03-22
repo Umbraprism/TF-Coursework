@@ -1,6 +1,4 @@
 ﻿using Coursework.Extensions;
-using Coursework.Forms;
-using Coursework.Helpers;
 using System.Text.Json.Serialization;
 
 namespace Coursework.ParentClasses
@@ -10,6 +8,7 @@ namespace Coursework.ParentClasses
     /// </summary>
     public class Quiz
     {
+        #region Field declarations
         // Name of the quiz - e.g. Weapons Quiz.
         public string Name { get; set; } = String.Empty;
 
@@ -45,7 +44,9 @@ namespace Coursework.ParentClasses
 
         // Used for RNG for shuffling questions.
         private Random rnd = new();
+        #endregion
 
+        #region Constructor
         // Constructor overload to hold an unassigned quiz.
         public Quiz() { CurrentDifficulty = BaseQuestions; }
 
@@ -64,5 +65,6 @@ namespace Coursework.ParentClasses
             // Sets the current difficulty.
             CurrentDifficulty = BaseQuestions;
         }
+        #endregion
     }
 }

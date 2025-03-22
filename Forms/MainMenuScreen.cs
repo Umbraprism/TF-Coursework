@@ -23,7 +23,7 @@ namespace Coursework.Forms
             UIHelper.ApplyFonts(this);
             UIHelper.ApplyCursor(this, CursorStyle.TFClass);
 
-            PlayerHelper.Player.TFClass.TFClassAbility.Reset();
+            PlayerHelper.Player.TFClass.Ability.Reset();
 
             pbPfp.Image = TFClass.Assets[PlayerHelper.Player.TFClass.Id].Avatar;
             lblUsername.Text = PlayerHelper.Player.Username;
@@ -134,7 +134,8 @@ namespace Coursework.Forms
 
         private void btnHostOrJoin_Click(object sender, EventArgs e)
         {
-            TcpClient client = new();
+            IPHostEntry ipHostEntry = Dns.GetHostEntry(Dns.GetHostName());
+            IPAddress ip = ipHostEntry.AddressList[0];
 
             DialogResult hostOrJoinQuery = TFMessageBox.Show("Would you like to host a match for others to join or join an already existing match?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Host", "Join" });
 
@@ -147,10 +148,7 @@ namespace Coursework.Forms
             {
                 try
                 {
-                    IPHostEntry ipHostEntry = Dns.GetHostEntry(Dns.GetHostName());
-                    IPAddress ip = ipHostEntry.AddressList[0];
-
-                    client.Connect(ip, 5001);
+                    TcpClient client = new(ip.ToString(), 5001);
 
                     string json = JsonSerializer.Serialize(PlayerHelper.Player);
 

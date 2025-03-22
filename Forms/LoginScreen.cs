@@ -2,6 +2,7 @@
 using System.Text.Json;
 using Coursework.ParentClasses;
 using Coursework.Helpers;
+using Coursework.UserControls;
 
 namespace Coursework.Forms
 {
@@ -54,36 +55,31 @@ namespace Coursework.Forms
                 }
                 else
                 {
-                    lblPasswordIncorrect.Visible = true;
+                    ErrorMessage(lblPasswordIncorrect.Text);
 
                     tbPassword.Clear();
-
-                    btnLogin.Click -= btnLogin_Click;
-
-                    await Task.Delay(1000);
-
-                    lblPasswordIncorrect.Visible = false;
-                    btnLogin.Click += btnLogin_Click;
                 }
             }
         }
 
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbShowPassword.Checked)
-            {
-                tbPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                tbPassword.PasswordChar = '●';
-            }
+            tbPassword.UseSystemPasswordChar = !cbShowPassword.Checked;
         }
 
         private void LoginScreen_Activated(object sender, EventArgs e)
         {
             uint tfRandomClass = (uint)rnd.Next(1, 9);
             pbClassImage.Image = TFClass.Assets[tfRandomClass].Portrait;
+        }
+
+        private void ErrorMessage(string text)
+        {
+            btnLogin.Click -= btnLogin_Click;
+
+            TFMessageBox.Show(text, "Error");
+
+            btnLogin.Click += btnLogin_Click;
         }
     }
 }

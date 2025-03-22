@@ -11,15 +11,25 @@ namespace Coursework
 {
     public partial class RegisterScreen : Form
     {
+        #region Field declarations
+
         private Player? player;
         private List<Player>? playerList = new();
         private uint classId = 0;
+
+        #endregion
+
+        #region Constructor
 
         public RegisterScreen()
         {
             InitializeComponent();
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void RegisterScreen_Load(object sender, EventArgs e)
         {
@@ -29,16 +39,7 @@ namespace Coursework
 
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbShowPassword.Checked)
-            {
-                tbPassword.PasswordChar = '\0';
-                tbReenter.PasswordChar = '\0';
-            }
-            else
-            {
-                tbPassword.PasswordChar = '●';
-                tbReenter.PasswordChar = '●';
-            }
+            tbPassword.UseSystemPasswordChar = tbReenter.UseSystemPasswordChar = !cbShowPassword.Checked;
         }
 
         private async void btnRegister_Click(object? sender, EventArgs e)
@@ -162,6 +163,10 @@ namespace Coursework
             Hide();
         }
 
+        #endregion
+
+        #region Methods
+
         private void ErrorMessage(string text)
         {
             btnRegister.Click -= btnRegister_Click;
@@ -170,5 +175,7 @@ namespace Coursework
 
             btnRegister.Click += btnRegister_Click;
         }
+
+        #endregion
     }
 }

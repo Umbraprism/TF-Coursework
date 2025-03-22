@@ -58,7 +58,7 @@ namespace Coursework.Forms
 
             lvLeaderboard.Columns[1].Width += lvLeaderboard.Width - (lvLeaderboard.Columns[0].Width + lvLeaderboard.Columns[1].Width + lvLeaderboard.Columns[2].Width + lvLeaderboard.Columns[3].Width);
 
-            lvLeaderboard.ListViewItemSorter = new ListViewSorter(2, SortOrder.Descending);
+            lvLeaderboard.ListViewItemSorter = new ListViewItemSorter(2, SortOrder.Descending);
 
             for (int i = 0; i < lvLeaderboard.Items.Count; i++)
             {
@@ -94,13 +94,13 @@ namespace Coursework.Forms
         }
     }
 
-    public class ListViewSorter : IComparer
+    public class ListViewItemSorter : IComparer
     {
         public int columnToSort = 0;
         public SortOrder sortOrder = SortOrder.None;
         private CaseInsensitiveComparer ciComparer = new();
 
-        public ListViewSorter(int columnToSort, SortOrder sortOrder)
+        public ListViewItemSorter(int columnToSort, SortOrder sortOrder)
         {
             this.columnToSort = columnToSort;
             this.sortOrder = sortOrder;
@@ -115,9 +115,16 @@ namespace Coursework.Forms
                 ListViewItem? lviX = (ListViewItem?)x;
                 ListViewItem? lviY = (ListViewItem?)y;
 
-                if (lviX != null && lviY != null)
+                try
                 {
-                    comparison = ciComparer.Compare(Int32.Parse(lviX.SubItems[columnToSort].Text), Int32.Parse(lviY.SubItems[columnToSort].Text));
+                    if (lviX != null && lviY != null)
+                    {
+                        comparison = ciComparer.Compare(lviX.SubItems[columnToSort].Text, lviY.SubItems[columnToSort].Text);
+                    }
+                }
+                catch (FormatException)
+                {
+                    throw;
                 }
 
                 switch (sortOrder)

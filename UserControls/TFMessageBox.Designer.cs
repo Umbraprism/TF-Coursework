@@ -58,7 +58,7 @@
             btnClose.Dock = DockStyle.Right;
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClose.Font = new Font("Segoe UI", 36F);
             btnClose.ForeColor = Color.FromArgb(246, 231, 222);
             btnClose.Location = new Point(459, 0);
             btnClose.Name = "btnClose";
@@ -72,7 +72,7 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitle.Font = new Font("Segoe UI", 21.75F);
             lblTitle.ForeColor = Color.FromArgb(246, 231, 222);
             lblTitle.Location = new Point(12, 31);
             lblTitle.Name = "lblTitle";
@@ -83,7 +83,7 @@
             // lblMessage
             // 
             lblMessage.AutoSize = true;
-            lblMessage.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMessage.Font = new Font("Segoe UI", 14.25F);
             lblMessage.ForeColor = Color.FromArgb(246, 231, 222);
             lblMessage.Location = new Point(12, 110);
             lblMessage.MaximumSize = new Size(530, 0);
@@ -114,7 +114,7 @@
             btnNo.BackColor = Color.FromArgb(189, 59, 59);
             btnNo.FlatAppearance.BorderSize = 0;
             btnNo.FlatStyle = FlatStyle.Flat;
-            btnNo.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNo.Font = new Font("Segoe UI", 36F);
             btnNo.ForeColor = Color.FromArgb(246, 231, 222);
             btnNo.Location = new Point(288, 3);
             btnNo.Name = "btnNo";
@@ -131,7 +131,7 @@
             btnYes.BackColor = Color.FromArgb(189, 59, 59);
             btnYes.FlatAppearance.BorderSize = 0;
             btnYes.FlatStyle = FlatStyle.Flat;
-            btnYes.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnYes.Font = new Font("Segoe UI", 36F);
             btnYes.ForeColor = Color.FromArgb(246, 231, 222);
             btnYes.Location = new Point(24, 3);
             btnYes.Name = "btnYes";
@@ -148,7 +148,7 @@
             btnOk.BackColor = Color.FromArgb(189, 59, 59);
             btnOk.FlatAppearance.BorderSize = 0;
             btnOk.FlatStyle = FlatStyle.Flat;
-            btnOk.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnOk.Font = new Font("Segoe UI", 36F);
             btnOk.ForeColor = Color.FromArgb(246, 231, 222);
             btnOk.Location = new Point(300, 303);
             btnOk.Name = "btnOk";
@@ -169,6 +169,7 @@
             Controls.Add(btnOk);
             Controls.Add(lblMessage);
             Controls.Add(pnlHeader);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TFMessageBox";

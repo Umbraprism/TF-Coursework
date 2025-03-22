@@ -67,8 +67,18 @@ namespace Coursework.UserControls
 
         public static DialogResult Show(string message, string title, TFMessageBoxButtons buttons = TFMessageBoxButtons.OK, params string[] buttonText)
         {
+            using (Form backDrop = new()
+            {
+                FormBorderStyle = FormBorderStyle.None,
+                WindowState = FormWindowState.Maximized,
+                BackColor = Color.Black,
+                Opacity = 0.4,
+                ShowInTaskbar = false,
+                Enabled = false
+            })
             using (TFMessageBox msg = new(message, title, buttons, buttonText))
             {
+                backDrop.Show();
                 msg.ShowDialog();
                 return result;
             }

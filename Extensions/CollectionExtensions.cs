@@ -2,6 +2,7 @@
 {
     public static class CollectionExtensions
     {
+        #region Methods
         public static List<T> Shuffle<T>(this List<T> toShuffle)
         {
             Random rnd = new();
@@ -33,5 +34,6 @@
 
             return toShuffle.ToArray();
         }
+        #endregion
     }
 }

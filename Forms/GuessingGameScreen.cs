@@ -13,7 +13,10 @@ namespace Coursework.Forms
         private List<Weapon> weaponsList = JsonSerializer.Deserialize<List<Weapon>>(File.ReadAllText("Quizzes/GuessingGame.json"));
 
         private bool isEndless;
+
         private Weapon? weapon;
+        private Bitmap? silhouette;
+
         private int guessCount = 0;
         private int streak = 0;
 
@@ -74,9 +77,9 @@ namespace Coursework.Forms
 
             if (weapon != null && weapon.Image != null)
             {
-                Bitmap silhouette = (Bitmap)weapon.Image.Clone();
+                silhouette = (Bitmap)weapon.Image.Silhoutte(Color.Black);
 
-                pbImage.Image = silhouette.Silhoutte(Color.Black);
+                pbImage.Image = silhouette;
             }
         }
 
@@ -115,7 +118,9 @@ namespace Coursework.Forms
                 {
                     TFMessageBox.Show($"Congratulations! You have guessed the weapon correctly in {guessCount} guesses.", "Congratulations!");
 
-                    weapon = weaponsList[rnd.Next(0, weaponsList.Count)];
+                    int rndIndex = rnd.Next(0, weaponsList.Count);
+
+                    weapon = weaponsList[rndIndex];
 
                     streak++;
 
@@ -169,9 +174,9 @@ namespace Coursework.Forms
 
             if (weapon.Image != null)
             {
-                Bitmap silhouette = (Bitmap)weapon.Image.Clone();
+                silhouette = weapon.Image.Silhoutte(Color.Black);
 
-                pbImage.Image = silhouette.Silhoutte(Color.Black);
+                pbImage.Image = silhouette;
             }
         }
 

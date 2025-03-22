@@ -18,6 +18,7 @@ namespace Coursework.ParentClasses
     /// </summary>
     public class Question
     {
+        #region Field declarations
         // Text of the question.
         public string Text { get; set; }
 
@@ -38,7 +39,9 @@ namespace Coursework.ParentClasses
 
         [JsonInclude]
         private uint imageId = 0;
+        #endregion
 
+        #region Constructor
         [JsonConstructor] // Marks this as the constructor used by System.Json.Text
         public Question(string text, string[] answers, QuestionType type, uint imageId)
         {
@@ -47,5 +50,6 @@ namespace Coursework.ParentClasses
             Type = type;
             this.imageId = imageId;
         }
+        #endregion
     }
 }

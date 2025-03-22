@@ -24,9 +24,15 @@ namespace Coursework.Forms
 
             lblQuizName.Text = $"{FormHelper.Quiz.Name.ToUpper()} QUIZ";
             lblQuestionText.Text = question.Text;
+
             lblScore.Text = score.ToString();
             lblTimeRemaining.Text = TimeSpan.FromSeconds(FormHelper.Quiz.TimeRemaining).ToString(@"m\:ss");
+
             tmrQuiz.Start();
+
+            lblQuestionNumber.Text = $"{FormHelper.Quiz.CurrentQuestionIndex + 1}/{FormHelper.Quiz.BaseQuestions.Count}";
+
+            ppbCharge.Value = (PlayerHelper.Player.TFClass.Ability.ChargeLevel * 100) / PlayerHelper.Player.TFClass.Ability.ChargesRequired;
 
             int i = 0;
 
@@ -47,7 +53,7 @@ namespace Coursework.Forms
 
         private void pbAbility_Click(object sender, EventArgs e)
         {
-            PlayerHelper.Player.TFClass.TFClassAbility.UseAbility(this, ref FormHelper.Quiz, ref question);
+            PlayerHelper.Player.TFClass.Ability.UseAbility(this, ref FormHelper.Quiz, ref question);
 
             if (question.IsCorrect)
             {

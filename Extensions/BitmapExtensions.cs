@@ -2,9 +2,10 @@
 {
     public static class BitmapExtensions
     {
+        #region Methods
         public static Bitmap Silhoutte(this Bitmap image, Color silhoutteColour)
         {
-            Bitmap result = image;
+            Bitmap result = (Bitmap)image.Clone();
 
             // Iterates through each pixel
             for (int x = 0; x < result.Width; x++)
@@ -24,5 +25,6 @@
 
             return result;
         }
+        #endregion
     }
 }

@@ -1,7 +1,5 @@
 ﻿using System.Media;
-using System.Runtime.CompilerServices;
 using System.Text.Json.Serialization;
-using Coursework.Forms;
 using Coursework.Helpers;
 using WMPLib;
 
@@ -13,11 +11,17 @@ namespace Coursework.ParentClasses
     [Serializable] // Allows serialization to binary file so it is not easily edited by the end-user. UNNEEDED?
     public class Ability
     {
+        #region Field declarations
+
         public string Name { get; private set; }
         public string Info { get; private set; }
         public int ChargesRequired { get; set; }
         public int ChargeLevel { get; set; }
         public int TimesUsed { get; set; }
+
+        #endregion
+
+        #region Constructor
 
         [JsonConstructor] // Marks this as the constructor used by System.Json.Text
         public Ability(string name, string info, int chargesRequired)
@@ -28,6 +32,9 @@ namespace Coursework.ParentClasses
             ChargeLevel = this.ChargesRequired;
         }
 
+        #endregion
+
+        #region Methods
         /// <summary>
         /// Passes the quiz and question by reference, and enacts an ability dependent on the user's TFClass on the current question.
         /// </summary>
@@ -144,5 +151,7 @@ namespace Coursework.ParentClasses
                 sp.Play();
             }
         }
+
+        #endregion
     }
 }

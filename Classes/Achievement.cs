@@ -8,6 +8,8 @@ namespace Coursework.ParentClasses
     /// </summary>
     public class Achievement
     {
+        #region Field declarations
+
         // Holds the name of the achievement.
         public string Name { get; set; }
 
@@ -20,6 +22,10 @@ namespace Coursework.ParentClasses
         // Marks if the user has achieved the achievement by meeting its conditions.
         public bool IsAchieved { get; set; }
 
+        #endregion
+
+        #region Constructor
+
         [JsonConstructor] // Marks this as the constructor used by System.Json.Text
         public Achievement(string name, string description, bool isAchieved)
         {
@@ -27,5 +33,7 @@ namespace Coursework.ParentClasses
             Description = description;
             IsAchieved = isAchieved;
         }
+
+        #endregion
     }
 }

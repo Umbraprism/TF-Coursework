@@ -1,5 +1,4 @@
-﻿using System.Text.Json;
-using Coursework.Exceptions;
+﻿using Coursework.Exceptions;
 using System.Text.Json.Serialization;
 
 namespace Coursework.ParentClasses
@@ -19,8 +18,10 @@ namespace Coursework.ParentClasses
     /// Holds information on a Player within the quiz.
     /// </summary>
     [Serializable] // Allows serialization to binary file so it is not easily edited by the end-user.
-    public class Player
+    public class Player : IComparable
     {
+        #region Field declarations
+
         // Holds a primary key, which is the user's ID.
         public uint Id { get; set; }
 
@@ -104,6 +105,10 @@ namespace Coursework.ParentClasses
             { QuizScores.GuessingGame, new(0, 0, "Junk", 0, 0, 0, 0) }
         };
 
+        #endregion
+
+        #region Constructor
+
         [JsonConstructor] // Marks this as the constructor used by System.Json.Text
         public Player(string username, string password, TFClass tfClass, uint id, Dictionary<QuizScores, Scores>? scoresHashmap, List<Achievement> achievements)
         {
@@ -124,6 +129,10 @@ namespace Coursework.ParentClasses
                 ScoresHashmap = scoresHashmap;
             }
         }
+
+        #endregion
+
+        #region Methods
 
         /// <summary>
         /// Gets the highest score out of every quiz.
@@ -212,10 +221,13 @@ namespace Coursework.ParentClasses
                 throw;
             }
         }
+
+        #endregion
     }
 
     public class Scores
     {
+        #region Field Declarations
         public int LatestScore { get; set; } = 0;
         public int HighestScore { get; set; } = 0;
         public string Rank { get; set; } = "Junk";
@@ -224,7 +236,9 @@ namespace Coursework.ParentClasses
         public int LowestGuessAmount { get; set; } = 0;
         public int CurrentStreak { get; set; } = 0;
         public int HighestStreak { get; set; } = 0;
+        #endregion
 
+        #region Constructor
         public Scores(int latestScore, int highestScore, string rank, int latestGuessAmount, int lowestGuessAmount, int currentStreak, int highestStreak)
         {
             LatestScore = latestScore;
@@ -236,5 +250,6 @@ namespace Coursework.ParentClasses
             CurrentStreak = currentStreak;
             HighestStreak = highestStreak;
         }
+        #endregion
     }
 }

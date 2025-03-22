@@ -7,6 +7,7 @@ namespace Coursework.ParentClasses
     /// </summary>
     public class Client
     {
+        #region Field declarations
         // Holds the TcpClient used to connect to the peer to peer host.
         public TcpClient TCP { get; set; }
 
@@ -16,11 +17,17 @@ namespace Coursework.ParentClasses
         // Holds the client's current screen for tracking.
         public string CurrentForm { get; set; }
 
+        #endregion
+
+        #region Constructor
+
         public Client(TcpClient tcp, Player player, string currentForm)
         {
             TCP = tcp;
             Player = player;
             CurrentForm = currentForm;
         }
+
+        #endregion
     }
 }

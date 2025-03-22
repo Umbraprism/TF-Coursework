@@ -44,13 +44,13 @@ namespace Coursework.Forms
             }
         }
 
-        private void WaitForPlayers()
+        private async void WaitForPlayers()
         {
             if (ServerHelper.Server != null)
             {
                 while (true)
                 {
-                    TcpClient client = listener.AcceptTcpClient();
+                    TcpClient client = await listener.AcceptTcpClientAsync();
                     Debug.WriteLine("Connected!");
 
                     Thread clientThread = new(() => AddClients(client.GetStream(), client));

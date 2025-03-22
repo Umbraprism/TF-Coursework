@@ -48,6 +48,8 @@
             rpnlImageBox = new UserControls.RoundedPanel();
             label1 = new Label();
             pbImage = new PictureBox();
+            ppbCharge = new UserControls.PercentageProgressBar();
+            lblQuestionNumber = new Label();
             pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAbility).BeginInit();
             tlpAnswers.SuspendLayout();
@@ -295,12 +297,40 @@
             pbImage.DragDrop += image_DragDrop;
             pbImage.DragEnter += image_DragEnter;
             // 
+            // ppbCharge
+            // 
+            ppbCharge.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            ppbCharge.Font = new Font("Segoe UI", 12F);
+            ppbCharge.Location = new Point(0, 876);
+            ppbCharge.Name = "ppbCharge";
+            ppbCharge.ProgressColour = Color.FromArgb(246, 231, 222);
+            ppbCharge.Size = new Size(205, 23);
+            ppbCharge.Style = ProgressBarStyle.Continuous;
+            ppbCharge.TabIndex = 6;
+            ppbCharge.Text = "PERCENTAGE";
+            ppbCharge.TextColour = Color.FromArgb(246, 231, 222);
+            ppbCharge.UsePercentage = true;
+            // 
+            // lblQuestionNumber
+            // 
+            lblQuestionNumber.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            lblQuestionNumber.AutoSize = true;
+            lblQuestionNumber.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblQuestionNumber.ForeColor = Color.FromArgb(246, 231, 222);
+            lblQuestionNumber.Location = new Point(1530, 854);
+            lblQuestionNumber.Name = "lblQuestionNumber";
+            lblQuestionNumber.Size = new Size(58, 37);
+            lblQuestionNumber.TabIndex = 7;
+            lblQuestionNumber.Text = "n/n";
+            // 
             // DragDropScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(53, 48, 46);
             ClientSize = new Size(1600, 900);
+            Controls.Add(lblQuestionNumber);
+            Controls.Add(ppbCharge);
             Controls.Add(rpnlImageBox);
             Controls.Add(tlpAnswers);
             Controls.Add(pbAbility);
@@ -344,5 +374,7 @@
         private UserControls.RoundedPanel rpnlImageBox;
         private PictureBox pbImage;
         private Label label1;
+        private UserControls.PercentageProgressBar ppbCharge;
+        private Label lblQuestionNumber;
     }
 }

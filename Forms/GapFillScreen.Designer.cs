@@ -42,6 +42,8 @@
             tmrQuiz = new System.Windows.Forms.Timer(components);
             rpnlAnswer = new UserControls.RoundedPanel();
             tbAnswer = new TextBox();
+            ppbCharge = new UserControls.PercentageProgressBar();
+            lblQuestionNumber = new Label();
             pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAbility).BeginInit();
             rpnlAnswer.SuspendLayout();
@@ -195,12 +197,40 @@
             tbAnswer.TabIndex = 0;
             tbAnswer.KeyDown += tbAnswer_KeyDown;
             // 
+            // ppbCharge
+            // 
+            ppbCharge.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            ppbCharge.Font = new Font("Segoe UI", 12F);
+            ppbCharge.Location = new Point(0, 876);
+            ppbCharge.Name = "ppbCharge";
+            ppbCharge.ProgressColour = Color.FromArgb(246, 231, 222);
+            ppbCharge.Size = new Size(205, 23);
+            ppbCharge.Style = ProgressBarStyle.Continuous;
+            ppbCharge.TabIndex = 5;
+            ppbCharge.Text = "PERCENTAGE";
+            ppbCharge.TextColour = Color.FromArgb(246, 231, 222);
+            ppbCharge.UsePercentage = true;
+            // 
+            // lblQuestionNumber
+            // 
+            lblQuestionNumber.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            lblQuestionNumber.AutoSize = true;
+            lblQuestionNumber.Font = new Font("Segoe UI", 20.25F);
+            lblQuestionNumber.ForeColor = Color.FromArgb(246, 231, 222);
+            lblQuestionNumber.Location = new Point(1530, 854);
+            lblQuestionNumber.Name = "lblQuestionNumber";
+            lblQuestionNumber.Size = new Size(58, 37);
+            lblQuestionNumber.TabIndex = 6;
+            lblQuestionNumber.Text = "n/n";
+            // 
             // GapFillScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(53, 48, 46);
             ClientSize = new Size(1600, 900);
+            Controls.Add(lblQuestionNumber);
+            Controls.Add(ppbCharge);
             Controls.Add(rpnlAnswer);
             Controls.Add(pbAbility);
             Controls.Add(lblQuestionText);
@@ -234,5 +264,7 @@
         private System.Windows.Forms.Timer tmrQuiz;
         private UserControls.RoundedPanel rpnlAnswer;
         private TextBox tbAnswer;
+        private UserControls.PercentageProgressBar ppbCharge;
+        private Label lblQuestionNumber;
     }
 }
