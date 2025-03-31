@@ -213,7 +213,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "SplashScreen";
-            Text = "Loading Screen";
+            Text = "Loading...";
             WindowState = FormWindowState.Maximized;
             Load += SplashScreen_Load;
             VisibleChanged += SplashScreen_VisibleChanged;

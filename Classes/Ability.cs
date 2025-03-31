@@ -6,9 +6,9 @@ using WMPLib;
 namespace Coursework.ParentClasses
 {
     /// <summary>
-    /// Holds info on the user's TFCLass' ability, including a method to use it.
+    /// Holds info on the user's TFClass' ability, including a method to use it.
     /// </summary>
-    [Serializable] // Allows serialization to binary file so it is not easily edited by the end-user. UNNEEDED?
+    [Serializable] // Allows serialization to binary file so it is not easily edited by the end-user.
     public class Ability
     {
         #region Field declarations
@@ -40,7 +40,7 @@ namespace Coursework.ParentClasses
         /// </summary>
         public virtual void UseAbility(Form form, ref Quiz quiz, ref Question question)
         {
-            switch (PlayerHelper.Player.TFClass.Id)
+            switch (Session.Player.TFClass.Id)
             {
                 case 1:
                     if (ChargeLevel == ChargesRequired)
@@ -135,20 +135,33 @@ namespace Coursework.ParentClasses
 
         private void PlayVoiceline()
         {
-            Random rnd = new();
-
-            string[] vo = Directory.GetFiles(@$"Sounds/Classes/{PlayerHelper.Player.TFClass.Id}");
-
             WindowsMediaPlayer wmp = new();
 
-            wmp.URL = vo[rnd.Next(1, vo.Length)];
+            Random rng = new Random();
 
-            if (vo.Contains("auxillary"))
+            string voDirectory = @$"Sounds\Classes\{Session.Player.TFClass.Id}";
+
+            string[] sounds = Directory.GetFiles(voDirectory);
+
+            int soundToPlay = 0;
+
+            if (sounds != null && sounds.Length > 1)
             {
-                SoundPlayer sp = new();
+                soundToPlay = rng.Next(1, sounds.Length);
+            }
 
-                sp.SoundLocation = vo[0];
-                sp.Play();
+            if (sounds != null)
+            {
+                wmp.URL = sounds[soundToPlay];
+
+                wmp.controls.play();
+
+                if (sounds.Contains(@$"{voDirectory}\auxillary.wav"))
+                {
+                    SoundPlayer player = new();
+                    player.SoundLocation = sounds[0];
+                    player.Play();
+                }
             }
         }
 

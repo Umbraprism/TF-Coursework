@@ -104,7 +104,7 @@
             lblGuessCount.AutoSize = true;
             lblGuessCount.Font = new Font("Segoe UI", 24F);
             lblGuessCount.ForeColor = Color.FromArgb(246, 231, 222);
-            lblGuessCount.Location = new Point(1547, 64);
+            lblGuessCount.Location = new Point(1511, 64);
             lblGuessCount.Name = "lblGuessCount";
             lblGuessCount.Size = new Size(38, 45);
             lblGuessCount.TabIndex = 8;
@@ -279,7 +279,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "GuessingGameScreen";
-            Text = "GuessingGameScreen";
+            Text = "Guessing Game";
             WindowState = FormWindowState.Maximized;
             Load += GuessingGameScreen_Load;
             pnlHeader.ResumeLayout(false);

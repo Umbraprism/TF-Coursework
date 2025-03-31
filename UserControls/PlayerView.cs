@@ -15,14 +15,14 @@ namespace Coursework.UserControls
 
         private void PlayerView_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyFonts(this);
-            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UI.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.TFClass);
 
             pbAvatar.Image = TFClass.Assets[player.TFClass.Id].Avatar;
             lblUsername.Text = player.Username;
             lblRank.Text = player.OnlineRank;
 
-            lblRank.ForeColor = FormHelper.ColourPalette[lblRank.Text];
+            lblRank.ForeColor = UI.ColourPalette[lblRank.Text];
         }
     }
 }

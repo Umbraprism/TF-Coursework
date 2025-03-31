@@ -38,6 +38,15 @@
             "ImageId": 0
         },
         {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
+            ],
+            "ImageId": 0
+        },
+        {
             "Text": "What is the first step to rocket jump as the Soldier?",
             "Type": 0,
             "CorrectAnswerIndex": 0,
@@ -68,6 +77,15 @@
                 "Offense",
                 "Defense",
                 "Spectator"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
             ],
             "ImageId": 0
         },
@@ -106,6 +124,15 @@
             "ImageId": 0
         },
         {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
+            ],
+            "ImageId": 0
+        },
+        {
             "Text": "Which technique is the Demoman the best at performing?",
             "Type": 0,
             "CorrectAnswerIndex": 1,
@@ -136,6 +163,15 @@
                 "Demogineer",
                 "Demojumper",
                 "Demoknight"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
             ],
             "ImageId": 0
         },
@@ -174,7 +210,16 @@
             "ImageId": 0
         },
         {
-            "Text": "If the engineer sets up a Teleporter Entrance at spawn, where should he place the Exit?",
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "If the Engineer sets up a Teleporter Entrance at spawn, where should he place the Exit?",
             "Type": 0,
             "CorrectAnswerIndex": 3,
             "Answers": [
@@ -204,6 +249,15 @@
                 "175",
                 "150",
                 "200"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
             ],
             "ImageId": 0
         },
@@ -242,6 +296,15 @@
             "ImageId": 0
         },
         {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
+            ],
+            "ImageId": 0
+        },
+        {
             "Text": "Where should the Sniper position himself in a Payload map?",
             "Type": 0,
             "CorrectAnswerIndex": 3,
@@ -276,6 +339,15 @@
             "ImageId": 0
         },
         {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
+            ],
+            "ImageId": 0
+        },
+        {
             "Text": "What tool should the Spy use to get behind enemy lines?",
             "Type": 0,
             "CorrectAnswerIndex": 1,
@@ -306,6 +378,15 @@
                 "Drop Stab",
                 "Matador",
                 "Corner Stab"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
             ],
             "ImageId": 0
         }
@@ -346,6 +427,15 @@
             "ImageId": 0
         },
         {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
+            ],
+            "ImageId": 0
+        },
+        {
             "Text": "What is the first step to rocket jump as the Soldier?",
             "Type": 0,
             "CorrectAnswerIndex": 0,
@@ -376,6 +466,15 @@
                 "Offense",
                 "Defense",
                 "Spectator"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
             ],
             "ImageId": 0
         },
@@ -414,6 +513,15 @@
             "ImageId": 0
         },
         {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
+            ],
+            "ImageId": 0
+        },
+        {
             "Text": "Which technique is the Demoman the best at performing?",
             "Type": 0,
             "CorrectAnswerIndex": 1,
@@ -444,6 +552,15 @@
                 "Demogineer",
                 "Demojumper",
                 "Demoknight"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
             ],
             "ImageId": 0
         },
@@ -482,7 +599,16 @@
             "ImageId": 0
         },
         {
-            "Text": "If the engineer sets up a Teleporter Entrance at spawn, where should he place the Exit?",
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "If the Engineer sets up a Teleporter Entrance at spawn, where should he place the Exit?",
             "Type": 0,
             "CorrectAnswerIndex": 3,
             "Answers": [
@@ -516,19 +642,28 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Medic weapon gains charge in the Übercharge meter on hit?",
-            "Type": 0,
-            "CorrectAnswerIndex": 2,
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
             "Answers": [
-                "Vitasaw",
-                "Amputator",
-                "Übersaw",
-                "Syringe Gun"
+                "Answer"
             ],
             "ImageId": 0
         },
         {
-            "Text": "The Vaccinator can provide 3 distinct types of immunity.",
+            "Text": "What should the Medic do if he is about to die with a full Übercharge?",
+            "Type": 0,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "Try and find an ally to Übercharge",
+                "Use it",
+                "Attack the enemy with his Syringe Gun",
+                "Attempt to escape"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Medic should usually not Übercharge a Scout.",
             "Type": 1,
             "CorrectAnswerIndex": 0,
             "Answers": [
@@ -538,9 +673,9 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Medic Übercharge grants guaranteed critical hits?",
+            "Text": "Which Medic Übercharge should be used when attacking an Engineer nest?",
             "Type": 2,
-            "CorrectAnswerIndex": 3,
+            "CorrectAnswerIndex": 1,
             "Answers": [
                 "Overdose",
                 "Medigun",
@@ -550,19 +685,28 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Sniper weapon can hit more than one player per bullet?",
-            "Type": 0,
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Machina",
-                "Hitman's Heatmaker",
-                "The Classic",
-                "Sniper Rifle"
+                "Answer"
             ],
             "ImageId": 0
         },
         {
-            "Text": "The Huntsman's arrows can be lit on fire.",
+            "Text": "Where should the Sniper position himself in a Payload map?",
+            "Type": 0,
+            "CorrectAnswerIndex": 3,
+            "Answers": [
+                "Machina",
+                "Directly on top of the Payload",
+                "Behind as much cover as possible",
+                "Decently far from the Payload, but with a clear line of sight"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Sniper is one of the best classes to play as in the Medieval mode.",
             "Type": 1,
             "CorrectAnswerIndex": 0,
             "Answers": [
@@ -580,6 +724,15 @@
                 "Razorback",
                 "Darwin's Danger Shield",
                 "Jarate"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
             ],
             "ImageId": 0
         },
@@ -614,6 +767,15 @@
                 "Drop Stab",
                 "Matador",
                 "Corner Stab"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which ____ weapon ____?",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Answer"
             ],
             "ImageId": 0
         }

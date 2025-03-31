@@ -33,8 +33,8 @@ namespace Coursework
 
         private void RegisterScreen_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyFonts(this);
-            UIHelper.ApplyCursor(this, CursorStyle.Default);
+            UI.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.Default);
         }
 
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace Coursework
 
             else if (classId == 0)
             {
-                ErrorMessage(lblPleaseSelectClass.Text);
+                ErrorMessage($"{lblPleaseSelectClass.Text}\n\nYou can view information about each class by right clicking their icon above.");
             }
 
             else
@@ -86,7 +86,7 @@ namespace Coursework
                     {
                         try
                         {
-                            List<Achievement> achievements = JsonSerializer.Deserialize<List<Achievement>>(File.ReadAllText("achievements.json"));
+                            List<Achievement>? achievements = JsonSerializer.Deserialize<List<Achievement>>(File.ReadAllText("achievements.json"));
 
                             player = new(tbUsername.Text.Trim(), tbPassword.Text.Trim(), new TFClass(classId), (uint)playerList.Count + 1, null, achievements);
                             playerList.Add(player);
@@ -120,7 +120,7 @@ namespace Coursework
 
                     btnRegister.BackColor = Color.FromArgb(189, 59, 59);
 
-                    PlayerHelper.PlayerList = playerList;
+                    Session.PlayerList = playerList;
 
                     this.Close();
                     new LoginScreen().Show();
@@ -128,26 +128,37 @@ namespace Coursework
             }
         }
 
-        private void classSelect_Click(object sender, EventArgs e)
+        private void classSelect_MouseClick(object sender, MouseEventArgs e)
         {
             PictureBox selectedClass = (PictureBox)sender;
 
-            classId = UInt32.Parse(selectedClass.Tag.ToString()); // gets the Tag defined in the designer (which will be a number from 1 to 9) into a variable
+            uint tempClassId = UInt32.Parse(selectedClass.Tag.ToString()); // gets the Tag defined in the designer (which will be a number from 1 to 9) into a variable
 
-            pbClassSelected.Image = TFClass.Assets[classId].Portrait;
+            TFClass tempClass = new(tempClassId);
+
+            if (e.Button == MouseButtons.Right)
+            {
+                TFMessageBox.Show($"{tempClass.Description}\n\n{tempClass.Ability.Name}\n\n{tempClass.Ability.Info}\n\nCharges Required - {tempClass.Ability.ChargesRequired}", $"The {tempClass.Name}");
+            }
+            else if (e.Button == MouseButtons.Left)
+            {
+                pbClassSelected.Image = TFClass.Assets[classId].Portrait;
+
+                classId = tempClassId;
+            }
         }
 
         private void classSelect_MouseEnter(object sender, EventArgs e)
         {
             PictureBox selectedClass = (PictureBox)sender;
 
-            classId = UInt32.Parse(selectedClass.Tag.ToString()); // gets the Tag defined in the designer (which will be a number from 1 to 9) into a variable
+            uint soundToPlay = UInt32.Parse(selectedClass.Tag.ToString()); // gets the Tag defined in the designer (which will be a number from 1 to 9) into a variable
 
             SoundPlayer player = new();
 
             try
             {
-                player.SoundLocation = @$"Sounds/SFX/tfclassSelect{classId}.wav";
+                player.SoundLocation = @$"Sounds/SFX/tfclassSelect{soundToPlay}.wav";
 
                 player.Play();
             }

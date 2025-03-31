@@ -55,6 +55,7 @@
             lblStats = new Label();
             btnBack = new Button();
             pbPortrait = new PictureBox();
+            btnAbilityInfo = new Button();
             pnlStats.SuspendLayout();
             pnlGuessingGame.SuspendLayout();
             pnlQuizStats.SuspendLayout();
@@ -407,6 +408,22 @@
             pbPortrait.TabIndex = 1;
             pbPortrait.TabStop = false;
             // 
+            // btnAbilityInfo
+            // 
+            btnAbilityInfo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnAbilityInfo.BackColor = Color.FromArgb(189, 59, 59);
+            btnAbilityInfo.FlatAppearance.BorderSize = 0;
+            btnAbilityInfo.FlatStyle = FlatStyle.Flat;
+            btnAbilityInfo.Font = new Font("Segoe UI", 42F);
+            btnAbilityInfo.ForeColor = Color.FromArgb(246, 231, 222);
+            btnAbilityInfo.Location = new Point(1488, 788);
+            btnAbilityInfo.Name = "btnAbilityInfo";
+            btnAbilityInfo.Size = new Size(100, 100);
+            btnAbilityInfo.TabIndex = 2;
+            btnAbilityInfo.Text = "i";
+            btnAbilityInfo.UseVisualStyleBackColor = false;
+            btnAbilityInfo.Click += btnAbilityInfo_Click;
+            // 
             // StatsScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -415,13 +432,14 @@
             BackgroundImage = Properties.Resources.cwBgWide;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1600, 900);
+            Controls.Add(btnAbilityInfo);
             Controls.Add(pbPortrait);
             Controls.Add(pnlStats);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "StatsScreen";
-            Text = "StatsScreen";
+            Text = "Stats";
             WindowState = FormWindowState.Maximized;
             Load += StatsScreen_Load;
             pnlStats.ResumeLayout(false);
@@ -467,5 +485,6 @@
         private Label lblGuessingGame;
         private Label lblCurrentStreak;
         private Label lblHighestStreak;
+        private Button btnAbilityInfo;
     }
 }

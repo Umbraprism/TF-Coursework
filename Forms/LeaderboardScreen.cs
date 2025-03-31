@@ -15,8 +15,8 @@ namespace Coursework.Forms
 
         private void LeaderboardScreen_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
-            UIHelper.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.TFClass);
+            UI.ApplyFonts(this);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -36,9 +36,9 @@ namespace Coursework.Forms
 
             lblQuizSelected.Text = $"{ti.ToTitleCase(btn.Text.ToLower())} Quiz";
 
-            for (int i = 0; i < PlayerHelper.PlayerList.Count; i++)
+            for (int i = 0; i < Session.PlayerList.Count; i++)
             {
-                Player player = PlayerHelper.PlayerList[i];
+                Player player = Session.PlayerList[i];
 
                 ListViewItem item = new();
 
@@ -48,10 +48,10 @@ namespace Coursework.Forms
 
                 item.UseItemStyleForSubItems = false;
 
-                UIHelper.ApplyFonts(this);
+                UI.ApplyFonts(this);
 
-                item.SubItems[0].Font = UIHelper.TF2Build;
-                item.SubItems[3].ForeColor = player.ScoresHashmap[quizScore].Rank != String.Empty ? FormHelper.ColourPalette[player.ScoresHashmap[quizScore].Rank] : Color.FromArgb(0, 0, 0);
+                item.SubItems[0].Font = UI.TF2Build;
+                item.SubItems[3].ForeColor = player.ScoresHashmap[quizScore].Rank != String.Empty ? UI.ColourPalette[player.ScoresHashmap[quizScore].Rank] : Color.FromArgb(0, 0, 0);
 
                 lvLeaderboard.Items.Add(item);
             }
@@ -76,16 +76,16 @@ namespace Coursework.Forms
                 switch (item.SubItems[0].Text)
                 {
                     case "1":
-                        item.SubItems[1].ForeColor = FormHelper.ColourPalette["Gold"];
-                        item.SubItems[2].ForeColor = FormHelper.ColourPalette["Gold"];
+                        item.SubItems[1].ForeColor = UI.ColourPalette["Gold"];
+                        item.SubItems[2].ForeColor = UI.ColourPalette["Gold"];
                         break;
                     case "2":
-                        item.SubItems[1].ForeColor = FormHelper.ColourPalette["Silver"];
-                        item.SubItems[2].ForeColor = FormHelper.ColourPalette["Silver"];
+                        item.SubItems[1].ForeColor = UI.ColourPalette["Silver"];
+                        item.SubItems[2].ForeColor = UI.ColourPalette["Silver"];
                         break;
                     case "3":
-                        item.SubItems[1].ForeColor = FormHelper.ColourPalette["Bronze"];
-                        item.SubItems[2].ForeColor = FormHelper.ColourPalette["Bronze"];
+                        item.SubItems[1].ForeColor = UI.ColourPalette["Bronze"];
+                        item.SubItems[2].ForeColor = UI.ColourPalette["Bronze"];
                         break;
                     default:
                         break;

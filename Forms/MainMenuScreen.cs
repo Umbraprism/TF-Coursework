@@ -20,21 +20,23 @@ namespace Coursework.Forms
 
         private void MainMenuScreen_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyFonts(this);
-            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UI.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.TFClass);
 
-            PlayerHelper.Player.TFClass.Ability.Reset();
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
 
-            pbPfp.Image = TFClass.Assets[PlayerHelper.Player.TFClass.Id].Avatar;
-            lblUsername.Text = PlayerHelper.Player.Username;
-            lblAchievementCount.Text = $"{PlayerHelper.Player.Achievements.Count(achievement => achievement.IsAchieved)} Achievements";
-            lblHighestScore.Text = $"Highest Score - {PlayerHelper.Player.GetHighestScore()}";
-            lblClass.Text = $"The {PlayerHelper.Player.TFClass.Name}";
+            tbVolume.Value = Program.WMP.settings.volume;
 
-            lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count - 1)].Text;
+            Session.Player.TFClass.Ability.Reset();
 
-            lblOnlineRank.Text = PlayerHelper.Player.OnlineRank;
-            lblOnlineRank.ForeColor = FormHelper.ColourPalette[lblOnlineRank.Text];
+            pbPfp.Image = TFClass.Assets[Session.Player.TFClass.Id].Avatar;
+            lblUsername.Text = Session.Player.Username;
+            lblAchievementCount.Text = $"{Session.Player.Achievements.Count(achievement => achievement.IsAchieved)} Achievements";
+            lblHighestScore.Text = $"Highest Score - {Session.Player.GetHighestScore()}";
+            lblClass.Text = $"The {Session.Player.TFClass.Name}";
+
+            lblTipText.Text = Session.Tips[rnd.Next(0, Session.Tips.Count - 1)].Text;
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -43,12 +45,12 @@ namespace Coursework.Forms
 
             if (quitQuery == DialogResult.Yes)
             {
-                int playerToReplace = PlayerHelper.PlayerList.FindIndex(player => player.Id == PlayerHelper.Player.Id);
-                PlayerHelper.PlayerList[playerToReplace] = PlayerHelper.Player;
+                int playerToReplace = Session.PlayerList.FindIndex(player => player.Id == Session.Player.Id);
+                Session.PlayerList[playerToReplace] = Session.Player;
 
                 using (BinaryWriter bw = new(File.Open("playerData.bin", FileMode.Create)))
                 {
-                    string json = JsonSerializer.Serialize(PlayerHelper.PlayerList);
+                    string json = JsonSerializer.Serialize(Session.PlayerList);
                     bw.Write(json);
                 }
 
@@ -58,13 +60,13 @@ namespace Coursework.Forms
 
         private void btnNextTip_Click(object sender, EventArgs e)
         {
-            if (lblTipText.Text == FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count)].Text)
+            if (lblTipText.Text == Session.Tips[rnd.Next(0, Session.Tips.Count)].Text)
             {
                 btnNextTip_Click(sender, e);
             }
             else
             {
-                lblTipText.Text = FormHelper.Tips[rnd.Next(0, FormHelper.Tips.Count)].Text;
+                lblTipText.Text = Session.Tips[rnd.Next(0, Session.Tips.Count)].Text;
             }
         }
 
@@ -73,11 +75,11 @@ namespace Coursework.Forms
             Button btn = (Button)sender;
 
             string json = File.ReadAllText(@$"Quizzes\{btn.Tag}Quiz.json");
-            FormHelper.Quiz = JsonSerializer.Deserialize<Quiz>(json);
+            Session.Quiz = JsonSerializer.Deserialize<Quiz>(json);
 
-            if (FormHelper.Quiz != null)
+            if (Session.Quiz != null)
             {
-                Question question = FormHelper.Quiz.CurrentDifficulty[FormHelper.Quiz.CurrentQuestionIndex];
+                Question question = Session.Quiz.CurrentDifficulty[Session.Quiz.CurrentQuestionIndex];
 
                 switch (question.Type)
                 {
@@ -89,6 +91,9 @@ namespace Coursework.Forms
                         break;
                     case QuestionType.DragDrop:
                         new SplashScreen(new DragDropScreen(ref question)).Show();
+                        break;
+                    case QuestionType.GapFill:
+                        new SplashScreen(new GapFillScreen(ref question)).Show();
                         break;
                     default:
                         throw new FormatException("Question is not of a valid type.");
@@ -135,30 +140,72 @@ namespace Coursework.Forms
         private void btnHostOrJoin_Click(object sender, EventArgs e)
         {
             IPHostEntry ipHostEntry = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress ip = ipHostEntry.AddressList[0];
+            string ip = ipHostEntry.AddressList.Where(ip => ip.AddressFamily == AddressFamily.InterNetwork).FirstOrDefault().ToString();
 
-            DialogResult hostOrJoinQuery = TFMessageBox.Show("Would you like to host a match for others to join or join an already existing match?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Host", "Join" });
+            DialogResult hostOrJoinQuery = TFMessageBox.Show("Would you like to host a chatroom for others to join or join an already existing match?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Host", "Join" });
 
-            if (hostOrJoinQuery == DialogResult.Yes)
+            if (hostOrJoinQuery == DialogResult.Yes && nudPort.Value > 1024)
             {
-                new SplashScreen(new ServerHostScreen()).Show();
-                this.Close();
+                new ServerHostScreen((int)nudPort.Value).Show();
+
+                TFMessageBox.Show($"Server created on IP Address {ip} with the port number {nudPort.Value}", "Server Created!");
             }
             else if (hostOrJoinQuery == DialogResult.No)
             {
                 try
                 {
-                    TcpClient client = new(ip.ToString(), 5001);
+                    TcpClient client = new();
 
-                    string json = JsonSerializer.Serialize(PlayerHelper.Player);
+                    string json = JsonSerializer.Serialize(Session.Player);
 
-                    ServerHelper.SendPacket(client.GetStream(), Encoding.Unicode.GetBytes(json));
+                    client.Connect(tbIPAddress.Text, (int)nudPort.Value);
+
+                    Server.SendPacket(client.GetStream(), Encoding.Unicode.GetBytes(json));
+                    client.GetStream().FlushAsync();
+
+                    new SplashScreen(new ServerClientScreen(client, client.GetStream())).Show();
+                    this.Close();
                 }
                 catch (SocketException ex)
                 {
                     TFMessageBox.Show(ex.Message, "Connection Error");
                 }
             }
+        }
+
+        private void btnMute_Click(object sender, EventArgs e)
+        {
+            tbVolume.Value = 0;
+        }
+
+        private void tbVolume_ValueChanged(object sender, EventArgs e)
+        {
+            ttVolume.SetToolTip(tbVolume, $"Current Volume - {tbVolume.Value}");
+
+            if (tbVolume.Value > 51)
+            {
+                btnMute.Text = "🔊";
+            }
+            if (tbVolume.Value <= 50)
+            {
+                btnMute.Text = "🔉";
+            }
+            if (tbVolume.Value == 0)
+            {
+                btnMute.Text = "🔈";
+            }
+
+            Program.WMP.settings.volume = tbVolume.Value;
+        }
+
+        private void ttVolume_Draw(object sender, DrawToolTipEventArgs e)
+        {
+            UI.DrawToolTip(sender, e);
+        }
+
+        private void ttVolume_Popup(object sender, PopupEventArgs e)
+        {
+            UI.SizeToolTip(sender, e);
         }
     }
 }

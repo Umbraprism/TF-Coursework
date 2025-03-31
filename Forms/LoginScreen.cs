@@ -18,8 +18,8 @@ namespace Coursework.Forms
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyFonts(this);
-            UIHelper.ApplyCursor(this, CursorStyle.Default);
+            UI.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.Default);
         }
 
         private void linkToRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -28,7 +28,7 @@ namespace Coursework.Forms
             Hide();
         }
 
-        private async void btnLogin_Click(object? sender, EventArgs e)
+        private void btnLogin_Click(object? sender, EventArgs e)
         {
             if (!File.Exists("playerData.bin") || File.ReadAllLines("playerData.bin").Length == 0)
             {
@@ -42,14 +42,14 @@ namespace Coursework.Forms
             using (BinaryReader br = new(File.Open("playerData.bin", FileMode.Open)))
             {
                 string json = br.ReadString();
-                PlayerHelper.PlayerList = JsonSerializer.Deserialize<List<Player>>(json);
+                Session.PlayerList = JsonSerializer.Deserialize<List<Player>>(json);
             }
 
-            if (PlayerHelper.PlayerList != null)
+            if (Session.PlayerList != null)
             {
-                if (PlayerHelper.PlayerList.Any(player => player.Username == tbUsername.Text.Trim() && player.Password == tbPassword.Text.Trim()))
+                if (Session.PlayerList.Any(player => player.Username == tbUsername.Text.Trim() && player.Password == tbPassword.Text.Trim()))
                 {
-                    PlayerHelper.Player = PlayerHelper.PlayerList.Where(user => user.Username == tbUsername.Text.Trim() && user.Password == tbPassword.Text.Trim()).First();
+                    Session.Player = Session.PlayerList.Where(user => user.Username == tbUsername.Text.Trim() && user.Password == tbPassword.Text.Trim()).First();
                     new SplashScreen(new MainMenuScreen()).Show();
                     Hide();
                 }

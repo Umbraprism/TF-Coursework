@@ -14,18 +14,16 @@ namespace Coursework.ParentClasses
         // Holds the received Player object from the client.
         public Player Player { get; set; }
 
-        // Holds the client's current screen for tracking.
-        public string CurrentForm { get; set; }
+        public Thread? Thread { get; set; }
 
         #endregion
 
         #region Constructor
 
-        public Client(TcpClient tcp, Player player, string currentForm)
+        public Client(TcpClient tcp, Player player)
         {
             TCP = tcp;
             Player = player;
-            CurrentForm = currentForm;
         }
 
         #endregion

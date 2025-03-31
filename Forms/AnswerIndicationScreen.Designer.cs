@@ -85,7 +85,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AnswerIndicationScreen";
-            Text = "AnswerIndicationScreen";
+            Text = "Indicator";
             WindowState = FormWindowState.Maximized;
             Load += AnswerIndicationScreen_Load;
             ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuScreen));
             pnlMain = new Panel();
             tlpStatistics = new TableLayoutPanel();
@@ -52,9 +53,14 @@
             lblTipText = new Label();
             lblTip = new Label();
             pnlOnline = new Panel();
-            ppbToNextOnlineRank = new UserControls.PercentageProgressBar();
+            rpnlPort = new UserControls.RoundedPanel();
+            nudPort = new NumericUpDown();
+            rpnlIPAddress = new UserControls.RoundedPanel();
+            tbIPAddress = new TextBox();
             btnHostOrJoin = new Button();
-            lblOnlineRank = new Label();
+            tbVolume = new TrackBar();
+            btnMute = new Button();
+            ttVolume = new ToolTip(components);
             pnlMain.SuspendLayout();
             tlpStatistics.SuspendLayout();
             tlpQuizSelect.SuspendLayout();
@@ -64,6 +70,10 @@
             ((System.ComponentModel.ISupportInitialize)pbPfp).BeginInit();
             pnlTip.SuspendLayout();
             pnlOnline.SuspendLayout();
+            rpnlPort.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudPort).BeginInit();
+            rpnlIPAddress.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)tbVolume).BeginInit();
             SuspendLayout();
             // 
             // pnlMain
@@ -374,28 +384,67 @@
             // 
             pnlOnline.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlOnline.BackColor = Color.FromArgb(45, 41, 39);
-            pnlOnline.Controls.Add(ppbToNextOnlineRank);
+            pnlOnline.Controls.Add(rpnlPort);
+            pnlOnline.Controls.Add(rpnlIPAddress);
             pnlOnline.Controls.Add(btnHostOrJoin);
-            pnlOnline.Controls.Add(lblOnlineRank);
             pnlOnline.Location = new Point(535, 768);
             pnlOnline.Name = "pnlOnline";
             pnlOnline.Size = new Size(1065, 132);
             pnlOnline.TabIndex = 2;
             // 
-            // ppbToNextOnlineRank
+            // rpnlPort
             // 
-            ppbToNextOnlineRank.Anchor = AnchorStyles.Right;
-            ppbToNextOnlineRank.BackColor = Color.FromArgb(41, 39, 39);
-            ppbToNextOnlineRank.Font = new Font("Segoe UI", 48F);
-            ppbToNextOnlineRank.Location = new Point(296, 24);
-            ppbToNextOnlineRank.Name = "ppbToNextOnlineRank";
-            ppbToNextOnlineRank.ProgressColour = Color.FromArgb(246, 231, 222);
-            ppbToNextOnlineRank.Size = new Size(619, 88);
-            ppbToNextOnlineRank.Style = ProgressBarStyle.Continuous;
-            ppbToNextOnlineRank.TabIndex = 3;
-            ppbToNextOnlineRank.Text = "PERCENTAGE";
-            ppbToNextOnlineRank.TextColour = Color.FromArgb(246, 231, 222);
-            ppbToNextOnlineRank.UsePercentage = true;
+            rpnlPort.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            rpnlPort.BorderColour = Color.Transparent;
+            rpnlPort.BorderSize = 0;
+            rpnlPort.Controls.Add(nudPort);
+            rpnlPort.Location = new Point(600, 36);
+            rpnlPort.Name = "rpnlPort";
+            rpnlPort.PanelColour = Color.White;
+            rpnlPort.Radius = 30;
+            rpnlPort.Size = new Size(312, 68);
+            rpnlPort.Style = System.Drawing.Drawing2D.DashStyle.Solid;
+            rpnlPort.TabIndex = 4;
+            // 
+            // nudPort
+            // 
+            nudPort.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            nudPort.BackColor = Color.White;
+            nudPort.BorderStyle = BorderStyle.None;
+            nudPort.Font = new Font("Segoe UI", 30F);
+            nudPort.Location = new Point(3, 11);
+            nudPort.Maximum = new decimal(new int[] { 65535, 0, 0, 0 });
+            nudPort.Minimum = new decimal(new int[] { 1025, 0, 0, 0 });
+            nudPort.Name = "nudPort";
+            nudPort.Size = new Size(306, 57);
+            nudPort.TabIndex = 5;
+            ttVolume.SetToolTip(nudPort, "Port Number");
+            nudPort.Value = new decimal(new int[] { 1025, 0, 0, 0 });
+            // 
+            // rpnlIPAddress
+            // 
+            rpnlIPAddress.Anchor = AnchorStyles.Left;
+            rpnlIPAddress.BorderColour = Color.Transparent;
+            rpnlIPAddress.BorderSize = 0;
+            rpnlIPAddress.Controls.Add(tbIPAddress);
+            rpnlIPAddress.Location = new Point(6, 36);
+            rpnlIPAddress.Name = "rpnlIPAddress";
+            rpnlIPAddress.PanelColour = Color.White;
+            rpnlIPAddress.Radius = 30;
+            rpnlIPAddress.Size = new Size(584, 68);
+            rpnlIPAddress.Style = System.Drawing.Drawing2D.DashStyle.Solid;
+            rpnlIPAddress.TabIndex = 3;
+            // 
+            // tbIPAddress
+            // 
+            tbIPAddress.BorderStyle = BorderStyle.None;
+            tbIPAddress.Font = new Font("Segoe UI", 30F);
+            tbIPAddress.Location = new Point(3, 11);
+            tbIPAddress.MaxLength = 20;
+            tbIPAddress.Name = "tbIPAddress";
+            tbIPAddress.PlaceholderText = "IP Address";
+            tbIPAddress.Size = new Size(906, 54);
+            tbIPAddress.TabIndex = 0;
             // 
             // btnHostOrJoin
             // 
@@ -415,17 +464,44 @@
             btnHostOrJoin.UseVisualStyleBackColor = false;
             btnHostOrJoin.Click += btnHostOrJoin_Click;
             // 
-            // lblOnlineRank
+            // tbVolume
             // 
-            lblOnlineRank.Anchor = AnchorStyles.Left;
-            lblOnlineRank.AutoSize = true;
-            lblOnlineRank.Font = new Font("Segoe UI", 36F);
-            lblOnlineRank.ForeColor = Color.FromArgb(246, 231, 222);
-            lblOnlineRank.Location = new Point(6, 47);
-            lblOnlineRank.Name = "lblOnlineRank";
-            lblOnlineRank.Size = new Size(152, 65);
-            lblOnlineRank.TabIndex = 0;
-            lblOnlineRank.Text = "RANK";
+            tbVolume.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tbVolume.BackColor = Color.FromArgb(45, 41, 39);
+            tbVolume.LargeChange = 1;
+            tbVolume.Location = new Point(599, 726);
+            tbVolume.Maximum = 100;
+            tbVolume.Name = "tbVolume";
+            tbVolume.Size = new Size(1001, 45);
+            tbVolume.TabIndex = 3;
+            tbVolume.TickFrequency = 0;
+            tbVolume.TickStyle = TickStyle.Both;
+            ttVolume.SetToolTip(tbVolume, "Current Volume - 25");
+            tbVolume.ValueChanged += tbVolume_ValueChanged;
+            // 
+            // btnMute
+            // 
+            btnMute.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnMute.BackColor = Color.FromArgb(45, 41, 39);
+            btnMute.FlatAppearance.BorderSize = 0;
+            btnMute.FlatStyle = FlatStyle.Flat;
+            btnMute.Font = new Font("Segoe UI", 20F);
+            btnMute.ForeColor = Color.FromArgb(246, 231, 222);
+            btnMute.Location = new Point(535, 726);
+            btnMute.Name = "btnMute";
+            btnMute.Size = new Size(66, 42);
+            btnMute.TabIndex = 4;
+            btnMute.Text = "🔊";
+            btnMute.UseVisualStyleBackColor = false;
+            btnMute.Click += btnMute_Click;
+            // 
+            // ttVolume
+            // 
+            ttVolume.BackColor = Color.FromArgb(41, 39, 39);
+            ttVolume.ForeColor = Color.FromArgb(246, 231, 222);
+            ttVolume.OwnerDraw = true;
+            ttVolume.Draw += ttVolume_Draw;
+            ttVolume.Popup += ttVolume_Popup;
             // 
             // MainMenuScreen
             // 
@@ -434,6 +510,8 @@
             BackgroundImage = Properties.Resources.cwBgWide;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1600, 900);
+            Controls.Add(btnMute);
+            Controls.Add(tbVolume);
             Controls.Add(pnlOnline);
             Controls.Add(pnlDetail);
             Controls.Add(pnlMain);
@@ -455,8 +533,13 @@
             pnlTip.ResumeLayout(false);
             pnlTip.PerformLayout();
             pnlOnline.ResumeLayout(false);
-            pnlOnline.PerformLayout();
+            rpnlPort.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)nudPort).EndInit();
+            rpnlIPAddress.ResumeLayout(false);
+            rpnlIPAddress.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)tbVolume).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -484,8 +567,13 @@
         private TableLayoutPanel tlpStatistics;
         private Button btnNextTip;
         private Panel pnlOnline;
-        private Label lblOnlineRank;
         private Button btnHostOrJoin;
-        private UserControls.PercentageProgressBar ppbToNextOnlineRank;
+        private TrackBar tbVolume;
+        private Button btnMute;
+        private ToolTip ttVolume;
+        private UserControls.RoundedPanel rpnlIPAddress;
+        private TextBox tbIPAddress;
+        private UserControls.RoundedPanel rpnlPort;
+        private NumericUpDown nudPort;
     }
 }

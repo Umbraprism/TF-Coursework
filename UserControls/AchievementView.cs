@@ -18,7 +18,7 @@ namespace Coursework.UserControls
             this.lblAchievementName.Text = achievement.Name;
             this.lblAchievementDescription.Text = achievement.Description;
 
-            foreach (Player player in PlayerHelper.PlayerList)
+            foreach (Player player in Session.PlayerList)
             {
                 if (PercentageAchieved() <= 10)
                 {
@@ -39,17 +39,15 @@ namespace Coursework.UserControls
             {
                 this.ttRareAchievement.SetToolTip(pbIsAchieved, $"This is a Rare Achievement. Less than 10% of players have achieved it./n/n{percAchieved}% of players have achieved this achievement.".Replace("/n", Environment.NewLine));
                 this.pbIsAchieved.BackgroundImage = Properties.Resources.starburst;
-                this.lblAchievementName.ForeColor = FormHelper.ColourPalette["Gold"];
+                this.lblAchievementName.ForeColor = UI.ColourPalette["Gold"];
             }
         }
 
         private void AchievementView_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyFonts(this);
+            UI.ApplyFonts(this);
             pbIsAchieved.Height = 121; // ensures unlock indicator remains a consistent size
             pbIsAchieved.Width = 121;
-            this.BackColor = this.Parent.BackColor;
-            this.ForeColor = this.Parent.ForeColor;
         }
 
         private void ttRareAchievement_Draw(object sender, DrawToolTipEventArgs e)
@@ -65,7 +63,7 @@ namespace Coursework.UserControls
                 e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
 
                 e.Graphics.Clear(toolTip.BackColor);
-                e.Graphics.DrawString(e.ToolTipText, UIHelper.TF2Secondary, textBrush, e.Bounds, sf);
+                e.Graphics.DrawString(e.ToolTipText, UI.TF2Secondary, textBrush, e.Bounds, sf);
             }
         }
 
@@ -73,7 +71,7 @@ namespace Coursework.UserControls
         {
             string toolTip = ((ToolTip)sender).GetToolTip(e.AssociatedControl);
 
-            Size textSize = TextRenderer.MeasureText(toolTip, UIHelper.TF2Secondary);
+            Size textSize = TextRenderer.MeasureText(toolTip, UI.TF2Secondary);
 
             e.ToolTipSize = textSize;
         }
@@ -82,9 +80,9 @@ namespace Coursework.UserControls
         {
             int numAchieved = 0;
 
-            for (int i = 0; i < PlayerHelper.PlayerList.Count; i++)
+            for (int i = 0; i < Session.PlayerList.Count; i++)
             {
-                Player player = PlayerHelper.PlayerList[i];
+                Player player = Session.PlayerList[i];
                 Achievement currentAchievement = player.Achievements.First(ach => ach.Name == achievement.Name);
 
                 if (currentAchievement.IsAchieved)
@@ -93,7 +91,7 @@ namespace Coursework.UserControls
                 }
             }
 
-            percAchieved = (numAchieved * 100) / PlayerHelper.PlayerList.Count;
+            percAchieved = (numAchieved * 100) / Session.PlayerList.Count;
 
             return percAchieved;
         }

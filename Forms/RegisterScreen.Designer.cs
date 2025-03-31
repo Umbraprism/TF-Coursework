@@ -101,7 +101,7 @@
             pbScoutEmblem.TabIndex = 1;
             pbScoutEmblem.TabStop = false;
             pbScoutEmblem.Tag = "1";
-            pbScoutEmblem.Click += classSelect_Click;
+            pbScoutEmblem.MouseClick += classSelect_MouseClick;
             pbScoutEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbSoldierEmblem
@@ -117,7 +117,7 @@
             pbSoldierEmblem.TabIndex = 2;
             pbSoldierEmblem.TabStop = false;
             pbSoldierEmblem.Tag = "2";
-            pbSoldierEmblem.Click += classSelect_Click;
+            pbSoldierEmblem.MouseClick += classSelect_MouseClick;
             pbSoldierEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbPyroEmblem
@@ -133,7 +133,7 @@
             pbPyroEmblem.TabIndex = 3;
             pbPyroEmblem.TabStop = false;
             pbPyroEmblem.Tag = "3";
-            pbPyroEmblem.Click += classSelect_Click;
+            pbPyroEmblem.MouseClick += classSelect_MouseClick;
             pbPyroEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbDemoEmblem
@@ -149,7 +149,7 @@
             pbDemoEmblem.TabIndex = 4;
             pbDemoEmblem.TabStop = false;
             pbDemoEmblem.Tag = "4";
-            pbDemoEmblem.Click += classSelect_Click;
+            pbDemoEmblem.MouseClick += classSelect_MouseClick;
             pbDemoEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbHWGEmblem
@@ -165,7 +165,7 @@
             pbHWGEmblem.TabIndex = 5;
             pbHWGEmblem.TabStop = false;
             pbHWGEmblem.Tag = "5";
-            pbHWGEmblem.Click += classSelect_Click;
+            pbHWGEmblem.MouseClick += classSelect_MouseClick;
             pbHWGEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbEngineerEmblem
@@ -181,7 +181,7 @@
             pbEngineerEmblem.TabIndex = 6;
             pbEngineerEmblem.TabStop = false;
             pbEngineerEmblem.Tag = "6";
-            pbEngineerEmblem.Click += classSelect_Click;
+            pbEngineerEmblem.MouseClick += classSelect_MouseClick;
             pbEngineerEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbMedicEmblem
@@ -197,7 +197,7 @@
             pbMedicEmblem.TabIndex = 7;
             pbMedicEmblem.TabStop = false;
             pbMedicEmblem.Tag = "7";
-            pbMedicEmblem.Click += classSelect_Click;
+            pbMedicEmblem.MouseClick += classSelect_MouseClick;
             pbMedicEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbSniperEmblem
@@ -213,7 +213,7 @@
             pbSniperEmblem.TabIndex = 8;
             pbSniperEmblem.TabStop = false;
             pbSniperEmblem.Tag = "8";
-            pbSniperEmblem.Click += classSelect_Click;
+            pbSniperEmblem.MouseClick += classSelect_MouseClick;
             pbSniperEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pbSpyEmblem
@@ -229,7 +229,7 @@
             pbSpyEmblem.TabIndex = 9;
             pbSpyEmblem.TabStop = false;
             pbSpyEmblem.Tag = "9";
-            pbSpyEmblem.Click += classSelect_Click;
+            pbSpyEmblem.MouseClick += classSelect_MouseClick;
             pbSpyEmblem.MouseEnter += classSelect_MouseEnter;
             // 
             // pnlRegister

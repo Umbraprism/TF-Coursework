@@ -70,8 +70,8 @@ namespace Coursework.Forms
 
         private void GuessingGameScreen_Load(object? sender, EventArgs? e)
         {
-            UIHelper.ApplyFonts(this);
-            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UI.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.TFClass);
 
             cbGuess.Text = String.Empty;
 
@@ -150,18 +150,18 @@ namespace Coursework.Forms
 
         private void ApplyScores()
         {
-            if (guessCount < PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount || PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount == 0)
+            if (guessCount < Session.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount || Session.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount == 0)
             {
-                PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount = guessCount;
+                Session.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount = guessCount;
             }
 
-            if (streak > PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].HighestStreak)
+            if (streak > Session.Player.ScoresHashmap[QuizScores.GuessingGame].HighestStreak)
             {
-                PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].HighestStreak = streak;
+                Session.Player.ScoresHashmap[QuizScores.GuessingGame].HighestStreak = streak;
             }
 
-            PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].LatestGuessAmount = guessCount;
-            PlayerHelper.Player.ScoresHashmap[QuizScores.GuessingGame].CurrentStreak = streak;
+            Session.Player.ScoresHashmap[QuizScores.GuessingGame].LatestGuessAmount = guessCount;
+            Session.Player.ScoresHashmap[QuizScores.GuessingGame].CurrentStreak = streak;
 
             guessCount = 0;
         }

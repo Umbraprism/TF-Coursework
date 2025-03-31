@@ -1,4 +1,5 @@
 ﻿using Coursework.Extensions;
+using System.Net.Security;
 using System.Text.Json.Serialization;
 
 namespace Coursework.ParentClasses

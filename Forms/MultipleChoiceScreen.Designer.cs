@@ -302,7 +302,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MultipleChoiceScreen";
-            Text = "MultipleChoiceScreen";
+            Text = "Multiple Choice";
             WindowState = FormWindowState.Maximized;
             Load += MultipleChoiceScreen_Load;
             pnlHeader.ResumeLayout(false);

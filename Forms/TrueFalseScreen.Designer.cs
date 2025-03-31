@@ -238,6 +238,7 @@
             // 
             // lblQuestionNumber
             // 
+            lblQuestionNumber.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lblQuestionNumber.AutoSize = true;
             lblQuestionNumber.Font = new Font("Segoe UI", 20F);
             lblQuestionNumber.ForeColor = Color.FromArgb(246, 231, 222);
@@ -262,7 +263,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TrueFalseScreen";
-            Text = "TrueFalseScreen";
+            Text = "True or False";
             WindowState = FormWindowState.Maximized;
             Load += TrueFalseScreen_Load;
             pnlHeader.ResumeLayout(false);

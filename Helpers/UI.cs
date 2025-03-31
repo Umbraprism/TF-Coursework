@@ -18,7 +18,7 @@ namespace Coursework.Helpers
         TFClass
     }
 
-    public static class UIHelper
+    public static class UI
     {
         private static PrivateFontCollection fontCollection = new();
 
@@ -26,6 +26,26 @@ namespace Coursework.Helpers
         public static Font TF2Secondary { get; set; }
         public static Cursor TFCursor { get; set; }
         public static Cursor DefaultCursor { get; set; }
+        public static Dictionary<string, Color> ColourPalette { get; } = new()
+        {
+            { "Background", Color.FromArgb(53, 48, 46) },
+            { "BackgroundDark", Color.FromArgb(45, 41, 39) },
+            { "BackgroundDarker", Color.FromArgb(41, 39, 39) },
+            { "Text", Color.FromArgb(246, 231, 222) },
+            { "Red", Color.FromArgb(189, 59, 59) },
+            { "Green", Color.FromArgb(114, 158, 66) },
+            { "Blue", Color.FromArgb(100, 142, 170) },
+            { "Gold", Color.FromArgb(234, 185, 59) },
+            { "Silver", Color.FromArgb(183, 173, 173) },
+            { "Bronze", Color.FromArgb(171, 101, 71) },
+            { "Unusual", Color.FromArgb(134, 80, 172) },
+            { "Strange", Color.FromArgb(207, 106, 50) },
+            { "Genuine", Color.FromArgb(77, 116, 85) },
+            { "Vintage", Color.FromArgb(71, 98, 145) },
+            { "Unique", Color.FromArgb(255, 215, 0) },
+            { "Basic", Color.FromArgb(250, 250, 250) },
+            { "Junk", Color.FromArgb(178, 178, 178) }
+        };
 
         /// <summary>
         /// <c>P/Invoke</c> Creates a cursor handle from a cursor file. Allows the custom cursor to utilise colour.
@@ -139,7 +159,7 @@ namespace Coursework.Helpers
 
             string cursorPath = $@"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\Cursors\";
 
-            uint id = PlayerHelper.Player == null ? 0 : PlayerHelper.Player.TFClass.Id;
+            uint id = Session.Player == null ? 0 : Session.Player.TFClass.Id;
 
             switch (id)
             {
@@ -213,7 +233,7 @@ namespace Coursework.Helpers
                 e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
 
                 e.Graphics.Clear(toolTip.BackColor);
-                e.Graphics.DrawString(e.ToolTipText, UIHelper.TF2Secondary, textBrush, e.Bounds, sf);
+                e.Graphics.DrawString(e.ToolTipText, UI.TF2Secondary, textBrush, e.Bounds, sf);
             }
         }
 
@@ -224,7 +244,7 @@ namespace Coursework.Helpers
         {
             string toolTip = ((ToolTip)sender).GetToolTip(e.AssociatedControl);
 
-            Size textSize = TextRenderer.MeasureText(toolTip, UIHelper.TF2Secondary);
+            Size textSize = TextRenderer.MeasureText(toolTip, UI.TF2Secondary);
 
             e.ToolTipSize = textSize;
         }

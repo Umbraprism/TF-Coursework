@@ -19,12 +19,12 @@ namespace Coursework.Forms
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyFonts(this);
-            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UI.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.TFClass);
 
             uint randomClass = (uint)rnd.Next(1, 10);
 
-            Tip[] tfClassTips = FormHelper.Tips.Where(tip => tip.TFClassId == randomClass).ToArray();
+            Tip[] tfClassTips = Session.Tips.Where(tip => tip.TFClassId == randomClass).ToArray();
             lblTipText.Text = tfClassTips[rnd.Next(0, tfClassTips.Length - 1)].Text;
 
             lblOnWayTo.Text = OnWayTo.Text;

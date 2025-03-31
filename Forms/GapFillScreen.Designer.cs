@@ -238,7 +238,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "GapFillScreen";
-            Text = "questionblank1";
+            Text = "Gap Fill";
             WindowState = FormWindowState.Maximized;
             Load += GapFillScreen_Load;
             pnlHeader.ResumeLayout(false);

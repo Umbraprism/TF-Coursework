@@ -1,4 +1,5 @@
-﻿using Coursework.Helpers;
+﻿using Coursework.Extensions;
+using Coursework.Helpers;
 using Coursework.ParentClasses;
 using Coursework.UserControls;
 
@@ -6,36 +7,54 @@ namespace Coursework.Forms
 {
     public partial class GapFillScreen : Form
     {
+        #region Field declarations
+
         private Question question;
         private int score;
+
+        #endregion
+
+        #region Constructor
 
         public GapFillScreen(ref Question question)
         {
             InitializeComponent();
             this.question = question;
-            this.Text = $"{FormHelper.Quiz.Name} Quiz";
-            score = FormHelper.Quiz.Score;
+            this.Text = $"{Session.Quiz.Name} Quiz";
+            score = Session.Quiz.Score;
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void GapFillScreen_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyFonts(this);
-            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UI.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.TFClass);
 
-            lblQuizName.Text = $"{FormHelper.Quiz.Name.ToUpper()} QUIZ";
+            lblQuizName.Text = $"{Session.Quiz.Name.ToUpper()} QUIZ";
             lblQuestionText.Text = question.Text;
 
             lblScore.Text = score.ToString();
-            lblTimeRemaining.Text = TimeSpan.FromSeconds(FormHelper.Quiz.TimeRemaining).ToString(@"m\:ss");
+            lblTimeRemaining.Text = TimeSpan.FromSeconds(Session.Quiz.TimeRemaining).ToString(@"m\:ss");
 
-            lblQuestionNumber.Text = $"{FormHelper.Quiz.CurrentQuestionIndex + 1}/{FormHelper.Quiz.BaseQuestions.Count}";
+            lblQuestionNumber.Text = $"{Session.Quiz.CurrentQuestionIndex + 1}/{Session.Quiz.BaseQuestions.Count}";
 
-            ppbCharge.Value = (PlayerHelper.Player.TFClass.Ability.ChargeLevel * 100) / PlayerHelper.Player.TFClass.Ability.ChargesRequired;
+            ppbCharge.Value = (Session.Player.TFClass.Ability.ChargeLevel * 100) / Session.Player.TFClass.Ability.ChargesRequired;
+            pbAbility.Image = TFClass.Assets[Session.Player.TFClass.Id].Portrait;
+
+            if (ppbCharge.Value != 100 && pbAbility.Image != null)
+            {
+                Bitmap destaurated = (Bitmap)pbAbility.Image;
+
+                pbAbility.Image = destaurated.Desaturate();
+            }
 
             tmrQuiz.Start();
 
             lblScore.Text = score.ToString();
-            pbAbility.Image = TFClass.Assets[PlayerHelper.Player.TFClass.Id].Emblem;
+            pbAbility.Image = TFClass.Assets[Session.Player.TFClass.Id].Emblem;
         }
 
         private void tbAnswer_KeyDown(object sender, KeyEventArgs e)
@@ -44,7 +63,7 @@ namespace Coursework.Forms
             {
                 if (tbAnswer.Text.Trim().ToLower() == question.Answers[0].ToLower())
                 {
-                    double scoreAddition = FormHelper.Quiz.ScoreMultiplier != 0 ? 20 * FormHelper.Quiz.ScoreMultiplier : 20;
+                    double scoreAddition = Session.Quiz.ScoreMultiplier != 0 ? 20 * Session.Quiz.ScoreMultiplier : 20;
 
                     score += (int)scoreAddition;
                     question.IsCorrect = true;
@@ -55,12 +74,12 @@ namespace Coursework.Forms
                 }
                 else
                 {
-                    if (PlayerHelper.Player.TFClass.Id == 4)
+                    if (Session.Player.TFClass.Id == 4)
                     {
-                        FormHelper.Quiz.ScoreMultiplier = 0;
+                        Session.Quiz.ScoreMultiplier = 0;
                     }
 
-                    FormHelper.Quiz.IsDisguised = false;
+                    Session.Quiz.IsDisguised = false;
 
                     question.IsAnswered = true;
 
@@ -72,11 +91,11 @@ namespace Coursework.Forms
 
         private void pbAbility_Click(object sender, EventArgs e)
         {
-            PlayerHelper.Player.TFClass.Ability.UseAbility(this, ref FormHelper.Quiz, ref question);
+            Session.Player.TFClass.Ability.UseAbility(this, ref Session.Quiz, ref question);
 
             if (question.IsCorrect)
             {
-                double scoreAddition = FormHelper.Quiz.ScoreMultiplier != 0 ? 20 * FormHelper.Quiz.ScoreMultiplier : 20;
+                double scoreAddition = Session.Quiz.ScoreMultiplier != 0 ? 20 * Session.Quiz.ScoreMultiplier : 20;
 
                 score += (int)scoreAddition;
 
@@ -94,7 +113,7 @@ namespace Coursework.Forms
 
             if (questionIndex == question.CorrectAnswerIndex)
             {
-                double scoreAddition = FormHelper.Quiz.ScoreMultiplier != 0 ? 20 * FormHelper.Quiz.ScoreMultiplier : 20;
+                double scoreAddition = Session.Quiz.ScoreMultiplier != 0 ? 20 * Session.Quiz.ScoreMultiplier : 20;
 
                 score += (int)scoreAddition;
                 question.IsCorrect = true;
@@ -105,12 +124,12 @@ namespace Coursework.Forms
             }
             else
             {
-                if (PlayerHelper.Player.TFClass.Id == 4)
+                if (Session.Player.TFClass.Id == 4)
                 {
-                    FormHelper.Quiz.ScoreMultiplier = 0;
+                    Session.Quiz.ScoreMultiplier = 0;
                 }
 
-                FormHelper.Quiz.IsDisguised = false;
+                Session.Quiz.IsDisguised = false;
 
                 question.IsAnswered = true;
 
@@ -121,15 +140,17 @@ namespace Coursework.Forms
 
         private void tmrQuiz_Tick(object sender, EventArgs e)
         {
-            FormHelper.Quiz.TimeRemaining--;
-            lblTimeRemaining.Text = TimeSpan.FromSeconds(FormHelper.Quiz.TimeRemaining).ToString(@"m\:ss");
+            Session.Quiz.TimeRemaining--;
+            lblTimeRemaining.Text = TimeSpan.FromSeconds(Session.Quiz.TimeRemaining).ToString(@"m\:ss");
 
-            if (FormHelper.Quiz.TimeRemaining <= 0)
+            if (Session.Quiz.TimeRemaining <= 0)
             {
                 tmrQuiz.Stop();
                 new EndScreen().Show();
                 this.Close();
             }
         }
+
+        #endregion
     }
 }

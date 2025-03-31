@@ -250,7 +250,7 @@
             Controls.Add(rpnlEnd);
             FormBorderStyle = FormBorderStyle.None;
             Name = "EndScreen";
-            Text = "EndScreen";
+            Text = "End";
             WindowState = FormWindowState.Maximized;
             Load += EndScreen_Load;
             rpnlEnd.ResumeLayout(false);

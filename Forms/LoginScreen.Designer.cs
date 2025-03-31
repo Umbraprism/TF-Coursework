@@ -217,7 +217,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginScreen";
-            Text = "LoginScreen";
+            Text = "Login";
             WindowState = FormWindowState.Maximized;
             Activated += LoginScreen_Activated;
             Load += LoginScreen_Load;

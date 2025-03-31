@@ -1,13 +1,17 @@
 ﻿using Coursework.Helpers;
 using Coursework.ParentClasses;
-using Coursework.UserControls;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Coursework.Forms
 {
     public partial class AnswerIndicationScreen : Form
     {
+        #region Field declarations
+
         private int score;
+
+        #endregion
+
+        #region Constructor
 
         public AnswerIndicationScreen(int score)
         {
@@ -15,12 +19,16 @@ namespace Coursework.Forms
             InitializeComponent();
         }
 
+        #endregion
+
+        #region Event Handlers
+
         private async void AnswerIndicationScreen_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyFonts(this);
-            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UI.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.TFClass);
 
-            Question previousQuestion = FormHelper.Quiz.BaseQuestions[FormHelper.Quiz.CurrentQuestionIndex];
+            Question previousQuestion = Session.Quiz.BaseQuestions[Session.Quiz.CurrentQuestionIndex];
 
             lblIndicator.Width = this.Width / 2;
             lblIndicator.Height = this.Height / 2;
@@ -28,36 +36,36 @@ namespace Coursework.Forms
             lblScore.Width = this.Width / 2;
             lblScore.Height = this.Height / 2;
 
-            if (PlayerHelper.Player.TFClass.Ability.ChargeLevel < PlayerHelper.Player.TFClass.Ability.ChargesRequired)
+            if (Session.Player.TFClass.Ability.ChargeLevel < Session.Player.TFClass.Ability.ChargesRequired)
             {
-                PlayerHelper.Player.TFClass.Ability.ChargeLevel++;
+                Session.Player.TFClass.Ability.ChargeLevel++;
             }
 
             if (score > 0)
             {
                 lblIndicator.Text = "CORRECT!";
                 lblScore.Text = $"+{score} Points";
-                lblScore.ForeColor = FormHelper.ColourPalette["Green"];
+                lblScore.ForeColor = UI.ColourPalette["Green"];
             }
             else
             {
                 lblIndicator.Text = "INCORRECT!";
                 lblScore.Text = $"+{score} Points";
-                lblScore.ForeColor = FormHelper.ColourPalette["Red"];
+                lblScore.ForeColor = UI.ColourPalette["Red"];
 
                 lblCorrectAnswer.Visible = true;
                 lblCorrectAnswer.Text = $"Correct Answer - {previousQuestion.Answers[previousQuestion.CorrectAnswerIndex]}";
             }
 
-            FormHelper.Quiz.Score += score;
+            Session.Quiz.Score += score;
 
             await Task.Delay(2000);
 
             try
             {
-                FormHelper.Quiz.CurrentQuestionIndex++;
+                Session.Quiz.CurrentQuestionIndex++;
 
-                Question nextQuestion = FormHelper.Quiz.BaseQuestions[FormHelper.Quiz.CurrentQuestionIndex];
+                Question nextQuestion = Session.Quiz.BaseQuestions[Session.Quiz.CurrentQuestionIndex];
 
                 switch (nextQuestion.Type)
                 {
@@ -85,5 +93,7 @@ namespace Coursework.Forms
 
             this.Close();
         }
+
+        #endregion
     }
 }

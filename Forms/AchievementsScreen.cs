@@ -1,32 +1,37 @@
 ﻿using Coursework.Helpers;
 using Coursework.UserControls;
 using Coursework.ParentClasses;
-using System.Windows.Forms;
 
 namespace Coursework.Forms
 {
     public partial class AchievementsScreen : Form
     {
+        #region Constructor
+
         public AchievementsScreen()
         {
             InitializeComponent();
         }
 
+        #endregion
+
+        #region Event Handlers
+
         private void AchievementsScreen_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyFonts(this);
-            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UI.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.TFClass);
             ttMyAchievementProgress.OwnerDraw = true;
 
-            ppbAchievementProgress.Value = (PlayerHelper.Player.Achievements.Where(achievement => achievement.IsAchieved).Count() * 100) / PlayerHelper.Player.Achievements.Count;
+            ppbAchievementProgress.Value = (Session.Player.Achievements.Where(achievement => achievement.IsAchieved).Count() * 100) / Session.Player.Achievements.Count;
 
             if (ppbAchievementProgress.Value == ppbAchievementProgress.Maximum)
             {
-                ppbAchievementProgress.TextColour = FormHelper.ColourPalette["Gold"];
-                ppbAchievementProgress.ProgressColour = FormHelper.ColourPalette["Gold"];
+                ppbAchievementProgress.TextColour = UI.ColourPalette["Gold"];
+                ppbAchievementProgress.ProgressColour = UI.ColourPalette["Gold"];
             }
 
-            foreach (Achievement achievement in PlayerHelper.Player.Achievements)
+            foreach (Achievement achievement in Session.Player.Achievements)
             {
                 flpAchievements.Controls.Add(new AchievementView(achievement));
             }
@@ -40,12 +45,14 @@ namespace Coursework.Forms
 
         private void ttMyAchievementProgress_Draw(object sender, DrawToolTipEventArgs e)
         {
-            UIHelper.DrawToolTip(sender, e);
+            UI.DrawToolTip(sender, e);
         }
 
         private void ttMyAchievementProgress_Popup(object sender, PopupEventArgs e)
         {
-            UIHelper.SizeToolTip(sender, e);
+            UI.SizeToolTip(sender, e);
         }
+
+        #endregion
     }
 }

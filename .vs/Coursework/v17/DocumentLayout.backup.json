@@ -1,42 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "U:\\CourseworkRoot\\CourseworkCode\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\usercontrols\\tfmessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:usercontrols\\tfmessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|c:\\users\\user\\documents\\courseworkcode - main work on this one!!! - copy\\forms\\serverclientscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\serverclientscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|U:\\CourseworkRoot\\CourseworkCode\\usercontrols\\tfmessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:usercontrols\\tfmessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|c:\\users\\user\\documents\\courseworkcode - main work on this one!!! - copy\\helpers\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:helpers\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|c:\\users\\user\\documents\\courseworkcode - main work on this one!!! - copy\\forms\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\forms\\endscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\endscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|c:\\users\\user\\documents\\courseworkcode - main work on this one!!! - copy\\forms\\serverhostscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\serverhostscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|u:\\courseworkroot\\courseworkcode\\classes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:classes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|U:\\CourseworkRoot\\CourseworkCode\\forms\\dragdropscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\dragdropscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|U:\\CourseworkRoot\\CourseworkCode\\forms\\gapfillscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\gapfillscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|U:\\CourseworkRoot\\CourseworkCode\\forms\\multiplechoicescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\multiplechoicescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|U:\\CourseworkRoot\\CourseworkCode\\forms\\truefalsescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\truefalsescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|c:\\users\\user\\documents\\courseworkcode - main work on this one!!! - copy\\forms\\serverhostscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA08B577-5EC1-4106-B577-CDE4D6CCB9E7}|Coursework.csproj|solutionrelative:forms\\serverhostscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,109 +33,73 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Helpers\\Server.cs",
+              "RelativeDocumentMoniker": "Helpers\\Server.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Helpers\\Server.cs",
+              "RelativeToolTip": "Helpers\\Server.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T20:30:00.95Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TFMessageBox.cs [Design]",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\UserControls\\TFMessageBox.cs",
-              "RelativeDocumentMoniker": "UserControls\\TFMessageBox.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\UserControls\\TFMessageBox.cs [Design]",
-              "RelativeToolTip": "UserControls\\TFMessageBox.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T17:22:36.454Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TFMessageBox.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\UserControls\\TFMessageBox.cs",
-              "RelativeDocumentMoniker": "UserControls\\TFMessageBox.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\UserControls\\TFMessageBox.cs",
-              "RelativeToolTip": "UserControls\\TFMessageBox.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAqwE4AAABPAAAAAAAAAA==",
+              "Title": "ServerClientScreen.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Forms\\ServerClientScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\ServerClientScreen.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Forms\\ServerClientScreen.cs",
+              "RelativeToolTip": "Forms\\ServerClientScreen.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAowDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T17:17:44.872Z",
+              "WhenOpened": "2025-03-31T20:32:15.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RegisterScreen.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\RegisterScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\RegisterScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\RegisterScreen.cs",
-              "RelativeToolTip": "Forms\\RegisterScreen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAASAAAAAAAAAA==",
+              "Title": "MainMenuScreen.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Forms\\MainMenuScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\MainMenuScreen.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Forms\\MainMenuScreen.cs",
+              "RelativeToolTip": "Forms\\MainMenuScreen.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAAAKwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T10:55:57.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Player.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Classes\\Player.cs",
-              "RelativeDocumentMoniker": "Classes\\Player.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Classes\\Player.cs",
-              "RelativeToolTip": "Classes\\Player.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T10:38:00.074Z"
+              "WhenOpened": "2025-03-31T20:24:56.742Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EndScreen.cs",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\EndScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\EndScreen.cs",
-              "ToolTip": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\EndScreen.cs",
-              "RelativeToolTip": "Forms\\EndScreen.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAUwEQAAAAaAAAAAAAAAA==",
+              "Title": "ServerHostScreen.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Forms\\ServerHostScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\ServerHostScreen.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Forms\\ServerHostScreen.cs",
+              "RelativeToolTip": "Forms\\ServerHostScreen.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAQwGYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T10:18:11.691Z"
+              "WhenOpened": "2025-03-31T20:24:45.758Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TrueFalseScreen.cs [Design]",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\TrueFalseScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\TrueFalseScreen.cs",
-              "ToolTip": "E:\\CourseworkRoot\\CourseworkCode\\Forms\\TrueFalseScreen.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "ServerHostScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Forms\\ServerHostScreen.cs",
+              "RelativeDocumentMoniker": "Forms\\ServerHostScreen.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Forms\\ServerHostScreen.cs [Design]",
+              "RelativeToolTip": "Forms\\ServerHostScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T10:15:15.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MultipleChoiceScreen.cs [Design]",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\MultipleChoiceScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\MultipleChoiceScreen.cs",
-              "ToolTip": "E:\\CourseworkRoot\\CourseworkCode\\Forms\\MultipleChoiceScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T10:15:14.398Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GapFillScreen.cs [Design]",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\GapFillScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\GapFillScreen.cs",
-              "ToolTip": "E:\\CourseworkRoot\\CourseworkCode\\Forms\\GapFillScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T10:15:09.902Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DragDropScreen.cs [Design]",
-              "DocumentMoniker": "U:\\CourseworkRoot\\CourseworkCode\\Forms\\DragDropScreen.cs",
-              "RelativeDocumentMoniker": "Forms\\DragDropScreen.cs",
-              "ToolTip": "E:\\CourseworkRoot\\CourseworkCode\\Forms\\DragDropScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T10:15:09.107Z"
+              "WhenOpened": "2025-03-31T20:24:29.122Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

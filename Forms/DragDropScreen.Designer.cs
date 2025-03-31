@@ -339,7 +339,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "DragDropScreen";
-            Text = "DragDropScreen";
+            Text = "Drag Drop";
             WindowState = FormWindowState.Maximized;
             Load += DragDropScreen_Load;
             pnlHeader.ResumeLayout(false);

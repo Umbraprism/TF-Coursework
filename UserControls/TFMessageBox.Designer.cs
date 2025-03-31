@@ -83,13 +83,13 @@
             // lblMessage
             // 
             lblMessage.AutoSize = true;
-            lblMessage.Font = new Font("Segoe UI", 14.25F);
+            lblMessage.Font = new Font("Segoe UI", 12.25F);
             lblMessage.ForeColor = Color.FromArgb(246, 231, 222);
             lblMessage.Location = new Point(12, 110);
             lblMessage.MaximumSize = new Size(530, 0);
-            lblMessage.MinimumSize = new Size(530, 0);
+            lblMessage.MinimumSize = new Size(530, 180);
             lblMessage.Name = "lblMessage";
-            lblMessage.Size = new Size(530, 25);
+            lblMessage.Size = new Size(530, 180);
             lblMessage.TabIndex = 1;
             lblMessage.Text = "Message";
             // 

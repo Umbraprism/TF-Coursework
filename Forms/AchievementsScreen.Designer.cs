@@ -126,7 +126,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AchievementsScreen";
-            Text = "AchievementsScreen";
+            Text = "Achievements";
             WindowState = FormWindowState.Maximized;
             Load += AchievementsScreen_Load;
             pnlHeader.ResumeLayout(false);

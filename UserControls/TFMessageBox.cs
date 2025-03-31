@@ -18,11 +18,15 @@ namespace Coursework.UserControls
     /// </summary>
     public partial class TFMessageBox : Form
     {
+        #region Field declarations
         private static DialogResult result;
+        #endregion
 
         public TFMessageBox(string message, string title, TFMessageBoxButtons? buttons, string[] buttonText)
         {
             InitializeComponent();
+            this.Text = title;
+
             this.lblMessage.Text = message;
             this.lblTitle.Text = title.ToUpper();
 
@@ -51,8 +55,8 @@ namespace Coursework.UserControls
 
         private void TFMessageBox_Load(object sender, EventArgs e)
         {
-            UIHelper.ApplyFonts(this);
-            UIHelper.ApplyCursor(this, CursorStyle.TFClass);
+            UI.ApplyFonts(this);
+            UI.ApplyCursor(this, CursorStyle.TFClass);
         }
 
         protected override CreateParams CreateParams
@@ -67,12 +71,17 @@ namespace Coursework.UserControls
 
         public static DialogResult Show(string message, string title, TFMessageBoxButtons buttons = TFMessageBoxButtons.OK, params string[] buttonText)
         {
+            if (buttonText.Length > 2)
+            {
+                throw new ArgumentException("The amount of items in the 'buttonText' parameter should not exceed 2.");
+            }
+
             using (Form backDrop = new()
             {
                 FormBorderStyle = FormBorderStyle.None,
                 WindowState = FormWindowState.Maximized,
                 BackColor = Color.Black,
-                Opacity = 0.4,
+                Opacity = 0.5,
                 ShowInTaskbar = false,
                 Enabled = false
             })
