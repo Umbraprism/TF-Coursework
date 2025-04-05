@@ -1,14 +1,18 @@
-﻿using Coursework.Extensions;
-using Coursework.Helpers;
+﻿using Coursework.Helpers;
 using Coursework.ParentClasses;
-using Coursework.UserControls;
 
 namespace Coursework.Forms
 {
     public partial class TrueFalseScreen : Form
     {
+        #region Field declarations
+
         private Question question;
         private int score;
+
+        #endregion
+
+        #region Constructor
 
         public TrueFalseScreen(ref Question question)
         {
@@ -17,6 +21,10 @@ namespace Coursework.Forms
             this.Text = $"{Session.Quiz.Name} Quiz";
             score = Session.Quiz.Score;
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void TrueFalseScreen_Load(object sender, EventArgs e)
         {
@@ -34,14 +42,7 @@ namespace Coursework.Forms
             lblQuestionNumber.Text = $"{Session.Quiz.CurrentQuestionIndex + 1}/{Session.Quiz.BaseQuestions.Count}";
 
             ppbCharge.Value = (Session.Player.TFClass.Ability.ChargeLevel * 100) / Session.Player.TFClass.Ability.ChargesRequired;
-            pbAbility.Image = TFClass.Assets[Session.Player.TFClass.Id].Portrait;
-
-            if (ppbCharge.Value != 100 && pbAbility.Image != null)
-            {
-                Bitmap destaurated = (Bitmap)pbAbility.Image;
-
-                pbAbility.Image = destaurated.Desaturate();
-            }
+            pbAbility.Image = TFClass.Assets[Session.Player.TFClass.Id].Emblem;
 
             int i = 0;
 
@@ -119,5 +120,7 @@ namespace Coursework.Forms
                 this.Close();
             }
         }
+
+        #endregion
     }
 }

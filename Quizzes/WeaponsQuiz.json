@@ -4,7 +4,7 @@
     "TimeRemaining": 300,
     "BaseQuestions": [
         {
-            "Text": "Which Scout weapon only partially reloads it's clip?",
+            "Text": "Which Scout weapon only partially reloads its clip?",
             "Type": 0,
             "CorrectAnswerIndex": 1,
             "Answers": [
@@ -38,11 +38,11 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Scout unlock ____?",
+            "Text": "The Soda Popper has a chargeable ___ meter.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "Hype"
             ],
             "ImageId": 0
         },
@@ -81,11 +81,11 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Soldier unlock ____?",
+            "Text": "The Black Box only has ___ available rockets.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "3"
             ],
             "ImageId": 0
         },
@@ -124,11 +124,11 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Pyro unlock ____?",
+            "Text": "The Scorch Shot is deals extra ___ damage around its impact point.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "Splash"
             ],
             "ImageId": 0
         },
@@ -167,11 +167,11 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Demoman unlock ____?",
+            "Text": "The Scotsman's Skullcutter raises damage by ___%.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "25"
             ],
             "ImageId": 0
         },
@@ -210,11 +210,11 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Heavy unlock ____?",
+            "Text": "The Tomislav has a ___ rev up sound.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "Silent"
             ],
             "ImageId": 0
         },
@@ -253,11 +253,11 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Engineer weapon ____?",
+            "Text": "The Jag builds buildings ___% faster.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "30"
             ],
             "ImageId": 0
         },
@@ -296,11 +296,11 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Medic weapon ____?",
+            "Text": "The ___ collects organs, retaining Über on death.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "Vita-saw"
             ],
             "ImageId": 0
         },
@@ -339,11 +339,11 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Sniper weapon ____?",
+            "Text": "The ___ can collect heads that lower the charge time on the rifle.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "Bazaar Bargain"
             ],
             "ImageId": 0
         },
@@ -382,11 +382,11 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Spy weapon ____?",
+            "Text": "The ___ speeds up the player on a backstab.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "Big Earner"
             ],
             "ImageId": 0
         }

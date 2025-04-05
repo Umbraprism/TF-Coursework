@@ -64,47 +64,47 @@ namespace Coursework.ParentClasses
                 case 1:
                     this.Name = "Scout";
                     this.Description = "A fast running hooligan from Boston; Complete with bad attitude.";
-                    this.Ability = new("Double Jump", "Skip the question you're currently on and get it right immediately. Get 3 answers right to charge it again!", 3);
+                    this.Ability = new("Double Jump", "Skip the question you're currently on and get it right immediately. Complete 3 questions to charge it again!", 3);
                     break;
                 case 2:
                     this.Name = "Soldier";
                     this.Description = "A lead poisoned military-man who has, in fact, never been in the military at all.";
-                    this.Ability = new("Buff Banner", "Skip the question you're currently on and get it right immediately. Get 3 answers right to charge it again!", 3);
+                    this.Ability = new("Buff Banner", "Get double points for the next three questions. Complete 5 questions to charge it again!", 5);
                     break;
                 case 3:
                     this.Name = "Pyro";
                     this.Description = "A fire-loving mercenary of origins unknown. In fact, the only thing known about him is his penchant for setting things alight.";
-                    this.Ability = new("Flare Gun", "Skip the question you're currently on and get it right immediately. Get 3 answers right to charge it again!", 3);
+                    this.Ability = new("Flare Gun", "If you got the previous question correct, get triple points for the next question! Complete 2 questions to charge it again!", 2);
                     break;
                 case 4:
                     this.Name = "Demoman";
                     this.Description = "Uses his one good eye for well timed explosions. Uses his liver to distil alcohol.";
-                    this.Ability = new("Eyelander", "Skip the question you're currently on and get it right immediately. Get 3 answers right to charge it again!", 3);
+                    this.Ability = new("Eyelander", "If you got the previous question correct, get quintuple points for the next question! Complete 10 questions to charge it again!", 10);
                     break;
                 case 5:
                     this.Name = "Heavy";
                     this.Description = "Some people think they can outsmart him. Maybe. He has yet to meet someone who can outsmart a bullet.";
-                    this.Ability = new("Minigun", "Skip the question you're currently on and get it right immediately. Get 3 answers right to charge it again!", 3);
+                    this.Ability = new("Minigun", "Blank out every answer that is incorrect. Complete 3 questions to charge it again!", 3);
                     break;
                 case 6:
                     this.Name = "Engineer";
                     this.Description = "A soft-spoken Texan with a knack for automatic machine gun turrets.";
-                    this.Ability = new("Teleporter", "Skip the question you're currently on and get it right immediately. Get 3 answers right to charge it again!", 3);
+                    this.Ability = new("Teleporter", "Teleport to any question you got incorrect to have another go! Complete 5 questions to charge it again!", 10);
                     break;
                 case 7:
                     this.Name = "Medic";
                     this.Description = "A 'doctor' from Germany who frequently breaks the Hippocratic oath. In fact, he doesn't even have his medical license.";
-                    this.Ability = new("Übercharge", "Skip the question you're currently on and get it right immediately. Get 3 answers right to charge it again!", 3);
+                    this.Ability = new("Übercharge", "Get double points for the next question. Complete 2 questions to charge it again!", 2);
                     break;
                 case 8:
                     this.Name = "Sniper";
                     this.Description = "Coming from the sunken and lost land of New Zealand - but raised in the outback - he has a keen eye which is usually found planted in a scope.";
-                    this.Ability = new("Razorback", "Skip the question you're currently on and get it right immediately. Get 3 answers right to charge it again!", 3);
+                    this.Ability = new("Razorback", "Skip the question you're currently on and get it right immediately. Complete 3 questions to charge it again!", 3);
                     break;
                 case 9:
                     this.Name = "Spy";
                     this.Description = "A dashing rogue hailing from who-knows-where in France. He has a penchant for dapper suits and even dapper-ier disguises.";
-                    this.Ability = new("Disguise Kit", "'Disguise' to switch to an easier set of BLU questions, but be careful - if you get a question wrong, your disguise will break and you will return to the normal questions.", 100);
+                    this.Ability = new("Disguise Kit", "'Disguise' to switch to an easier set of BLU questions, but be careful - if you get a question wrong, your disguise will break and you will return to the normal questions. Complete 5 questions to charge it again!", 5);
                     break;
                 default:
                     throw new IndexOutOfRangeException();

@@ -88,10 +88,6 @@ namespace Coursework.ParentClasses
             set { scoresHashmap = value; }
         }
 
-        // Holds the user's rank in the online mode. Starts at 3, but can be progressed through peer to peer LAN matches.
-        public string OnlineRank { get; set; } = "Junk";
-
-
         // Backing fields for Username and Password properties
         private string username = String.Empty;
         private string password = String.Empty;
@@ -149,7 +145,7 @@ namespace Coursework.ParentClasses
         /// </summary>
         private bool IsValidUsername(string value)
         {
-            if (!String.IsNullOrEmpty(value) && value.Length >= 3 && value.Length < 20)
+            if (!String.IsNullOrEmpty(value) && value.Length >= 3 && value.Length <= 20)
             {
                 return true;
             }
@@ -175,7 +171,7 @@ namespace Coursework.ParentClasses
             int numberCount = 0;
             int specialCount = 0;
 
-            if (String.IsNullOrEmpty(value) || value.Length < 8)
+            if (String.IsNullOrEmpty(value) || value.Length <= 8)
             {
                 return false;
             }

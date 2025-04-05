@@ -44,14 +44,7 @@ namespace Coursework.Forms
             lblQuestionNumber.Text = $"{Session.Quiz.CurrentQuestionIndex + 1}/{Session.Quiz.BaseQuestions.Count}";
 
             ppbCharge.Value = (Session.Player.TFClass.Ability.ChargeLevel * 100) / Session.Player.TFClass.Ability.ChargesRequired;
-            pbAbility.Image = TFClass.Assets[Session.Player.TFClass.Id].Portrait;
-
-            if (ppbCharge.Value != 100 && pbAbility.Image != null)
-            {
-                Bitmap destaurated = (Bitmap)pbAbility.Image;
-
-                pbAbility.Image = destaurated.Desaturate();
-            }
+            pbAbility.Image = TFClass.Assets[Session.Player.TFClass.Id].Emblem;
 
             tmrQuiz.Start();
 

@@ -142,9 +142,9 @@ namespace Coursework
             }
             else if (e.Button == MouseButtons.Left)
             {
-                pbClassSelected.Image = TFClass.Assets[classId].Portrait;
-
                 classId = tempClassId;
+
+                pbClassSelected.Image = TFClass.Assets[classId].Portrait;
             }
         }
 
@@ -171,7 +171,7 @@ namespace Coursework
         private void linkToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new LoginScreen().Show();
-            Hide();
+            this.Close();
         }
 
         #endregion

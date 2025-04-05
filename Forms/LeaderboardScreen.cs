@@ -8,10 +8,16 @@ namespace Coursework.Forms
 {
     public partial class LeaderboardScreen : Form
     {
+        #region Constructor
+
         public LeaderboardScreen()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void LeaderboardScreen_Load(object sender, EventArgs e)
         {
@@ -91,20 +97,52 @@ namespace Coursework.Forms
                         break;
                 }
             }
+
+            if (lvLeaderboard.Items[0].SubItems[1].Text == Session.Player.Username)
+            {
+                UnlockAchievement("Global Elite");
+            }
         }
+
+        #endregion
+
+        #region Methods
+
+        private void UnlockAchievement(string name)
+        {
+            Achievement achievement = Session.Player.Achievements.Where(achievement => achievement.Name == name).First();
+
+            if (!achievement.IsAchieved)
+            {
+                Session.Player.Achievements.Where(achievement => achievement.Name == name).First().IsAchieved = true;
+            }
+        }
+
+        #endregion
     }
 
     public class ListViewItemSorter : IComparer
     {
+
+        #region Field declarations
+
         public int columnToSort = 0;
         public SortOrder sortOrder = SortOrder.None;
         private CaseInsensitiveComparer ciComparer = new();
+
+        #endregion
+
+        #region Constructor
 
         public ListViewItemSorter(int columnToSort, SortOrder sortOrder)
         {
             this.columnToSort = columnToSort;
             this.sortOrder = sortOrder;
         }
+
+        #endregion
+
+        #region Methods
 
         public int Compare(Object? x, Object? y)
         {
@@ -144,5 +182,7 @@ namespace Coursework.Forms
                 throw;
             }
         }
+
+        #endregion
     }
 }

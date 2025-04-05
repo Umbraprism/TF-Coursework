@@ -1,21 +1,31 @@
 ﻿using Coursework.Helpers;
 using Coursework.ParentClasses;
-using Coursework.UserControls;
 using System.ComponentModel;
+
 namespace Coursework.Forms
 {
     public partial class SplashScreen : Form
     {
+        #region Field declarations
+
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Form OnWayTo { get; set; }
 
         private Random rnd = new();
+
+        #endregion
+
+        #region Constructor
 
         public SplashScreen(Form OnWayTo)
         {
             InitializeComponent();
             this.OnWayTo = OnWayTo;
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
@@ -56,5 +66,7 @@ namespace Coursework.Forms
                 tmrLoading.Stop();
             }
         }
+
+        #endregion
     }
 }

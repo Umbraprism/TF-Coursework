@@ -1,142 +1,163 @@
-﻿using System.Diagnostics;
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Text.Json;
 using Coursework.Helpers;
-using Coursework.ParentClasses;
 using Coursework.UserControls;
 
 namespace Coursework.Forms
 {
     public partial class ServerHostScreen : Form
     {
-        private Client? client;
-        private int port = 0;
-        private TcpListener listener;
+        #region Field declarations
 
-        public ServerHostScreen(int port)
+        private TcpListener tcpListener;
+        private List<TcpClient> clients = new();
+
+        private string ip = String.Empty;
+        private int port = 0;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle = 0x00020000;
+                return cp;
+            }
+        }
+
+        #endregion
+
+        #region Constructor
+
+        public ServerHostScreen(string ip, int port)
         {
             InitializeComponent();
 
+            this.ip = ip;
             this.port = port;
-            listener = new(IPAddress.Any, port);
 
-            try
-            {
-                listener.Start();
+            lblIPAddress.Text = $"IP Address - {ip}";
+            lblPort.Text = $"Port - {port}";
 
-                Thread connectionThread = new(WaitForPlayers);
-                connectionThread.Start();
-            }
-            catch (SocketException)
-            {
-                Debug.WriteLine("Server already open on current port.");
-            }
+            tcpListener = new(IPAddress.Any, port);
 
-            tmrCheckClients.Start();
-
-            this.WindowState = FormWindowState.Minimized;
+            tmrCheckClientConnections.Start();
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void ServerHostScreen_Load(object sender, EventArgs e)
         {
             UI.ApplyFonts(this);
             UI.ApplyCursor(this, CursorStyle.TFClass);
-
-            AllocConsole();
-
         }
 
-        [DllImport("kernel32")]
-        static extern bool AllocConsole();
-
-        private async void WaitForPlayers()
+        private void btnHost_Click(object sender, EventArgs e)
         {
-            while (true && listener != null)
+            try
             {
-                TcpClient client = await listener.AcceptTcpClientAsync();
-                Debug.WriteLine("Connected!");
+                tcpListener.Start();
 
-                string json = JsonSerializer.Serialize(Session.Player);
+                btnHost.Visible = false;
 
-                Server.SendPacket(client.GetStream(), Encoding.Unicode.GetBytes(json));
-
-                Task clientThread = Task.Run(() => AddClients(client.GetStream(), client));
-
-                Task handleMessage = Task.Run(() => HandleClient(client.GetStream()));
+                Task connectionThread = Task.Run(WaitForPlayers);
+            }
+            catch (SocketException ex)
+            {
+                TFMessageBox.Show($"Server already exists on the IP {ip} with the port number {port}. {ex.Message}", "Server Already Exists");
             }
         }
 
-        private void AddClients(NetworkStream stream, TcpClient tcpClient)
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            if (stream.DataAvailable)
+            DialogResult disconnectQuery = TFMessageBox.Show("Are you sure you would like to exit? The server will shut down and all other players will be disconnected!", "Are you sure?", TFMessageBoxButtons.YesAndNo);
+
+            if (disconnectQuery == DialogResult.Yes)
             {
-                Player? clientPlayer = JsonSerializer.Deserialize<Player>(Encoding.Unicode.GetString(Server.ReadStream(stream)));
+                tmrCheckClientConnections.Stop();
 
-                if (clientPlayer != null)
+                tcpListener.Stop();
+                tcpListener.Dispose();
+
+                this.Close();
+            }
+        }
+
+        private void btnMinimise_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void ServerHostScreen_Shown(object sender, EventArgs e)
+        {
+            using Form backDrop = new()
+            {
+                FormBorderStyle = FormBorderStyle.None,
+                WindowState = FormWindowState.Maximized,
+                BackColor = Color.Black,
+                Opacity = 0.5,
+                ShowInTaskbar = false,
+                Enabled = false
+            };
+
+            backDrop.Show();
+        }
+
+        private void tmrCheckClientConnections_Tick(object sender, EventArgs e)
+        {
+            lblConnected.Text = $"Connected Clients   {clients.Count}";
+
+            foreach (TcpClient client in clients.ToList())
+            {
+                if (client.Client.Poll(1, SelectMode.SelectRead) && !client.GetStream().DataAvailable)
                 {
-                    client = new(tcpClient, clientPlayer);
-
-                    Debug.WriteLine("Received new player.");
-
-                    Server.Clients.Add(client);
-
-                    PlayerView connectedPlayerView = new PlayerView(clientPlayer);
-                    connectedPlayerView.Anchor = AnchorStyles.None;
-
-                    flpPlayers.Invoke(() => flpPlayers.Controls.Add(connectedPlayerView));
+                    clients.Remove(client);
                 }
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        private void WaitForPlayers()
+        {
+            try
+            {
+                while (true && tcpListener != null)
+                {
+                    Console.WriteLine("Waiting...");
+
+                    TcpClient tcpClient = tcpListener.AcceptTcpClient();
+                    clients.Add(tcpClient);
+
+                    Task clientThread = Task.Run(() => HandleClient(tcpClient.GetStream()));
+                }
+            }
+            catch (SocketException)
+            {
             }
         }
 
         private void HandleClient(NetworkStream stream)
         {
-            while (stream.DataAvailable)
+            while (tcpListener != null)
             {
-                if (client != null)
+                if (stream.DataAvailable)
                 {
-                    byte[] msg = Server.ReadStream(stream);
+                    byte[] received = Server.ReadStream(stream);
 
-                    string msgDecoded = Encoding.Unicode.GetString(msg);
-
-                    Console.WriteLine(msgDecoded);
+                    foreach (TcpClient client in clients.ToList())
+                    {
+                        Server.SendPacket(client.GetStream(), received);
+                    }
                 }
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            DialogResult disconnectQuery = TFMessageBox.Show("Are you sure you would like to exit? The server will shut down and all other players will be disconnected!", "Are you sure?", TFMessageBoxButtons.YesAndNo);
-
-            if (disconnectQuery == DialogResult.Yes && listener != null)
-            {
-
-                foreach (Client client in Server.Clients)
-                {
-                    client.TCP.Close();
-                }
-
-                new SplashScreen(new MainMenuScreen()).Show();
-                this.Close();
-            }
-        }
-
-        private void tmrCheckClients_Tick(object sender, EventArgs e)
-        {
-            PlayerView clientView;
-
-            foreach (Client client in Server.Clients)
-            {
-                if (!client.TCP.Connected)
-                {
-                    clientView = new(client.Player);
-
-                    Server.Clients.Remove(client);
-                    flpPlayers.Controls.Remove(clientView);
-                }
-            }
-        }
+        #endregion
     }
 }

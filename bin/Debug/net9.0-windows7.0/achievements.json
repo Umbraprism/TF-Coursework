@@ -20,6 +20,11 @@
 	    "IsAchieved": false
     },
     {
+        "Name": "Guess What",
+	    "Description": "Guess the correct weapon in the Guessing Game in 1 go.",
+	    "IsAchieved": false
+    },
+    {
         "Name": "Global Elite",
 	    "Description": "Reach 1st place on any leaderboard.",
 	    "IsAchieved": false

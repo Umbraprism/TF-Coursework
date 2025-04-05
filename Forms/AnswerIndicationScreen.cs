@@ -91,6 +91,16 @@ namespace Coursework.Forms
                 this.Close();
             }
 
+            if (Session.Player.TFClass.Ability.Duration > 0)
+            {
+                Session.Player.TFClass.Ability.Duration--;
+            }
+
+            if (Session.Player.TFClass.Ability.Duration == 0)
+            {
+                Session.Quiz.ScoreMultiplier = 0;
+            }
+
             this.Close();
         }
 

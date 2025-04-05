@@ -24,7 +24,6 @@ U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net9.0-windows7.0\Coursework.P
 U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net9.0-windows7.0\Coursework.UserControls.AchievementView.resources
 U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net9.0-windows7.0\Coursework.UserControls.Guess.resources
 U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PercentageProgressBar.resources
-U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PlayerView.resources
 U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net9.0-windows7.0\Coursework.UserControls.TFMessageBox.resources
 U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net9.0-windows7.0\Coursework.csproj.GenerateResource.cache
 U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net9.0-windows7.0\Coursework.GeneratedMSBuildEditorConfig.editorconfig
@@ -756,3 +755,6 @@ C:\Users\User\Documents\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\obj\Deb
 C:\Users\User\Documents\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\obj\Debug\net9.0-windows7.0\Coursework.pdb
 C:\Users\User\Documents\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\obj\Debug\net9.0-windows7.0\Coursework.genruntimeconfig.cache
 C:\Users\User\Documents\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\obj\Debug\net9.0-windows7.0\ref\Coursework.dll
+E:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.ServerClientScreen.resources
+U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.ServerClientScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net9.0-windows7.0\Coursework.Forms.ServerClientScreen.resources

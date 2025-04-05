@@ -46,7 +46,6 @@
             btnHistoryQuiz = new Button();
             bntTFClassQuiz = new Button();
             btnWeaponsQuiz = new Button();
-            lblOnlineRank = new Label();
             lblTFClass = new Label();
             lblUsername = new Label();
             pbAvatar = new PictureBox();
@@ -70,7 +69,6 @@
             pnlStats.Controls.Add(pnlGuessingGame);
             pnlStats.Controls.Add(pnlQuizStats);
             pnlStats.Controls.Add(tlpQuizSelect);
-            pnlStats.Controls.Add(lblOnlineRank);
             pnlStats.Controls.Add(lblTFClass);
             pnlStats.Controls.Add(lblUsername);
             pnlStats.Controls.Add(pbAvatar);
@@ -299,23 +297,12 @@
             btnWeaponsQuiz.UseVisualStyleBackColor = false;
             btnWeaponsQuiz.Click += btnQuiz_Click;
             // 
-            // lblOnlineRank
-            // 
-            lblOnlineRank.AutoSize = true;
-            lblOnlineRank.Font = new Font("Segoe UI", 36F);
-            lblOnlineRank.ForeColor = Color.FromArgb(246, 231, 222);
-            lblOnlineRank.Location = new Point(272, 349);
-            lblOnlineRank.Name = "lblOnlineRank";
-            lblOnlineRank.Size = new Size(152, 65);
-            lblOnlineRank.TabIndex = 4;
-            lblOnlineRank.Text = "RANK";
-            // 
             // lblTFClass
             // 
             lblTFClass.AutoSize = true;
             lblTFClass.Font = new Font("Segoe UI", 36F);
             lblTFClass.ForeColor = Color.FromArgb(246, 231, 222);
-            lblTFClass.Location = new Point(272, 271);
+            lblTFClass.Location = new Point(272, 322);
             lblTFClass.Name = "lblTFClass";
             lblTFClass.Size = new Size(302, 65);
             lblTFClass.TabIndex = 3;
@@ -466,7 +453,6 @@
         private PictureBox pbAvatar;
         private Label lblUsername;
         private Label lblTFClass;
-        private Label lblOnlineRank;
         private Panel pnlQuizStats;
         private TableLayoutPanel tlpQuizSelect;
         private Button btnGuessingGame;

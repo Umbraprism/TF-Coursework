@@ -16,8 +16,12 @@ namespace Coursework.ParentClasses
         public string Name { get; private set; }
         public string Info { get; private set; }
         public int ChargesRequired { get; set; }
+        [JsonIgnore]
         public int ChargeLevel { get; set; }
+        [JsonIgnore]
         public int TimesUsed { get; set; }
+        [JsonIgnore]
+        public int Duration { get; set; } = 0;
 
         #endregion
 
@@ -49,6 +53,7 @@ namespace Coursework.ParentClasses
 
                         question.IsCorrect = true;
                         question.IsAnswered = true;
+
                         ChargeLevel = 0;
                         TimesUsed++;
                     }
@@ -61,6 +66,7 @@ namespace Coursework.ParentClasses
 
                         quiz.ScoreMultiplier = 2;
                         ChargeLevel = 0;
+                        Duration = 3;
                         TimesUsed++;
                     }
                     break;
@@ -72,13 +78,27 @@ namespace Coursework.ParentClasses
                         if (quiz.CurrentDifficulty[quiz.CurrentQuestionIndex - 1].IsCorrect)
                         { 
                             quiz.ScoreMultiplier = 2;
+
                             ChargeLevel = 0;
+                            Duration = 1;
                             TimesUsed++;
                         }
                     }
                     break;
                 case 4:
-                    quiz.ScoreMultiplier += 0.5;
+                    if (ChargeLevel == ChargesRequired)
+                    {
+                        PlayVoiceline();
+
+                        if (quiz.CurrentDifficulty[quiz.CurrentQuestionIndex - 1].IsCorrect)
+                        {
+                            quiz.ScoreMultiplier = 5;
+
+                            ChargeLevel = 0;
+                            Duration = 1;
+                            TimesUsed++;
+                        }
+                    }
                     break;
                 case 5:
                     if (ChargeLevel == ChargesRequired)
@@ -108,22 +128,65 @@ namespace Coursework.ParentClasses
                     }
                     break;
                 case 6:
-                    ChargeLevel = 0;
-                    throw new NotImplementedException();
-                    // teleport to any qu - 3x uses
-                case 7:
-                    ChargeLevel = 0;
-                    throw new NotImplementedException();
-                    // immunity for next three qus - once
-                case 8:
-                    ChargeLevel = 0;
-                    throw new NotImplementedException();
-                    // immunity for one qu - 1 charge
-                case 9:
-                    quiz.CurrentDifficulty = quiz.EasyQuestions;
-                    quiz.IsDisguised = true;
+                    if (ChargeLevel == ChargesRequired)
+                    {
+                        Random rnd = new();
+
+                        List<Question> incorrectQuestions = quiz.CurrentDifficulty.Where(question => question.IsAnswered && !question.IsCorrect).ToList();
+
+                        if (incorrectQuestions.Count > 0)
+                        {
+                            Session.Quiz.CurrentQuestionIndex = quiz.CurrentDifficulty.IndexOf(incorrectQuestions[rnd.Next(0, incorrectQuestions.Count) - 1]);
+                        }
+                        else
+                        {
+                            return;
+                        }
+
+                        PlayVoiceline();
+
+                        ChargeLevel = 0;
+                        TimesUsed++;
+                    }
+
                     break;
-                    // 'disguise' to blu until question wrong - once
+                case 7:
+                    if (ChargeLevel == ChargesRequired)
+                    {
+                        Duration = 1;
+
+                        PlayVoiceline();
+
+                        quiz.ScoreMultiplier = 2;
+
+                        ChargeLevel = 0;
+                        TimesUsed++;
+                    }
+
+                    break;
+                case 8:
+                    if (ChargeLevel == ChargesRequired)
+                    {
+                        PlayVoiceline();
+
+                        question.IsCorrect = true;
+                        question.IsAnswered = true;
+
+                        ChargeLevel = 0;
+                        TimesUsed++;
+                    }
+
+                    break;
+                case 9:
+                    if (ChargeLevel == ChargesRequired)
+                    {
+                        PlayVoiceline();
+
+                        ChargeLevel = 0;
+                        TimesUsed++;
+                    }
+
+                    break;
             }
         }
 

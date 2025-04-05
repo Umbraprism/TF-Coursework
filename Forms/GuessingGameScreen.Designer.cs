@@ -242,11 +242,12 @@
             cbGuess.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             cbGuess.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cbGuess.BackColor = Color.White;
-            cbGuess.DropDownHeight = 100;
+            cbGuess.DropDownHeight = 600;
             cbGuess.FlatStyle = FlatStyle.Flat;
             cbGuess.Font = new Font("Segoe UI", 24F);
             cbGuess.FormattingEnabled = true;
             cbGuess.IntegralHeight = false;
+            cbGuess.ItemHeight = 45;
             cbGuess.Location = new Point(5, 8);
             cbGuess.Name = "cbGuess";
             cbGuess.Size = new Size(453, 53);

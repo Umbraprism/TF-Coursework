@@ -440,7 +440,7 @@
             tbIPAddress.BorderStyle = BorderStyle.None;
             tbIPAddress.Font = new Font("Segoe UI", 30F);
             tbIPAddress.Location = new Point(3, 11);
-            tbIPAddress.MaxLength = 20;
+            tbIPAddress.MaxLength = 15;
             tbIPAddress.Name = "tbIPAddress";
             tbIPAddress.PlaceholderText = "IP Address";
             tbIPAddress.Size = new Size(906, 54);

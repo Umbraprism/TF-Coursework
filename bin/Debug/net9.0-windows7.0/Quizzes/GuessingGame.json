@@ -6,10 +6,76 @@
         "Update": "Release"
     },
     {
+        "Name": "Force-A-Nature",
+        "Slot": "Primary",
+        "UsedBy": 1,
+        "Update": "Scout Update"
+    },
+    {
+        "Name": "Shortstop",
+        "Slot": "Primary",
+        "UsedBy": 1,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Soda Popper",
+        "Slot": "Primary",
+        "UsedBy": 1,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Baby Face's Blaster",
+        "Slot": "Primary",
+        "UsedBy": 1,
+        "Update": "Pyromania"
+    },
+    {
+        "Name": "Back Scatter",
+        "Slot": "Primary",
+        "UsedBy": 1,
+        "Update": "Love & War"
+    },
+    {
         "Name": "Pistol",
         "Slot": "Secondary",
         "UsedBy": 0,
         "Update": "Release"
+    },
+    {
+        "Name": "Winger",
+        "Slot": "Secondary",
+        "UsedBy": 1,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Pretty Boy's Pocket Pistol",
+        "Slot": "Secondary",
+        "UsedBy": 1,
+        "Update": "Pyromania"
+    },
+    {
+        "Name": "Flying Guillotine",
+        "Slot": "Secondary",
+        "UsedBy": 1,
+        "Update": "Triad Pack"
+    },
+    {
+        "Name": "Bonk! Atomic Punch",
+        "Slot": "Secondary",
+        "UsedBy": 1,
+        "Update": "Scout Update"
+    },
+    {
+        "Name": "Crit-a-Cola",
+        "Slot": "Secondary",
+        "UsedBy": 1,
+        "Update": "April 28, 2010 Patch"
+    },
+    {
+        "Name": "Mad Milk",
+        "Slot": "Secondary",
+        "UsedBy": 1,
+        "Update": "Mann-Conomy"
     },
     {
         "Name": "Bat",
@@ -18,10 +84,94 @@
         "Update": "Release"
     },
     {
+        "Name": "Sandman",
+        "Slot": "Melee",
+        "UsedBy": 1,
+        "Update": "Scout Update"
+    },
+    {
+        "Name": "Candy Cane",
+        "Slot": "Melee",
+        "UsedBy": 1,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Boston Basher",
+        "Slot": "Melee",
+        "UsedBy": 1,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Sun-on-a-Stick",
+        "Slot": "Melee",
+        "UsedBy": 1,
+        "Update": "Rift Pack"
+    },
+    {
+        "Name": "Fan O' War",
+        "Slot": "Melee",
+        "UsedBy": 1,
+        "Update": "Shogun Pack"
+    },
+    {
+        "Name": "Atomizer",
+        "Slot": "Melee",
+        "UsedBy": 1,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Wrap Assasin",
+        "Slot": "Melee",
+        "UsedBy": 1,
+        "Update": "Australian Christmas"
+    },
+    {
         "Name": "Rocket Launcher",
         "Slot": "Primary",
         "UsedBy": 2,
         "Update": "Release"
+    },
+    {
+        "Name": "Direct Hit",
+        "Slot": "Primary",
+        "UsedBy": 2,
+        "Update": "WAR!"
+    },
+    {
+        "Name": "Black Box",
+        "Slot": "Primary",
+        "UsedBy": 2,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Rocket Jumper",
+        "Slot": "Primary",
+        "UsedBy": 2,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Liberty Launcher",
+        "Slot": "Primary",
+        "UsedBy": 2,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Cow Mangler 5000",
+        "Slot": "Primary",
+        "UsedBy": 2,
+        "Update": "Dr. Grordbort's Victory Pack"
+    },
+    {
+        "Name": "Beggar's Bazooka",
+        "Slot": "Primary",
+        "UsedBy": 2,
+        "Update": "Pyromania"
+    },
+    {
+        "Name": "Air Strike",
+        "Slot": "Primary",
+        "UsedBy": 2,
+        "Update": "Love & War"
     },
     {
         "Name": "Shotgun",
@@ -30,16 +180,166 @@
         "Update": "Release"
     },
     {
+        "Name": "Reserve Shooter",
+        "Slot": "Secondary",
+        "UsedBy": 0,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Buff Banner",
+        "Slot": "Secondary",
+        "UsedBy": 2,
+        "Update": "WAR!"
+    },
+    {
+        "Name": "Gunboats",
+        "Slot": "Secondary",
+        "UsedBy": 2,
+        "Update": "WAR!"
+    },
+    {
+        "Name": "Battalion's Backup",
+        "Slot": "Secondary",
+        "UsedBy": 2,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Concheror",
+        "Slot": "Secondary",
+        "UsedBy": 2,
+        "Update": "Shogun Pack"
+    },
+    {
+        "Name": "Mantreads",
+        "Slot": "Secondary",
+        "UsedBy": 2,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Righteous Bison",
+        "Slot": "Secondary",
+        "UsedBy": 2,
+        "Update": "Dr GrordBort's Victory Pack"
+    },
+    {
+        "Name": "B.A.S.E Jumper",
+        "Slot": "Secondary",
+        "UsedBy": 0,
+        "Update": "Love & War"
+    },
+    {
+        "Name": "Panic Attack",
+        "Slot": "Secondary",
+        "UsedBy": 0,
+        "Update": "Smissmas 2014"
+    },
+    {
         "Name": "Shovel",
         "Slot": "Melee",
         "UsedBy": 2,
         "Update": "Release"
     },
-        {
+    {
+        "Name": "Equalizer",
+        "Slot": "Melee",
+        "UsedBy": 2,
+        "Update": "WAR!"
+    },
+    {
+        "Name": "Pain Train",
+        "Slot": "Melee",
+        "UsedBy": 0,
+        "Update": "First Community Contribution"
+    },
+    {
+        "Name": "Half-Zatoichi",
+        "Slot": "Melee",
+        "UsedBy": 0,
+        "Update": "Shogun Pack"
+    },
+    {
+        "Name": "Disciplinary Action",
+        "Slot": "Melee",
+        "UsedBy": 2,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Market Gardener",
+        "Slot": "Melee",
+        "UsedBy": 2,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Escape Plan",
+        "Slot": "Melee",
+        "UsedBy": 2,
+        "Update": "Pyromania"
+    },
+    {
         "Name": "Flamethrower",
         "Slot": "Primary",
         "UsedBy": 3,
         "Update": "Release"
+    },
+    {
+        "Name": "Backburner",
+        "Slot": "Primary",
+        "UsedBy": 3,
+        "Update": "Pyro Update"
+    },
+    {
+        "Name": "Degreaser",
+        "Slot": "Primary",
+        "UsedBy": 3,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Phlogistinator",
+        "Slot": "Primary",
+        "UsedBy": 3,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Dragon's Fury",
+        "Slot": "Primary",
+        "UsedBy": 3,
+        "Update": "Jungle Inferno"
+    },
+    {
+        "Name": "Flare Gun",
+        "Slot": "Secondary",
+        "UsedBy": 3,
+        "Update": "Pyro Update"
+    },
+    {
+        "Name": "Detonator",
+        "Slot": "Secondary",
+        "UsedBy": 3,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Manmelter",
+        "Slot": "Secondary",
+        "UsedBy": 3,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Scorch Shot",
+        "Slot": "Secondary",
+        "UsedBy": 3,
+        "Update": "Pyromania"
+    },
+    {
+        "Name": "Thermal Thruster",
+        "Slot": "Secondary",
+        "UsedBy": 3,
+        "Update": "Jungle Inferno"
+    },
+    {
+        "Name": "Gas Passer",
+        "Slot": "Secondary",
+        "UsedBy": 3,
+        "Update": "Jungle Inferno"
     },
     {
         "Name": "Fire Axe",
@@ -47,11 +347,83 @@
         "UsedBy": 3,
         "Update": "Release"
     },
-        {
+    {
+        "Name": "Axtinguisher",
+        "Slot": "Melee",
+        "UsedBy": 3,
+        "Update": "Pyro Update"
+    },
+    {
+        "Name": "Homewrecker",
+        "Slot": "Melee",
+        "UsedBy": 3,
+        "Update": "First Community Contribution"
+    },
+    {
+        "Name": "Powerjack",
+        "Slot": "Melee",
+        "UsedBy": 3,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Back Scratcher",
+        "Slot": "Melee",
+        "UsedBy": 3,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Sharpened Volcano Fragment",
+        "Slot": "Melee",
+        "UsedBy": 3,
+        "Update": "Rift Pack"
+    },
+    {
+        "Name": "Third Degree",
+        "Slot": "Melee",
+        "UsedBy": 3,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Neon Annihilator",
+        "Slot": "Melee",
+        "UsedBy": 3,
+        "Update": "Triad Pack"
+    },
+    {
+        "Name": "Hot Hand",
+        "Slot": "Melee",
+        "UsedBy": 3,
+        "Update": "Jungle Inferno"
+    },
+    {
         "Name": "Grenade Launcher",
         "Slot": "Primary",
         "UsedBy": 4,
         "Update": "Release"
+    },
+    {
+        "Name": "Loch-n-Load",
+        "Slot": "Primary",
+        "UsedBy": 4,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Ali Baba's Wee Booties",
+        "Slot": "Primary",
+        "UsedBy": 4,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Loose Cannon",
+        "Slot": "Primary",
+        "UsedBy": 4,
+        "Update": "Mecha Update"
+    },
+    {
+        "Name": "Iron Bomber",
+        "Slot": "Primary",
+        "UsedBy": 4,
+        "Update": "Smissmas 2014"
     },
     {
         "Name": "Stickybomb Launcher",
@@ -60,10 +432,76 @@
         "Update": "Release"
     },
     {
+        "Name": "Scottish Resistance",
+        "Slot": "Secondary",
+        "UsedBy": 4,
+        "Update": "WAR!"
+    },
+    {
+        "Name": "Chargin' Targe",
+        "Slot": "Secondary",
+        "UsedBy": 4,
+        "Update": "WAR!"
+    },
+    {
+        "Name": "Sticky Jumper",
+        "Slot": "Secondary",
+        "UsedBy": 4,
+        "Update": "Scream Fortress"
+    },
+    {
+        "Name": "Splendid Screen",
+        "Slot": "Secondary",
+        "UsedBy": 4,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Tide Turner",
+        "Slot": "Secondary",
+        "UsedBy": 4,
+        "Update": "Love & War"
+    },
+    {
+        "Name": "Quickiebomb Launcher",
+        "Slot": "Secondary",
+        "UsedBy": 4,
+        "Update": "Smissmas 2014"
+    },
+    {
         "Name": "Bottle",
         "Slot": "Melee",
         "UsedBy": 4,
         "Update": "Release"
+    },
+    {
+        "Name": "Eyelander",
+        "Slot": "Melee",
+        "UsedBy": 4,
+        "Update": "WAR!"
+    },
+    {
+        "Name": "Scotsman's Skullcutter",
+        "Slot": "Melee",
+        "UsedBy": 4,
+        "Update": "Second Community Contribution"
+    },
+    {
+        "Name": "Ullapool Caber",
+        "Slot": "Melee",
+        "UsedBy": 4,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Claidheamh Mor",
+        "Slot": "Melee",
+        "UsedBy": 4,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Persian Persuader",
+        "Slot": "Melee",
+        "UsedBy": 4,
+        "Update": "Uber Update"
     },
     {
         "Name": "Minigun",
@@ -72,10 +510,136 @@
         "Update": "Release"
     },
     {
+        "Name": "Natascha",
+        "Slot": "Primary",
+        "UsedBy": 5,
+        "Update": "Heavy Update"
+    },
+    {
+        "Name": "Brass Beast",
+        "Slot": "Primary",
+        "UsedBy": 5,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Tomislav",
+        "Slot": "Primary",
+        "UsedBy": 5,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Huo-Long Heater",
+        "Slot": "Primary",
+        "UsedBy": 5,
+        "Update": "Triad Pack"
+    },
+    {
+        "Name": "Sandvich",
+        "Slot": "Secondary",
+        "UsedBy": 5,
+        "Update": "Heavy Update"
+    },
+    {
+        "Name": "Family Business",
+        "Slot": "Secondary",
+        "UsedBy": 5,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Dalokohs Bar",
+        "Slot": "Secondary",
+        "UsedBy": 5,
+        "Update": "First Community Contribution"
+    },
+    {
+        "Name": "Buffalo Steak Sandvich",
+        "Slot": "Secondary",
+        "UsedBy": 5,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Second Banana",
+        "Slot": "Secondary",
+        "UsedBy": 5,
+        "Update": "Jungle Inferno"
+    },
+    {
         "Name": "Fists",
         "Slot": "Melee",
         "UsedBy": 5,
         "Update": "Release"
+    },
+    {
+        "Name": "Killing Gloves of Boxing",
+        "Slot": "Melee",
+        "UsedBy": 5,
+        "Update": "Heavy Update"
+    },
+    {
+        "Name": "Gloves of Running Urgently",
+        "Slot": "Melee",
+        "UsedBy": 5,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Warrior's Spirit",
+        "Slot": "Melee",
+        "UsedBy": 5,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Fists of Steel",
+        "Slot": "Melee",
+        "UsedBy": 5,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Holiday Punch",
+        "Slot": "Melee",
+        "UsedBy": 5,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Eviction Notice",
+        "Slot": "Melee",
+        "UsedBy": 5,
+        "Update": ""
+    },
+    {
+        "Name": "Frontier Justice",
+        "Slot": "Primary",
+        "UsedBy": 6,
+        "Update": "Engineer Update"
+    },
+    {
+        "Name": "Widowmaker",
+        "Slot": "Primary",
+        "UsedBy": 6,
+        "Update": "Manno-Technology"
+    },
+    {
+        "Name": "Pomson 6000",
+        "Slot": "Primary",
+        "UsedBy": 6,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Rescue Ranger",
+        "Slot": "Primary",
+        "UsedBy": 6,
+        "Update": "Mecha Update"
+    },
+    {
+        "Name": "Wrangler",
+        "Slot": "Secondary",
+        "UsedBy": 6,
+        "Update": "Engineer Update"
+    },
+    {
+        "Name": "Short Circuit",
+        "Slot": "Secondary",
+        "UsedBy": 6,
+        "Update": "Manno-Technology"
     },
     {
         "Name": "Wrench",
@@ -84,10 +648,52 @@
         "Update": "Release"
     },
     {
+        "Name": "Gunslinger",
+        "Slot": "Melee",
+        "UsedBy": 6,
+        "Update": "Engineer Update"
+    },
+    {
+        "Name": "Southern Hospitality",
+        "Slot": "Melee",
+        "UsedBy": 6,
+        "Update": "Engineer Update"
+    },
+    {
+        "Name": "Jag",
+        "Slot": "Melee",
+        "UsedBy": 6,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Eureka Effect",
+        "Slot": "Melee",
+        "UsedBy": 6,
+        "Update": "Australian Christmas"
+    },
+    {
         "Name": "Syringe Gun",
         "Slot": "Primary",
         "UsedBy": 7,
         "Update": "Release"
+    },
+    {
+        "Name": "Blutsauger",
+        "Slot": "Primary",
+        "UsedBy": 7,
+        "Update": "Gold Rush"
+    },
+    {
+        "Name": "Crusader's Crossbow",
+        "Slot": "Primary",
+        "UsedBy": 7,
+        "Update": "Australian Christmas"
+    },
+    {
+        "Name": "Overdose",
+        "Slot": "Primary",
+        "UsedBy": 7,
+        "Update": "Uber Update"
     },
     {
         "Name": "Medigun",
@@ -96,16 +702,88 @@
         "Update": "Release"
     },
     {
+        "Name": "Kritzkrieg",
+        "Slot": "Secondary",
+        "UsedBy": 7,
+        "Update": "Gold Rush"
+    },
+    {
+        "Name": "Quick-Fix",
+        "Slot": "Secondary",
+        "UsedBy": 7,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Vaccinator",
+        "Slot": "Secondary",
+        "UsedBy": 7,
+        "Update": "Mecha Update"
+    },
+    {
         "Name": "Bone Saw",
         "Slot": "Melee",
         "UsedBy": 7,
         "Update": "Release"
     },
-        {
+    {
+        "Name": "Ubersaw",
+        "Slot": "Melee",
+        "UsedBy": 7,
+        "Update": "Gold Rush"
+    },
+    {
+        "Name": "Vita-Saw",
+        "Slot": "Melee",
+        "UsedBy": 7,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Amputator",
+        "Slot": "Melee",
+        "UsedBy": 7,
+        "Update": "Australian Christmas"
+    },
+    {
         "Name": "Sniper Rifle",
         "Slot": "Primary",
         "UsedBy": 8,
         "Update": "Release"
+    },
+    {
+        "Name": "Huntsman",
+        "Slot": "Primary",
+        "UsedBy": 8,
+        "Update": "Sniper vs. Spy"
+    },
+    {
+        "Name": "Sydney Sleeper",
+        "Slot": "Primary",
+        "UsedBy": 8,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Bazaar Bargain",
+        "Slot": "Primary",
+        "UsedBy": 8,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Machina",
+        "Slot": "Primary",
+        "UsedBy": 8,
+        "Update": "Manno-Technology"
+    },
+    {
+        "Name": "Hitman's Heatmaker",
+        "Slot": "Primary",
+        "UsedBy": 8,
+        "Update": "Pyromania"
+    },
+    {
+        "Name": "Classic",
+        "Slot": "Primary",
+        "UsedBy": 8,
+        "Update": "Love & War"
     },
     {
         "Name": "SMG",
@@ -114,10 +792,58 @@
         "Update": "Release"
     },
     {
+        "Name": "Cleaner's Carbine",
+        "Slot": "Secondary",
+        "UsedBy": 8,
+        "Update": "Pyromania"
+    },
+    {
+        "Name": "Jarate",
+        "Slot": "Secondary",
+        "UsedBy": 8,
+        "Update": "Sniper vs. Spy"
+    },
+    {
+        "Name": "Razorback",
+        "Slot": "Secondary",
+        "UsedBy": 8,
+        "Update": "Sniper vs. Spy"
+    },
+    {
+        "Name": "Darwin's Danger Shield",
+        "Slot": "Secondary",
+        "UsedBy": 8,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Cozy Camper",
+        "Slot": "Secondary",
+        "UsedBy": 8,
+        "Update": "March 15, 2012 Patch"
+    },
+    {
         "Name": "Kukri",
         "Slot": "Melee",
         "UsedBy": 8,
         "Update": "Release"
+    },
+    {
+        "Name": "Tribalman's Shiv",
+        "Slot": "Melee",
+        "UsedBy": 8,
+        "Update": "Second Community Contribution"
+    },
+    {
+        "Name": "Bushwacka",
+        "Slot": "Melee",
+        "UsedBy": 8,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Shahanshah",
+        "Slot": "Melee",
+        "UsedBy": 8,
+        "Update": "Uber Update"
     },
     {
         "Name": "Revolver",
@@ -126,15 +852,75 @@
         "Update": "Release"
     },
     {
+        "Name": "Ambassador",
+        "Slot": "Primary",
+        "UsedBy": 9,
+        "Update": "Sniper vs. Spy"
+    },
+    {
+        "Name": "L'Etranger",
+        "Slot": "Primary",
+        "UsedBy": 9,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Enforcer",
+        "Slot": "Primary",
+        "UsedBy": 9,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Diamondback",
+        "Slot": "Primary",
+        "UsedBy": 9,
+        "Update": "Manno-Technology"
+    },
+    {
         "Name": "Invis Watch",
         "Slot": "Secondary",
         "UsedBy": 9,
         "Update": "Release"
     },
     {
+        "Name": "Cloak and Dagger",
+        "Slot": "Secondary",
+        "UsedBy": 9,
+        "Update": "Sniper vs. Spy"
+    },
+    {
+        "Name": "Dead Ringer",
+        "Slot": "Secondary",
+        "UsedBy": 9,
+        "Update": "Sniper vs. Spy"
+    },
+    {
         "Name": "Knife",
         "Slot": "Melee",
         "UsedBy": 9,
         "Update": "Release"
+    },
+    {
+        "Name": "Your Eternal Reward",
+        "Slot": "Melee",
+        "UsedBy": 9,
+        "Update": "Mann-Conomy"
+    },
+    {
+        "Name": "Conniver's Kunai",
+        "Slot": "Melee",
+        "UsedBy": 9,
+        "Update": "Shogun Pack"
+    },
+    {
+        "Name": "Big Earner",
+        "Slot": "Melee",
+        "UsedBy": 9,
+        "Update": "Uber Update"
+    },
+    {
+        "Name": "Spy-cicle",
+        "Slot": "Melee",
+        "UsedBy": 9,
+        "Update": "Australian Christmas"
     }
 ]

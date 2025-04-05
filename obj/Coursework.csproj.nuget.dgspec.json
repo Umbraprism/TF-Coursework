@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Coursework.csproj": {}
+    "U:\\CourseworkRoot\\CourseworkCode - Copy\\Coursework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Coursework.csproj": {
+    "U:\\CourseworkRoot\\CourseworkCode - Copy\\Coursework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Coursework.csproj",
+        "projectUniqueName": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Coursework.csproj",
         "projectName": "Coursework",
-        "projectPath": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\Coursework.csproj",
+        "projectPath": "U:\\CourseworkRoot\\CourseworkCode - Copy\\Coursework.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\\obj\\",
+        "outputPath": "U:\\CourseworkRoot\\CourseworkCode - Copy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

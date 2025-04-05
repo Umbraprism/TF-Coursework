@@ -5,10 +5,9 @@ namespace Coursework.Helpers
 {
     public static class Server
     {
-        #region Field declartions
+        #region Field declarations
 
         public static TcpListener? Listener { get; set; }
-        public static List<Client> Clients { get; set; } = new();
 
         #endregion
 
@@ -16,17 +15,18 @@ namespace Coursework.Helpers
 
         public static byte[] ReadStream(NetworkStream stream)
         {
+            List<byte> recieved = new();
+
             while (stream.DataAvailable)
             {
-                using (MemoryStream ms = new())
-                {
-                    stream.FlushAsync();
-                    stream.CopyToAsync(ms);
-                    return ms.ToArray();
-                }
+                byte[] buffer = new byte[65536];
+
+                stream.Read(buffer, 0, buffer.Length);
+
+                recieved.AddRange(buffer);
             }
 
-            throw new SocketException(404);
+            return recieved.ToArray();
         }
 
         public static void SendPacket(NetworkStream stream, byte[] data)

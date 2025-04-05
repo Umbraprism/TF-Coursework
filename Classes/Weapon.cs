@@ -20,7 +20,7 @@ namespace Coursework.ParentClasses
             Slot = slot;
             UsedBy = usedBy;
             Update = update;
-            Image = (Bitmap?)Bitmap.FromFile(@$"Weapons/{name.Replace(" ", "").ToLower()}.png");
+            Image = (Bitmap?)Bitmap.FromFile(@$"Weapons/{name.Replace(" ", "").Replace("'", "").ToLower()}.png");
         }
         #endregion
     }

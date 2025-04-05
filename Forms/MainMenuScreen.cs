@@ -3,20 +3,29 @@ using Coursework.Helpers;
 using Coursework.UserControls;
 using System.Text.Json;
 using System.Net.Sockets;
-using System.Text;
 using System.Net;
 
 namespace Coursework.Forms
 {
     public partial class MainMenuScreen : Form
     {
+        #region Field declarations
+
         private Random rnd = new();
         private static bool dailyPlayed = false;
+
+        #endregion
+
+        #region Constructor
 
         public MainMenuScreen()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void MainMenuScreen_Load(object sender, EventArgs e)
         {
@@ -142,34 +151,16 @@ namespace Coursework.Forms
             IPHostEntry ipHostEntry = Dns.GetHostEntry(Dns.GetHostName());
             string ip = ipHostEntry.AddressList.Where(ip => ip.AddressFamily == AddressFamily.InterNetwork).FirstOrDefault().ToString();
 
-            DialogResult hostOrJoinQuery = TFMessageBox.Show("Would you like to host a chatroom for others to join or join an already existing match?", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Host", "Join" });
+            DialogResult hostOrJoinQuery = TFMessageBox.Show("Would you like to host a chatroom for others to join or join an already existing match? If you are hosting, please ensure you have supplied an appropriate port number. The IP Address will be automatically assigned for you. To join a sever, ask the host for the IP Address and port number and supply them.", "Select a mode", TFMessageBoxButtons.Custom, new string[] { "Host", "Join" });
 
             if (hostOrJoinQuery == DialogResult.Yes && nudPort.Value > 1024)
             {
-                new ServerHostScreen((int)nudPort.Value).Show();
-
-                TFMessageBox.Show($"Server created on IP Address {ip} with the port number {nudPort.Value}", "Server Created!");
+                new ServerHostScreen(ip, (int)nudPort.Value).Show();
             }
-            else if (hostOrJoinQuery == DialogResult.No)
+            else if (hostOrJoinQuery == DialogResult.No && tbIPAddress.Text.Contains('.') && Int32.TryParse(tbIPAddress.Text.Replace(".", ""), out _))
             {
-                try
-                {
-                    TcpClient client = new();
-
-                    string json = JsonSerializer.Serialize(Session.Player);
-
-                    client.Connect(tbIPAddress.Text, (int)nudPort.Value);
-
-                    Server.SendPacket(client.GetStream(), Encoding.Unicode.GetBytes(json));
-                    client.GetStream().FlushAsync();
-
-                    new SplashScreen(new ServerClientScreen(client, client.GetStream())).Show();
-                    this.Close();
-                }
-                catch (SocketException ex)
-                {
-                    TFMessageBox.Show(ex.Message, "Connection Error");
-                }
+                new SplashScreen(new ServerClientScreen(tbIPAddress.Text, (int)nudPort.Value)).Show();
+                this.Close();
             }
         }
 
@@ -207,5 +198,7 @@ namespace Coursework.Forms
         {
             UI.SizeToolTip(sender, e);
         }
+
+        #endregion
     }
 }

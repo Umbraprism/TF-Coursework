@@ -8,6 +8,8 @@ namespace Coursework.Forms
 {
     public partial class GuessingGameScreen : Form
     {
+        #region Field declarations
+
         private Random rnd = new Random();
 
         private List<Weapon> weaponsList = JsonSerializer.Deserialize<List<Weapon>>(File.ReadAllText("Quizzes/GuessingGame.json"));
@@ -21,6 +23,10 @@ namespace Coursework.Forms
         private int streak = 0;
 
         private Guess? guess;
+
+        #endregion
+
+        #region Constructor
 
         public GuessingGameScreen(bool isEndless)
         {
@@ -67,6 +73,10 @@ namespace Coursework.Forms
 
             ResetLabels();
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void GuessingGameScreen_Load(object? sender, EventArgs? e)
         {
@@ -148,6 +158,26 @@ namespace Coursework.Forms
             }
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (isEndless)
+            {
+                DialogResult backQuery = TFMessageBox.Show("Would you like to stop guessing weapons and return to the main menu?", "Are you sure?", TFMessageBoxButtons.YesAndNo);
+
+                if (backQuery == DialogResult.Yes)
+                {
+                    ApplyScores();
+
+                    this.Close();
+                    new MainMenuScreen().Show();
+                }
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
         private void ApplyScores()
         {
             if (guessCount < Session.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount || Session.Player.ScoresHashmap[QuizScores.GuessingGame].LowestGuessAmount == 0)
@@ -162,6 +192,8 @@ namespace Coursework.Forms
 
             Session.Player.ScoresHashmap[QuizScores.GuessingGame].LatestGuessAmount = guessCount;
             Session.Player.ScoresHashmap[QuizScores.GuessingGame].CurrentStreak = streak;
+
+            CheckAchievements();
 
             guessCount = 0;
         }
@@ -180,20 +212,28 @@ namespace Coursework.Forms
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void CheckAchievements()
         {
-            if (isEndless)
+            if (isEndless && streak >= 5)
             {
-                DialogResult backQuery = TFMessageBox.Show("Would you like to stop guessing weapons and return to the main menu?", "Are you sure?", TFMessageBoxButtons.YesAndNo);
-
-                if (backQuery == DialogResult.Yes)
-                {
-                    ApplyScores();
-
-                    this.Close();
-                    new MainMenuScreen().Show();
-                }
+                UnlockAchievement("Hard to Kill");
+            }
+            if (guessCount == 1)
+            {
+                UnlockAchievement("Guess What");
             }
         }
+
+        private void UnlockAchievement(string name)
+        {
+            Achievement achievement = Session.Player.Achievements.Where(achievement => achievement.Name == name).First();
+
+            if (!achievement.IsAchieved)
+            {
+                Session.Player.Achievements.Where(achievement => achievement.Name == name).First().IsAchieved = true;
+            }
+        }
+
+        #endregion
     }
 }

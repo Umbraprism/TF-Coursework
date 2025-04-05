@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Coursework.Helpers;
+﻿using Coursework.Helpers;
 using Coursework.ParentClasses;
 using Coursework.UserControls;
 
@@ -15,10 +6,16 @@ namespace Coursework.Forms
 {
     public partial class StatsScreen : Form
     {
+        #region Constructor
+
         public StatsScreen()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void StatsScreen_Load(object sender, EventArgs e)
         {
@@ -28,8 +25,6 @@ namespace Coursework.Forms
             pbAvatar.Image = TFClass.Assets[Session.Player.TFClass.Id].Avatar;
             lblUsername.Text = Session.Player.Username;
             lblTFClass.Text = $"The {Session.Player.TFClass.Name}";
-            lblOnlineRank.Text = Session.Player.OnlineRank;
-            lblOnlineRank.ForeColor = UI.ColourPalette[lblOnlineRank.Text];
         }
 
         private void btnLeaderboard_Click(object sender, EventArgs e)
@@ -79,5 +74,7 @@ namespace Coursework.Forms
         {
             TFMessageBox.Show($"{Session.Player.TFClass.Ability.Name}\n\n{Session.Player.TFClass.Ability.Info}\n\nCharges Required - {Session.Player.TFClass.Ability.ChargesRequired}", "Ability Info");
         }
+
+        #endregion
     }
 }

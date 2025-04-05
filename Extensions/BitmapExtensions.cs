@@ -26,24 +26,6 @@
             return result;
         }
 
-        public static Bitmap Desaturate(this Bitmap bitmap)
-        {
-            Bitmap result = (Bitmap)bitmap.Clone();
-
-            for (int x = 0; x < bitmap.Width; x++)
-            {
-                for (int y = 0; y < bitmap.Height; y++)
-                {
-                    int[] rgb = [result.GetPixel(x, y).R, result.GetPixel(x, y).G, result.GetPixel(x, y).B];
-
-                    double avg = rgb.Average();
-
-                    result.SetPixel(x, y, Color.FromArgb(result.GetPixel(x, y).A, (int)avg, (int)avg, (int)avg));
-                }
-            }
-
-            return result;
-        }
         #endregion
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Text.Json;
+﻿using System.Text.Json;
 using Coursework.ParentClasses;
 using Coursework.Helpers;
 using Coursework.UserControls;
@@ -8,13 +7,23 @@ namespace Coursework.Forms
 {
     public partial class LoginScreen : Form
     {
+        #region Field declarations
+
         private Random rnd = new();
+
+        #endregion
+
+        #region Constructor
 
         public LoginScreen()
         {
             InitializeComponent();
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
@@ -73,6 +82,10 @@ namespace Coursework.Forms
             pbClassImage.Image = TFClass.Assets[tfRandomClass].Portrait;
         }
 
+        #endregion
+
+        #region Methods
+
         private void ErrorMessage(string text)
         {
             btnLogin.Click -= btnLogin_Click;
@@ -81,5 +94,7 @@ namespace Coursework.Forms
 
             btnLogin.Click += btnLogin_Click;
         }
+
+        #endregion
     }
 }

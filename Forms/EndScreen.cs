@@ -166,6 +166,10 @@ namespace Coursework.Forms
             {
                 UnlockAchievement("A Perfect Disguise");
             }
+            if (CheckLeaderboards())
+            {
+                UnlockAchievement("Iron Kurtain");
+            }
         }
 
         private void UnlockAchievement(string name)
@@ -178,6 +182,28 @@ namespace Coursework.Forms
 
                 flpAchievementsUnlocked.Controls.Add(new AchievementView(achievement));
             }
+        }
+
+        private bool CheckLeaderboards()
+        {
+            int[] placements = new int[3];
+
+            for (int i = 0; i < 4; i++)
+            {
+                List<int> scores = new();
+
+                foreach (Player player in Session.PlayerList)
+                {
+                    scores.Add(player.ScoresHashmap[(QuizScores)i].LatestScore);
+                }
+
+                scores.Sort();
+                scores.Reverse();
+
+                placements[i] = scores.IndexOf(Session.Player.ScoresHashmap[Session.Quiz.QuizType].LatestScore) + 1;
+            }
+
+            return placements.All(place => place == 1);
         }
 
         #endregion
