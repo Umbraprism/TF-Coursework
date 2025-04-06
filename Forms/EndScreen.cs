@@ -186,7 +186,7 @@ namespace Coursework.Forms
 
         private bool CheckLeaderboards()
         {
-            int[] placements = new int[3];
+            List<int> placements = new();
 
             for (int i = 0; i < 4; i++)
             {
@@ -200,7 +200,7 @@ namespace Coursework.Forms
                 scores.Sort();
                 scores.Reverse();
 
-                placements[i] = scores.IndexOf(Session.Player.ScoresHashmap[Session.Quiz.QuizType].LatestScore) + 1;
+                placements.Add(scores.IndexOf(Session.Player.ScoresHashmap[Session.Quiz.QuizType].LatestScore) + 1);
             }
 
             return placements.All(place => place == 1);

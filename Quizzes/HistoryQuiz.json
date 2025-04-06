@@ -4,21 +4,21 @@
     "TimeRemaining": 540,
     "BaseQuestions": [
         {
-            "Text": "What is the Scout's maximum health with overheal?",
+            "Text": "What is the metal with special properties important to the storyline called?",
             "Type": 0,
             "CorrectAnswerIndex": 3,
             "Answers": [
-                "225",
-                "200",
-                "150",
-                "175"
+                "New-Zealandium",
+                "Neptunium",
+                "Brazilium",
+                "Australium"
             ],
             "ImageId": 0
         },
         {
-            "Text": "The Scout captures points thrice as fast.",
+            "Text": "Gray Mann is the third son of Zepheniah Mann.",
             "Type": 1,
-            "CorrectAnswerIndex": 1,
+            "CorrectAnswerIndex": 0,
             "Answers": [
                 "True",
                 "False"
@@ -26,40 +26,40 @@
             "ImageId": 0
         },
         {
-            "Text": "What role is the Scout best at fulfilling in a team?",
+            "Text": "Who did Zepheniah Mann commision to build a Life Extender Machine?",
             "Type": 2,
             "CorrectAnswerIndex": 2,
             "Answers": [
-                "Support",
-                "Defense",
-                "Flanking",
-                "Long-range offense"
+                "The Medic",
+                "The Administrator",
+                "Radigan Conagher",
+                "The Engineer"
             ],
             "ImageId": 0
         },
         {
-            "Text": "Which ____ weapon ____?",
+            "Text": "In the TF2 storyline, Abraham Lincoln invented ___.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "Stairs"
             ],
             "ImageId": 0
         },
         {
-            "Text": "What is the first step to rocket jump as the Soldier?",
+            "Text": "Which is not a real organisation in the TF2 storyline?",
             "Type": 0,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Face behind you",
-                "Crouch",
-                "Fire a rocket",
-                "Jump"
+                "Yard Logistics Workers",
+                "Mann. Co",
+                "Reliable Excavation & Demolition",
+                "Builder's League United"
             ],
             "ImageId": 0
         },
         {
-            "Text": "The Soldier can deal splash damage to multiple enemies.",
+            "Text": "Red Shed whisky is distilled in Tougaloo.",
             "Type": 1,
             "CorrectAnswerIndex": 0,
             "Answers": [
@@ -69,126 +69,40 @@
             "ImageId": 0
         },
         {
-            "Text": "Which type of class is the Soldier?",
+            "Text": "Team Fortress Classic takes place in which year?",
             "Type": 2,
             "CorrectAnswerIndex": 1,
             "Answers": [
-                "Support",
-                "Offense",
-                "Defense",
-                "Spectator"
+                "1942",
+                "1930",
+                "1977",
+                "2003"
             ],
             "ImageId": 0
         },
         {
-            "Text": "Which ____ weapon ____?",
+            "Text": "The Engineer created the Sentry Gun in ___.",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "1965"
             ],
             "ImageId": 0
         },
         {
-            "Text": "As the Pyro, what is the name of the technique where the Pyro launches himself with a flare?",
+            "Text": "When did the Gravel War start?",
             "Type": 0,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Detonator Jumping",
-                "Scorch Hopping",
-                "Flare Jumping",
-                "Double Jumping"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Pyro is ineffective at flanking other players.",
-            "Type": 1,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "In what environment would the Pyro perform best?",
-            "Type": 2,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "At the 2nd Point of Dustbowl",
-                "In the open field in Barnblitz",
-                "In a tight corridor in Steel",
-                "In the water in 2Fort"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which technique is the Demoman the best at performing?",
-            "Type": 0,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Flanking other players",
-                "Destroying Sentry nests",
-                "Defending friendly Engineers",
-                "Checking for enemy Spies"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Demoman is only effective in an offensive scenario.",
-            "Type": 1,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which is a real Demoman subclass?",
-            "Type": 2,
             "CorrectAnswerIndex": 3,
             "Answers": [
-                "Spy Demo",
-                "Demogineer",
-                "Demojumper",
-                "Demoknight"
+                "April, 1998",
+                "March, 1938",
+                "August, 1948",
+                "June, 1968"
             ],
             "ImageId": 0
         },
         {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "When should the Heavy have his Minigun revved but not firing?",
-            "Type": 0,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "When near the spawnpoint",
-                "When travelling around the map",
-                "When jumping around corners",
-                "When being attacked by enemies"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Sandwich is the only effective Secondary choice for the Heavy.",
+            "Text": "Gray Mann ended the Gravel War by assassinating Saxton Hale.",
             "Type": 1,
             "CorrectAnswerIndex": 1,
             "Answers": [
@@ -198,257 +112,128 @@
             "ImageId": 0
         },
         {
-            "Text": "What class complements the Heavy most effectively?",
+            "Text": "What event came directly after the Gravel War?",
             "Type": 2,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "71st Century",
+                "21st Century",
+                "Robot War",
+                "Australium Chase"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "in 1971, Saxton Hale fought and captured the last surviving ___.",
+            "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Medic",
-                "Another Heavy",
-                "Demoman",
+                "Yeti"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "In what year does Merasmus claim to be born?",
+            "Type": 0,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "14000 BCE",
+                "4000 BCE",
+                "1",
+                "1640"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The Administrator went into hiding in 1972.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "On September 7th of 1972, which two mercenaries had their mugshot taken?",
+            "Type": 2,
+            "CorrectAnswerIndex": 1,
+            "Answers": [
+                "Soldier & Sniper",
+                "Spy & Scout",
+                "Heavy & Medic",
+                "Two Soldiers"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The entire populace of Teufort has severe ___ poisoning.",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Lead"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which country, in TF2, appears sunken and similar to Atlantis?",
+            "Type": 0,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "New Zealand",
+                "Australia",
+                "Brazil",
+                "Norway"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The TF Classic Heavy has a fight with the TF2 Heavy in comic #6.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which mercenary is hinted to be the father of the Scout?",
+            "Type": 2,
+            "CorrectAnswerIndex": 2,
+            "Answers": [
+                "Sniper",
+                "Heavy",
+                "Spy",
                 "Pyro"
             ],
             "ImageId": 0
         },
         {
-            "Text": "Which ____ weapon ____?",
+            "Text": "In the year ___, Saxton Hale's ownership rights of the Sniper's likeness expire",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "If the Engineer sets up a Teleporter Entrance at spawn, where should he place the Exit?",
-            "Type": 0,
-            "CorrectAnswerIndex": 3,
-            "Answers": [
-                "Facing off a cliff",
-                "Near the enemies' spawnpoint",
-                "Away from the frontline",
-                "At a safe distance from the main fight"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Engineer's most effective wrench during setup time is the Jag.",
-            "Type": 1,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What is the Engineer's health when using the Gunslinger?",
-            "Type": 2,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "125",
-                "175",
-                "150",
-                "200"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What should the Medic do if he is about to die with a full Übercharge?",
-            "Type": 0,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Try and find an ally to Übercharge",
-                "Use it",
-                "Attack the enemy with his Syringe Gun",
-                "Attempt to escape"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Medic should usually not Übercharge a Scout.",
-            "Type": 1,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Medic Übercharge should be used when attacking an Engineer nest?",
-            "Type": 2,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Overdose",
-                "Medigun",
-                "Vaccinator",
-                "Kritzkrieg"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Where should the Sniper position himself in a Payload map?",
-            "Type": 0,
-            "CorrectAnswerIndex": 3,
-            "Answers": [
-                "Machina",
-                "Directly on top of the Payload",
-                "Behind as much cover as possible",
-                "Decently far from the Payload, but with a clear line of sight"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Sniper is one of the best classes to play as in the Medieval mode.",
-            "Type": 1,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What weapon should you equip as the Sniper if an enemy Pyro is attacking you with flares?",
-            "Type": 2,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "Cozy Camper",
-                "Razorback",
-                "Darwin's Danger Shield",
-                "Jarate"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What tool should the Spy use to get behind enemy lines?",
-            "Type": 0,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Disguises",
-                "Cloak",
-                "Rocket Surfing",
-                "Trickstabs"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "You should avoid sapping enemy Engineer's buildings as they are better dealt with by a Demoman.",
-            "Type": 1,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which trickstab involves luring an enemy up a flight of stairs, jumping over them and then stabbing them in the back?",
-            "Type": 2,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Stair Stab",
-                "Drop Stab",
-                "Matador",
-                "Corner Stab"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
+                "7039"
             ],
             "ImageId": 0
         }
     ],
     "EasyQuestions": [
         {
-            "Text": "What is the Scout's maximum health with overheal?",
+            "Text": "How many mercenaries are in TF2?",
             "Type": 0,
             "CorrectAnswerIndex": 3,
             "Answers": [
-                "225",
-                "200",
-                "150",
-                "175"
+                "New-12",
+                "7",
+                "3",
+                "9"
             ],
             "ImageId": 0
         },
         {
-            "Text": "The Scout captures points thrice as fast.",
-            "Type": 1,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What role is the Scout best at fulfilling in a team?",
-            "Type": 2,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "Support",
-                "Defense",
-                "Flanking",
-                "Long-range offense"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What is the first step to rocket jump as the Soldier?",
-            "Type": 0,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Face behind you",
-                "Crouch",
-                "Fire a rocket",
-                "Jump"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Soldier can deal splash damage to multiple enemies.",
+            "Text": "The game takes place during the Gravel War.",
             "Type": 1,
             "CorrectAnswerIndex": 0,
             "Answers": [
@@ -458,324 +243,88 @@
             "ImageId": 0
         },
         {
-            "Text": "Which type of class is the Soldier?",
-            "Type": 2,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Support",
-                "Offense",
-                "Defense",
-                "Spectator"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "As the Pyro, what is the name of the technique where the Pyro launches himself with a flare?",
-            "Type": 0,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Detonator Jumping",
-                "Scorch Hopping",
-                "Flare Jumping",
-                "Double Jumping"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Pyro is ineffective at flanking other players.",
-            "Type": 1,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "In what environment would the Pyro perform best?",
-            "Type": 2,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "At the 2nd Point of Dustbowl",
-                "In the open field in Barnblitz",
-                "In a tight corridor in Steel",
-                "In the water in 2Fort"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which technique is the Demoman the best at performing?",
-            "Type": 0,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Flanking other players",
-                "Destroying Sentry nests",
-                "Defending friendly Engineers",
-                "Checking for enemy Spies"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Demoman is only effective in an offensive scenario.",
-            "Type": 1,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which is a real Demoman subclass?",
-            "Type": 2,
-            "CorrectAnswerIndex": 3,
-            "Answers": [
-                "Spy Demo",
-                "Demogineer",
-                "Demojumper",
-                "Demoknight"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "When should the Heavy have his Minigun revved but not firing?",
-            "Type": 0,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "When near the spawnpoint",
-                "When travelling around the map",
-                "When jumping around corners",
-                "When being attacked by enemies"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Sandwich is the only effective Secondary choice for the Heavy.",
-            "Type": 1,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What class complements the Heavy most effectively?",
+            "Text": "Which mercenary from TF2 worked with the TF Classic team?",
             "Type": 2,
             "CorrectAnswerIndex": 0,
             "Answers": [
                 "Medic",
-                "Another Heavy",
-                "Demoman",
+                "Spy",
+                "Engineer",
+                "Sniper"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Abraham Lincoln weas the original ___.",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
                 "Pyro"
             ],
             "ImageId": 0
         },
         {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
+            "Text": "What is the main colour of the Administrator?",
+            "Type": 0,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "Purple",
+                "Red",
+                "Green",
+                "Yellow"
             ],
             "ImageId": 0
         },
         {
-            "Text": "If the Engineer sets up a Teleporter Entrance at spawn, where should he place the Exit?",
+            "Text": "The Soldier was never actually enlisted in any military.",
+            "Type": 1,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "In what year did the Sniper leave New Zealand?",
+            "Type": 2,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "1942",
+                "1930",
+                "1977",
+                "2003"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "The RED team has many experiments to do with teleporting ___.",
+            "Type": 3,
+            "CorrectAnswerIndex": 0,
+            "Answers": [
+                "Bread"
+            ],
+            "ImageId": 0
+        },
+        {
+            "Text": "Which mercanary has lead poisoning?",
             "Type": 0,
             "CorrectAnswerIndex": 3,
             "Answers": [
-                "Facing off a cliff",
-                "Near the enemies' spawnpoint",
-                "Away from the frontline",
-                "At a safe distance from the main fight"
+                "Scout",
+                "Pyro",
+                "Demoman",
+                "Soldier"
             ],
             "ImageId": 0
         },
         {
-            "Text": "The Engineer's most effective wrench during setup time is the Jag.",
-            "Type": 1,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What is the Engineer's health when using the Gunslinger?",
-            "Type": 2,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "125",
-                "175",
-                "150",
-                "200"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What should the Medic do if he is about to die with a full Übercharge?",
-            "Type": 0,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Try and find an ally to Übercharge",
-                "Use it",
-                "Attack the enemy with his Syringe Gun",
-                "Attempt to escape"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Medic should usually not Übercharge a Scout.",
-            "Type": 1,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Medic Übercharge should be used when attacking an Engineer nest?",
-            "Type": 2,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Overdose",
-                "Medigun",
-                "Vaccinator",
-                "Kritzkrieg"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Where should the Sniper position himself in a Payload map?",
-            "Type": 0,
-            "CorrectAnswerIndex": 3,
-            "Answers": [
-                "Machina",
-                "Directly on top of the Payload",
-                "Behind as much cover as possible",
-                "Decently far from the Payload, but with a clear line of sight"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Sniper is one of the best classes to play as in the Medieval mode.",
-            "Type": 1,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What weapon should you equip as the Sniper if an enemy Pyro is attacking you with flares?",
-            "Type": 2,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "Cozy Camper",
-                "Razorback",
-                "Darwin's Danger Shield",
-                "Jarate"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "What tool should the Spy use to get behind enemy lines?",
-            "Type": 0,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Disguises",
-                "Cloak",
-                "Rocket Surfing",
-                "Trickstabs"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "You should avoid sapping enemy Engineer's buildings as they are better dealt with by a Demoman.",
+            "Text": "Saxton Hale was never the owner of Mann Co.",
             "Type": 1,
             "CorrectAnswerIndex": 1,
             "Answers": [
                 "True",
                 "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which trickstab involves luring an enemy up a flight of stairs, jumping over them and then stabbing them in the back?",
-            "Type": 2,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Stair Stab",
-                "Drop Stab",
-                "Matador",
-                "Corner Stab"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
             ],
             "ImageId": 0
         }

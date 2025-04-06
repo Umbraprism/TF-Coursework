@@ -144,7 +144,7 @@
             // 
             // btnSend
             // 
-            btnSend.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSend.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnSend.BackColor = Color.FromArgb(189, 59, 59);
             btnSend.FlatAppearance.BorderSize = 0;
             btnSend.FlatStyle = FlatStyle.Flat;
@@ -166,6 +166,7 @@
             // 
             // lvChat
             // 
+            lvChat.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lvChat.BackColor = Color.FromArgb(41, 39, 39);
             lvChat.BorderStyle = BorderStyle.None;
             lvChat.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);

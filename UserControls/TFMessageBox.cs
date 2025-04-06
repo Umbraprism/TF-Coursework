@@ -1,5 +1,4 @@
-﻿using System.Windows.Forms;
-using Coursework.Helpers;
+﻿using Coursework.Helpers;
 
 namespace Coursework.UserControls
 {

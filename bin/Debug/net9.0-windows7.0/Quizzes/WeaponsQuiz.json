@@ -393,21 +393,21 @@
     ],
     "EasyQuestions": [
         {
-            "Text": "Which Scout weapon only partially reloads it's clip?",
+            "Text": "The Scout primarily uses which type of weapon?",
             "Type": 0,
             "CorrectAnswerIndex": 1,
             "Answers": [
-                "Scattergun",
-                "Force-of-Nature",
-                "Backscatter",
-                "Baby Face's Blaster"
+                "Long range",
+                "Close range",
+                "Mid range",
+                "Throwables"
             ],
             "ImageId": 0
         },
         {
-            "Text": "The Scout's Scattergun has 8 bullets in the clip.",
+            "Text": "The Demoman has a wide variety of shields.",
             "Type": 1,
-            "CorrectAnswerIndex": 1,
+            "CorrectAnswerIndex": 0,
             "Answers": [
                 "True",
                 "False"
@@ -415,40 +415,40 @@
             "ImageId": 0
         },
         {
-            "Text": "Which Scout weapon grants temporary invincibility?",
+            "Text": "Which Scout item causes hit players to bleed?",
             "Type": 2,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Bonk! Atomic Punch",
+                "Flying Guillotine",
                 "Crit-A-Cola",
                 "Atomizer",
-                "Sandman"
+                "Mad Milk"
             ],
             "ImageId": 0
         },
         {
-            "Text": "Which ____ weapon ____?",
+            "Text": "The Heavy's stock secondary weapon is the ___",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "Shotgun"
             ],
             "ImageId": 0
         },
         {
-            "Text": "Which Soldier weapon has infinite ammunition?",
+            "Text": "Which weapon is usable by all classes?",
             "Type": 0,
             "CorrectAnswerIndex": 2,
             "Answers": [
-                "Beggar's Bazooka",
-                "Black Box",
-                "Cow Mangler",
+                "Wrench",
+                "Pistol",
+                "Golden Frying Pan",
                 "Liberty Launcher"
             ],
             "ImageId": 0
         },
         {
-            "Text": "The Soldier has 3 different Banner type items.",
+            "Text": "The Golden Frying Pan is the most expensive weapon in TF2.",
             "Type": 1,
             "CorrectAnswerIndex": 0,
             "Answers": [
@@ -465,317 +465,38 @@
                 "Rocket Launcher",
                 "Righteous Bison",
                 "Beggar's Bazooka",
-                "Loch n' Load"
+                "Scattergun"
             ],
             "ImageId": 0
         },
         {
-            "Text": "Which ____ weapon ____?",
+            "Text": "The Cow Mangler can shoot a ___",
             "Type": 3,
             "CorrectAnswerIndex": 0,
             "Answers": [
-                "Answer"
+                "Charge shot"
             ],
             "ImageId": 0
         },
         {
-            "Text": "Which Pyro weapon is capable of propelling the user with a flare?",
+            "Text": "Which Pyro weapon acts like a jetpack?",
             "Type": 0,
             "CorrectAnswerIndex": 3,
             "Answers": [
                 "Backburner",
                 "Phlogistinator",
                 "Flare Gun",
-                "Detonator"
+                "Thermal Thruster"
             ],
             "ImageId": 0
         },
         {
-            "Text": "The Gas Passer is fully recharged on respawn.",
-            "Type": 1,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Pyro weapon has a chargeable 'MMMPH' meter?",
-            "Type": 2,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Scorch Shot",
-                "Phlogistinator",
-                "Dragon's Fury",
-                "Sharpened Volcano Fragment"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Demoman weapon can deal knockback when the projectiles hit?",
-            "Type": 0,
-            "CorrectAnswerIndex": 3,
-            "Answers": [
-                "Scottish Resistance",
-                "Loch n' Load",
-                "Iron Bomber",
-                "Loose Cannon"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Stickybomb Launcher can be charged to launch stickybombs further.",
+            "Text": "The Flare Gun burns hit players.",
             "Type": 1,
             "CorrectAnswerIndex": 0,
             "Answers": [
                 "True",
                 "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Demoman weapon collects heads?",
-            "Type": 2,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "Persian Persuader",
-                "Eyelander",
-                "Claidmhor",
-                "Scotsman's Skullcutter"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Heavy weapon slows players down whilst they are being shot?",
-            "Type": 0,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Natascha",
-                "Tomislav",
-                "Brass Beast",
-                "Minigun"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Sandwich cannot be refilled by Ammo Boxes.",
-            "Type": 1,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Heavy weapon produces a ring of fire around the Heavy whilst revved?",
-            "Type": 2,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "Warrior's Spirit",
-                "Eviction Notice",
-                "Huo-Long Heater",
-                "Killing Gloves of Boxing"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Engineer weapon always hits a critical hit on the 3rd succesive attack on an enemy?",
-            "Type": 0,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Gunslinger",
-                "Jag",
-                "Eureka Effect",
-                "Wrench"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Teleporters cost 50 Metal whilst using the Eureka Effect.",
-            "Type": 1,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which building cannot be built whilst using the Gunslinger?",
-            "Type": 2,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "Dispensers",
-                "Teleporter Entrances",
-                "Sentries",
-                "Teleporter Exits"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Medic weapon gains charge in the Übercharge meter on hit?",
-            "Type": 0,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "Vitasaw",
-                "Amputator",
-                "Übersaw",
-                "Syringe Gun"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Vaccinator can provide 3 distinct types of immunity.",
-            "Type": 1,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Medic Übercharge grants guaranteed critical hits?",
-            "Type": 2,
-            "CorrectAnswerIndex": 3,
-            "Answers": [
-                "Overdose",
-                "Medigun",
-                "Vaccinator",
-                "Kritzkrieg"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Sniper weapon can hit more than one player per bullet?",
-            "Type": 0,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Machina",
-                "Hitman's Heatmaker",
-                "The Classic",
-                "Sniper Rifle"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Huntsman's arrows cannot be lit on fire.",
-            "Type": 1,
-            "CorrectAnswerIndex": 1,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Sniper weapon converts Mini-Crits into full critical hits?",
-            "Type": 2,
-            "CorrectAnswerIndex": 3,
-            "Answers": [
-                "Kukri",
-                "Tribalman's Shiv",
-                "Shanshaha",
-                "Bushwacka"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Spy weapon disguises you on backstabs?",
-            "Type": 0,
-            "CorrectAnswerIndex": 3,
-            "Answers": [
-                "Conniver's Kunai",
-                "Knife",
-                "Big Earner",
-                "Your Eternal Reward"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "The Dead Ringer cannot be refilled by Ammo Boxes.",
-            "Type": 1,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "True",
-                "False"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which Spy weapon freezes backstab victims?",
-            "Type": 2,
-            "CorrectAnswerIndex": 2,
-            "Answers": [
-                "Red-Tape Recorder",
-                "Electro-Sapper",
-                "Spycicle",
-                "Cloak and Dagger"
-            ],
-            "ImageId": 0
-        },
-        {
-            "Text": "Which ____ weapon ____?",
-            "Type": 3,
-            "CorrectAnswerIndex": 0,
-            "Answers": [
-                "Answer"
             ],
             "ImageId": 0
         }

@@ -39,7 +39,7 @@ namespace Coursework.Forms
 
             tmrQuiz.Start();
 
-            lblQuestionNumber.Text = $"{Session.Quiz.CurrentQuestionIndex + 1}/{Session.Quiz.BaseQuestions.Count}";
+            lblQuestionNumber.Text = $"{Session.Quiz.CurrentQuestionIndex + 1}/{Session.Quiz.CurrentDifficulty.Count}";
 
             ppbCharge.Value = (Session.Player.TFClass.Ability.ChargeLevel * 100) / Session.Player.TFClass.Ability.ChargesRequired;
             pbAbility.Image = TFClass.Assets[Session.Player.TFClass.Id].Emblem;
@@ -63,6 +63,8 @@ namespace Coursework.Forms
         private void pbAbility_Click(object sender, EventArgs e)
         {
             Session.Player.TFClass.Ability.UseAbility(this, ref Session.Quiz, ref question);
+
+            ppbCharge.Value = (Session.Player.TFClass.Ability.ChargeLevel * 100) / Session.Player.TFClass.Ability.ChargesRequired;
 
             if (question.IsCorrect)
             {
@@ -94,12 +96,12 @@ namespace Coursework.Forms
             }
             else
             {
-                if (Session.Player.TFClass.Id == 4)
+                if (Session.Quiz.IsDisguised)
                 {
-                    Session.Quiz.ScoreMultiplier = 0;
+                    Session.Quiz.IsDisguised = false;
+                    Session.Quiz.CurrentDifficulty = Session.Quiz.BaseQuestions;
+                    Session.Quiz.CurrentQuestionIndex = Ability.UndisguisedQuestionIndex;
                 }
-
-                Session.Quiz.IsDisguised = false;
 
                 question.IsAnswered = true;
 

@@ -103,6 +103,16 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap demoPortrait {
+            get {
+                object obj = ResourceManager.GetObject("demoPortrait", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap engineerAva {
             get {
                 object obj = ResourceManager.GetObject("engineerAva", resourceCulture);
@@ -116,6 +126,16 @@ namespace Coursework.Properties {
         internal static System.Drawing.Bitmap engineerEmblem {
             get {
                 object obj = ResourceManager.GetObject("engineerEmblem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap engineerPortrait {
+            get {
+                object obj = ResourceManager.GetObject("engineerPortrait", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +193,16 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap medicPortrait {
+            get {
+                object obj = ResourceManager.GetObject("medicPortrait", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap powerSymbol {
             get {
                 object obj = ResourceManager.GetObject("powerSymbol", resourceCulture);
@@ -196,6 +226,16 @@ namespace Coursework.Properties {
         internal static System.Drawing.Bitmap pyroEmblem {
             get {
                 object obj = ResourceManager.GetObject("pyroEmblem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pyroPortrait {
+            get {
+                object obj = ResourceManager.GetObject("pyroPortrait", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +303,16 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sniperPortrait {
+            get {
+                object obj = ResourceManager.GetObject("sniperPortrait", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap soldierAva {
             get {
                 object obj = ResourceManager.GetObject("soldierAva", resourceCulture);
@@ -306,6 +356,16 @@ namespace Coursework.Properties {
         internal static System.Drawing.Bitmap spyEmblem {
             get {
                 object obj = ResourceManager.GetObject("spyEmblem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spyPortrait {
+            get {
+                object obj = ResourceManager.GetObject("spyPortrait", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

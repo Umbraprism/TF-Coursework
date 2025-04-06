@@ -22,6 +22,8 @@ namespace Coursework.ParentClasses
         public int TimesUsed { get; set; }
         [JsonIgnore]
         public int Duration { get; set; } = 0;
+        [JsonIgnore]
+        public static int UndisguisedQuestionIndex { get; set; } = 0;
 
         #endregion
 
@@ -113,9 +115,9 @@ namespace Coursework.ParentClasses
                             {
                                 foreach (Control answer in control.Controls)
                                 {
-                                    if (UInt32.Parse(answer.Controls[i].Tag.ToString()) != question.CorrectAnswerIndex)
+                                    if (question.Answers.ToList().IndexOf(answer.Text) != question.CorrectAnswerIndex)
                                     {
-                                        answer.Controls[i].ForeColor = Color.DarkGray;
+                                        answer.ForeColor = Color.DarkGray;
                                     }
 
                                     i++;
@@ -134,9 +136,9 @@ namespace Coursework.ParentClasses
 
                         List<Question> incorrectQuestions = quiz.CurrentDifficulty.Where(question => question.IsAnswered && !question.IsCorrect).ToList();
 
-                        if (incorrectQuestions.Count > 0)
+                        if (incorrectQuestions.Count > 1)
                         {
-                            Session.Quiz.CurrentQuestionIndex = quiz.CurrentDifficulty.IndexOf(incorrectQuestions[rnd.Next(0, incorrectQuestions.Count) - 1]);
+                            Session.Quiz.CurrentQuestionIndex = quiz.CurrentDifficulty.IndexOf(incorrectQuestions[rnd.Next(0, incorrectQuestions.Count)]);
                         }
                         else
                         {
@@ -178,9 +180,15 @@ namespace Coursework.ParentClasses
 
                     break;
                 case 9:
-                    if (ChargeLevel == ChargesRequired)
+                    if (ChargeLevel == ChargesRequired && !quiz.IsDisguised)
                     {
                         PlayVoiceline();
+
+                        quiz.IsDisguised = true;
+                        quiz.CurrentDifficulty = quiz.EasyQuestions;
+                        UndisguisedQuestionIndex = quiz.CurrentQuestionIndex;
+
+                        quiz.CurrentQuestionIndex = 0;
 
                         ChargeLevel = 0;
                         TimesUsed++;
@@ -204,13 +212,15 @@ namespace Coursework.ParentClasses
 
             string voDirectory = @$"Sounds\Classes\{Session.Player.TFClass.Id}";
 
-            string[] sounds = Directory.GetFiles(voDirectory);
+            List<string> sounds = Directory.GetFiles(voDirectory).ToList();
 
             int soundToPlay = 0;
 
-            if (sounds != null && sounds.Length > 1)
+            sounds.Sort();
+
+            if (sounds != null && sounds.Count > 1)
             {
-                soundToPlay = rng.Next(1, sounds.Length);
+                soundToPlay = rng.Next(1, sounds.Count);
             }
 
             if (sounds != null)

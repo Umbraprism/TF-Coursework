@@ -188,7 +188,6 @@ U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Properti
 U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.UserControls.AchievementView.resources
 U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.UserControls.Guess.resources
 U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PercentageProgressBar.resources
-U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PlayerView.resources
 U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.UserControls.TFMessageBox.resources
 U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.csproj.GenerateResource.cache
 U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.GeneratedMSBuildEditorConfig.editorconfig
@@ -307,7 +306,6 @@ U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursewo
 U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.AchievementView.resources
 U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.Guess.resources
 U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PercentageProgressBar.resources
-U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.PlayerView.resources
 U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.UserControls.TFMessageBox.resources
 U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.csproj.GenerateResource.cache
 U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.GeneratedMSBuildEditorConfig.editorconfig
@@ -758,3 +756,4 @@ C:\Users\User\Documents\CourseworkCode - MAIN WORK ON THIS ONE!!! - Copy\obj\Deb
 E:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.ServerClientScreen.resources
 U:\CourseworkRoot\CourseworkCode\obj\Debug\net9.0-windows7.0\Coursework.Forms.ServerClientScreen.resources
 U:\CourseworkRoot\CourseworkCode - Copy\obj\Debug\net9.0-windows7.0\Coursework.Forms.ServerClientScreen.resources
+U:\CourseworkRoot\CourseworkCode - Copy (2)\obj\Debug\net9.0-windows7.0\Coursework.Forms.ServerClientScreen.resources

@@ -124,6 +124,7 @@ namespace Coursework.UserControls
 
                     borderPen.Alignment = PenAlignment.Inset;
                     borderPen.DashStyle = Style;
+
                     e.Graphics.DrawPath(borderPen, roundedPath);
                 }
             }

@@ -192,7 +192,7 @@
             tbAnswer.Location = new Point(3, 11);
             tbAnswer.MaxLength = 20;
             tbAnswer.Name = "tbAnswer";
-            tbAnswer.PlaceholderText = "Username";
+            tbAnswer.PlaceholderText = "Answer...";
             tbAnswer.Size = new Size(557, 54);
             tbAnswer.TabIndex = 0;
             tbAnswer.KeyDown += tbAnswer_KeyDown;

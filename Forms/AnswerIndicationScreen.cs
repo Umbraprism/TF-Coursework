@@ -28,7 +28,7 @@ namespace Coursework.Forms
             UI.ApplyFonts(this);
             UI.ApplyCursor(this, CursorStyle.TFClass);
 
-            Question previousQuestion = Session.Quiz.BaseQuestions[Session.Quiz.CurrentQuestionIndex];
+            Question previousQuestion = Session.Quiz.CurrentDifficulty[Session.Quiz.CurrentQuestionIndex];
 
             lblIndicator.Width = this.Width / 2;
             lblIndicator.Height = this.Height / 2;
@@ -65,7 +65,7 @@ namespace Coursework.Forms
             {
                 Session.Quiz.CurrentQuestionIndex++;
 
-                Question nextQuestion = Session.Quiz.BaseQuestions[Session.Quiz.CurrentQuestionIndex];
+                Question nextQuestion = Session.Quiz.CurrentDifficulty[Session.Quiz.CurrentQuestionIndex];
 
                 switch (nextQuestion.Type)
                 {

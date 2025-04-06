@@ -135,12 +135,12 @@
             // lblGrade
             // 
             lblGrade.BackColor = Color.FromArgb(189, 59, 59);
-            lblGrade.Dock = DockStyle.Bottom;
+            lblGrade.Dock = DockStyle.Fill;
             lblGrade.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblGrade.ForeColor = Color.White;
-            lblGrade.Location = new Point(0, 55);
+            lblGrade.Location = new Point(0, 0);
             lblGrade.Name = "lblGrade";
-            lblGrade.Size = new Size(391, 128);
+            lblGrade.Size = new Size(391, 183);
             lblGrade.TabIndex = 6;
             lblGrade.Text = "GRADE";
             lblGrade.TextAlign = ContentAlignment.MiddleCenter;
