@@ -24,3 +24,5 @@ Tests how well the user knows the history of the game, including updates, lore, 
 ## 🔍 Guessing Game
 
 A Wordle like game where the user must guess a weapon whilst being given hints surrounding it as they guess.
+
+## This project received 49/50 from CCEA
